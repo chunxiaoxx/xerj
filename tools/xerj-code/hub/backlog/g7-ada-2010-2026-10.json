@@ -1,0 +1,36 @@
+{
+ "suite": "g7-ada-2010-2026-10",
+ "pre_registered": "2026-10-04 (before indexing/retrieval; committed to corpus-hub first)",
+ "authoring": "BLIND from mirror file reads; every expect is a verbatim clause grep-verified against the mirror at authoring time; no retrieval was run",
+ "corpus_pin": {
+  "repo": "corpus-ada-2010",
+  "sha": "d2be9eb3d93849ee331f94a09a963415928a6af6"
+ },
+ "queries": [
+  {
+   "q": "minimum clearance around a water closet",
+   "expect": "Clearance around a water closet shall be 60 inches (1525 mm) minimum",
+   "expect_file": "sections/604-water-closets-and-toilet-compartments.txt"
+  },
+  {
+   "q": "water closet seat height range",
+   "expect": "The seat height of a water closet above the finish floor shall be 17 inches (430 mm) minimum and 19 inches (485 mm) maximum",
+   "expect_file": "sections/604-water-closets-and-toilet-compartments.txt"
+  },
+  {
+   "q": "side wall grab bar length at water closet",
+   "expect": "The side wall grab bar shall be 42 inches (1065 mm) long minimum",
+   "expect_file": "sections/604-water-closets-and-toilet-compartments.txt"
+  },
+  {
+   "q": "drinking fountain spout height for standing persons",
+   "expect": "Spout outlets of drinking fountains for standing persons shall be 38 inches (965 mm) minimum",
+   "expect_file": "sections/602-drinking-fountains.txt"
+  },
+  {
+   "q": "turning space required inside a toilet room",
+   "expect": "Turning space complying with 304 shall be provided within the room",
+   "expect_file": "sections/603-toilet-and-bathing-rooms.txt"
+  }
+ ]
+}

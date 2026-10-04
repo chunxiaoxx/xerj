@@ -1660,6 +1660,63 @@
     "evidence": "backlog/g7-night2-2026-10-04-graded.json",
     "note": "4/5 pass 5/5 relevant on first grade; blind suite pre-registered before indexing"
    }
+  },
+  {
+   "slug": "uk-building-regs",
+   "cat": "STD",
+   "lane": "A",
+   "refresh": "pinned",
+   "status": "candidate",
+   "domain": "current UK Building Regulations 2010 text: what work must comply with, materials, loading, exemptions, notices",
+   "sources": [
+    {
+     "url": "https://www.legislation.gov.uk/uksi/2010/2214/data.xml",
+     "licence_hint": "UK Open Government Licence v3.0 (Crown); verified at the legislation.gov.uk per-page footer reuse statement. Mirror xerj-org/corpus-uk-building-regs @d4669402: 194 per-provision files from the CLML XML (England inline, differing Wales variants appended labelled), 44ZB/44ZC dual numbering and repealed Schedule 4A/5 handled and documented in the mirror README. Approved Documents deliberately out of scope."
+    }
+   ],
+   "g7": {
+    "round": 0,
+    "suite": "backlog/g7-uk-building-regs-2026-10.json",
+    "note": "pre-registered 2026-10-04 before indexing"
+   }
+  },
+  {
+   "slug": "eurlex-core",
+   "cat": "STD",
+   "lane": "A",
+   "refresh": "pinned",
+   "status": "candidate",
+   "domain": "GDPR / AI Act / DSA / DMA / NIS2 article and recital text",
+   "sources": [
+    {
+     "url": "https://publications.europa.eu/resource/celex/32016R0679 (Cellar CONVEX lane)",
+     "licence_hint": "EU reuse: CC BY 4.0 (Commission Decision 2011/833/EU), verified at commission.europa.eu/legal-notice_en. Mirror xerj-org/corpus-eurlex-core @f407c938: 1,167 per-article/per-recital files across the five acts (405 articles + 762 recitals); eur-lex.europa.eu direct fetches WAF-blocked (AWS challenge), the Cellar content-negotiation lane used instead; annexes deliberately excluded and documented (AI Act Annex III absence flagged)."
+    }
+   ],
+   "g7": {
+    "round": 0,
+    "suite": "backlog/g7-eurlex-core-2026-10.json",
+    "note": "pre-registered 2026-10-04 before indexing"
+   }
+  },
+  {
+   "slug": "ada-2010",
+   "cat": "STD",
+   "lane": "A",
+   "refresh": "pinned",
+   "status": "candidate",
+   "domain": "ADA 2010 Standards for Accessible Design: exact dimensional and technical requirements",
+   "sources": [
+    {
+     "url": "https://www.ada.gov/law-and-regs/design-standards/2010-stds/",
+     "licence_hint": "US public domain (17 USC 105; no copyright notice on the source page). Mirror xerj-org/corpus-ada-2010 @d2be9eb3: 145 section files sliced at the page's own h2/h3 anchors (ada.gov now publishes the Standards as one page); chapters 1-10 complete; figures keep dimension-level alt text."
+    }
+   ],
+   "g7": {
+    "round": 0,
+    "suite": "backlog/g7-ada-2010-2026-10.json",
+    "note": "pre-registered 2026-10-04 before indexing"
+   }
   }
  ]
 }

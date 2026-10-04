@@ -1,0 +1,36 @@
+{
+ "suite": "g7-uk-building-regs-2026-10",
+ "pre_registered": "2026-10-04 (before indexing/retrieval; committed to corpus-hub first)",
+ "authoring": "BLIND from mirror file reads; every expect is a verbatim clause grep-verified against the mirror at authoring time; no retrieval was run",
+ "corpus_pin": {
+  "repo": "corpus-uk-building-regs",
+  "sha": "d4669402330fb8819980fc3fb498ac5776f86bba"
+ },
+ "queries": [
+  {
+   "q": "what must building work comply with in schedule 1",
+   "expect": "(a) it complies with the applicable requirements contained in Schedule 1; and",
+   "expect_file": "regs/reg-04.txt"
+  },
+  {
+   "q": "materials for building work must be what",
+   "expect": "(a) with adequate and proper materials which\u2014",
+   "expect_file": "regs/reg-07.txt"
+  },
+  {
+   "q": "structural loading dead imposed wind loads transmitted to the ground",
+   "expect": "combined dead, imposed and wind loads are sustained and transmitted by it to the ground",
+   "expect_file": "schedules/sched-1.txt"
+  },
+  {
+   "q": "exempt small detached buildings floor area limit",
+   "expect": "having a floor area which does not exceed 30m2",
+   "expect_file": "schedules/sched-2.txt"
+  },
+  {
+   "q": "how much notice before starting building work",
+   "expect": "at least two days have elapsed since the end of the day on which the notice was given",
+   "expect_file": "regs/reg-16.txt"
+  }
+ ]
+}

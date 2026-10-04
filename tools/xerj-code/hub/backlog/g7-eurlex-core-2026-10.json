@@ -1,0 +1,36 @@
+{
+ "suite": "g7-eurlex-core-2026-10",
+ "pre_registered": "2026-10-04 (before indexing/retrieval; committed to corpus-hub first)",
+ "authoring": "BLIND from mirror file reads; every expect is a verbatim clause grep-verified against the mirror at authoring time; no retrieval was run",
+ "corpus_pin": {
+  "repo": "corpus-eurlex-core",
+  "sha": "f407c9381a689e64b7ba2576bf274cb07f57babb"
+ },
+ "queries": [
+  {
+   "q": "gdpr principles for processing personal data lawfulness fairness transparency",
+   "expect": "processed lawfully, fairly and in a transparent manner in relation to the data subject",
+   "expect_file": "gdpr/art-5.txt"
+  },
+  {
+   "q": "is pseudonymised data personal data under the gdpr",
+   "expect": "Personal data which have undergone pseudonymisation",
+   "expect_file": "gdpr/recital-26.txt"
+  },
+  {
+   "q": "which ai practices are prohibited subliminal manipulation",
+   "expect": "deploys subliminal techniques",
+   "expect_file": "ai-act/art-5.txt"
+  },
+  {
+   "q": "dma gatekeeper combining personal data across services for advertising",
+   "expect": "process, for the purpose of providing online advertising services, personal data of end users",
+   "expect_file": "dma/art-5.txt"
+  },
+  {
+   "q": "nis2 what security measures must entities take",
+   "expect": "appropriate and proportionate technical, operational and organisational measures to manage the risks",
+   "expect_file": "nis2/art-21.txt"
+  }
+ ]
+}
