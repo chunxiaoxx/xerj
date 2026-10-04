@@ -1,0 +1,37 @@
+{
+ "suite": "g7-ecfr-title-14-2026-10",
+ "pre_registered": "2026-10-04 (before indexing/retrieval; committed to corpus-hub first)",
+ "authoring": "BLIND from clone reads; every expect is a verbatim clause grep-verified against the clone at authoring time; no retrieval was run",
+ "corpus_pin": {
+  "repo": "corpus-ecfr-title-14",
+  "sha": "0520b312d9645977144dfd356caa3f37f323d017",
+  "amddate": "2026-07-24"
+ },
+ "queries": [
+  {
+   "q": "VFR minimum flight visibility and distance from clouds by airspace class",
+   "expect": "no person may operate an aircraft under VFR when the flight visibility is less, or at a distance from clouds that is less, than that prescribed for the corresponding altitude and class of airspace",
+   "expect_file": "parts/part-91/sec-91.155.txt"
+  },
+  {
+   "q": "when is an operable transponder with Mode C required to operate an aircraft",
+   "expect": "unless that aircraft is equipped with an operable coded radar beacon transponder",
+   "expect_file": "parts/part-91/sec-91.215.txt"
+  },
+  {
+   "q": "minimum safe altitude flying over a congested city",
+   "expect": "an altitude of 1,000 feet above the highest obstacle within a horizontal radius of 2,000 feet of the aircraft",
+   "expect_file": "parts/part-91/sec-91.119.txt"
+  },
+  {
+   "q": "how often must an aircraft have an annual inspection to be operated",
+   "expect": "within the preceding 12 calendar months",
+   "expect_file": "parts/part-91/sec-91.409.txt"
+  },
+  {
+   "q": "which aircraft has the right of way when two aircraft are converging",
+   "expect": "the aircraft to the other's right has the right-of-way",
+   "expect_file": "parts/part-91/sec-91.113.txt"
+  }
+ ]
+}

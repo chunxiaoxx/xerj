@@ -1582,6 +1582,25 @@
     "engine": "PR #1140 (0ae1439bb+35903648c)",
     "evidence": "backlog/g7-tonight-2026-10-03-graded.json"
    }
+  },
+  {
+   "slug": "ecfr-title-14",
+   "cat": "STD",
+   "lane": "A",
+   "refresh": "pinned",
+   "status": "candidate",
+   "domain": "a pilot or mechanic queries this for the current FAR text \u2014 visibility minimums, transponder airspace, inspection intervals, right-of-way",
+   "sources": [
+    {
+     "url": "https://www.govinfo.gov/bulkdata/ECFR/title-14/ECFR-title14.xml",
+     "licence_hint": "US public domain (17 USC 105, government edict); GPO bulk data, no restriction. Mirror xerj-org/corpus-ecfr-title-14 @0520b312 (AMDDATE 2026-07-24, downloaded 2026-10-04): 6,421 per-section files, same split_ecfr.py pipeline as titles 12/26/29. Demand: legal/courts rank 8 overall; HN aviation volume 0 (HN skew \u2014 r/flying active), second-wave per demand-2026-10 action 3."
+    }
+   ],
+   "g7": {
+    "round": 0,
+    "suite": "backlog/g7-ecfr-title-14-2026-10.json",
+    "note": "pre-registered 2026-10-04 before indexing"
+   }
   }
  ]
 }
