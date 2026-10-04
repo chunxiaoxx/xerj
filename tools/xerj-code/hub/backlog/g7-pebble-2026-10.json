@@ -10,17 +10,17 @@
   {
    "q": "when does pebble enable another concurrent compaction",
    "expect": "concurrent compaction up to CompactionConcurrencyRange.",
-   "expect_file": "options.go"
+   "expect_file": "pebble/options.go"
   },
   {
    "q": "what does the memtable write stall metric measure",
    "expect": "MemTableWriteStallDuration is the wait caused by a write stall due to too",
-   "expect_file": "batch.go"
+   "expect_file": "pebble/batch.go"
   },
   {
    "q": "iteration order L0 sublevels then lower levels",
    "expect": "Next are the file levels: L0 sub-levels followed by lower levels.",
-   "expect_file": "scan_internal.go"
+   "expect_file": "pebble/scan_internal.go"
   },
   {
    "q": "why prohibit splitting a user key across sstables",
