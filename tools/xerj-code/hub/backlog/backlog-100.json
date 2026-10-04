@@ -594,9 +594,18 @@
    "sources": [
     {
      "url": "https://github.com/open-telemetry/opentelemetry-proto",
-     "licence_hint": "RE-PINNED (scope fix) after G7 fail 2026-10-02: dropped open-telemetry/semantic-conventions from the corpus — its markdown docs diluted proto-field queries and its content duplicates opentelemetry-spec. Apache-2.0 (hand-verified). Corpus is now the proto repo alone; suite expect_files unchanged (they were proto files). ROUND 2 re-pinned 2026-10-05: the 2026-10-02 scope fix over-corrected — semconv docs are the only source for HTTP/database span conventions. Corpus = opentelemetry-proto @b3f75588 + semantic-conventions @60a64b66 (2,660 records). Remap g7-otel-round2-2026-10.json pre-registered before retrieval (all 5 clauses verified on disk); prediction 3-4/5 with engine #1137/#1139. ROUND 2 GRADED 2026-10-05: 1/5 — prediction 3-4/5 was WRONG. With both repos indexed (2,660 records) semconv prose (2,475 docs) dwarfs the 185 proto records: proto queries retrieve span-convention prose, and db/http queries get CHANGELOG and sibling chapter docs instead of the expected files. ROUND 3 fix (pre-registered, not yet run): scope the semantic-conventions clone to its docs/ subtree minus CHANGELOG (the model/ YAMLs, internal/, non-normative/ and the CHANGELOG are the measured diluters); prediction 3/5. G7 round-2 2026-10-05 graded 1/5 pass 1/5 relevant -> FAIL (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 1/5 round-2 — see round-3 note."
+     "licence_hint": "RE-PINNED (scope fix) after G7 fail 2026-10-02: dropped open-telemetry/semantic-conventions from the corpus — its markdown docs diluted proto-field queries and its content duplicates opentelemetry-spec. Apache-2.0 (hand-verified). Corpus is now the proto repo alone; suite expect_files unchanged (they were proto files). ROUND 2 re-pinned 2026-10-05: the 2026-10-02 scope fix over-corrected — semconv docs are the only source for HTTP/database span conventions. Corpus = opentelemetry-proto @b3f75588 + semantic-conventions @60a64b66 (2,660 records). Remap g7-otel-round2-2026-10.json pre-registered before retrieval (all 5 clauses verified on disk); prediction 3-4/5 with engine #1137/#1139. ROUND 2 GRADED 2026-10-05: 1/5 — prediction 3-4/5 was WRONG. With both repos indexed (2,660 records) semconv prose (2,475 docs) dwarfs the 185 proto records: proto queries retrieve span-convention prose, and db/http queries get CHANGELOG and sibling chapter docs instead of the expected files. ROUND 3 fix (pre-registered, not yet run): scope the semantic-conventions clone to its docs/ subtree minus CHANGELOG (the model/ YAMLs, internal/, non-normative/ and the CHANGELOG are the measured diluters); prediction 3/5. G7 round-2 2026-10-05 graded 1/5 pass 1/5 relevant -> FAIL (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 1/5 round-2 — see round-3 note. ROUND 3 EXECUTED 2026-10-04 (mirror corpus-otel-semconv-docs @15f75ec3, docs/ minus non-normative, upstream 60a64b66c pinned): graded 1/5 — prediction 3/5 was WRONG. Root cause found post-grade: the two semconv expect files (docs/http/http-spans.md, docs/db/database-spans.md) are NOT IN THE INDEX — they open with a Hugo `<!---` comment, so the engine sniffs them XML (#1142, same defect class as nist-sp800-sec) and junks them. Scope change could not have fixed this. ROUND 4 PRE-REGISTERED before any re-retrieval: engine fix #1142 (markdown-signature guard + YAML parse tier), corpus UNCHANGED (corpus-otel-semconv-docs @15f75ec3), same round-2 suite, prediction 3/5 (Q2 passes today; Q3/Q4 expect files become indexable; Q1/Q5 are proto-vs-prose ranking and may still miss)."
     }
-   ]
+   ],
+   "g7": {
+    "round": 3,
+    "graded_at": "2026-10-04",
+    "verdict": "FAIL",
+    "prediction_wrong": true,
+    "fix": "engine #1142 round-4 pre-registered, prediction 3/5",
+    "corpus_unchanged": true,
+    "evidence": "backlog/g7-tonight-2026-10-03-graded.json"
+   }
   },
   {
    "slug": "etcd-docs",

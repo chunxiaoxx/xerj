@@ -44,5 +44,10 @@
   "graded_round1": "2/5 (evidence: g7-tonight-2026-10-03-graded.json) — all three misses retrieved *-additional-material.txt boilerplate chapters (p17/18, p54/09, p596/08) ahead of the answer; those 5 files are worksheets/notices appendices, not rule text",
   "fix": "mirror scope: drop the 5 *additional-material*.txt files from corpus-irs-pubs (new mirror commit); queries and expect clauses UNCHANGED; expect_files unchanged",
   "prediction": "4/5 — Q1/Q3/Q5 expects become the strongest topical files once the boilerplate is gone; Q2/Q4 already pass; residual risk is cross-pub restatement (shape_risk above)"
+ },
+ "round2_result": {
+  "executed": "2026-10-04 (mirror corpus-irs-pubs @510aace0, 5 additional-material files dropped)",
+  "graded": "2/5 — prediction 4/5 was WRONG. Identical score to round 1 with completely different diluter files: round 1 blamed *-additional-material.txt, round 2's misses retrieve p334/01-publication-334-introductory-material.txt and sibling index/intro files. All expect files ARE in the index (p523/02=15 records, p17/05-4=33, p596/02-1=12) — this is ranking, not coverage: conversational queries ('how long do I have to own and live in my house') vs normative text ('owned and used the home as your main home') is a lexical gap BM25 cannot bridge, compounded by the cross-pub boilerplate restatement documented in shape_risk",
+  "decision": "STOP scope surgery (two rounds, identical scores — scope is not the lever) and do NOT flip live. irs-pubs stays candidate. Revisit under the semantic/neural lane (#66 program: ecfr neural re-test) where conversational-vs-normative is the actual gap being probed"
  }
 }
