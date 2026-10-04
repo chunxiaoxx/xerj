@@ -1,0 +1,21 @@
+{
+ "corpus": "eurlex-core",
+ "cloned_at": "2026-10-04T22:13:01Z",
+ "repos": [
+  {
+   "repo": "corpus-eurlex-core",
+   "url": "https://github.com/xerj-org/corpus-eurlex-core",
+   "licence": "NONE-FOUND",
+   "sha": "f407c9381a689e64b7ba2576bf274cb07f57babb",
+   "files": 1170,
+   "bytes": 1985742,
+   "review": {
+    "spdx": "NONE-FOUND",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-04",
+    "note": "GDPR, AI Act, DSA, DMA, NIS2 from the EUR-Lex Cellar CONVEX lane (direct eur-lex.europa.eu fetches are AWS-WAF-challenged): 1,167 per-article and per-recital files (405 articles + 762 recitals); annexes deliberately excluded and documented. G7 4/5 pass 4/5 relevant. Evidence: backlog/g7-night2-2026-10-04-graded.json"
+   }
+  }
+ ]
+}

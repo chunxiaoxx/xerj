@@ -1,0 +1,21 @@
+{
+ "corpus": "uk-building-regs",
+ "cloned_at": "2026-10-04T22:12:22Z",
+ "repos": [
+  {
+   "repo": "corpus-uk-building-regs",
+   "url": "https://github.com/xerj-org/corpus-uk-building-regs",
+   "licence": "NONE-FOUND",
+   "sha": "d4669402330fb8819980fc3fb498ac5776f86bba",
+   "files": 197,
+   "bytes": 535279,
+   "review": {
+    "spdx": "NONE-FOUND",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-04",
+    "note": "Building Regulations 2010 (SI 2010/2214) as CLML XML -> 194 per-provision files (England inline, differing Wales variants appended labelled; 44ZB/44ZC dual numbering and repealed Schedules 4A/5 documented). Approved Documents out of scope. G7 5/5 pass 5/5 relevant. Evidence: backlog/g7-night2-2026-10-04-graded.json"
+   }
+  }
+ ]
+}

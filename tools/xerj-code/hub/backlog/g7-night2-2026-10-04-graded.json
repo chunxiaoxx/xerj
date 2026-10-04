@@ -310,6 +310,237 @@
    "pass": 5,
    "relevant": 5,
    "verdict": "PASS"
+  },
+  "uk-building-regs": {
+   "queries": [
+    {
+     "q": "what must building work comply with in schedule 1",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-uk-building-regs/regs/reg-04.txt",
+     "expect_file": "regs/reg-04.txt",
+     "top5": [
+      "corpus-uk-building-regs/regs/reg-18.txt",
+      "corpus-uk-building-regs/regs/reg-18.txt",
+      "corpus-uk-building-regs/regs/reg-04.txt",
+      "corpus-uk-building-regs/regs/reg-14.txt",
+      "corpus-uk-building-regs/regs/reg-20a.txt"
+     ]
+    },
+    {
+     "q": "materials for building work must be what",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-uk-building-regs/regs/reg-07.txt",
+     "expect_file": "regs/reg-07.txt",
+     "top5": [
+      "corpus-uk-building-regs/regs/reg-16.txt",
+      "corpus-uk-building-regs/regs/reg-18.txt",
+      "corpus-uk-building-regs/regs/reg-07.txt",
+      "corpus-uk-building-regs/regs/reg-18.txt",
+      "corpus-uk-building-regs/regs/reg-04.txt"
+     ]
+    },
+    {
+     "q": "structural loading dead imposed wind loads transmitted to the ground",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-uk-building-regs/schedules/sched-1.txt",
+     "expect_file": "schedules/sched-1.txt",
+     "top5": [
+      "corpus-uk-building-regs/schedules/sched-1.txt",
+      "corpus-uk-building-regs/schedules/sched-1.txt",
+      "corpus-uk-building-regs/schedules/sched-3.txt",
+      "corpus-uk-building-regs/regs/reg-46a.txt",
+      "corpus-uk-building-regs/regs/reg-46b.txt"
+     ]
+    },
+    {
+     "q": "exempt small detached buildings floor area limit",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-uk-building-regs/schedules/sched-2.txt",
+     "expect_file": "schedules/sched-2.txt",
+     "top5": [
+      "corpus-uk-building-regs/schedules/sched-2.txt",
+      "corpus-uk-building-regs/regs/reg-09.txt",
+      "corpus-uk-building-regs/regs/reg-02.txt",
+      "corpus-uk-building-regs/schedules/sched-4.txt",
+      "corpus-uk-building-regs/schedules/sched-3a.txt"
+     ]
+    },
+    {
+     "q": "how much notice before starting building work",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-uk-building-regs/regs/reg-16.txt",
+     "expect_file": "regs/reg-16.txt",
+     "top5": [
+      "corpus-uk-building-regs/regs/reg-52.txt",
+      "corpus-uk-building-regs/regs/reg-50.txt",
+      "corpus-uk-building-regs/regs/reg-19b.txt",
+      "corpus-uk-building-regs/regs/reg-14.txt",
+      "corpus-uk-building-regs/regs/reg-16.txt"
+     ]
+    }
+   ],
+   "pass": 5,
+   "relevant": 5,
+   "verdict": "PASS"
+  },
+  "eurlex-core": {
+   "queries": [
+    {
+     "q": "gdpr principles for processing personal data lawfulness fairness transparency",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-eurlex-core/gdpr/art-5.txt",
+     "expect_file": "gdpr/art-5.txt",
+     "top5": [
+      "corpus-eurlex-core/gdpr/recital-39.txt",
+      "corpus-eurlex-core/gdpr/recital-60.txt",
+      "corpus-eurlex-core/ai-act/recital-94.txt",
+      "corpus-eurlex-core/gdpr/art-5.txt",
+      "corpus-eurlex-core/gdpr/recital-4.txt"
+     ]
+    },
+    {
+     "q": "is pseudonymised data personal data under the gdpr",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-eurlex-core/gdpr/recital-26.txt",
+     "expect_file": "gdpr/recital-26.txt",
+     "top5": [
+      "corpus-eurlex-core/gdpr/recital-29.txt",
+      "corpus-eurlex-core/gdpr/recital-28.txt",
+      "corpus-eurlex-core/gdpr/recital-85.txt",
+      "corpus-eurlex-core/gdpr/recital-26.txt",
+      "corpus-eurlex-core/gdpr/recital-75.txt"
+     ]
+    },
+    {
+     "q": "which ai practices are prohibited subliminal manipulation",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-eurlex-core/ai-act/art-5.txt",
+     "expect_file": "ai-act/art-5.txt",
+     "top5": [
+      "corpus-eurlex-core/ai-act/recital-29.txt",
+      "corpus-eurlex-core/ai-act/art-5.txt",
+      "corpus-eurlex-core/ai-act/recital-28.txt",
+      "corpus-eurlex-core/ai-act/art-50.txt",
+      "corpus-eurlex-core/ai-act/recital-31.txt"
+     ]
+    },
+    {
+     "q": "dma gatekeeper combining personal data across services for advertising",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-eurlex-core/dma/art-5.txt",
+     "expect_file": "dma/art-5.txt",
+     "top5": [
+      "corpus-eurlex-core/dma/recital-36.txt",
+      "corpus-eurlex-core/dma/art-5.txt",
+      "corpus-eurlex-core/dma/recital-58.txt",
+      "corpus-eurlex-core/dma/recital-47.txt",
+      "corpus-eurlex-core/dma/recital-45.txt"
+     ]
+    },
+    {
+     "q": "nis2 what security measures must entities take",
+     "hard": false,
+     "verdict": "miss",
+     "hit": null,
+     "expect_file": "nis2/art-21.txt",
+     "top5": [
+      "corpus-eurlex-core/nis2/recital-78.txt",
+      "corpus-eurlex-core/nis2/recital-88.txt",
+      "corpus-eurlex-core/nis2/recital-85.txt",
+      "corpus-eurlex-core/nis2/recital-103.txt",
+      "corpus-eurlex-core/nis2/recital-97.txt"
+     ]
+    }
+   ],
+   "pass": 4,
+   "relevant": 4,
+   "verdict": "PASS"
+  },
+  "ada-2010": {
+   "queries": [
+    {
+     "q": "minimum clearance around a water closet",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
+     "expect_file": "sections/604-water-closets-and-toilet-compartments.txt",
+     "top5": [
+      "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
+      "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
+      "corpus-ada-2010/sections/213-toilet-facilities-and-bathing-facilities.txt",
+      "corpus-ada-2010/sections/1003-recreational-boating-facilities.txt",
+      "corpus-ada-2010/sections/602-drinking-fountains.txt"
+     ]
+    },
+    {
+     "q": "water closet seat height range",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
+     "expect_file": "sections/604-water-closets-and-toilet-compartments.txt",
+     "top5": [
+      "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
+      "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
+      "corpus-ada-2010/sections/1009-swimming-pools-wading-pools-and-spas.txt",
+      "corpus-ada-2010/sections/213-toilet-facilities-and-bathing-facilities.txt",
+      "corpus-ada-2010/sections/1009-swimming-pools-wading-pools-and-spas.txt"
+     ]
+    },
+    {
+     "q": "side wall grab bar length at water closet",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
+     "expect_file": "sections/604-water-closets-and-toilet-compartments.txt",
+     "top5": [
+      "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
+      "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
+      "corpus-ada-2010/sections/1009-swimming-pools-wading-pools-and-spas.txt",
+      "corpus-ada-2010/sections/607-bathtubs.txt",
+      "corpus-ada-2010/sections/608-shower-compartments.txt"
+     ]
+    },
+    {
+     "q": "drinking fountain spout height for standing persons",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-ada-2010/sections/602-drinking-fountains.txt",
+     "expect_file": "sections/602-drinking-fountains.txt",
+     "top5": [
+      "corpus-ada-2010/sections/602-drinking-fountains.txt",
+      "corpus-ada-2010/sections/211-drinking-fountains.txt",
+      "corpus-ada-2010/sections/602-drinking-fountains.txt",
+      "corpus-ada-2010/sections/28-cfr-35151-new-construction-and-alterations.txt",
+      "corpus-ada-2010/sections/36403-alterations-path-of-travel.txt"
+     ]
+    },
+    {
+     "q": "turning space required inside a toilet room",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-ada-2010/sections/603-toilet-and-bathing-rooms.txt",
+     "expect_file": "sections/603-toilet-and-bathing-rooms.txt",
+     "top5": [
+      "corpus-ada-2010/sections/603-toilet-and-bathing-rooms.txt",
+      "corpus-ada-2010/sections/805-medical-care-and-long-term-care-facilities.txt",
+      "corpus-ada-2010/sections/806-transient-lodging-guest-rooms.txt",
+      "corpus-ada-2010/sections/807-holding-cells-and-housing-cells.txt",
+      "corpus-ada-2010/sections/407-elevators.txt"
+     ]
+    }
+   ],
+   "pass": 5,
+   "relevant": 5,
+   "verdict": "PASS"
   }
  }
 }

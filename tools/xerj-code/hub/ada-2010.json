@@ -1,0 +1,21 @@
+{
+ "corpus": "ada-2010",
+ "cloned_at": "2026-10-04T22:13:04Z",
+ "repos": [
+  {
+   "repo": "corpus-ada-2010",
+   "url": "https://github.com/xerj-org/corpus-ada-2010",
+   "licence": "NONE-FOUND",
+   "sha": "d2be9eb3d93849ee331f94a09a963415928a6af6",
+   "files": 149,
+   "bytes": 569722,
+   "review": {
+    "spdx": "NONE-FOUND",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-04",
+    "note": "ADA 2010 Standards for Accessible Design, sliced at the page's own h2/h3 anchors (ada.gov now publishes the Standards as one page): 145 section files, chapters 1-10 complete, figures keep dimension-level alt text. G7 5/5 pass 5/5 relevant. Evidence: backlog/g7-night2-2026-10-04-graded.json"
+   }
+  }
+ ]
+}

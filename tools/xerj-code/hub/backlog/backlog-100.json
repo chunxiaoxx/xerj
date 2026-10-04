@@ -1666,7 +1666,7 @@
    "cat": "STD",
    "lane": "A",
    "refresh": "pinned",
-   "status": "candidate",
+   "status": "live",
    "domain": "current UK Building Regulations 2010 text: what work must comply with, materials, loading, exemptions, notices",
    "sources": [
     {
@@ -1677,7 +1677,10 @@
    "g7": {
     "round": 0,
     "suite": "backlog/g7-uk-building-regs-2026-10.json",
-    "note": "pre-registered 2026-10-04 before indexing"
+    "graded_at": "2026-10-04",
+    "engine": "v1.0.0-rc.81 @9cefd8070 (PR #1144)",
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "note": "passed on first grade; blind suite pre-registered before indexing"
    }
   },
   {
@@ -1685,7 +1688,7 @@
    "cat": "STD",
    "lane": "A",
    "refresh": "pinned",
-   "status": "candidate",
+   "status": "live",
    "domain": "GDPR / AI Act / DSA / DMA / NIS2 article and recital text",
    "sources": [
     {
@@ -1696,7 +1699,10 @@
    "g7": {
     "round": 0,
     "suite": "backlog/g7-eurlex-core-2026-10.json",
-    "note": "pre-registered 2026-10-04 before indexing"
+    "graded_at": "2026-10-04",
+    "engine": "v1.0.0-rc.81 @9cefd8070 (PR #1144)",
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "note": "passed on first grade; blind suite pre-registered before indexing"
    }
   },
   {
@@ -1704,7 +1710,7 @@
    "cat": "STD",
    "lane": "A",
    "refresh": "pinned",
-   "status": "candidate",
+   "status": "live",
    "domain": "ADA 2010 Standards for Accessible Design: exact dimensional and technical requirements",
    "sources": [
     {
@@ -1715,7 +1721,10 @@
    "g7": {
     "round": 0,
     "suite": "backlog/g7-ada-2010-2026-10.json",
-    "note": "pre-registered 2026-10-04 before indexing"
+    "graded_at": "2026-10-04",
+    "engine": "v1.0.0-rc.81 @9cefd8070 (PR #1144)",
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "note": "passed on first grade; blind suite pre-registered before indexing"
    }
   }
  ]
