@@ -1,0 +1,21 @@
+{
+ "corpus": "navrules",
+ "cloned_at": "2026-10-04T21:55:00Z",
+ "repos": [
+  {
+   "repo": "corpus-navrules",
+   "url": "https://github.com/xerj-org/corpus-navrules",
+   "licence": "US-government public domain (17 USC 105)",
+   "sha": "4d535668c9067ae6b2d06686afe382e9eb3bf24e",
+   "files": 44,
+   "bytes": 277000,
+   "review": {
+    "spdx": "US-government public domain (USCG)",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-04",
+    "note": "COMDTINST M16672.2D Navigation Rules International-Inland, per-rule text (38 rules + 5 annexes) extracted with pypdf from the PDF USCG navcen still serves at its canonical URL; provenance per file in MANIFEST.tsv; currency caveat (2024 Handbook M16672.2F supersedes, PDF not retrievable at build time) stated in README. G7 4/5 pass 5/5 relevant. Evidence: backlog/g7-night2-2026-10-04-graded.json"
+   }
+  }
+ ]
+}

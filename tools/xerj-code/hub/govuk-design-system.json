@@ -1,0 +1,21 @@
+{
+ "corpus": "govuk-design-system",
+ "cloned_at": "2026-10-04T21:50:00Z",
+ "repos": [
+  {
+   "repo": "corpus-govuk-components",
+   "url": "https://github.com/xerj-org/corpus-govuk-components",
+   "licence": "MIT",
+   "sha": "9bd52fc935875e57b4fd2b3d85b5f087f817134c",
+   "files": 41,
+   "bytes": 402026,
+   "review": {
+    "spdx": "MIT",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-04",
+    "note": "RE-PINNED mirror of alphagov/govuk-frontend component docs: 39 component files (README + options YAML + accessibilityCriteria) where the criteria actually live, after round 0 (raw upstream tree) failed G7 2026-10-02 by ranking macros over criteria. Round 1 vs this mirror: 5/5 pass 5/5 relevant. Evidence: backlog/g7-night2-2026-10-04-graded.json"
+   }
+  }
+ ]
+}

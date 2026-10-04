@@ -815,14 +815,22 @@
    "cat": "GOOD",
    "lane": "A",
    "refresh": "pinned",
-   "status": "candidate",
+   "status": "live",
    "domain": "an agent building accessible UI queries this for the component's exact accessibility criteria and edge cases",
    "sources": [
     {
      "url": "https://github.com/xerj-org/corpus-govuk-components",
      "licence_hint": "RE-PINNED after G7 fail 2026-10-02 (mirror fix): upstream alphagov/govuk-frontend buries the accessibility criteria in a 100k-line SCSS/Nunjucks app tree; queries hit macros not criteria. Mirror = the 39 component READMEs (where the criteria actually live), MIT (hand-verified). Upstream SHA pinned in the mirror README."
     }
-   ]
+   ],
+   "g7": {
+    "round": 1,
+    "suite": "backlog/g7-govuk-round1-2026-10.json",
+    "graded_at": "2026-10-04",
+    "engine": "v1.0.0-rc.81 @9cefd8070 (PR #1144)",
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "note": "round 0 failed 2026-10-02 (raw upstream tree ranked macros over criteria); re-pinned to the 39 component-doc mirror, round 1 5/5 pass 5/5 relevant"
+   }
   },
   {
    "slug": "twelve-factor",
@@ -1636,7 +1644,7 @@
    "cat": "STD",
    "lane": "A",
    "refresh": "pinned",
-   "status": "candidate",
+   "status": "live",
    "domain": "a mariner, boater, or agent writing navigation software queries this for the actual text of Rule 7 risk of collision, Rule 9 narrow channels, lights, sound signals",
    "sources": [
     {
@@ -1647,7 +1655,10 @@
    "g7": {
     "round": 0,
     "suite": "backlog/g7-navrules-2026-10.json",
-    "note": "pre-registered 2026-10-04 before indexing"
+    "graded_at": "2026-10-04",
+    "engine": "v1.0.0-rc.81 @9cefd8070 (PR #1144)",
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "note": "4/5 pass 5/5 relevant on first grade; blind suite pre-registered before indexing"
    }
   }
  ]

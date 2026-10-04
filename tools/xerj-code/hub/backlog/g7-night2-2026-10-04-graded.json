@@ -156,6 +156,160 @@
    "pass": 5,
    "relevant": 5,
    "verdict": "PASS"
+  },
+  "navrules": {
+   "queries": [
+    {
+     "q": "how must a vessel determine if risk of collision exists",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-navrules/rules/rule-07-risk-of-collision.txt:1",
+     "expect_file": "rules/rule-07-risk-of-collision.txt",
+     "top5": [
+      "corpus-navrules/rules/rule-07-risk-of-collision.txt:1",
+      "corpus-navrules/src/navrules.pdf",
+      "corpus-navrules/src/navrules.pdf",
+      "corpus-navrules/rules/rule-07-risk-of-collision.txt:33",
+      "corpus-navrules/rules/rule-19-conduct-of-vessels-in-restricted-visibility.txt:33"
+     ]
+    },
+    {
+     "q": "lookout requirement sight and hearing",
+     "hard": false,
+     "verdict": "partial",
+     "hit": "corpus-navrules/rules/rule-05-look-out.txt:1",
+     "expect_file": "rules/rule-05-look-out.txt",
+     "top5": [
+      "corpus-navrules/rules/rule-05-look-out.txt:1",
+      "corpus-navrules/src/navrules.pdf",
+      "corpus-navrules/src/navrules.pdf",
+      "corpus-navrules/rules/rule-34-maneuvering-and-warning-signals.txt:1",
+      "corpus-navrules/rules/rule-34-maneuvering-and-warning-signals.txt:33"
+     ]
+    },
+    {
+     "q": "factors to consider in determining safe speed",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-navrules/rules/rule-06-safe-speed.txt:1",
+     "expect_file": "rules/rule-06-safe-speed.txt",
+     "top5": [
+      "corpus-navrules/rules/rule-06-safe-speed.txt:1",
+      "corpus-navrules/rules/rule-06-safe-speed.txt:32",
+      "corpus-navrules/src/navrules.pdf",
+      "corpus-navrules/src/navrules.pdf",
+      "corpus-navrules/rules/rule-19-conduct-of-vessels-in-restricted-visibility.txt:1"
+     ]
+    },
+    {
+     "q": "proceeding along a narrow channel which side to keep",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-navrules/rules/rule-09-narrow-channels.txt",
+     "expect_file": "rules/rule-09-narrow-channels.txt",
+     "top5": [
+      "corpus-navrules/src/navrules.pdf",
+      "corpus-navrules/src/navrules.pdf",
+      "corpus-navrules/rules/rule-09-narrow-channels.txt",
+      "corpus-navrules/rules/rule-09-narrow-channels.txt",
+      "corpus-navrules/rules/rule-15-crossing-situation.txt:1"
+     ]
+    },
+    {
+     "q": "two power-driven vessels crossing which vessel gives way",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-navrules/rules/rule-15-crossing-situation.txt:34",
+     "expect_file": "rules/rule-15-crossing-situation.txt",
+     "top5": [
+      "corpus-navrules/rules/rule-15-crossing-situation.txt:34",
+      "corpus-navrules/rules/rule-15-crossing-situation.txt:1",
+      "corpus-navrules/rules/rule-17-action-by-stand-on-vessel.txt",
+      "corpus-navrules/src/navrules.pdf",
+      "corpus-navrules/src/navrules.pdf"
+     ]
+    }
+   ],
+   "pass": 4,
+   "relevant": 5,
+   "verdict": "PASS"
+  },
+  "govuk-design-system": {
+   "queries": [
+    {
+     "q": "error summary what should happen to focus when the page loads",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-govuk-components/components/error-summary.txt:38",
+     "expect_file": "components/error-summary.txt",
+     "top5": [
+      "corpus-govuk-components/components/error-summary.txt:38",
+      "corpus-govuk-components/components/error-summary.txt:68",
+      "corpus-govuk-components/components/checkboxes.txt:128",
+      "corpus-govuk-components/components/radios.txt:128",
+      "corpus-govuk-components/components/error-message.txt:38"
+     ]
+    },
+    {
+     "q": "why must the accordion id be unique across the service",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-govuk-components/components/accordion.txt:1",
+     "expect_file": "components/accordion.txt",
+     "top5": [
+      "corpus-govuk-components/components/accordion.txt:1",
+      "corpus-govuk-components/components/textarea.txt:98",
+      "corpus-govuk-components/components/textarea.txt:130",
+      "corpus-govuk-components/components/accordion.txt:38",
+      "corpus-govuk-components/components/footer.txt:129"
+     ]
+    },
+    {
+     "q": "checkboxes text separating the last item in a list",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-govuk-components/components/checkboxes.txt:128",
+     "expect_file": "components/checkboxes.txt",
+     "top5": [
+      "corpus-govuk-components/components/checkboxes.txt:128",
+      "corpus-govuk-components/components/checkboxes.txt:98",
+      "corpus-govuk-components/components/task-list.txt:68",
+      "corpus-govuk-components/components/service-navigation.txt:98",
+      "corpus-govuk-components/components/inset-text.txt:38"
+     ]
+    },
+    {
+     "q": "character count what happens if both max words and max characters are set",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-govuk-components/components/character-count.txt:378",
+     "expect_file": "components/character-count.txt",
+     "top5": [
+      "corpus-govuk-components/components/character-count.txt:378",
+      "corpus-govuk-components/components/character-count.txt:1",
+      "corpus-govuk-components/components/footer.txt:68",
+      "corpus-govuk-components/components/checkboxes.txt:718",
+      "corpus-govuk-components/components/date-input.txt:38"
+     ]
+    },
+    {
+     "q": "exit this page how many times must the user press shift",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-govuk-components/components/exit-this-page.txt:38",
+     "expect_file": "components/exit-this-page.txt",
+     "top5": [
+      "corpus-govuk-components/components/exit-this-page.txt:38",
+      "corpus-govuk-components/components/exit-this-page.txt:70",
+      "corpus-govuk-components/components/error-message.txt:38",
+      "corpus-govuk-components/components/hint.txt:38",
+      "corpus-govuk-components/components/table.txt:38"
+     ]
+    }
+   ],
+   "pass": 5,
+   "relevant": 5,
+   "verdict": "PASS"
   }
  }
 }
