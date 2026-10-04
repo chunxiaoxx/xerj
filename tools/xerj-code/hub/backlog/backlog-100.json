@@ -1630,6 +1630,25 @@
     "evidence": "backlog/g7-night2-2026-10-04-graded.json",
     "note": "5/5 pass 5/5 relevant on first grade; blind suite pre-registered before indexing"
    }
+  },
+  {
+   "slug": "navrules",
+   "cat": "STD",
+   "lane": "A",
+   "refresh": "pinned",
+   "status": "candidate",
+   "domain": "a mariner, boater, or agent writing navigation software queries this for the actual text of Rule 7 risk of collision, Rule 9 narrow channels, lights, sound signals",
+   "sources": [
+    {
+     "url": "https://www.navcen.uscg.gov/pdf/navRules/NavRules.pdf",
+     "licence_hint": "US government work, public domain (17 USC 105). Mirror xerj-org/corpus-navrules @4d535668: per-rule files from the COMDTINST M16672.2D PDF still distributed at navcen's canonical URL; pypdf extraction (born-digital, no OCR); currency caveat (M16672.2F Handbook supersedes, not retrievable at build time) stated in the mirror README."
+    }
+   ],
+   "g7": {
+    "round": 0,
+    "suite": "backlog/g7-navrules-2026-10.json",
+    "note": "pre-registered 2026-10-04 before indexing"
+   }
   }
  ]
 }

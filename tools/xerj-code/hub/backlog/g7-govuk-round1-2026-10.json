@@ -1,0 +1,36 @@
+{
+ "suite": "g7-govuk-round1-2026-10",
+ "pre_registered": "2026-10-04 round 1 against the RE-PINNED mirror (round 0 failed 2026-10-02 against the raw upstream tree; committed before indexing/retrieval)",
+ "authoring": "BLIND from mirror file reads; every expect is a verbatim clause grep-verified against the mirror at authoring time; no retrieval was run",
+ "corpus_pin": {
+  "repo": "corpus-govuk-components",
+  "note": "mirror SHA read from corpus.json at add time"
+ },
+ "queries": [
+  {
+   "q": "error summary what should happen to focus when the page loads",
+   "expect": "Must be focused when the page loads",
+   "expect_file": "components/error-summary.txt"
+  },
+  {
+   "q": "why must the accordion id be unique across the service",
+   "expect": "Must be unique across the domain of your service if `rememberExpanded` is `true`",
+   "expect_file": "components/accordion.txt"
+  },
+  {
+   "q": "checkboxes text separating the last item in a list",
+   "expect": "Divider text to separate checkbox items",
+   "expect_file": "components/checkboxes.txt"
+  },
+  {
+   "q": "character count what happens if both max words and max characters are set",
+   "expect": "If `maxwords` is provided, the `maxlength` option will be ignored.",
+   "expect_file": "components/character-count.txt"
+  },
+  {
+   "q": "exit this page how many times must the user press shift",
+   "expect": "press 2 more times to exit.",
+   "expect_file": "components/exit-this-page.txt"
+  }
+ ]
+}

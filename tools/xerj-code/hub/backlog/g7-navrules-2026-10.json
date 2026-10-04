@@ -1,0 +1,36 @@
+{
+ "suite": "g7-navrules-2026-10",
+ "pre_registered": "2026-10-04 (before indexing/retrieval; committed to corpus-hub first)",
+ "authoring": "BLIND from mirror file reads; every expect is a verbatim clause grep-verified against the mirror at authoring time; no retrieval was run",
+ "corpus_pin": {
+  "repo": "corpus-navrules",
+  "sha": "4d535668c9067ae6b2d06686afe382e9eb3bf24e"
+ },
+ "queries": [
+  {
+   "q": "how must a vessel determine if risk of collision exists",
+   "expect": "Every vessel shall use all available means appropriate to the prevailing",
+   "expect_file": "rules/rule-07-risk-of-collision.txt"
+  },
+  {
+   "q": "lookout requirement sight and hearing",
+   "expect": "Every vessel shall at all times maintain a proper look-out by sight as well as",
+   "expect_file": "rules/rule-05-look-out.txt"
+  },
+  {
+   "q": "factors to consider in determining safe speed",
+   "expect": "the state of visibility;",
+   "expect_file": "rules/rule-06-safe-speed.txt"
+  },
+  {
+   "q": "proceeding along a narrow channel which side to keep",
+   "expect": "shall keep as near to the outer limit of the channel or fairway which",
+   "expect_file": "rules/rule-09-narrow-channels.txt"
+  },
+  {
+   "q": "two power-driven vessels crossing which vessel gives way",
+   "expect": "the vessel which has the other on her starboard side shall keep out",
+   "expect_file": "rules/rule-15-crossing-situation.txt"
+  }
+ ]
+}
