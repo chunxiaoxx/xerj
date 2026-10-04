@@ -105,14 +105,19 @@
    "cat": "SEC",
    "lane": "B",
    "refresh": "daily",
-   "status": "planned",
+   "status": "candidate",
    "domain": "an agent triaging findings queries this for whether a CVE is known-exploited in the wild, with ransomware-use and due-date fields",
    "sources": [
     {
      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
-     "licence_hint": "public domain (US gov); intake decides fetch mechanism (#1110 Part A owns this pack \u2014 coordinate, do not duplicate)"
+     "licence_hint": "CC0 1.0 \u2014 VERIFIED verbatim from the licence file the catalog page links (Akamai-gated for non-browser clients): \"The KEV database is distributed under the Creative Commons 0 1.0 License.\" Mirror xerj-org/corpus-cisa-kev @1c09ebebd1e9: 1,734 per-CVE files (catalogVersion 2026.10.04), raw feed kept in source/ for verification; canonical CC0 text + provenance in LICENSE."
     }
-   ]
+   ],
+   "g7": {
+    "round": 0,
+    "suite": "backlog/g7-cisa-kev-2026-10.json",
+    "note": "pre-registered 2026-10-04 before indexing"
+   }
   },
   {
    "slug": "ghsa-db",
@@ -328,12 +333,12 @@
    "cat": "SEC",
    "lane": "B",
    "refresh": "daily",
-   "status": "candidate",
+   "status": "deferred",
    "domain": "an agent prioritising remediation queries this for a CVE's EPSS score and percentile to rank patch order",
    "sources": [
     {
      "url": "https://www.first.org/epss/data-stats",
-     "licence_hint": "verify FIRST data terms at intake"
+     "licence_hint": "DEFERRED 2026-10-04 on TWO measured/verified blockers, not vibes: (1) LICENCE NOT VERIFIED \u2014 FIRST publishes scores \"free of charge\" with attribution requested, but no licence statement could be found on first.org/epss pages, the site footer asserts copyright, and the official archive repo (empiricalsec/epss_scores) has license:null; do not ship an unverified licence. (2) THROUGHPUT \u2014 382,621 files at the measured ~1 file/s corpus-index rate (issue #1147) = ~4.4 days serial ingest. Mirror xerj-org/corpus-first-epss @1c3552ed was fully built (382,621 per-CVE files, model v2026.06.15 from the CSV header) and stays published; un-defer when FIRST states a licence or the pack lane batches records."
     }
    ]
   },
@@ -963,14 +968,19 @@
    "cat": "DATA",
    "lane": "A",
    "refresh": "pinned",
-   "status": "deferred",
+   "status": "candidate",
    "domain": "an agent working on LSM stores queries this for a modern Go LSM with delete/RangeLock semantics",
    "sources": [
     {
      "url": "https://github.com/cockroachdb/pebble",
-     "licence_hint": "VERIFY FIRST \u2014 CockroachDB-adjacent licensing has moved; if not permissive, rocksdb+badger cover the domain and this stays deferred"
+     "licence_hint": "BSD-2-Clause VERIFIED at pin e0818dd07ec5 (LICENSE is the LevelDB-Go-derived BSD text; no BUSL anywhere in the tree \u2014 CockroachDB's BUSL does not apply to Pebble). 1,492 files. Un-deferred 2026-10-04: the deferral note said VERIFY FIRST; verified permissive."
     }
-   ]
+   ],
+   "g7": {
+    "round": 0,
+    "suite": "backlog/g7-pebble-2026-10.json",
+    "note": "pre-registered 2026-10-04 before indexing"
+   }
   },
   {
    "slug": "badger",

@@ -1,0 +1,36 @@
+{
+ "suite": "g7-cisa-kev-2026-10",
+ "pre_registered": "2026-10-04 (before indexing/retrieval; committed to corpus-hub first)",
+ "authoring": "BLIND from source file reads; every expect is a verbatim clause grep-verified at authoring time; no retrieval was run",
+ "corpus_pin": {
+  "repo": "corpus-cisa-kev",
+  "sha": "1c09ebebd1e9"
+ },
+ "queries": [
+  {
+   "q": "log4j log4shell what remediation does CISA require",
+   "expect": "the only acceptable remediation actions are: 1) Apply updates",
+   "expect_file": "kev/CVE-2021-44228.txt"
+  },
+  {
+   "q": "citrixbleed netscaler mitigation required action",
+   "expect": "kill all active and persistent sessions per vendor instructions",
+   "expect_file": "kev/CVE-2023-4966.txt"
+  },
+  {
+   "q": "zerologon what is the vulnerability",
+   "expect": "privilege escalation vulnerability when an attacker establishes a vulnerable Netlogon secure channel",
+   "expect_file": "kev/CVE-2020-1472.txt"
+  },
+  {
+   "q": "confluence OGNL RCE 2022 what should agencies do",
+   "expect": "Immediately block all internet traffic to and from affected products",
+   "expect_file": "kev/CVE-2022-26134.txt"
+  },
+  {
+   "q": "newest Citrix NetScaler memory buffer denial of service",
+   "expect": "improper restriction of operations within the bounds of a memory buffer",
+   "expect_file": "kev/CVE-2026-88779.txt"
+  }
+ ]
+}

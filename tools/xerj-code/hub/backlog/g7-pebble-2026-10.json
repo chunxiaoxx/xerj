@@ -1,0 +1,36 @@
+{
+ "suite": "g7-pebble-2026-10",
+ "pre_registered": "2026-10-04 (before indexing/retrieval; committed to corpus-hub first)",
+ "authoring": "BLIND from source file reads; every expect is a verbatim clause grep-verified at authoring time; no retrieval was run",
+ "corpus_pin": {
+  "repo": "pebble",
+  "sha": "e0818dd07ec580eb229e8291b4eefdb135cd5a55"
+ },
+ "queries": [
+  {
+   "q": "when does pebble enable another concurrent compaction",
+   "expect": "concurrent compaction up to CompactionConcurrencyRange.",
+   "expect_file": "options.go"
+  },
+  {
+   "q": "what does the memtable write stall metric measure",
+   "expect": "MemTableWriteStallDuration is the wait caused by a write stall due to too",
+   "expect_file": "batch.go"
+  },
+  {
+   "q": "iteration order L0 sublevels then lower levels",
+   "expect": "Next are the file levels: L0 sub-levels followed by lower levels.",
+   "expect_file": "scan_internal.go"
+  },
+  {
+   "q": "why prohibit splitting a user key across sstables",
+   "expect": "prohibit splitting of a user key between sstables",
+   "expect_file": "range_deletions.md"
+  },
+  {
+   "q": "why exclusive end key in range deletes",
+   "expect": "regardless of user needs, the exclusive end key helps with splitting a",
+   "expect_file": "range_deletions.md"
+  }
+ ]
+}
