@@ -1,0 +1,37 @@
+{
+ "corpus": "freebsd-handbook",
+ "registered": "2026-10-04",
+ "note": "pre-registered before retrieval; expects grep-verified against the mirror tree",
+ "queries": [
+  {
+   "q": "Which command lists the jails that are running on a FreeBSD host?",
+   "expect": "To list the jails that are running on the host system, the command man:jls[8] can be used:",
+   "expect_file": "freebsd-handbook/documentation/content/en/books/handbook/jails/_index.adoc",
+   "hard": false
+  },
+  {
+   "q": "How do I enable the PF firewall at boot on FreeBSD?",
+   "expect": "Start by adding `pf_enable=yes` to [.filename]#/etc/rc.conf#:",
+   "expect_file": "freebsd-handbook/documentation/content/en/books/handbook/firewalls/_index.adoc",
+   "hard": false
+  },
+  {
+   "q": "Which command shows the status of a user's print jobs on FreeBSD?",
+   "expect": "man:lpq[1] shows the status of a user's print jobs.",
+   "expect_file": "freebsd-handbook/documentation/content/en/books/handbook/printing/_index.adoc",
+   "hard": false
+  },
+  {
+   "q": "How can I reset a forgotten root password on FreeBSD?",
+   "expect": "It can also be used to reset the `root` password when it is unknown.",
+   "expect_file": "freebsd-handbook/documentation/content/en/books/handbook/boot/_index.adoc",
+   "hard": false
+  },
+  {
+   "q": "How can I use a FreeBSD machine with a wireless card as a wifi hotspot for other devices?",
+   "expect": "# ifconfig wlan0 create wlandev ath0 wlanmode hostap",
+   "expect_file": "freebsd-handbook/documentation/content/en/books/handbook/advanced-networking/_index.adoc",
+   "hard": true
+  }
+ ]
+}
