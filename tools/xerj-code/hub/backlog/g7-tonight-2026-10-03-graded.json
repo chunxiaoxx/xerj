@@ -1001,6 +1001,160 @@
    "pass": 2,
    "relevant": 2,
    "verdict": "FAIL"
+  },
+  "dailymed": {
+   "queries": [
+    {
+     "q": "The eye doctor gave me a Tyrvaya nasal spray \u2014 what condition is it actually supposed to treat?",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-dailymed/01/014c93dc-5737-479c-a9f0-aaadac1ac298__1-indications-and-usage.txt",
+     "expect_file": "01/014c93dc-5737-479c-a9f0-aaadac1ac298__1-indications-and-usage.txt",
+     "top5": [
+      "corpus-dailymed/01/014c93dc-5737-479c-a9f0-aaadac1ac298__patient-package-insert.txt",
+      "corpus-dailymed/01/014c93dc-5737-479c-a9f0-aaadac1ac298__patient-package-insert.txt",
+      "corpus-dailymed/01/014c93dc-5737-479c-a9f0-aaadac1ac298__instructions-for-use.txt",
+      "corpus-dailymed/01/014c93dc-5737-479c-a9f0-aaadac1ac298__1-indications-and-usage.txt",
+      "corpus-dailymed/01/014c93dc-5737-479c-a9f0-aaadac1ac298__instructions-for-use.txt"
+     ]
+    },
+    {
+     "q": "Is it okay to split or chew my metformin extended-release tablet if it's hard to swallow?",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-dailymed/0e/0ef9de1a-b786-4b6c-a250-3f5ac532b16a__2-1-adult-dosage-and-administration.txt",
+     "expect_file": "c3/c3dfa8a1-d10a-4a1a-8eba-5f4e2a5a2949__2-1-adult-dosage.txt",
+     "top5": [
+      "corpus-dailymed/10/10aa7cc4-4f9a-4403-a5c0-753d2aa5f0f9__medication-guide.txt",
+      "corpus-dailymed/6f/6faf465b-c3a3-4ae7-9e16-1ba758f6962a__2-2-administration-instructions.txt:1",
+      "corpus-dailymed/d6/d698c106-2322-401e-b738-cbd83c843ecf__2-4-administration.txt:59",
+      "corpus-dailymed/0e/0ef9de1a-b786-4b6c-a250-3f5ac532b16a__2-1-adult-dosage-and-administration.txt",
+      "corpus-dailymed/dd/dd62a2b8-300b-d92b-7b27-a30eaa68fdd3__2-2-important-administration-instructions.txt"
+     ]
+    },
+    {
+     "q": "Someone on Eliquis still has an epidural catheter in after surgery \u2014 how long after their last dose can it come out?",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-dailymed/41/41a133ef-e461-48ad-8221-b735bdd0ec25__5-3-spinal-epidural-anesthesia-or-puncture.txt",
+     "expect_file": "41/41a133ef-e461-48ad-8221-b735bdd0ec25__5-3-spinal-epidural-anesthesia-or-puncture.txt",
+     "top5": [
+      "corpus-dailymed/41/41a133ef-e461-48ad-8221-b735bdd0ec25__5-3-spinal-epidural-anesthesia-or-puncture.txt",
+      "corpus-dailymed/41/41a133ef-e461-48ad-8221-b735bdd0ec25__medication-guide.txt",
+      "corpus-dailymed/d6/d6de1719-6fbd-4386-9f81-d65980dc4bd8__5-3-spinal-epidural-anesthesia-or-puncture.txt",
+      "corpus-dailymed/41/41a133ef-e461-48ad-8221-b735bdd0ec25__warning-a-premature-discontinuation-of-eliquis-increases-the-risk-of-thrombotic.txt",
+      "corpus-dailymed/41/41a133ef-e461-48ad-8221-b735bdd0ec25__17-patient-counseling-information.txt"
+     ]
+    },
+    {
+     "q": "My husband took a tadalafil tablet and now has bad chest pain \u2014 how long do we have to wait before giving nitroglycerin?",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-dailymed/66/66e24ced-0008-40cb-b242-9d9add1f665c__17-1-nitrates.txt",
+     "expect_file": "23/2354c3e2-7b5f-4fdd-bbf2-7fa3c57686f8__5-1-cardiovascular.txt",
+     "top5": [
+      "corpus-dailymed/66/66e24ced-0008-40cb-b242-9d9add1f665c__17-1-nitrates.txt",
+      "corpus-dailymed/09/09ad27a1-3908-4533-b84c-7a7fd3514101__17-1-nitrates.txt",
+      "corpus-dailymed/16/164394b3-d7ba-4bbf-b64b-e2dd15735ea8__patient-information.txt:180",
+      "corpus-dailymed/69/698a46a6-29b5-4763-9442-ec9ad5eea86b__information-for-the-patient.txt",
+      "corpus-dailymed/76/761dc0f8-2f65-4615-ab49-a4bcffd40ce9__17-1-nitrates.txt"
+     ]
+    },
+    {
+     "q": "I've been on tamsulosin for my prostate for years and I'm having cataract surgery next month \u2014 what should I warn the eye surgeon about?",
+     "hard": true,
+     "verdict": "pass",
+     "hit": "corpus-dailymed/96/9631351f-66f4-45e5-a866-1e59311bd4d7__patient-information.txt",
+     "expect_file": "96/9631351f-66f4-45e5-a866-1e59311bd4d7__patient-information.txt",
+     "top5": [
+      "corpus-dailymed/96/9631351f-66f4-45e5-a866-1e59311bd4d7__patient-information.txt",
+      "corpus-dailymed/82/82d65964-de00-42c2-baaa-cc3de744b8eb__patient-information.txt",
+      "corpus-dailymed/96/9631351f-66f4-45e5-a866-1e59311bd4d7__17-patient-counseling-information.txt",
+      "corpus-dailymed/82/82d65964-de00-42c2-baaa-cc3de744b8eb__17-patient-counseling-information.txt",
+      "corpus-dailymed/82/82d65964-de00-42c2-baaa-cc3de744b8eb__5-5-intraoperative-floppy-iris-syndrome.txt"
+     ]
+    }
+   ],
+   "pass": 5,
+   "relevant": 5,
+   "verdict": "PASS"
+  },
+  "nist-sp800-sec": {
+   "queries": [
+    {
+     "q": "How short can a password be if we let the user pick it themselves?",
+     "hard": false,
+     "verdict": "miss",
+     "hit": null,
+     "expect_file": "sp800-63/sp800-63b/sec5_authenticators.md",
+     "top5": [
+      "corpus-nist-sp800/sp800-63/sp800-63-3/sec4_model.md",
+      "corpus-nist-sp800/sp800-63/faq/63B/restricted.md",
+      "corpus-nist-sp800/sp800-63/faq/63C/authorizationcomponent.md",
+      "corpus-nist-sp800/sp800-63/faq/63B/commonpasswords.md",
+      "corpus-nist-sp800/sp800-63/sp800-63c/sec7_presentation.md"
+     ]
+    },
+    {
+     "q": "Can we let people recover their account by answering security questions?",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-nist-sp800/sp800-63/faq/63B/kbareset.md",
+     "expect_file": "sp800-63/faq/63B/kbareset.md",
+     "top5": [
+      "corpus-nist-sp800/sp800-63/faq/general/separation.md",
+      "corpus-nist-sp800/sp800-63/faq/general/federal.md",
+      "corpus-nist-sp800/sp800-63/faq/63B/kbareset.md",
+      "corpus-nist-sp800/sp800-63/faq/general/levels.md",
+      "corpus-nist-sp800/sp800-63/faq/63B/passwordmanagers.md"
+     ]
+    },
+    {
+     "q": "Do we have to change the passwords vendors ship on new equipment before we start using it?",
+     "hard": true,
+     "verdict": "miss",
+     "hit": null,
+     "expect_file": "sp800-53r5/IA-5.txt",
+     "top5": [
+      "corpus-nist-sp800/sp800-63/faq/general/federal.md",
+      "corpus-nist-sp800/sp800-63/faq/63B/restricted.md",
+      "corpus-nist-sp800/sp800-63/faq/general/levels.md",
+      "corpus-nist-sp800/sp800-63/faq/63C/authorizationcomponent.md",
+      "corpus-nist-sp800/sp800-63/faq/63B/memhard.md"
+     ]
+    },
+    {
+     "q": "What do we have to put on a flash drive that holds CUI so people know how to treat it?",
+     "hard": false,
+     "verdict": "miss",
+     "hit": null,
+     "expect_file": "sp800-171r3/3.8.4.txt",
+     "top5": [
+      "corpus-nist-sp800/sp800-63/faq/63B/restricted.md",
+      "corpus-nist-sp800/sp800-63/faq/63C/authorizationcomponent.md",
+      "corpus-nist-sp800/sp800-63/faq/63B/memhard.md",
+      "corpus-nist-sp800/sp800-53r5/PT-7.txt",
+      "corpus-nist-sp800/sp800-63/sp800-63-3/sec4_model.md"
+     ]
+    },
+    {
+     "q": "How often should we go back and check whether our software security requirements are still current?",
+     "hard": false,
+     "verdict": "miss",
+     "hit": null,
+     "expect_file": "sp800-218/PO.1.txt",
+     "top5": [
+      "corpus-nist-sp800/sp800-63/faq/63B/commonpasswords.md",
+      "corpus-nist-sp800/sp800-63/faq/63B/restricted.md",
+      "corpus-nist-sp800/sp800-63/faq/general/federal.md",
+      "corpus-nist-sp800/sp800-63/sp800-63-3/definitions.md",
+      "corpus-nist-sp800/csf-2-0/GV.OV.txt:1"
+     ]
+    }
+   ],
+   "pass": 1,
+   "relevant": 1,
+   "verdict": "FAIL"
   }
  }
 }

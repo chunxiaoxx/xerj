@@ -264,13 +264,21 @@
    "sources": [
     {
      "url": "https://github.com/usnistgov/800-63-3",
-     "licence_hint": "INTAKE RE-SCOPED 2026-10-04 from source survey (planned csrc.nist.gov/pubs/sp/800 is 404; CSRC has no bulk API and per-pub downloads are PDF-only — the famous prose pubs are unfetchable as text). Build instead from GitHub text sources: usnistgov/800-63-3 (SP 800-63-3 + vols A/B/C + FAQ as per-section Jekyll markdown — licence 'NIST Technical Series Publications': USG work, worldwide perpetual royalty-free reprint right granted, attribute 'Republished courtesy of NIST', third-party portions may carry copyright) + usnistgov/oscal-content (SP 800-53r5 + 4 baselines, 800-171r3, 800-172r3, 800-218, CSF 2.0 as OSCAL JSON — LICENSE.md is worldwide public domain + CC0-1.0, cleanest). Chunk OSCAL at control level. 10-13 documents; pin commit SHAs. TRAP: usnistgov/zero-trust-architecture contains NO 800-207 text (verified all branches — stubs + a different NCCoE practice guide)."
+     "licence_hint": "INTAKE RE-SCOPED 2026-10-04 from source survey (planned csrc.nist.gov/pubs/sp/800 is 404; CSRC has no bulk API and per-pub downloads are PDF-only — the famous prose pubs are unfetchable as text). Build instead from GitHub text sources: usnistgov/800-63-3 (SP 800-63-3 + vols A/B/C + FAQ as per-section Jekyll markdown — licence 'NIST Technical Series Publications': USG work, worldwide perpetual royalty-free reprint right granted, attribute 'Republished courtesy of NIST', third-party portions may carry copyright) + usnistgov/oscal-content (SP 800-53r5 + 4 baselines, 800-171r3, 800-172r3, 800-218, CSF 2.0 as OSCAL JSON — LICENSE.md is worldwide public domain + CC0-1.0, cleanest). Chunk OSCAL at control level. 10-13 documents; pin commit SHAs. TRAP: usnistgov/zero-trust-architecture contains NO 800-207 text (verified all branches — stubs + a different NCCoE practice guide). G7 graded 2026-10-04 vs PR #1140 engine: 1/5 -> FAIL. Root cause is NOT corpus scope: engine #1142 (autoindex sniffs markdown-with-bare-YAML-header as YAML and markdown-with-HTML-prefix as XML, then silently drops the file — 440/722 mirror files never indexed, incl. sec5_authenticators.md, the whole sp800-218 tree, and the 171r3/172r3 control files). ROUND-2 FIX PRE-REGISTERED before any re-retrieval: engine fix #1142 (markdown-signature guard in classify_text before the YAML-ratio/XML-prefix branches); corpus UNCHANGED (mutating 440 files to dodge a classifier bug would falsify the verbatim-mirror policy). PREDICTION: 4/5 (Q1/Q4/Q5 expect files are in the junked classes; Q2 already passes; Q3 may stay a miss — FAQ-title ranking competition, a different defect class)."
     },
     {
      "url": "https://github.com/usnistgov/oscal-content",
      "licence_hint": "see 800-63-3 entry"
     }
-   ]
+   ],
+   "g7": {
+    "round": 1,
+    "graded_at": "2026-10-04",
+    "verdict": "FAIL",
+    "fix": "engine #1142 (pre-registered, prediction 4/5)",
+    "corpus_unchanged": true,
+    "evidence": "backlog/g7-tonight-2026-10-03-graded.json"
+   }
   },
   {
    "slug": "nsa-cyber-advisories",
@@ -1532,6 +1540,26 @@
      "licence_hint": "OGL v3.0 (acknowledgement required); pinned mirror github.com/xerj-org/corpus-uk-legislation"
     }
    ]
+  },
+  {
+   "slug": "dailymed",
+   "cat": "DATA",
+   "lane": "A",
+   "refresh": "pinned",
+   "status": "live",
+   "domain": "an agent answering medication questions queries this for what the FDA-approved label actually says — indications, do-not-crush/dose-form rules, epidural-timing windows before/after anticoagulants, nitrate co-administration intervals, intraoperative floppy iris warnings (demand: patient-safety medication questions; 28k records over the current SPL set)",
+   "sources": [
+    {
+     "url": "https://github.com/xerj-org/corpus-dailymed",
+     "licence_hint": "G7 graded 2026-10-04 vs PR #1140 engine (0ae1439bb+35903648c): 5/5 pass 5/5 relevant -> PASS; FLIPPED live same day. Licence: no terms ship with the data; NLM pages quoted verbatim in the mirror README — US-government works not subject to copyright, reproduction free, attribution 'Courtesy of the National Library of Medicine' requested (corpus.json carries the same). Manifest hub/dailymed.json."
+    }
+   ],
+   "g7": {
+    "round": 1,
+    "graded_at": "2026-10-04",
+    "engine": "PR #1140 (0ae1439bb+35903648c)",
+    "evidence": "backlog/g7-tonight-2026-10-03-graded.json"
+   }
   }
  ]
 }

@@ -1,0 +1,21 @@
+{
+ "corpus": "dailymed",
+ "cloned_at": "2026-10-04T14:38:23Z",
+ "repos": [
+  {
+   "repo": "corpus-dailymed",
+   "url": "https://github.com/xerj-org/corpus-dailymed",
+   "licence": "US-government public domain (NLM DailyMed), attribution requested",
+   "sha": "21a87b3cbed42fc963f167ffcee6dee91987233f",
+   "files": 18732,
+   "bytes": 28054872,
+   "review": {
+    "spdx": "US-government public domain (NLM), attribution requested",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-04",
+    "note": "Mirror of NLM DailyMed current SPL full-text (18,732 files split per label section, one .txt per section; 28,018 records, dupcheck CLEAN 28018/20036/0). No licence file ships with the data; mirror README quotes the governing NLM pages verbatim: US-government works are not subject to copyright, reproduction free, attribution 'Courtesy of the National Library of Medicine' requested. G7 graded 2026-10-04 vs engine PR #1140 (0ae1439bb+35903648c): 5/5 pass 5/5 relevant PASS (drug-label questions: indications, do-not-crush, epidural timing, nitrates interval, intraoperative floppy iris). Evidence: backlog/g7-tonight-2026-10-03-graded.json."
+   }
+  }
+ ]
+}
