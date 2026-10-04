@@ -1,0 +1,36 @@
+{
+ "suite": "g7-ssa-poms-2026-10",
+ "pre_registered": "2026-10-04 (before indexing/retrieval; committed to corpus-hub first)",
+ "authoring": "BLIND from mirror file reads; every expect is a verbatim clause grep-verified against the mirror at authoring time; no retrieval was run",
+ "corpus_pin": {
+  "repo": "corpus-ssa-poms",
+  "sha": "3af36df5dbbdf2d1ce4a2aa7fab0779ca2f56b9b"
+ },
+ "queries": [
+  {
+   "q": "how long is the disability insurance waiting period",
+   "expect": "For initial entitlement to DIB the number holder (NH) must serve a waiting period",
+   "expect_file": "di/di-10105-005.txt"
+  },
+  {
+   "q": "the two disability programs SSA administers",
+   "expect": "Social Security Disability Insurance (SSDI) program and the Supplemental Security",
+   "expect_file": "di/di-00115-001.txt"
+  },
+  {
+   "q": "SSI resource limit example with a life insurance contract",
+   "expect": "as a resource, Dottle is still under the $2,000 resource limit.",
+   "expect_file": "si/si-01140-300.txt"
+  },
+  {
+   "q": "how are certain payments issued since February 2026",
+   "expect": "we issue these payments via a United States Debit Card (USDC).",
+   "expect_file": "si/si-02004-001.txt"
+  },
+  {
+   "q": "representative payee payment information",
+   "expect": "For information on representative payee payment, see GN 00502.001B.",
+   "expect_file": "gn/gn-00502-001.txt"
+  }
+ ]
+}

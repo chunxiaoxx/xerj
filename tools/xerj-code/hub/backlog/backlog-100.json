@@ -1726,6 +1726,63 @@
     "evidence": "backlog/g7-night2-2026-10-04-graded.json",
     "note": "passed on first grade; blind suite pre-registered before indexing"
    }
+  },
+  {
+   "slug": "mutcd",
+   "cat": "OPS",
+   "lane": "A",
+   "refresh": "pinned",
+   "status": "candidate",
+   "domain": "the current MUTCD: sign and signal warrants, markings, work-zone typical applications",
+   "sources": [
+    {
+     "url": "https://mutcd.fhwa.dot.gov/",
+     "licence_hint": "US public domain (17 USC 105) \u2014 the Manual's own Section 1D.06 mandates it. Mirror xerj-org/corpus-mutcd @b70b9188: 11th Edition with Revision 1 (Dec 2025, 1,162 pp; FHWA no longer publishes an HTML lane) split into 955 per-section files via pypdf; monotonic-order heading check caught a corrupted 2G.19 boundary; documented source ligature defects. Source PDF sha256 in README."
+    }
+   ],
+   "g7": {
+    "round": 0,
+    "suite": "backlog/g7-mutcd-2026-10.json",
+    "note": "pre-registered 2026-10-04 before indexing"
+   }
+  },
+  {
+   "slug": "fda-food-code",
+   "cat": "DATA",
+   "lane": "A",
+   "refresh": "pinned",
+   "status": "candidate",
+   "domain": "FDA Food Code 2022 provisions: cooking/holding temperatures, sanitizer tables, reporting rules",
+   "sources": [
+    {
+     "url": "https://www.fda.gov/food/fda-food-code/food-code-2022",
+     "licence_hint": "US public domain (17 USC 105). Mirror xerj-org/corpus-fda-food-code @30a28444: 396 per-provision files + 7 annexes from the 2022 PDF (668 pp) via pypdf; 2- and 3-digit provision numbers handled (38 provisions recovered); degree-sign extraction artifact kept verbatim. 2022 Supplement and Food Code 2026 explicitly excluded, flagged as not-current in README."
+    }
+   ],
+   "g7": {
+    "round": 0,
+    "suite": "backlog/g7-fda-food-code-2026-10.json",
+    "note": "pre-registered 2026-10-04 before indexing"
+   }
+  },
+  {
+   "slug": "ssa-poms",
+   "cat": "DATA",
+   "lane": "A",
+   "refresh": "pinned",
+   "status": "candidate",
+   "domain": "SSA program rules: disability waiting periods, SSI resource limits, payment mechanics",
+   "sources": [
+    {
+     "url": "https://secure.ssa.gov/apps10/poms.nsf/",
+     "licence_hint": "US public domain (17 USC 105). Mirror xerj-org/corpus-ssa-poms @3af36df5: 8,989 POMS section files scoped to GN+DI+SI (54% of POMS; full corpus is 16,545 sections \u2014 scope decision + reason in README); robots.txt allows /poms.nsf/; 8,989/8,989 fetched with 0 failures; every file header carries its live source URL."
+    }
+   ],
+   "g7": {
+    "round": 0,
+    "suite": "backlog/g7-ssa-poms-2026-10.json",
+    "note": "pre-registered 2026-10-04 before indexing"
+   }
   }
  ]
 }

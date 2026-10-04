@@ -1,0 +1,36 @@
+{
+ "suite": "g7-fda-food-code-2026-10",
+ "pre_registered": "2026-10-04 (before indexing/retrieval; committed to corpus-hub first)",
+ "authoring": "BLIND from mirror file reads; every expect is a verbatim clause grep-verified against the mirror at authoring time; no retrieval was run",
+ "corpus_pin": {
+  "repo": "corpus-fda-food-code",
+  "sha": "30a284445738f3beceeb6127d16e7a89b6e0b306"
+ },
+ "queries": [
+  {
+   "q": "cooking temperature for raw eggs prepared to order",
+   "expect": "63oC (145oF) or above for 15 seconds",
+   "expect_file": "provisions/3-401-11.txt"
+  },
+  {
+   "q": "holding temperature for time/temperature control for safety food",
+   "expect": "At 57\u00b0C (135\u00b0F) or above, except that roasts",
+   "expect_file": "provisions/3-501-16.txt"
+  },
+  {
+   "q": "hot water sanitizing rinse temperature stationary rack single temperature machine",
+   "expect": "For a stationary rack, single temperature machine, 74oC (165oF)",
+   "expect_file": "provisions/4-501-110.txt"
+  },
+  {
+   "q": "what must food employees report to the person in charge",
+   "expect": "CONDITIONAL EMPLOYEES to report to the PERSON IN CHARGE",
+   "expect_file": "provisions/2-201-11.txt"
+  },
+  {
+   "q": "chlorine sanitizer concentration and temperature",
+   "expect": "25 \u2013 49 49 (120) 49 (120)",
+   "expect_file": "provisions/4-501-114.txt"
+  }
+ ]
+}

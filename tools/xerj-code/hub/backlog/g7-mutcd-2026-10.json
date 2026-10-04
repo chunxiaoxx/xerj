@@ -1,0 +1,36 @@
+{
+ "suite": "g7-mutcd-2026-10",
+ "pre_registered": "2026-10-04 (before indexing/retrieval; committed to corpus-hub first)",
+ "authoring": "BLIND from mirror file reads; every expect is a verbatim clause grep-verified against the mirror at authoring time; no retrieval was run",
+ "corpus_pin": {
+  "repo": "corpus-mutcd",
+  "sha": "b70b91886a801dcd91ea87ec0008b8ea85f0f6ac"
+ },
+ "queries": [
+  {
+   "q": "when is a STOP sign required at an intersection",
+   "expect": "When it is determined that a full stop is always required on an approach to an intersection",
+   "expect_file": "sections/sec-2b-04.txt"
+  },
+  {
+   "q": "how to choose which road gets the STOP or YIELD sign",
+   "expect": "A roadway with the lower functional classification,",
+   "expect_file": "sections/sec-2b-07.txt"
+  },
+  {
+   "q": "peak hour signal warrant what is it for",
+   "expect": "The Peak Hour signal warrant is intended for use at a location",
+   "expect_file": "sections/sec-4c-04.txt"
+  },
+  {
+   "q": "pavement markings for a two-way left-turn lane",
+   "expect": "the two-way left-turn lane shall consist of a normal width broken yellow line",
+   "expect_file": "sections/sec-3b-05.txt"
+  },
+  {
+   "q": "dilemma zone high speed approaches yellow change interval",
+   "expect": "onset of the yellow change interval is displayed when high-speed approaching vehicles are in",
+   "expect_file": "sections/sec-4d-01.txt"
+  }
+ ]
+}
