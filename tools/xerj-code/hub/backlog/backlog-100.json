@@ -1789,7 +1789,7 @@
    "status": "candidate"
   },
   {
-   "cat": "LAW",
+   "cat": "DATA",
    "domain": "US Supreme Court slip opinions 2019-2025 terms (449 cases, 1,158 files): holdings and separate opinions verbatim",
    "g7": {
     "note": "pre-registered 2026-10-04 before retrieval",
@@ -1808,7 +1808,7 @@
    "status": "candidate"
   },
   {
-   "cat": "LAW",
+   "cat": "DATA",
    "domain": "German federal statutes per norm: GG, BGB, StGB, StVO, VwGO (3,546 norm files)",
    "g7": {
     "note": "pre-registered 2026-10-04 before retrieval",
