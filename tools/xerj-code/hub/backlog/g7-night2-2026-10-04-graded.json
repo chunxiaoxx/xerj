@@ -704,6 +704,95 @@
    "relevant": 5,
    "verdict": "PASS"
   },
+  "ssa-poms": {
+   "analysis": "Round-1 FAIL 0/5. Expect clauses all exist in the pinned files (grep-verified) but none of the five expected files reached top-5. Q1's answer section (DI 10105.070, titled 'Waiting Period for DIB') ranked #1-2 while the suite pinned DI 10105.005 (same clause, different section); Q2's answer is verbatim in DI 00115.001 yet GN 01707.010 outranked it. Root cause hypothesis (pre-registered fix): POMS pages are 10-100KB and autoindex splits them ~3.8 records/file - 34,356 records from 8,989 files - so short chunks win BM25 length normalization and near-duplicate chunks crowd top-5 (DI 10105.070 appears twice in Q1's top-5). FIX: re-pin the mirror split at POMS sub-section boundaries (per A/B/C heading) so each record is small and clause-bearing; round-2 suite keeps identical queries and clauses, expect_file re-pinned to the new split. Not a suite edit: queries and expect clauses are unchanged.",
+   "median": 0.0,
+   "pass": 0,
+   "queries": [
+    {
+     "expect": "corpus-ssa-poms/di/di-10105-005.txt",
+     "expect_file": "corpus-ssa-poms/di/di-10105-005.txt",
+     "grade": "irrelevant",
+     "hard": false,
+     "hit": null,
+     "q": "how long is the disability insurance waiting period",
+     "top5": [
+      "corpus-ssa-poms/di/di-10105-070.txt",
+      "corpus-ssa-poms/di/di-10105-070.txt",
+      "corpus-ssa-poms/di/di-11015-001.txt:32",
+      "corpus-ssa-poms/di/di-10110-001.txt:62",
+      "corpus-ssa-poms/di/di-10105-075.txt"
+     ],
+     "verdict": "miss"
+    },
+    {
+     "expect": "corpus-ssa-poms/di/di-00115-001.txt",
+     "expect_file": "corpus-ssa-poms/di/di-00115-001.txt",
+     "grade": "irrelevant",
+     "hard": false,
+     "hit": null,
+     "q": "the two disability programs SSA administers",
+     "top5": [
+      "corpus-ssa-poms/gn/gn-01707-010.txt",
+      "corpus-ssa-poms/si/si-01401-001.txt:32",
+      "corpus-ssa-poms/gn/gn-01751-020.txt:1",
+      "corpus-ssa-poms/gn/gn-01751-010.txt:1",
+      "corpus-ssa-poms/gn/gn-01752-220.txt:1"
+     ],
+     "verdict": "miss"
+    },
+    {
+     "expect": "corpus-ssa-poms/si/si-01140-300.txt",
+     "expect_file": "corpus-ssa-poms/si/si-01140-300.txt",
+     "grade": "irrelevant",
+     "hard": false,
+     "hit": null,
+     "q": "SSI resource limit example with a life insurance contract",
+     "top5": [
+      "corpus-ssa-poms/si/si-01130-425.txt",
+      "corpus-ssa-poms/si/si-01130-425.txt",
+      "corpus-ssa-poms/si/si-01130-300.txt:32",
+      "corpus-ssa-poms/si/si-01130-410.txt:722",
+      "corpus-ssa-poms/si/si-01130-300.txt:1"
+     ],
+     "verdict": "miss"
+    },
+    {
+     "expect": "corpus-ssa-poms/si/si-02004-001.txt",
+     "expect_file": "corpus-ssa-poms/si/si-02004-001.txt",
+     "grade": "irrelevant",
+     "hard": false,
+     "hit": null,
+     "q": "how are certain payments issued since February 2026",
+     "top5": [
+      "corpus-ssa-poms/si/si-00501-154.txt",
+      "corpus-ssa-poms/gn/gn-02408-600.txt",
+      "corpus-ssa-poms/gn/gn-02408-650.txt",
+      "corpus-ssa-poms/gn/gn-02408-620.txt:182",
+      "corpus-ssa-poms/si/si-00830-314.txt:32"
+     ],
+     "verdict": "miss"
+    },
+    {
+     "expect": "corpus-ssa-poms/gn/gn-00502-001.txt",
+     "expect_file": "corpus-ssa-poms/gn/gn-00502-001.txt",
+     "grade": "irrelevant",
+     "hard": false,
+     "hit": null,
+     "q": "representative payee payment information",
+     "top5": [
+      "corpus-ssa-poms/gn/gn-02402-055.txt",
+      "corpus-ssa-poms/gn/gn-02402-055.txt",
+      "corpus-ssa-poms/gn/gn-02613-865.txt",
+      "corpus-ssa-poms/gn/gn-03940-037.txt",
+      "corpus-ssa-poms/gn/gn-00504-160.txt"
+     ],
+     "verdict": "miss"
+    }
+   ],
+   "relevant": 0,
+   "verdict": "FAIL"
+  },
   "uk-building-regs": {
    "median": 5.0,
    "pass": 5,
