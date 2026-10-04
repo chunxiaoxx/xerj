@@ -324,16 +324,21 @@
   {
    "cat": "STD",
    "domain": "an agent implementing or debugging a protocol queries this for what the RFC actually says at clause level (TLP permits unmodified redistribution)",
+   "g7": {
+    "note": "pre-registered 2026-10-04 before retrieval; was deferred (no maintained mirror) - agent built a byte-verbatim one (9,836 rfc/*.txt, 10/10 sha256 re-verify) so it now backs the 100",
+    "round": 0,
+    "suite": "backlog/g7-ietf-rfc-2026-10.json"
+   },
    "lane": "A",
    "refresh": "pinned",
    "slug": "ietf-rfc",
    "sources": [
     {
-     "licence_hint": "IETF TLP (unmodified redistribution permitted); DEFERRED: no maintained full-text git mirror exists (mcpherrinm/rfc-mirror is ~2014-stale) \u2014 needs an http tar.gz dir-fetch recipe, not a manifest",
+     "licence_hint": "IETF Trust Legal Provisions 5.0 3.c (evidence https://trustee.ietf.org/documents/trust-legal-provisions/tlp-5/, verified 2026-10-04): copying IETF Documents in full and without modification is permitted; modification withheld (3.d.i). Mirror xerj-org/corpus-ietf-rfc @526d5ede: 9,836 rfc/*.txt byte-verbatim from rfc-editor.org + MANIFEST.tsv sha256s; 7 PDF-only RFCs legitimately absent (README). Backup slot for the 100.",
      "url": "https://www.rfc-editor.org/rfc/rfc-txt.tar.gz"
     }
    ],
-   "status": "deferred"
+   "status": "candidate"
   },
   {
    "cat": "STD",
