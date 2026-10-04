@@ -133,14 +133,18 @@
    "cat": "SEC",
    "lane": "B",
    "refresh": "daily",
-   "status": "candidate",
+   "status": "deferred",
    "domain": "an agent pinning dependencies queries this for affected-version truth across Go/PyPI/npm, resolved to one record per vulnerability",
    "sources": [
     {
      "url": "https://osv.dev",
-     "licence_hint": "CC-BY-4.0 for OSV data (verify per ecosystem export)"
+     "licence_hint": "DEFERRED 2026-10-04 on a measured throughput ceiling, NOT on licence or scope: 251,915 files at the measured corpus-index rate for many-small-files corpora (~1 file/s; cdc-clinical 62 files/62s, ghsa-db 36k files projecting 8-10h) = ~3 days of serial ingest for one corpus. The mirror's scope is sound (xerj-org/corpus-osv-ecosystems, 7 ecosystems, MAL npm 222k by design) and the per-file top-k cap (#1137) is the right protection for the MAL wall \u2014 but the corpus cannot be BUILT to a G7 grade until either (a) engine ingest throughput for many-small-files corpora improves (tracker to file) or (b) it moves to the Lane B pack builder (pattern-rust-vulns) which batches records instead of walking files. Neither is scope surgery; revisit after the engine work. CC-BY-4.0 for OSV data verified at mirror authoring."
     }
-   ]
+   ],
+   "g7": {
+    "round": 0,
+    "note": "deferred before any grading; suite exists in backlog/g7-tonight (osv-ecosystems, 5 queries, pre-registered 2026-10-03)"
+   }
   },
   {
    "slug": "pysec",
