@@ -1,252 +1,253 @@
 {
-  "suite": "SEC lane wave — security reference corpora",
-  "pre_registered": "2026-10-03 (before retrieval; committed to corpus-hub prior to the retrieval run)",
-  "authoring": "BLIND from clone reads; every expect is a verbatim clause (<=25 words) grep-verified against the clone at authoring time; no retrieval was run",
-  "corpora": {
-    "ghsa-db": {
-      "shape_risk": "Content shape is ideal — one JSON per GHSA id under advisories/ with the largest at 143 KB — but the corpus is 380k tiny files plus a 216 MB .git pack, and unreviewed/ mirrors github-reviewed/ records, so duplicate hits on the same CVE are plausible.",
-      "queries": [
-        {
-          "q": "In the npm advisory GHSA-jf85-cpcp-j695 for lodash, what does exploiting the flaw do to properties on every object?",
-          "expect": "causing the addition or modification of an existing property that will exist on all objects",
-          "expect_file": "advisories/github-reviewed/2019/07/GHSA-jf85-cpcp-j695/GHSA-jf85-cpcp-j695.json",
-          "hard": false
-        },
-        {
-          "q": "Under what conditions does rust-openssl before 0.10.79 overrun an allocation, and by how much?",
-          "expect": "writes up to 7 bytes past the end of the caller's buffer or Vec",
-          "expect_file": "advisories/github-reviewed/2026/05/GHSA-xv59-967r-8726/GHSA-xv59-967r-8726.json",
-          "hard": true
-        },
-        {
-          "q": "When does the python requests library expose proxy credentials to a target server, per GHSA-j8r2-6x86-q33q?",
-          "expect": "vulnerable to potentially leaking `Proxy-Authorization` headers to destination servers, specifically during redirects to an HTTPS origin",
-          "expect_file": "advisories/github-reviewed/2023/05/GHSA-j8r2-6x86-q33q/GHSA-j8r2-6x86-q33q.json",
-          "hard": false
-        },
-        {
-          "q": "What is the worst-case outcome of loading a hostile .pth checkpoint into PyTorch, per GHSA-63cw-57p8-fm3p?",
-          "expect": "can corrupt memory and potentially lead to arbitrary code execution",
-          "expect_file": "advisories/github-reviewed/2026/01/GHSA-63cw-57p8-fm3p/GHSA-63cw-57p8-fm3p.json",
-          "hard": false
-        },
-        {
-          "q": "What can an external user of esm.sh's CDN do to intranet-only sites via GHSA-3c9r-837r-qqm4?",
-          "expect": "allowing an attacker to retrieve information from internal websites through the vulnerability",
-          "expect_file": "advisories/github-reviewed/2026/02/GHSA-3c9r-837r-qqm4/GHSA-3c9r-837r-qqm4.json",
-          "hard": false
-        }
-      ]
+ "suite": "SEC lane wave \u2014 security reference corpora",
+ "pre_registered": "2026-10-03 (before retrieval; committed to corpus-hub prior to the retrieval run)",
+ "authoring": "BLIND from clone reads; every expect is a verbatim clause (<=25 words) grep-verified against the clone at authoring time; no retrieval was run",
+ "corpora": {
+  "ghsa-db": {
+   "shape_risk": "Content shape is ideal \u2014 one JSON per GHSA id under advisories/ with the largest at 143 KB \u2014 but the corpus is 380k tiny files plus a 216 MB .git pack, and unreviewed/ mirrors github-reviewed/ records, so duplicate hits on the same CVE are plausible.",
+   "queries": [
+    {
+     "q": "In the npm advisory GHSA-jf85-cpcp-j695 for lodash, what does exploiting the flaw do to properties on every object?",
+     "expect": "causing the addition or modification of an existing property that will exist on all objects",
+     "expect_file": "github-reviewed/2019/07/GHSA-jf85-cpcp-j695/GHSA-jf85-cpcp-j695.json",
+     "hard": false
     },
-    "pysec": {
-      "shape_risk": "Max file 36 KB, one YAML per advisory under vulns/<package>/ — clean per-file shape, but details blocks are YAML-folded across lines (verbatim clauses need whitespace-normalized matching) and 2026-era advisories embed long markdown writeups that may swamp chunks.",
-      "queries": [
-        {
-          "q": "What root cause did the django advisory for CVE-2024-56374 give for the denial of service?",
-          "expect": "Lack of upper-bound limit enforcement in strings passed when performing IPv6 validation",
-          "expect_file": "vulns/django/PYSEC-2025-1.yaml",
-          "hard": false
-        },
-        {
-          "q": "Why did urllib3 2.0.5 ship a fix for CVE-2023-43804, and what did it prevent?",
-          "expect": "unknowingly leak information via HTTP redirects to a different origin if that user doesn't disable redirects explicitly",
-          "expect_file": "vulns/urllib3/PYSEC-2023-192.yaml",
-          "hard": false
-        },
-        {
-          "q": "What happens to my python process if it deserializes a hostile PKCS7 blob with the affected cryptography release?",
-          "expect": "Calling `load_pem_pkcs7_certificates` or `load_der_pkcs7_certificates` could lead to a NULL-pointer dereference and segfault",
-          "expect_file": "vulns/cryptography/PYSEC-2023-254.yaml",
-          "hard": true
-        },
-        {
-          "q": "What did CVE-2026-25645 let a local attacker pre-plant in the temp folder used by requests?",
-          "expect": "uses a predictable filename when extracting files from zip archives into the system temporary directory",
-          "expect_file": "vulns/requests/PYSEC-2026-2275.yaml",
-          "hard": false
-        },
-        {
-          "q": "What kind of malicious upload header triggered the regular expression denial of service fixed in FastAPI?",
-          "expect": "An attacker could send a custom-made `Content-Type` option that is very difficult for the RegEx to process",
-          "expect_file": "vulns/fastapi/PYSEC-2024-38.yaml",
-          "hard": false
-        }
-      ]
+    {
+     "q": "Under what conditions does rust-openssl before 0.10.79 overrun an allocation, and by how much?",
+     "expect": "writes up to 7 bytes past the end of the caller's buffer or Vec",
+     "expect_file": "github-reviewed/2026/05/GHSA-xv59-967r-8726/GHSA-xv59-967r-8726.json",
+     "hard": true
     },
-    "go-vulndb": {
-      "shape_risk": "4.6k per-ID OSV JSONs under data/osv/ (largest 13 KB) are well-shaped, but the clone also ships the entire vulndb Go tool source, tests and testdata (largest file 15 MB .gz), so non-advisory files can soak up retrieval hits.",
-      "queries": [
-        {
-          "q": "What could a malicious client forge through gin's URL handling per GO-2020-0001?",
-          "expect": "allows attackers to inject arbitrary log entries by manipulating the request path",
-          "expect_file": "data/osv/GO-2020-0001.json",
-          "hard": false
-        },
-        {
-          "q": "Why did Go 1.19.6 patch the x/net HTTP/2 code — what resource does GO-2023-1571 burn?",
-          "expect": "cause excessive CPU consumption in the HPACK decoder, sufficient to cause a denial of service from a small number of small requests",
-          "expect_file": "data/osv/GO-2023-1571.json",
-          "hard": false
-        },
-        {
-          "q": "What hang did google.golang.org/protobuf fix in 1.33.0 per GO-2024-2611?",
-          "expect": "can enter an infinite loop when unmarshaling certain forms of invalid JSON",
-          "expect_file": "data/osv/GO-2024-2611.json",
-          "hard": false
-        },
-        {
-          "q": "What input makes Go's TLS stack crash before the 1.16.6 fix?",
-          "expect": "clients can panic when provided a certificate of the wrong type for the negotiated parameters",
-          "expect_file": "data/osv/GO-2021-0243.json",
-          "hard": false
-        },
-        {
-          "q": "What kind of message remotely crashes an unauthenticated Go SSH endpoint when AEAD ciphers are in use?",
-          "expect": "consuming a malformed packet which contains an empty plaintext causes a panic",
-          "expect_file": "data/osv/GO-2022-0968.json",
-          "hard": true
-        }
-      ]
+    {
+     "q": "When does the python requests library expose proxy credentials to a target server, per GHSA-j8r2-6x86-q33q?",
+     "expect": "vulnerable to potentially leaking `Proxy-Authorization` headers to destination servers, specifically during redirects to an HTTPS origin",
+     "expect_file": "github-reviewed/2023/05/GHSA-j8r2-6x86-q33q/GHSA-j8r2-6x86-q33q.json",
+     "hard": false
     },
-    "mitre-attck": {
-      "shape_risk": "Monolith-shaped: every matrix ships as one giant STIX bundle (enterprise-attack.json is 53.8 MB, and 42 near-duplicate versioned enterprise bundles exist) with NO per-object files, so retrieval may simply fail on shape — expects are anchored to the smallest bundles (mobile 1.0/3.0 at 0.7-1.2 MB, ics 8.0/9.0 at 1.3-1.5 MB) plus one deliberate 53.8 MB enterprise probe.",
-      "queries": [
-        {
-          "q": "What does the ATT&CK ICS technique Project File Infection achieve on a controller once code is planted?",
-          "expect": "Malicious programs allow adversaries control of all aspects of the process enabled by the PLC",
-          "expect_file": "ics-attack/ics-attack-8.0.json",
-          "hard": false
-        },
-        {
-          "q": "During an OT intrusion, how can an adversary blind control-room staff while the underlying operations keep running?",
-          "expect": "The environment's data and processes may still be operational, but functioning in an unintended or adversarial manner",
-          "expect_file": "ics-attack/ics-attack-9.0.json",
-          "hard": true
-        },
-        {
-          "q": "What does the Pegasus implant do on an iPhone according to its ATT&CK mobile entry?",
-          "expect": "escalates privileges on iOS devices and uses its privileged access to collect a variety of sensitive information",
-          "expect_file": "mobile-attack/mobile-attack-1.0.json",
-          "hard": false
-        },
-        {
-          "q": "What can a hostile Android application achieve by exploiting the operating system's accessibility framework, per ATT&CK mobile?",
-          "expect": "A malicious app could abuse Android's accessibility features to capture sensitive data or perform other malicious actions",
-          "expect_file": "mobile-attack/mobile-attack-3.0.json",
-          "hard": false
-        },
-        {
-          "q": "According to Enterprise ATT&CK, how does the Phishing technique ultimately run attacker payloads?",
-          "expect": "Adversaries may send victims emails containing malicious attachments or links, typically to execute malicious code on victim systems",
-          "expect_file": "enterprise-attack/enterprise-attack.json",
-          "hard": false
-        }
-      ]
+    {
+     "q": "What is the worst-case outcome of loading a hostile .pth checkpoint into PyTorch, per GHSA-63cw-57p8-fm3p?",
+     "expect": "can corrupt memory and potentially lead to arbitrary code execution",
+     "expect_file": "github-reviewed/2026/01/GHSA-63cw-57p8-fm3p/GHSA-63cw-57p8-fm3p.json",
+     "hard": false
     },
-    "owasp-cheatsheets": {
-      "shape_risk": "136 markdown files, largest 74 KB — friendly shape; the real risk is topical overlap between sibling sheets (XSS vs DOM-based XSS vs XSS Filter Evasion, five Authorization sheets), which makes near-duplicate chunks plausible.",
-      "queries": [
-        {
-          "q": "What Argon2id work parameters does the OWASP cheat sheet recommend for storing passwords?",
-          "expect": "with a minimum configuration of 19 MiB of memory, an iteration count of 2, and 1 degree of parallelism",
-          "expect_file": "cheatsheets/Password_Storage_Cheat_Sheet.md",
-          "hard": false
-        },
-        {
-          "q": "Why does OWASP push parameterized queries as the main defense for database injection flaws?",
-          "expect": "prepared statements ensure that an attacker cannot change the intent of a query, even if SQL commands are inserted by an attacker",
-          "expect_file": "cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.md",
-          "hard": false
-        },
-        {
-          "q": "After login, how much is a session cookie worth compared to the credentials the user just presented?",
-          "expect": "is temporarily equivalent to the strongest authentication method used by the application",
-          "expect_file": "cheatsheets/Session_Management_Cheat_Sheet.md",
-          "hard": false
-        },
-        {
-          "q": "Is there a CSRF mitigation for my fetch-based frontend that avoids anti-forgery tokens entirely?",
-          "expect": "A user-friendly defense that is particularly well suited for AJAX or API endpoints is the use of a **custom request header**",
-          "expect_file": "cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.md",
-          "hard": true
-        },
-        {
-          "q": "Why is trusting the alg field dangerous when a REST endpoint validates a JSON web token?",
-          "expect": "It must not rely on the information of the JWT header to select the verification algorithm",
-          "expect_file": "cheatsheets/REST_Security_Cheat_Sheet.md",
-          "hard": false
-        }
-      ]
-    },
-    "owasp-asvs": {
-      "shape_risk": "29 chapter markdowns in 5.0/en (largest 23 KB), but the repo also carries 4.0-era chapters, five language translations, and docs_en flat JSON/CSV/XML renderings of the identical requirement text — heavy duplicate risk across versions and formats.",
-      "queries": [
-        {
-          "q": "What does ASVS level 2 say about protecting the SMS or email verification channel from automated guessing?",
-          "expect": "a code based out-of-band authentication mechanism is protected against brute force attacks by using rate limiting",
-          "expect_file": "5.0/en/0x15-V6-Authentication.md",
-          "hard": false
-        },
-        {
-          "q": "How much randomness must a server-side session reference have under ASVS?",
-          "expect": "generated using a cryptographically secure pseudo-random number generator (CSPRNG) and possess at least 128 bits of entropy",
-          "expect_file": "5.0/en/0x16-V7-Session-Management.md",
-          "hard": false
-        },
-        {
-          "q": "What does ASVS require apps to do about restricting which JWT signing methods they accept?",
-          "expect": "The allowlist must include the permitted algorithms, ideally only either symmetric or asymmetric algorithms, and must not include the 'None' algorithm",
-          "expect_file": "5.0/en/0x18-V9-Self-contained-Tokens.md",
-          "hard": false
-        },
-        {
-          "q": "What extra transport-security requirement does ASVS impose at its highest assurance level?",
-          "expect": "L3 applications must only support cipher suites which provide forward secrecy",
-          "expect_file": "5.0/en/0x21-V12-Secure-Communication.md",
-          "hard": true
-        },
-        {
-          "q": "How should an OAuth authorization server check callback URLs per ASVS?",
-          "expect": "validates redirect URIs based on a client-specific allowlist of pre-registered URIs using exact string comparison",
-          "expect_file": "5.0/en/0x19-V10-OAuth-and-OIDC.md",
-          "hard": false
-        }
-      ]
-    },
-    "owasp-wstg": {
-      "shape_risk": "165 section markdowns under document/ (largest 45 KB) plus checklists, website and template copies of the same text — moderate duplicate risk; binary noise (ebooks/fonts, images) is confined to non-md paths.",
-      "queries": [
-        {
-          "q": "During database injection testing, what does the UNION technique accomplish?",
-          "expect": "to join a query, purposely forged by the tester, to the original query",
-          "expect_file": "document/4-Web_Application_Security_Testing/07-Injection/05-SQL_Injection.md",
-          "hard": false
-        },
-        {
-          "q": "When testing tokens, what should happen if a payload section has been altered?",
-          "expect": "Modifying any part of the JWT should cause the signature to be invalid, and the token to be rejected by the server",
-          "expect_file": "document/4-Web_Application_Security_Testing/06-Session_Management/10-JSON_Web_Tokens.md",
-          "hard": false
-        },
-        {
-          "q": "When testing login throttling, after how many failed tries do applications commonly freeze an account?",
-          "expect": "Accounts are typically locked after 3 to 5 unsuccessful attempts and can only be unlocked after a predetermined period of time",
-          "expect_file": "document/4-Web_Application_Security_Testing/04-Authentication/03-Weak_Lock_Out_Mechanism.md",
-          "hard": false
-        },
-        {
-          "q": "What risks come from misconfigured permissions on cloud object stores like S3, per the testing guide?",
-          "expect": "may lead to the exposure of sensitive information, data tampering, or unauthorized access",
-          "expect_file": "document/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management/11-Cloud_Storage.md",
-          "hard": false
-        },
-        {
-          "q": "How can a tester map out every operation and type a GraphQL endpoint exposes?",
-          "expect": "Introspection queries are the method by which GraphQL lets you ask what queries are supported, which data types are available",
-          "expect_file": "document/4-Web_Application_Security_Testing/12-API_Testing/99-GraphQL.md",
-          "hard": true
-        }
-      ]
+    {
+     "q": "What can an external user of esm.sh's CDN do to intranet-only sites via GHSA-3c9r-837r-qqm4?",
+     "expect": "allowing an attacker to retrieve information from internal websites through the vulnerability",
+     "expect_file": "github-reviewed/2026/02/GHSA-3c9r-837r-qqm4/GHSA-3c9r-837r-qqm4.json",
+     "hard": false
     }
+   ],
+   "note": "expect_files re-based 2026-10-04 to the scoped-mirror layout (xerj-org/corpus-ghsa-db drops the upstream 'advisories/' segment; queries and expect clauses unchanged)"
+  },
+  "pysec": {
+   "shape_risk": "Max file 36 KB, one YAML per advisory under vulns/<package>/ \u2014 clean per-file shape, but details blocks are YAML-folded across lines (verbatim clauses need whitespace-normalized matching) and 2026-era advisories embed long markdown writeups that may swamp chunks.",
+   "queries": [
+    {
+     "q": "What root cause did the django advisory for CVE-2024-56374 give for the denial of service?",
+     "expect": "Lack of upper-bound limit enforcement in strings passed when performing IPv6 validation",
+     "expect_file": "vulns/django/PYSEC-2025-1.yaml",
+     "hard": false
+    },
+    {
+     "q": "Why did urllib3 2.0.5 ship a fix for CVE-2023-43804, and what did it prevent?",
+     "expect": "unknowingly leak information via HTTP redirects to a different origin if that user doesn't disable redirects explicitly",
+     "expect_file": "vulns/urllib3/PYSEC-2023-192.yaml",
+     "hard": false
+    },
+    {
+     "q": "What happens to my python process if it deserializes a hostile PKCS7 blob with the affected cryptography release?",
+     "expect": "Calling `load_pem_pkcs7_certificates` or `load_der_pkcs7_certificates` could lead to a NULL-pointer dereference and segfault",
+     "expect_file": "vulns/cryptography/PYSEC-2023-254.yaml",
+     "hard": true
+    },
+    {
+     "q": "What did CVE-2026-25645 let a local attacker pre-plant in the temp folder used by requests?",
+     "expect": "uses a predictable filename when extracting files from zip archives into the system temporary directory",
+     "expect_file": "vulns/requests/PYSEC-2026-2275.yaml",
+     "hard": false
+    },
+    {
+     "q": "What kind of malicious upload header triggered the regular expression denial of service fixed in FastAPI?",
+     "expect": "An attacker could send a custom-made `Content-Type` option that is very difficult for the RegEx to process",
+     "expect_file": "vulns/fastapi/PYSEC-2024-38.yaml",
+     "hard": false
+    }
+   ]
+  },
+  "go-vulndb": {
+   "shape_risk": "4.6k per-ID OSV JSONs under data/osv/ (largest 13 KB) are well-shaped, but the clone also ships the entire vulndb Go tool source, tests and testdata (largest file 15 MB .gz), so non-advisory files can soak up retrieval hits.",
+   "queries": [
+    {
+     "q": "What could a malicious client forge through gin's URL handling per GO-2020-0001?",
+     "expect": "allows attackers to inject arbitrary log entries by manipulating the request path",
+     "expect_file": "data/osv/GO-2020-0001.json",
+     "hard": false
+    },
+    {
+     "q": "Why did Go 1.19.6 patch the x/net HTTP/2 code \u2014 what resource does GO-2023-1571 burn?",
+     "expect": "cause excessive CPU consumption in the HPACK decoder, sufficient to cause a denial of service from a small number of small requests",
+     "expect_file": "data/osv/GO-2023-1571.json",
+     "hard": false
+    },
+    {
+     "q": "What hang did google.golang.org/protobuf fix in 1.33.0 per GO-2024-2611?",
+     "expect": "can enter an infinite loop when unmarshaling certain forms of invalid JSON",
+     "expect_file": "data/osv/GO-2024-2611.json",
+     "hard": false
+    },
+    {
+     "q": "What input makes Go's TLS stack crash before the 1.16.6 fix?",
+     "expect": "clients can panic when provided a certificate of the wrong type for the negotiated parameters",
+     "expect_file": "data/osv/GO-2021-0243.json",
+     "hard": false
+    },
+    {
+     "q": "What kind of message remotely crashes an unauthenticated Go SSH endpoint when AEAD ciphers are in use?",
+     "expect": "consuming a malformed packet which contains an empty plaintext causes a panic",
+     "expect_file": "data/osv/GO-2022-0968.json",
+     "hard": true
+    }
+   ]
+  },
+  "mitre-attck": {
+   "shape_risk": "Monolith-shaped: every matrix ships as one giant STIX bundle (enterprise-attack.json is 53.8 MB, and 42 near-duplicate versioned enterprise bundles exist) with NO per-object files, so retrieval may simply fail on shape \u2014 expects are anchored to the smallest bundles (mobile 1.0/3.0 at 0.7-1.2 MB, ics 8.0/9.0 at 1.3-1.5 MB) plus one deliberate 53.8 MB enterprise probe.",
+   "queries": [
+    {
+     "q": "What does the ATT&CK ICS technique Project File Infection achieve on a controller once code is planted?",
+     "expect": "Malicious programs allow adversaries control of all aspects of the process enabled by the PLC",
+     "expect_file": "ics-attack/ics-attack-8.0.json",
+     "hard": false
+    },
+    {
+     "q": "During an OT intrusion, how can an adversary blind control-room staff while the underlying operations keep running?",
+     "expect": "The environment's data and processes may still be operational, but functioning in an unintended or adversarial manner",
+     "expect_file": "ics-attack/ics-attack-9.0.json",
+     "hard": true
+    },
+    {
+     "q": "What does the Pegasus implant do on an iPhone according to its ATT&CK mobile entry?",
+     "expect": "escalates privileges on iOS devices and uses its privileged access to collect a variety of sensitive information",
+     "expect_file": "mobile-attack/mobile-attack-1.0.json",
+     "hard": false
+    },
+    {
+     "q": "What can a hostile Android application achieve by exploiting the operating system's accessibility framework, per ATT&CK mobile?",
+     "expect": "A malicious app could abuse Android's accessibility features to capture sensitive data or perform other malicious actions",
+     "expect_file": "mobile-attack/mobile-attack-3.0.json",
+     "hard": false
+    },
+    {
+     "q": "According to Enterprise ATT&CK, how does the Phishing technique ultimately run attacker payloads?",
+     "expect": "Adversaries may send victims emails containing malicious attachments or links, typically to execute malicious code on victim systems",
+     "expect_file": "enterprise-attack/enterprise-attack.json",
+     "hard": false
+    }
+   ]
+  },
+  "owasp-cheatsheets": {
+   "shape_risk": "136 markdown files, largest 74 KB \u2014 friendly shape; the real risk is topical overlap between sibling sheets (XSS vs DOM-based XSS vs XSS Filter Evasion, five Authorization sheets), which makes near-duplicate chunks plausible.",
+   "queries": [
+    {
+     "q": "What Argon2id work parameters does the OWASP cheat sheet recommend for storing passwords?",
+     "expect": "with a minimum configuration of 19 MiB of memory, an iteration count of 2, and 1 degree of parallelism",
+     "expect_file": "cheatsheets/Password_Storage_Cheat_Sheet.md",
+     "hard": false
+    },
+    {
+     "q": "Why does OWASP push parameterized queries as the main defense for database injection flaws?",
+     "expect": "prepared statements ensure that an attacker cannot change the intent of a query, even if SQL commands are inserted by an attacker",
+     "expect_file": "cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.md",
+     "hard": false
+    },
+    {
+     "q": "After login, how much is a session cookie worth compared to the credentials the user just presented?",
+     "expect": "is temporarily equivalent to the strongest authentication method used by the application",
+     "expect_file": "cheatsheets/Session_Management_Cheat_Sheet.md",
+     "hard": false
+    },
+    {
+     "q": "Is there a CSRF mitigation for my fetch-based frontend that avoids anti-forgery tokens entirely?",
+     "expect": "A user-friendly defense that is particularly well suited for AJAX or API endpoints is the use of a **custom request header**",
+     "expect_file": "cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.md",
+     "hard": true
+    },
+    {
+     "q": "Why is trusting the alg field dangerous when a REST endpoint validates a JSON web token?",
+     "expect": "It must not rely on the information of the JWT header to select the verification algorithm",
+     "expect_file": "cheatsheets/REST_Security_Cheat_Sheet.md",
+     "hard": false
+    }
+   ]
+  },
+  "owasp-asvs": {
+   "shape_risk": "29 chapter markdowns in 5.0/en (largest 23 KB), but the repo also carries 4.0-era chapters, five language translations, and docs_en flat JSON/CSV/XML renderings of the identical requirement text \u2014 heavy duplicate risk across versions and formats.",
+   "queries": [
+    {
+     "q": "What does ASVS level 2 say about protecting the SMS or email verification channel from automated guessing?",
+     "expect": "a code based out-of-band authentication mechanism is protected against brute force attacks by using rate limiting",
+     "expect_file": "5.0/en/0x15-V6-Authentication.md",
+     "hard": false
+    },
+    {
+     "q": "How much randomness must a server-side session reference have under ASVS?",
+     "expect": "generated using a cryptographically secure pseudo-random number generator (CSPRNG) and possess at least 128 bits of entropy",
+     "expect_file": "5.0/en/0x16-V7-Session-Management.md",
+     "hard": false
+    },
+    {
+     "q": "What does ASVS require apps to do about restricting which JWT signing methods they accept?",
+     "expect": "The allowlist must include the permitted algorithms, ideally only either symmetric or asymmetric algorithms, and must not include the 'None' algorithm",
+     "expect_file": "5.0/en/0x18-V9-Self-contained-Tokens.md",
+     "hard": false
+    },
+    {
+     "q": "What extra transport-security requirement does ASVS impose at its highest assurance level?",
+     "expect": "L3 applications must only support cipher suites which provide forward secrecy",
+     "expect_file": "5.0/en/0x21-V12-Secure-Communication.md",
+     "hard": true
+    },
+    {
+     "q": "How should an OAuth authorization server check callback URLs per ASVS?",
+     "expect": "validates redirect URIs based on a client-specific allowlist of pre-registered URIs using exact string comparison",
+     "expect_file": "5.0/en/0x19-V10-OAuth-and-OIDC.md",
+     "hard": false
+    }
+   ]
+  },
+  "owasp-wstg": {
+   "shape_risk": "165 section markdowns under document/ (largest 45 KB) plus checklists, website and template copies of the same text \u2014 moderate duplicate risk; binary noise (ebooks/fonts, images) is confined to non-md paths.",
+   "queries": [
+    {
+     "q": "During database injection testing, what does the UNION technique accomplish?",
+     "expect": "to join a query, purposely forged by the tester, to the original query",
+     "expect_file": "document/4-Web_Application_Security_Testing/07-Injection/05-SQL_Injection.md",
+     "hard": false
+    },
+    {
+     "q": "When testing tokens, what should happen if a payload section has been altered?",
+     "expect": "Modifying any part of the JWT should cause the signature to be invalid, and the token to be rejected by the server",
+     "expect_file": "document/4-Web_Application_Security_Testing/06-Session_Management/10-JSON_Web_Tokens.md",
+     "hard": false
+    },
+    {
+     "q": "When testing login throttling, after how many failed tries do applications commonly freeze an account?",
+     "expect": "Accounts are typically locked after 3 to 5 unsuccessful attempts and can only be unlocked after a predetermined period of time",
+     "expect_file": "document/4-Web_Application_Security_Testing/04-Authentication/03-Weak_Lock_Out_Mechanism.md",
+     "hard": false
+    },
+    {
+     "q": "What risks come from misconfigured permissions on cloud object stores like S3, per the testing guide?",
+     "expect": "may lead to the exposure of sensitive information, data tampering, or unauthorized access",
+     "expect_file": "document/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management/11-Cloud_Storage.md",
+     "hard": false
+    },
+    {
+     "q": "How can a tester map out every operation and type a GraphQL endpoint exposes?",
+     "expect": "Introspection queries are the method by which GraphQL lets you ask what queries are supported, which data types are available",
+     "expect_file": "document/4-Web_Application_Security_Testing/12-API_Testing/99-GraphQL.md",
+     "hard": true
+    }
+   ]
   }
+ }
 }
