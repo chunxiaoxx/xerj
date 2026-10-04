@@ -175,6 +175,15 @@
   {
    "cat": "SEC",
    "domain": "an agent writing or reviewing detections queries this for technique ids, tactics, detection data-sources and procedure examples",
+   "g7": {
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "fix_pre_registered": "re-pin as id-level mirror like the passing mitre-cwe/mitre-capec - one text file per ATT&CK technique (T####) with name/description/kill-chain-phase/mitigations extracted from the STIX bundles already mirrored; round-2 suite re-pins expect_file to the per-technique files, queries and clauses unchang",
+    "graded": "2026-10-04",
+    "pass": 0,
+    "relevant": 0,
+    "round": 1,
+    "verdict": "FAIL"
+   },
    "lane": "B",
    "refresh": "weekly",
    "slug": "mitre-attck",
@@ -217,6 +226,15 @@
   {
    "cat": "SEC",
    "domain": "an agent reviewing an application's security posture queries this for the ASVS requirement and its verification level",
+   "g7": {
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "fix_pre_registered": "re-pin to 5.0-only (the current standard; 4.0.3 is superseded and stays citable from upstream), round-2 suite unchanged queries/clauses, expect_file already 5.0.",
+    "graded": "2026-10-04",
+    "pass": 1,
+    "relevant": 1,
+    "round": 1,
+    "verdict": "FAIL"
+   },
    "lane": "B",
    "refresh": "pinned",
    "slug": "owasp-asvs",
