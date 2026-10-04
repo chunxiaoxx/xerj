@@ -1,0 +1,37 @@
+{
+ "corpus": "ietf-rfc",
+ "registered": "2026-10-04",
+ "note": "pre-registered before any retrieval; expects grep-verified against the mirror (RFC .txt wraps at col 72 - expects chosen to avoid mid-word wraps). Mirror is byte-verbatim rfc-editor.org text, TLP-5.0 3.c permits full unmodified copying.",
+ "queries": [
+  {
+   "q": "is HTTP a stateful or stateless protocol",
+   "hard": false,
+   "expect": "HTTP is defined as a stateless protocol, meaning that each request",
+   "expect_file": "corpus-ietf-rfc/rfc/rfc-9110.txt"
+  },
+  {
+   "q": "which document specifies TLS 1.3",
+   "hard": false,
+   "expect": "This document specifies version 1.3 of the Transport Layer Security (TLS) protocol.",
+   "expect_file": "corpus-ietf-rfc/rfc/rfc-8446.txt"
+  },
+  {
+   "q": "where is the Transmission Control Protocol currently specified",
+   "hard": false,
+   "expect": "This document specifies the Transmission Control Protocol (TCP).",
+   "expect_file": "corpus-ietf-rfc/rfc/rfc-9293.txt"
+  },
+  {
+   "q": "what does QUIC provide as a transport protocol",
+   "hard": false,
+   "expect": "This document defines the core of the QUIC transport protocol.",
+   "expect_file": "corpus-ietf-rfc/rfc/rfc-9000.txt"
+  },
+  {
+   "q": "what problem do domain names solve in DNS",
+   "hard": false,
+   "expect": "The goal of domain names is to provide a mechanism for naming resources",
+   "expect_file": "corpus-ietf-rfc/rfc/rfc-1035.txt"
+  }
+ ]
+}
