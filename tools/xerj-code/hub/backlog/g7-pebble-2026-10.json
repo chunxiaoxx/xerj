@@ -25,12 +25,12 @@
   {
    "q": "why prohibit splitting a user key across sstables",
    "expect": "prohibit splitting of a user key between sstables",
-   "expect_file": "range_deletions.md"
+   "expect_file": "pebble/docs/range_deletions.md"
   },
   {
    "q": "why exclusive end key in range deletes",
    "expect": "regardless of user needs, the exclusive end key helps with splitting a",
-   "expect_file": "range_deletions.md"
+   "expect_file": "pebble/docs/range_deletions.md"
   }
  ]
 }
