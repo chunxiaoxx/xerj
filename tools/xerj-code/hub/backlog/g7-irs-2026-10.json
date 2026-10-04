@@ -1,42 +1,48 @@
 {
-  "suite": "g7-irs-2026-10",
-  "pre_registered": "2026-10-04",
-  "authoring": "blind — authored from clone reads only, no retrieval run; every expect clause grep-verified (whitespace-normalized substring) in the named file; corpus is corpus-irs-pubs @65b4a7b62165",
-  "corpora": {
-    "irs-pubs": {
-      "shape_risk": "Cross-publication boilerplate is heavy: p17/03 (filing status) and p501/04 share 131 identical >=10-word sentences, 'married filing jointly' appears in 44/154 files across 11/15 pubs, and 'earned income credit' appears in 37/154 files across all 15 pubs, so topic-keyword queries can match another pub's restatement of the same rule. All five expect spans are verbatim-unique to exactly 1 of 154 files (grep-verified, whitespace-normalized), so a near-miss in a sibling file is a shape false-friend, not a pass. The hard EIC query carries no number and none of the answer's wording ('$11,950', 'investment income') beyond the corpus-wide credit name, and its answer sits in p596/02 'Rules for Everyone' while every p596 chapter discusses eligibility.",
-      "queries": [
-        {
-          "q": "How long do I have to own and live in my house before I can sell it without paying tax on the profit?",
-          "expect": "If you owned the home and used it as your residence for at least 24 months of the previous 5 years",
-          "expect_file": "p523/02-does-your-home-sale-qualify-for-the-exclusion-of-gain.txt",
-          "hard": false
-        },
-        {
-          "q": "Can I count the miles I drive to medical appointments as a medical deduction, and at what rate?",
-          "expect": "If you don’t want to use your actual expenses for 2025, you can use the standard medical mileage rate of 21 cents a mile.",
-          "expect_file": "p502/05-what-medical-expenses-are-includible.txt",
-          "hard": false
-        },
-        {
-          "q": "I just took a second job — what do I need to do about my withholding so I don't end up owing at tax time?",
-          "expect": "If you have income from more than one job at the same time, or are married filing jointly and you and your spouse both work",
-          "expect_file": "p17/05-4-tax-withholding-and-estimated-tax.txt",
-          "hard": false
-        },
-        {
-          "q": "Is any of the college tuition credit refundable if I don't owe income tax this year?",
-          "expect": "Forty percent of the American opportunity credit may be refundable",
-          "expect_file": "p970/03-2-american-opportunity-credit.txt",
-          "hard": false
-        },
-        {
-          "q": "I only made about $19,000 working part-time, but I sold some stock this year — can I still get the earned income credit?",
-          "expect": "You can’t claim the EIC unless your investment income is $11,950 or less.",
-          "expect_file": "p596/02-1-rules-for-everyone.txt",
-          "hard": true
-        }
-      ]
+ "suite": "g7-irs-2026-10",
+ "pre_registered": "2026-10-04",
+ "authoring": "blind — authored from clone reads only, no retrieval run; every expect clause grep-verified (whitespace-normalized substring) in the named file; corpus is corpus-irs-pubs @65b4a7b62165",
+ "corpora": {
+  "irs-pubs": {
+   "shape_risk": "Cross-publication boilerplate is heavy: p17/03 (filing status) and p501/04 share 131 identical >=10-word sentences, 'married filing jointly' appears in 44/154 files across 11/15 pubs, and 'earned income credit' appears in 37/154 files across all 15 pubs, so topic-keyword queries can match another pub's restatement of the same rule. All five expect spans are verbatim-unique to exactly 1 of 154 files (grep-verified, whitespace-normalized), so a near-miss in a sibling file is a shape false-friend, not a pass. The hard EIC query carries no number and none of the answer's wording ('$11,950', 'investment income') beyond the corpus-wide credit name, and its answer sits in p596/02 'Rules for Everyone' while every p596 chapter discusses eligibility.",
+   "queries": [
+    {
+     "q": "How long do I have to own and live in my house before I can sell it without paying tax on the profit?",
+     "expect": "If you owned the home and used it as your residence for at least 24 months of the previous 5 years",
+     "expect_file": "p523/02-does-your-home-sale-qualify-for-the-exclusion-of-gain.txt",
+     "hard": false
+    },
+    {
+     "q": "Can I count the miles I drive to medical appointments as a medical deduction, and at what rate?",
+     "expect": "If you don’t want to use your actual expenses for 2025, you can use the standard medical mileage rate of 21 cents a mile.",
+     "expect_file": "p502/05-what-medical-expenses-are-includible.txt",
+     "hard": false
+    },
+    {
+     "q": "I just took a second job — what do I need to do about my withholding so I don't end up owing at tax time?",
+     "expect": "If you have income from more than one job at the same time, or are married filing jointly and you and your spouse both work",
+     "expect_file": "p17/05-4-tax-withholding-and-estimated-tax.txt",
+     "hard": false
+    },
+    {
+     "q": "Is any of the college tuition credit refundable if I don't owe income tax this year?",
+     "expect": "Forty percent of the American opportunity credit may be refundable",
+     "expect_file": "p970/03-2-american-opportunity-credit.txt",
+     "hard": false
+    },
+    {
+     "q": "I only made about $19,000 working part-time, but I sold some stock this year — can I still get the earned income credit?",
+     "expect": "You can’t claim the EIC unless your investment income is $11,950 or less.",
+     "expect_file": "p596/02-1-rules-for-everyone.txt",
+     "hard": true
     }
+   ]
   }
+ },
+ "round2": {
+  "pre_registered": "2026-10-04T18:40:00Z (before any round-2 retrieval or mirror change)",
+  "graded_round1": "2/5 (evidence: g7-tonight-2026-10-03-graded.json) — all three misses retrieved *-additional-material.txt boilerplate chapters (p17/18, p54/09, p596/08) ahead of the answer; those 5 files are worksheets/notices appendices, not rule text",
+  "fix": "mirror scope: drop the 5 *additional-material*.txt files from corpus-irs-pubs (new mirror commit); queries and expect clauses UNCHANGED; expect_files unchanged",
+  "prediction": "4/5 — Q1/Q3/Q5 expects become the strongest topical files once the boilerplate is gone; Q2/Q4 already pass; residual risk is cross-pub restatement (shape_risk above)"
+ }
 }
