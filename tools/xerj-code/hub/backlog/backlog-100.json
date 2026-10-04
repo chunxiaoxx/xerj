@@ -1601,6 +1601,25 @@
     "suite": "backlog/g7-ecfr-title-14-2026-10.json",
     "note": "pre-registered 2026-10-04 before indexing"
    }
+  },
+  {
+   "slug": "cdc-clinical",
+   "cat": "DATA",
+   "lane": "A",
+   "refresh": "pinned",
+   "status": "candidate",
+   "domain": "a clinician or medical writer queries this for the current CDC-recommended STI regimen and dose, and measles clinical signs",
+   "sources": [
+    {
+     "url": "https://www.cdc.gov/std/treatment-guidelines/toc.htm",
+     "licence_hint": "US public domain (CDC web content, 17 USC 105). Mirror xerj-org/corpus-cdc-clinical @3bd1ba62: STI Treatment Guidelines 2021 per-condition pages (56) + measles clinical overview (1), chrome stripped to main content, MANIFEST.json path->URL. ACIP vaccine pages fetched then DROPPED (link index to MMWR PDFs, not recommendation text) - immunization scope unmet until a PDF text lane exists; recorded honestly rather than padded. Demand: health/medical rank 3 (volume 87). Fetch trap: CDC WAF 403s python-urllib and generic Mozilla UAs, plain curl passes."
+    }
+   ],
+   "g7": {
+    "round": 0,
+    "suite": "backlog/g7-cdc-clinical-2026-10.json",
+    "note": "pre-registered 2026-10-04 before indexing"
+   }
   }
  ]
 }

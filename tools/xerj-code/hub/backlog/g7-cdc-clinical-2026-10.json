@@ -1,0 +1,37 @@
+{
+ "suite": "g7-cdc-clinical-2026-10",
+ "pre_registered": "2026-10-04 (before indexing/retrieval; committed to corpus-hub first)",
+ "authoring": "BLIND from clone reads; every expect is a verbatim clause grep-verified against the clone at authoring time; no retrieval was run",
+ "corpus_pin": {
+  "repo": "corpus-cdc-clinical",
+  "sha": "3bd1ba62e3e1e4bba29ba075aa5d9d6ed5e31877"
+ },
+ "scope_note": "ACIP vaccine pages dropped before suite authoring (link index to MMWR PDFs, not text); suite covers STI treatment + measles only",
+ "queries": [
+  {
+   "q": "first-line treatment uncomplicated gonorrhea in adults ceftriaxone dosing",
+   "expect": "Ceftriaxone 500 mg* IM in a single dose for persons weighing <150 kg",
+   "expect_file": "sti-tx/gonorrhea-adults.md"
+  },
+  {
+   "q": "recommended regimen for chlamydia infection in adolescents and adults",
+   "expect": "Doxycycline 100 mg orally 2 times/day for 7 days",
+   "expect_file": "sti-tx/chlamydia.md"
+  },
+  {
+   "q": "treating primary syphilis in a pregnant woman allergic to penicillin",
+   "expect": "Pregnant women with primary or secondary syphilis who are allergic to penicillin should be desensitized and treated with penicillin G",
+   "expect_file": "sti-tx/p-and-s-syphilis.md"
+  },
+  {
+   "q": "dose of benzathine penicillin for primary and secondary syphilis",
+   "expect": "Benzathine penicillin G 2.4 million units IM in a single dose",
+   "expect_file": "sti-tx/p-and-s-syphilis.md"
+  },
+  {
+   "q": "pathognomonic enanthem of measles in the mouth",
+   "expect": "A pathognomonic enanthema (Koplik spots)",
+   "expect_file": "measles/clinical-overview.md"
+  }
+ ]
+}
