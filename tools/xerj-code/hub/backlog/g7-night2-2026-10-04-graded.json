@@ -1,0 +1,161 @@
+{
+ "graded_at": "2026-10-04",
+ "engine": "v1.0.0-rc.81 @9cefd8070 (autoindex sniff guards, PR #1144)",
+ "grader": "expect-clause whitespace-normalized in any top-5 hit; partial = same-basename file",
+ "corpora": {
+  "cdc-clinical": {
+   "queries": [
+    {
+     "q": "first-line treatment uncomplicated gonorrhea in adults ceftriaxone dosing",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-cdc-clinical/sti-tx/gonorrhea-adults.md",
+     "expect_file": "sti-tx/gonorrhea-adults.md",
+     "top5": [
+      "corpus-cdc-clinical/sti-tx/references.md",
+      "corpus-cdc-clinical/sti-tx/gonorrhea-adults.md",
+      "corpus-cdc-clinical/sti-tx/gonorrhea-children.md",
+      "corpus-cdc-clinical/sti-tx/gonorrhea-adults.md",
+      "corpus-cdc-clinical/sti-tx/sexual-assault-adults.md"
+     ]
+    },
+    {
+     "q": "recommended regimen for chlamydia infection in adolescents and adults",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-cdc-clinical/sti-tx/chlamydia.md",
+     "expect_file": "sti-tx/chlamydia.md",
+     "top5": [
+      "corpus-cdc-clinical/sti-tx/sexual-assault-adults.md",
+      "corpus-cdc-clinical/sti-tx/chlamydia.md",
+      "corpus-cdc-clinical/sti-tx/gonorrhea-adults.md",
+      "corpus-cdc-clinical/sti-tx/chlamydia.md",
+      "corpus-cdc-clinical/sti-tx/adolescents.md"
+     ]
+    },
+    {
+     "q": "treating primary syphilis in a pregnant woman allergic to penicillin",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-cdc-clinical/sti-tx/p-and-s-syphilis.md",
+     "expect_file": "sti-tx/p-and-s-syphilis.md",
+     "top5": [
+      "corpus-cdc-clinical/sti-tx/p-and-s-syphilis.md",
+      "corpus-cdc-clinical/sti-tx/latent-syphilis.md",
+      "corpus-cdc-clinical/sti-tx/tertiary-syphilis.md",
+      "corpus-cdc-clinical/sti-tx/syphilis-hiv.md",
+      "corpus-cdc-clinical/sti-tx/syphilis-pregnancy.md"
+     ]
+    },
+    {
+     "q": "dose of benzathine penicillin for primary and secondary syphilis",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-cdc-clinical/sti-tx/p-and-s-syphilis.md",
+     "expect_file": "sti-tx/p-and-s-syphilis.md",
+     "top5": [
+      "corpus-cdc-clinical/sti-tx/syphilis-hiv.md",
+      "corpus-cdc-clinical/sti-tx/p-and-s-syphilis.md",
+      "corpus-cdc-clinical/sti-tx/syphilis-hiv.md",
+      "corpus-cdc-clinical/sti-tx/p-and-s-syphilis.md",
+      "corpus-cdc-clinical/sti-tx/syphilis-pregnancy.md"
+     ]
+    },
+    {
+     "q": "pathognomonic enanthem of measles in the mouth",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-cdc-clinical/measles/clinical-overview.md",
+     "expect_file": "measles/clinical-overview.md",
+     "top5": [
+      "corpus-cdc-clinical/measles/clinical-overview.md",
+      "corpus-cdc-clinical/measles/clinical-overview.md",
+      "corpus-cdc-clinical/tools/fetch_cdc.py",
+      "corpus-cdc-clinical/README.md",
+      "corpus-cdc-clinical/sti-tx/clinical-risk.md"
+     ]
+    }
+   ],
+   "pass": 5,
+   "relevant": 5,
+   "verdict": "PASS"
+  },
+  "ecfr-title-14": {
+   "queries": [
+    {
+     "q": "VFR minimum flight visibility and distance from clouds by airspace class",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-ecfr-title-14/parts/part-91/sec-91.155.txt",
+     "expect_file": "parts/part-91/sec-91.155.txt",
+     "top5": [
+      "corpus-ecfr-title-14/parts/part-91/sec-91.155.txt",
+      "corpus-ecfr-title-14/parts/part-103/sec-103.23.txt",
+      "corpus-ecfr-title-14/parts/part-135/sec-135.613.txt",
+      "corpus-ecfr-title-14/parts/part-91/sec-91.129.txt",
+      "corpus-ecfr-title-14/parts/part-91/sec-91.155.txt"
+     ]
+    },
+    {
+     "q": "when is an operable transponder with Mode C required to operate an aircraft",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-ecfr-title-14/parts/part-91/sec-91.215.txt",
+     "expect_file": "parts/part-91/sec-91.215.txt",
+     "top5": [
+      "corpus-ecfr-title-14/parts/part-91/sec-91.215.txt",
+      "corpus-ecfr-title-14/parts/part-91/sec-91.215.txt",
+      "corpus-ecfr-title-14/parts/part-91/sec-91.217.txt",
+      "corpus-ecfr-title-14/parts/part-99/sec-99.13.txt",
+      "corpus-ecfr-title-14/parts/part-93/sec-93.339.txt"
+     ]
+    },
+    {
+     "q": "minimum safe altitude flying over a congested city",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-ecfr-title-14/parts/part-91/sec-91.119.txt",
+     "expect_file": "parts/part-91/sec-91.119.txt",
+     "top5": [
+      "corpus-ecfr-title-14/parts/part-91/sec-91.119.txt",
+      "corpus-ecfr-title-14/parts/part-103/sec-103.15.txt",
+      "corpus-ecfr-title-14/parts/part-137/sec-137.51.txt",
+      "corpus-ecfr-title-14/parts/part-105/sec-105.21.txt",
+      "corpus-ecfr-title-14/parts/part-91/sec-91.303.txt"
+     ]
+    },
+    {
+     "q": "how often must an aircraft have an annual inspection to be operated",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-ecfr-title-14/parts/part-91/sec-91.409.txt",
+     "expect_file": "parts/part-91/sec-91.409.txt",
+     "top5": [
+      "corpus-ecfr-title-14/parts/part-91/sec-91.409.txt",
+      "corpus-ecfr-title-14/parts/part-145/sec-145.211.txt",
+      "corpus-ecfr-title-14/parts/part-121/sec-121.629.txt",
+      "corpus-ecfr-title-14/parts/part-136/sec-136.1.txt",
+      "corpus-ecfr-title-14/parts/part-137/sec-137.53.txt"
+     ]
+    },
+    {
+     "q": "which aircraft has the right of way when two aircraft are converging",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-ecfr-title-14/parts/part-91/sec-91.113.txt",
+     "expect_file": "parts/part-91/sec-91.113.txt",
+     "top5": [
+      "corpus-ecfr-title-14/parts/part-91/sec-91.113.txt",
+      "corpus-ecfr-title-14/parts/part-91/sec-91.113.txt",
+      "corpus-ecfr-title-14/parts/part-91/sec-91.115.txt",
+      "corpus-ecfr-title-14/parts/part-93/sec-93.163.txt",
+      "corpus-ecfr-title-14/parts/part-107/sec-107.37.txt"
+     ]
+    }
+   ],
+   "pass": 5,
+   "relevant": 5,
+   "verdict": "PASS"
+  }
+ }
+}

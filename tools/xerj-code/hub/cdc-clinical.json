@@ -1,0 +1,21 @@
+{
+ "corpus": "cdc-clinical",
+ "cloned_at": "2026-10-04T21:15:00Z",
+ "repos": [
+  {
+   "repo": "corpus-cdc-clinical",
+   "url": "https://github.com/xerj-org/corpus-cdc-clinical",
+   "licence": "US-government public domain (CDC web content, 17 USC 105)",
+   "sha": "3bd1ba62e3e1e4bba29ba075aa5d9d6ed5e31877",
+   "files": 61,
+   "bytes": 1107990,
+   "review": {
+    "spdx": "US-government public domain (CDC)",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-04",
+    "note": "CDC provider-facing clinical guidance as markdown: STI Treatment Guidelines 2021 per-condition pages (56) + measles clinical overview (1). The 27 ACIP vaccine pages were fetched then DROPPED - link indexes to MMWR PDFs, not text; immunization scope unmet until a PDF lane exists, recorded rather than padded. Chrome stripped to main content; MANIFEST.json carries path->URL. G7 graded 2026-10-04: 5/5 pass 5/5 relevant (regimens, doses, desensitization, Koplik spots). Evidence: hub backlog/g7-night2-2026-10-04-graded.json"
+   }
+  }
+ ]
+}

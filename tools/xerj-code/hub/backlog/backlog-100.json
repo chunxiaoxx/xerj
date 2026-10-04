@@ -1592,7 +1592,7 @@
    "cat": "STD",
    "lane": "A",
    "refresh": "pinned",
-   "status": "candidate",
+   "status": "live",
    "domain": "a pilot or mechanic queries this for the current FAR text \u2014 visibility minimums, transponder airspace, inspection intervals, right-of-way",
    "sources": [
     {
@@ -1603,7 +1603,10 @@
    "g7": {
     "round": 0,
     "suite": "backlog/g7-ecfr-title-14-2026-10.json",
-    "note": "pre-registered 2026-10-04 before indexing"
+    "graded_at": "2026-10-04",
+    "engine": "v1.0.0-rc.81 @9cefd8070 (PR #1144)",
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "note": "5/5 pass 5/5 relevant on first grade; blind suite pre-registered before indexing"
    }
   },
   {
@@ -1611,7 +1614,7 @@
    "cat": "DATA",
    "lane": "A",
    "refresh": "pinned",
-   "status": "candidate",
+   "status": "live",
    "domain": "a clinician or medical writer queries this for the current CDC-recommended STI regimen and dose, and measles clinical signs",
    "sources": [
     {
@@ -1622,7 +1625,10 @@
    "g7": {
     "round": 0,
     "suite": "backlog/g7-cdc-clinical-2026-10.json",
-    "note": "pre-registered 2026-10-04 before indexing"
+    "graded_at": "2026-10-04",
+    "engine": "v1.0.0-rc.81 @9cefd8070 (PR #1144)",
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "note": "5/5 pass 5/5 relevant on first grade; blind suite pre-registered before indexing"
    }
   }
  ]

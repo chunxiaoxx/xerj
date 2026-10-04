@@ -1,0 +1,21 @@
+{
+ "corpus": "ecfr-title-14",
+ "cloned_at": "2026-10-04T20:45:00Z",
+ "repos": [
+  {
+   "repo": "corpus-ecfr-title-14",
+   "url": "https://github.com/xerj-org/corpus-ecfr-title-14",
+   "licence": "US-government public domain (17 USC 105)",
+   "sha": "0520b312d9645977144dfd356caa3f37f323d017",
+   "files": 6421,
+   "bytes": 11786635,
+   "review": {
+    "spdx": "US-government public domain (CFR text, 17 USC 105)",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-04",
+    "note": "eCFR Title 14 (Aeronautics and Space - FARs) snapshot, AMDDATE 2026-07-24, downloaded 2026-10-04 from GPO bulk API. Same per-section split and tooling as the live ecfr-title-12/26/29 mirrors (split_ecfr.py). G7 graded 2026-10-04: 5/5 pass 5/5 relevant (91.155 visibility, 91.215 transponder, 91.119 min safe altitude, 91.409 inspection interval, 91.113 right-of-way). Build note: first index on the scratch node recorded autoindex_exit=1/salvaged, but dupcheck 9928/9928/0 CLEAN (full coverage) and the graded queries retrieved at rank 1-2; a plain re-index clears the mark. Evidence: hub backlog/g7-night2-2026-10-04-graded.json"
+   }
+  }
+ ]
+}
