@@ -1,0 +1,37 @@
+{
+ "corpus": "de-gesetze",
+ "registered": "2026-10-04",
+ "note": "pre-registered before any retrieval; expects grep-verified. GG/BGB/StGB/StVO/VwGO per-norm files from gesetze-im-internet.de (Amtliches Recht, keine Urheberrechtsperre per section 5 UrhG).",
+ "queries": [
+  {
+   "q": "was bedeutet Schadensersatz in Natur nach dem BGB",
+   "hard": false,
+   "expect": "Wer zum Schadensersatz verpflichtet ist, hat den Zustand herzustellen",
+   "expect_file": "corpus-de-gesetze/bgb/\u00a7-249-BGB.txt"
+  },
+  {
+   "q": "welche Strafe droht einem Moerder nach StGB 211",
+   "hard": false,
+   "expect": "Der M\u00f6rder wird mit lebenslanger Freiheitsstrafe bestraft.",
+   "expect_file": "corpus-de-gesetze/stgb/\u00a7-211-StGB.txt"
+  },
+  {
+   "q": "was steht im Grundgesetz zur Menschenwuerde",
+   "hard": false,
+   "expect": "Die W\u00fcrde des Menschen ist unantastbar.",
+   "expect_file": "corpus-de-gesetze/gg/Art-1-GG.txt"
+  },
+  {
+   "q": "welcher Rechtsweg gilt fuer oeffentlich-rechtliche Streitigkeiten",
+   "hard": true,
+   "expect": "Der Verwaltungsrechtsweg ist in allen \u00f6ffentlich-rechtlichen Streitigkeiten",
+   "expect_file": "corpus-de-gesetze/vwgo/\u00a7-40-VwGO.txt"
+  },
+  {
+   "q": "welche Fahrbahn muessen Fahrzeuge benutzen StVO",
+   "hard": false,
+   "expect": "Fahrzeuge m\u00fcssen die Fahrbahnen benutzen, von zwei Fahrbahnen die rechte.",
+   "expect_file": "corpus-de-gesetze/stvo/\u00a7-2-StVO.txt"
+  }
+ ]
+}

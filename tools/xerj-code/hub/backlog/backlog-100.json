@@ -1787,6 +1787,44 @@
     }
    ],
    "status": "candidate"
+  },
+  {
+   "cat": "LAW",
+   "domain": "US Supreme Court slip opinions 2019-2025 terms (449 cases, 1,158 files): holdings and separate opinions verbatim",
+   "g7": {
+    "note": "pre-registered 2026-10-04 before retrieval",
+    "round": 0,
+    "suite": "backlog/g7-scotus-2026-10.json"
+   },
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "scotus",
+   "sources": [
+    {
+     "licence_hint": "US public domain (17 USC 105; case law uncopyrightable, Wheaton v. Peters 1834). Mirror @300f9fe6: supremecourt.gov slip PDFs via pypdf, ligature defects repaired (0 residual of 40 corrupted forms); CourtListener rejected honestly (NXDOMAIN + 403 anonymous).",
+     "url": "https://github.com/xerj-org/corpus-scotus"
+    }
+   ],
+   "status": "candidate"
+  },
+  {
+   "cat": "LAW",
+   "domain": "German federal statutes per norm: GG, BGB, StGB, StVO, VwGO (3,546 norm files)",
+   "g7": {
+    "note": "pre-registered 2026-10-04 before retrieval",
+    "round": 0,
+    "suite": "backlog/g7-de-gesetze-2026-10.json"
+   },
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "de-gesetze",
+   "sources": [
+    {
+     "licence_hint": "No copyright - section 5 UrhG, verified on gesetze-im-internet.de: 'Die Rechtsnormen in deutscher Sprache stehen ... zur freien Nutzung und Weiterverwendung zur Verfuegung.' Mirror @035b6f60: per-norm text from gesetze-im-internet.de xml.zip; 453 structural headings skipped, documented.",
+     "url": "https://github.com/xerj-org/corpus-de-gesetze"
+    }
+   ],
+   "status": "candidate"
   }
  ],
  "lanes": [
