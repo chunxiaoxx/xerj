@@ -176,6 +176,94 @@
    "relevant": 5,
    "verdict": "PASS"
   },
+  "cisa-kev": {
+   "median": 4.0,
+   "pass": 4,
+   "queries": [
+    {
+     "expect": "corpus-cisa-kev/kev/CVE-2021-44228.txt",
+     "expect_file": "corpus-cisa-kev/kev/CVE-2021-44228.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-cisa-kev/kev/CVE-2021-44228.txt",
+     "q": "log4j log4shell what remediation does CISA require",
+     "top5": [
+      "corpus-cisa-kev/kev/CVE-2021-44228.txt",
+      "corpus-cisa-kev/kev/CVE-2023-43208.txt",
+      "corpus-cisa-kev/LICENSE",
+      "corpus-cisa-kev/kev/CVE-2022-0185.txt",
+      "corpus-cisa-kev/kev/CVE-2023-33107.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-cisa-kev/kev/CVE-2023-4966.txt",
+     "expect_file": "corpus-cisa-kev/kev/CVE-2023-4966.txt",
+     "grade": "irrelevant",
+     "hard": false,
+     "hit": null,
+     "q": "citrixbleed netscaler mitigation required action",
+     "top5": [
+      "corpus-cisa-kev/kev/CVE-2026-88771.txt",
+      "corpus-cisa-kev/kev/CVE-2026-19490.txt",
+      "corpus-cisa-kev/kev/CVE-2026-88772.txt",
+      "corpus-cisa-kev/kev/CVE-2026-8452.txt",
+      "corpus-cisa-kev/kev/CVE-2026-88779.txt"
+     ],
+     "verdict": "miss"
+    },
+    {
+     "expect": "corpus-cisa-kev/kev/CVE-2020-1472.txt",
+     "expect_file": "corpus-cisa-kev/kev/CVE-2020-1472.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-cisa-kev/kev/CVE-2020-1472.txt",
+     "q": "zerologon what is the vulnerability",
+     "top5": [
+      "corpus-cisa-kev/kev/CVE-2020-1472.txt",
+      "corpus-cisa-kev/kev/CVE-2023-43208.txt",
+      "corpus-cisa-kev/README.md:38",
+      "corpus-cisa-kev/kev/CVE-2020-28949.txt",
+      "corpus-cisa-kev/LICENSE"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-cisa-kev/kev/CVE-2022-26134.txt",
+     "expect_file": "corpus-cisa-kev/kev/CVE-2022-26134.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-cisa-kev/kev/CVE-2022-26134.txt",
+     "q": "confluence OGNL RCE 2022 what should agencies do",
+     "top5": [
+      "corpus-cisa-kev/kev/CVE-2022-26134.txt",
+      "corpus-cisa-kev/kev/CVE-2021-44228.txt",
+      "corpus-cisa-kev/kev/CVE-2023-43208.txt",
+      "corpus-cisa-kev/LICENSE",
+      "corpus-cisa-kev/kev/CVE-2025-20362.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-cisa-kev/kev/CVE-2026-88779.txt",
+     "expect_file": "corpus-cisa-kev/kev/CVE-2026-88779.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-cisa-kev/kev/CVE-2026-88779.txt",
+     "q": "newest Citrix NetScaler memory buffer denial of service",
+     "top5": [
+      "corpus-cisa-kev/kev/CVE-2026-88779.txt",
+      "corpus-cisa-kev/kev/CVE-2026-8452.txt",
+      "corpus-cisa-kev/kev/CVE-2026-88772.txt",
+      "corpus-cisa-kev/kev/CVE-2026-19490.txt",
+      "corpus-cisa-kev/kev/CVE-2026-88771.txt"
+     ],
+     "verdict": "pass"
+    }
+   ],
+   "relevant": 4,
+   "verdict": "PASS"
+  },
   "ecfr-title-14": {
    "median": 5.0,
    "pass": 5,
@@ -881,6 +969,182 @@
    ],
    "relevant": 1,
    "verdict": "FAIL"
+  },
+  "owasp-cheatsheets": {
+   "median": 5.0,
+   "pass": 5,
+   "queries": [
+    {
+     "expect": "cheatsheets/Password_Storage_Cheat_Sheet.md",
+     "expect_file": "cheatsheets/Password_Storage_Cheat_Sheet.md",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "CheatSheetSeries/cheatsheets/Password_Storage_Cheat_Sheet.md",
+     "q": "What Argon2id work parameters does the OWASP cheat sheet recommend for storing passwords?",
+     "top5": [
+      "CheatSheetSeries/cheatsheets/Password_Storage_Cheat_Sheet.md",
+      "CheatSheetSeries/cheatsheets/Password_Storage_Cheat_Sheet.md",
+      "CheatSheetSeries/GUIDELINE.md",
+      "CheatSheetSeries/GUIDELINE.md",
+      "CheatSheetSeries/cheatsheets/REST_Assessment_Cheat_Sheet.md"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.md",
+     "expect_file": "cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.md",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "CheatSheetSeries/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.md",
+     "q": "Why does OWASP push parameterized queries as the main defense for database injection flaws?",
+     "top5": [
+      "CheatSheetSeries/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.md",
+      "CheatSheetSeries/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.md",
+      "CheatSheetSeries/cheatsheets/Injection_Prevention_Cheat_Sheet.md",
+      "CheatSheetSeries/cheatsheets/LDAP_Injection_Prevention_Cheat_Sheet.md",
+      "CheatSheetSeries/cheatsheets/Injection_Prevention_Cheat_Sheet.md"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "cheatsheets/Session_Management_Cheat_Sheet.md",
+     "expect_file": "cheatsheets/Session_Management_Cheat_Sheet.md",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "CheatSheetSeries/cheatsheets/Session_Management_Cheat_Sheet.md",
+     "q": "After login, how much is a session cookie worth compared to the credentials the user just presented?",
+     "top5": [
+      "CheatSheetSeries/cheatsheets/Cookie_Theft_Mitigation_Cheat_Sheet.md",
+      "CheatSheetSeries/cheatsheets/Bot_Management_and_Anti-Automation_Cheat_Sheet.md",
+      "CheatSheetSeries/cheatsheets/Authentication_Cheat_Sheet.md",
+      "CheatSheetSeries/cheatsheets/Session_Management_Cheat_Sheet.md",
+      "CheatSheetSeries/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.md"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.md",
+     "expect_file": "cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.md",
+     "grade": "relevant",
+     "hard": true,
+     "hit": "CheatSheetSeries/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.md",
+     "q": "Is there a CSRF mitigation for my fetch-based frontend that avoids anti-forgery tokens entirely?",
+     "top5": [
+      "CheatSheetSeries/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.md",
+      "CheatSheetSeries/cheatsheets/Ruby_on_Rails_Cheat_Sheet.md",
+      "CheatSheetSeries/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.md",
+      "CheatSheetSeries/cheatsheets/DotNet_Security_Cheat_Sheet.md",
+      "CheatSheetSeries/cheatsheets/Nodejs_Security_Cheat_Sheet.md"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "cheatsheets/REST_Security_Cheat_Sheet.md",
+     "expect_file": "cheatsheets/REST_Security_Cheat_Sheet.md",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "CheatSheetSeries/cheatsheets/REST_Security_Cheat_Sheet.md",
+     "q": "Why is trusting the alg field dangerous when a REST endpoint validates a JSON web token?",
+     "top5": [
+      "CheatSheetSeries/cheatsheets/REST_Security_Cheat_Sheet.md",
+      "CheatSheetSeries/cheatsheets/REST_Assessment_Cheat_Sheet.md",
+      "CheatSheetSeries/cheatsheets/JSON_Web_Token_Cheat_Sheet.md",
+      "CheatSheetSeries/cheatsheets/JSON_Web_Token_Cheat_Sheet.md",
+      "CheatSheetSeries/cheatsheets/REST_Assessment_Cheat_Sheet.md"
+     ],
+     "verdict": "pass"
+    }
+   ],
+   "relevant": 5,
+   "verdict": "PASS"
+  },
+  "owasp-wstg": {
+   "median": 5.0,
+   "pass": 5,
+   "queries": [
+    {
+     "expect": "document/4-Web_Application_Security_Testing/07-Injection/05-SQL_Injection.md",
+     "expect_file": "document/4-Web_Application_Security_Testing/07-Injection/05-SQL_Injection.md",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "wstg/document/4-Web_Application_Security_Testing/07-Injection/05-SQL_Injection.md",
+     "q": "During database injection testing, what does the UNION technique accomplish?",
+     "top5": [
+      "wstg/document/4-Web_Application_Security_Testing/07-Injection/05-SQL_Injection.md",
+      "wstg/document/4-Web_Application_Security_Testing/07-Injection/05-SQL_Injection.md",
+      "wstg/document/4-Web_Application_Security_Testing/07-Injection/07-XML_Injection.md:1",
+      "wstg/document/4-Web_Application_Security_Testing/07-Injection/05.5-MS_Access.md",
+      "wstg/document/4-Web_Application_Security_Testing/07-Injection/07-XML_Injection.md:144"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "document/4-Web_Application_Security_Testing/06-Session_Management/10-JSON_Web_Tokens.md",
+     "expect_file": "document/4-Web_Application_Security_Testing/06-Session_Management/10-JSON_Web_Tokens.md",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "wstg/document/4-Web_Application_Security_Testing/06-Session_Management/10-JSON_Web_Tokens.md",
+     "q": "When testing tokens, what should happen if a payload section has been altered?",
+     "top5": [
+      "wstg/document/4-Web_Application_Security_Testing/06-Session_Management/07-Session_Timeout.md",
+      "wstg/document/4-Web_Application_Security_Testing/06-Session_Management/10-JSON_Web_Tokens.md",
+      "wstg/document/4-Web_Application_Security_Testing/06-Session_Management/01-Session_Management_Schema.md",
+      "wstg/document/4-Web_Application_Security_Testing/01-Information_Gathering/04-Attack_Surface_Identification.md",
+      "wstg/document/4-Web_Application_Security_Testing/07-Injection/07-XML_Injection.md:397"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "document/4-Web_Application_Security_Testing/04-Authentication/03-Weak_Lock_Out_Mechanism.md",
+     "expect_file": "document/4-Web_Application_Security_Testing/04-Authentication/03-Weak_Lock_Out_Mechanism.md",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "wstg/document/4-Web_Application_Security_Testing/04-Authentication/03-Weak_Lock_Out_Mechanism.md",
+     "q": "When testing login throttling, after how many failed tries do applications commonly freeze an account?",
+     "top5": [
+      "wstg/document/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management/15-Feature_Flag_Security_Bypass.md",
+      "wstg/document/4-Web_Application_Security_Testing/07-Injection/07-XML_Injection.md:1",
+      "wstg/document/4-Web_Application_Security_Testing/04-Authentication/03-Weak_Lock_Out_Mechanism.md",
+      "wstg/document/4-Web_Application_Security_Testing/03-Identity_Management/04-Account_Enumeration_and_Guessable_User_Account.md",
+      "wstg/document/4-Web_Application_Security_Testing/07-Injection/07-XML_Injection.md:266"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "document/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management/11-Cloud_Storage.md",
+     "expect_file": "document/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management/11-Cloud_Storage.md",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "wstg/document/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management/11-Cloud_Storage.md",
+     "q": "What risks come from misconfigured permissions on cloud object stores like S3, per the testing guide?",
+     "top5": [
+      "wstg/document/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management/09-File_Permissions.md",
+      "wstg/checklists/checklist.json",
+      "wstg/document/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management/14-Other_HTTP_Security_Header_Misconfigurations.md",
+      "wstg/document/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management/04-Review_Old_Backup_and_Unreferenced_Files_for_Sensitive_Information.md",
+      "wstg/document/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management/11-Cloud_Storage.md"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "document/4-Web_Application_Security_Testing/12-API_Testing/99-GraphQL.md",
+     "expect_file": "document/4-Web_Application_Security_Testing/12-API_Testing/99-GraphQL.md",
+     "grade": "relevant",
+     "hard": true,
+     "hit": "wstg/document/4-Web_Application_Security_Testing/12-API_Testing/99-GraphQL.md",
+     "q": "How can a tester map out every operation and type a GraphQL endpoint exposes?",
+     "top5": [
+      "wstg/document/4-Web_Application_Security_Testing/12-API_Testing/99-GraphQL.md",
+      "wstg/document/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management/02-Application_Platform_Configuration.md",
+      "wstg/document/4-Web_Application_Security_Testing/07-Injection/07-XML_Injection.md:397",
+      "wstg/document/4-Web_Application_Security_Testing/07-Injection/07-XML_Injection.md:226",
+      "wstg/document/4-Web_Application_Security_Testing/12-API_Testing/03-Excessive_Data_Exposure.md"
+     ],
+     "verdict": "pass"
+    }
+   ],
+   "relevant": 5,
+   "verdict": "PASS"
   },
   "ssa-poms": {
    "analysis": "Round-1 FAIL 0/5. Expect clauses all exist in the pinned files (grep-verified) but none of the five expected files reached top-5. Q1's answer section (DI 10105.070, titled 'Waiting Period for DIB') ranked #1-2 while the suite pinned DI 10105.005 (same clause, different section); Q2's answer is verbatim in DI 00115.001 yet GN 01707.010 outranked it. Root cause hypothesis (pre-registered fix): POMS pages are 10-100KB and autoindex splits them ~3.8 records/file - 34,356 records from 8,989 files - so short chunks win BM25 length normalization and near-duplicate chunks crowd top-5 (DI 10105.070 appears twice in Q1's top-5). FIX: re-pin the mirror split at POMS sub-section boundaries (per A/B/C heading) so each record is small and clause-bearing; round-2 suite keeps identical queries and clauses, expect_file re-pinned to the new split. Not a suite edit: queries and expect clauses are unchanged.",

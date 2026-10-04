@@ -1,0 +1,21 @@
+{
+ "corpus": "cisa-kev",
+ "cloned_at": "2026-10-04T21:50:00Z",
+ "repos": [
+  {
+   "repo": "corpus-cisa-kev",
+   "url": "https://github.com/xerj-org/corpus-cisa-kev",
+   "licence": "UNKNOWN",
+   "sha": "1c09ebebd1e9821c8c38d4a72e4a3c7e6ea51c80",
+   "files": 1738,
+   "bytes": 3481601,
+   "review": {
+    "spdx": "UNKNOWN",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-04",
+    "note": "CISA Known Exploited Vulnerabilities catalog, one file per KEV entry (1,734 kev/CVE-*.txt) + source feed. Licence: CC0-1.0 human-verified (canonical text + provenance in mirror LICENSE; detector reads UNKNOWN). Build note: autoindex_exit=1 salvaged but dupcheck 5212/5212/0 CLEAN - full coverage; plain re-index clears the mark. G7 round-1: 4/5 pass 4/5 relevant. Evidence: backlog/g7-night2-2026-10-04-graded.json"
+   }
+  }
+ ]
+}

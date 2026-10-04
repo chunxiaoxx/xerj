@@ -1,0 +1,21 @@
+{
+ "corpus": "owasp-wstg",
+ "cloned_at": "2026-10-04T21:50:00Z",
+ "repos": [
+  {
+   "repo": "wstg",
+   "url": "https://github.com/OWASP/wstg",
+   "licence": "CC-BY-SA-4.0",
+   "sha": "8df290a38090b8d2235caa52a25a13e021af6670",
+   "files": 362,
+   "bytes": 15319364,
+   "review": {
+    "spdx": "CC-BY-SA-4.0",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-04",
+    "note": "OWASP Web Security Testing Guide v4.2 as cloned. G7 round-1: 5/5 pass 5/5 relevant. Evidence: backlog/g7-night2-2026-10-04-graded.json"
+   }
+  }
+ ]
+}

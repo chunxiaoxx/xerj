@@ -83,11 +83,16 @@
    "cat": "SEC",
    "domain": "an agent triaging findings queries this for whether a CVE is known-exploited in the wild, with ransomware-use and due-date fields",
    "g7": {
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "graded": "2026-10-04",
     "note": "pre-registered 2026-10-04 before indexing",
-    "round": 0,
-    "suite": "backlog/g7-cisa-kev-2026-10.json"
+    "pass": 4,
+    "relevant": 4,
+    "round": 1,
+    "suite": "backlog/g7-cisa-kev-2026-10.json",
+    "verdict": "PASS"
    },
-   "lane": "B",
+   "lane": "A",
    "refresh": "daily",
    "slug": "cisa-kev",
    "sources": [
@@ -96,7 +101,7 @@
      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
     }
    ],
-   "status": "candidate"
+   "status": "live"
   },
   {
    "cat": "SEC",
@@ -212,7 +217,15 @@
   {
    "cat": "SEC",
    "domain": "an agent implementing an auth/upload/crypto feature queries this for the concrete cheatsheet: header lists, code shapes, test ideas",
-   "lane": "B",
+   "g7": {
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "graded": "2026-10-04",
+    "pass": 5,
+    "relevant": 5,
+    "round": 1,
+    "verdict": "PASS"
+   },
+   "lane": "A",
    "refresh": "weekly",
    "slug": "owasp-cheatsheets",
    "sources": [
@@ -221,7 +234,7 @@
      "url": "https://github.com/OWASP/CheatSheetSeries"
     }
    ],
-   "status": "candidate"
+   "status": "live"
   },
   {
    "cat": "SEC",
@@ -249,7 +262,15 @@
   {
    "cat": "SEC",
    "domain": "an agent planning a web test pass queries this for test categories, procedures and expected results",
-   "lane": "B",
+   "g7": {
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "graded": "2026-10-04",
+    "pass": 5,
+    "relevant": 5,
+    "round": 1,
+    "verdict": "PASS"
+   },
+   "lane": "A",
    "refresh": "pinned",
    "slug": "owasp-wstg",
    "sources": [
@@ -258,7 +279,7 @@
      "url": "https://github.com/OWASP/wstg"
     }
    ],
-   "status": "candidate"
+   "status": "live"
   },
   {
    "cat": "SEC",
