@@ -1,0 +1,21 @@
+{
+ "corpus": "fda-food-code",
+ "cloned_at": "2026-10-04T21:50:00Z",
+ "repos": [
+  {
+   "repo": "corpus-fda-food-code",
+   "url": "https://github.com/xerj-org/corpus-fda-food-code",
+   "licence": "US-government public domain (FDA/HHS, 17 USC 105)",
+   "sha": "30a284445738f3beceeb6127d16e7a89b6e0b306",
+   "files": 407,
+   "bytes": 6642305,
+   "review": {
+    "spdx": "US-government public domain (FDA/HHS, 17 USC 105)",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-04",
+    "note": "FDA Food Code 2022 full document (chapters 1-8 + annexes 1-7 + front matter), PDF sha256 pinned in the mirror README, extracted with pypdf and split per provision (407 files). Honest boundary recorded in the README: the 2022 edition as published - neither the Supplement to the 2022 Food Code nor the 2026 Food Code is included. G7 graded 2026-10-04: 4/5 pass 4/5 relevant (handwashing sink hand-contact, Time as a Public Health Control, date marking disposition, bare-hand contact readiness). Evidence: backlog/g7-night2-2026-10-04-graded.json"
+   }
+  }
+ ]
+}

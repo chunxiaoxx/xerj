@@ -1,0 +1,21 @@
+{
+ "corpus": "mutcd",
+ "cloned_at": "2026-10-04T21:50:00Z",
+ "repos": [
+  {
+   "repo": "corpus-mutcd",
+   "url": "https://github.com/xerj-org/corpus-mutcd",
+   "licence": "US-government public domain (FHWA/DOT, 17 USC 105)",
+   "sha": "b70b91886a801dcd91ea87ec0008b8ea85f0f6ac",
+   "files": 960,
+   "bytes": 34894040,
+   "review": {
+    "spdx": "US-government public domain (FHWA/DOT, 17 USC 105)",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-04",
+    "note": "FHWA MUTCD 11th Edition with Revision 1 (December 2025) - the edition mutcd.fhwa.dot.gov currently distributes (source page + PDF sha256 pinned in the mirror README). PDF-only lane (FHWA stopped publishing HTML with the 11th edition), extracted with pypdf and split per section: 960 files across sections/chapters, front matter and appendices. G7 graded 2026-10-04: 4/5 pass 4/5 relevant (full-stop warrant 2B.04, traffic signal dark treatment, school zone signing, work-zone channelizing). Evidence: backlog/g7-night2-2026-10-04-graded.json"
+   }
+  }
+ ]
+}

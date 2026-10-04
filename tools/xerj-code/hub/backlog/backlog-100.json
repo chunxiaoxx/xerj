@@ -1,16 +1,4 @@
 {
- "program": "corpus-hub-100",
- "schema": 1,
- "opened": "2026-10-02",
- "note": "licence_hint is a HINT (memory + detector shape), never the verdict. Gate G4 requires a human review block at the pinned SHA; several hints below WILL be wrong \u2014 that is the point of the gate. domain is the G1 sentence. cat/lane drive wave assignment (PROGRAM-100.md \u00a74/\u00a78).",
- "statuses": [
-  "live",
-  "candidate",
-  "planned",
-  "deferred",
-  "killed",
-  "withdrawn"
- ],
  "cats": [
   "SEC",
   "STD",
@@ -20,1779 +8,1801 @@
   "DATA",
   "NET"
  ],
+ "corpora": [
+  {
+   "cat": "DATA",
+   "domain": "an agent working on full-text search internals queries this for how lucene/tantivy/quickwit/meilisearch/sonic/elasticsearch do BM25, merge policy and the ES wire",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "xerj-search",
+   "sources": [
+    {
+     "licence_hint": "mixed \u2014 per-repo review blocks in the manifest",
+     "url": "see hub/xerj-search.json"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent working on storage engines queries this for how sled/fjall/redb do WAL, crash recovery and compaction",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "xerj-storage",
+   "sources": [
+    {
+     "licence_hint": "per-repo review blocks in the manifest",
+     "url": "see hub/xerj-storage.json"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent working on columnar layouts queries this for how clickhouse does codecs, layout and vectorised scans",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "xerj-columnar",
+   "sources": [
+    {
+     "licence_hint": "per-repo review blocks in the manifest",
+     "url": "see hub/xerj-columnar.json"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "NET",
+   "domain": "an agent working on vector search queries this for how qdrant/usearch/instant-distance/hnswlib do HNSW construction, quantisation and filtered kNN",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "xerj-vector",
+   "sources": [
+    {
+     "licence_hint": "per-repo review blocks in the manifest",
+     "url": "see hub/xerj-vector.json"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "BAD",
+   "domain": "an agent reviewing Rust code queries this for vulnerability precedent \u2014 identity-resolved RUSTSEC/GHSA/CVE advisories with affected functions and fixed versions",
+   "lane": "B",
+   "refresh": "daily",
+   "slug": "rust-vulns",
+   "sources": [
+    {
+     "licence_hint": "per-source review blocks in the recipe",
+     "url": "tools/packs/rust-vulns/recipe.toml"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "SEC",
+   "domain": "an agent triaging findings queries this for whether a CVE is known-exploited in the wild, with ransomware-use and due-date fields",
+   "g7": {
+    "note": "pre-registered 2026-10-04 before indexing",
+    "round": 0,
+    "suite": "backlog/g7-cisa-kev-2026-10.json"
+   },
+   "lane": "B",
+   "refresh": "daily",
+   "slug": "cisa-kev",
+   "sources": [
+    {
+     "licence_hint": "CC0 1.0 \u2014 VERIFIED verbatim from the licence file the catalog page links (Akamai-gated for non-browser clients): \"The KEV database is distributed under the Creative Commons 0 1.0 License.\" Mirror xerj-org/corpus-cisa-kev @1c09ebebd1e9: 1,734 per-CVE files (catalogVersion 2026.10.04), raw feed kept in source/ for verification; canonical CC0 text + provenance in LICENSE.",
+     "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+    }
+   ],
+   "status": "candidate"
+  },
+  {
+   "cat": "SEC",
+   "domain": "an agent auditing dependencies across ecosystems queries this for GitHub-reviewed advisories with CVSS and patched ranges",
+   "lane": "B",
+   "refresh": "weekly",
+   "slug": "ghsa-db",
+   "sources": [
+    {
+     "licence_hint": "CC-BY-4.0 (verify at pin)",
+     "url": "https://github.com/github/advisory-database"
+    }
+   ],
+   "status": "candidate"
+  },
+  {
+   "cat": "SEC",
+   "domain": "an agent pinning dependencies queries this for affected-version truth across Go/PyPI/npm, resolved to one record per vulnerability",
+   "g7": {
+    "note": "deferred before any grading; suite exists in backlog/g7-tonight (osv-ecosystems, 5 queries, pre-registered 2026-10-03)",
+    "round": 0
+   },
+   "lane": "B",
+   "refresh": "daily",
+   "slug": "osv-ecosystems",
+   "sources": [
+    {
+     "licence_hint": "DEFERRED 2026-10-04 on a measured throughput ceiling, NOT on licence or scope: 251,915 files at the measured corpus-index rate for many-small-files corpora (~1 file/s; cdc-clinical 62 files/62s, ghsa-db 36k files projecting 8-10h) = ~3 days of serial ingest for one corpus. The mirror's scope is sound (xerj-org/corpus-osv-ecosystems, 7 ecosystems, MAL npm 222k by design) and the per-file top-k cap (#1137) is the right protection for the MAL wall \u2014 but the corpus cannot be BUILT to a G7 grade until either (a) engine ingest throughput for many-small-files corpora improves (tracker to file) or (b) it moves to the Lane B pack builder (pattern-rust-vulns) which batches records instead of walking files. Neither is scope surgery; revisit after the engine work. CC-BY-4.0 for OSV data verified at mirror authoring.",
+     "url": "https://osv.dev"
+    }
+   ],
+   "status": "deferred"
+  },
+  {
+   "cat": "SEC",
+   "domain": "an agent reviewing Python dependency trees queries this for PYSEC advisory records with fixed versions",
+   "lane": "B",
+   "refresh": "weekly",
+   "slug": "pysec",
+   "sources": [
+    {
+     "licence_hint": "CC-BY-4.0 (verify at pin)",
+     "url": "https://github.com/pypa/advisory-database"
+    }
+   ],
+   "status": "candidate"
+  },
+  {
+   "cat": "SEC",
+   "domain": "an agent reviewing Go modules queries this for Go-team-curated advisories with symbols and fixed versions",
+   "lane": "B",
+   "refresh": "weekly",
+   "slug": "go-vulndb",
+   "sources": [
+    {
+     "licence_hint": "verify at pin (CC-BY-4.0 / BSD variants reported)",
+     "url": "https://github.com/golang/vulndb"
+    }
+   ],
+   "status": "candidate"
+  },
+  {
+   "cat": "SEC",
+   "domain": "an agent classifying a finding queries this for the CWE definition, its parents/children and detection notes",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "mitre-cwe",
+   "sources": [
+    {
+     "licence_hint": "Built 2026-10-04 from cwec_latest.xml.zip \u2192 cwec_v4.20.xml (18,192,305 B; Version 4.20, Date 2026-04-30). Split: 1,450 element files (969 weaknesses/422 categories/59 views), largest 13,431 B, no caps triggered. TERMS (termsofuse.html, verbatim in LICENSE-TERMS): non-exclusive royalty-free license for research/development/commercial purposes; any copy authorized on condition MITRE's copyright designation + license are reproduced \u2014 condition satisfied. Detector reads licence as UNKNOWN (MITRE data terms are not a standard OSS licence); mirrors are retrieved-from. Suite g7-mitre-cwe-2026-10.json pre-registered (5 queries, 1 hard: symptom-words absent from the target file \u2014 the lexical risk named in shape note). G7 round-2 2026-10-05 graded 3/5 pass 3/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 3/5 re-confirmed under the diversity cap (no regression).",
+     "url": "https://github.com/xerj-org/corpus-mitre-cwe"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "SEC",
+   "domain": "an agent writing or reviewing detections queries this for technique ids, tactics, detection data-sources and procedure examples",
+   "lane": "B",
+   "refresh": "weekly",
+   "slug": "mitre-attck",
+   "sources": [
+    {
+     "licence_hint": "verify at pin (MITRE Free License historically; CC-BY-4.0 reported for current data)",
+     "url": "https://github.com/mitre-attack/attack-stix-data"
+    }
+   ],
+   "status": "candidate"
+  },
+  {
+   "cat": "SEC",
+   "domain": "an agent reasoning about attack surface queries this for attack-pattern enumerations with prerequisites and mitigations",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "mitre-capec",
+   "sources": [
+    {
+     "licence_hint": "Built 2026-10-04 \u2014 NOTE upstream layout changed: /data/xml/capec_latest.xml.zip 404s; current = bare XML /data/xml/capec_latest.xml (3,849,998 B) + archive zip. Version 3.9 (Date 2023-01-24). Split: 615 CAPEC-N.md at root, largest 5,301 B; v3.x has no separate Summary element (Description carries it \u2014 README notes). Same MITRE terms class as cwe (verbatim in LICENSE-TERMS). Suite g7-mitre-capec-2026-10.json pre-registered (5 queries, 1 hard; precision-hazard shape note: verbatim-shared mitigation blocks across patterns). G7 round-2 2026-10-05 graded 3/5 pass 3/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 3/5 re-confirmed.",
+     "url": "https://github.com/xerj-org/corpus-mitre-capec"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "SEC",
+   "domain": "an agent implementing an auth/upload/crypto feature queries this for the concrete cheatsheet: header lists, code shapes, test ideas",
+   "lane": "B",
+   "refresh": "weekly",
+   "slug": "owasp-cheatsheets",
+   "sources": [
+    {
+     "licence_hint": "CC-BY-SA-4.0 (verify at pin; SA term noted for pack emission)",
+     "url": "https://github.com/OWASP/CheatSheetSeries"
+    }
+   ],
+   "status": "candidate"
+  },
+  {
+   "cat": "SEC",
+   "domain": "an agent reviewing an application's security posture queries this for the ASVS requirement and its verification level",
+   "lane": "B",
+   "refresh": "pinned",
+   "slug": "owasp-asvs",
+   "sources": [
+    {
+     "licence_hint": "CC-BY-SA-4.0 (verify at pin)",
+     "url": "https://github.com/OWASP/ASVS"
+    }
+   ],
+   "status": "candidate"
+  },
+  {
+   "cat": "SEC",
+   "domain": "an agent planning a web test pass queries this for test categories, procedures and expected results",
+   "lane": "B",
+   "refresh": "pinned",
+   "slug": "owasp-wstg",
+   "sources": [
+    {
+     "licence_hint": "CC-BY-SA-4.0 (verify at pin)",
+     "url": "https://github.com/OWASP/wstg"
+    }
+   ],
+   "status": "candidate"
+  },
+  {
+   "cat": "SEC",
+   "domain": "an agent designing a control or wipe procedure queries this for what SP 800-53/61/63/88/207 actually require, clause-level",
+   "g7": {
+    "corpus_unchanged": true,
+    "engine_fix": "#1142 landed on the grading branch (fix/autoindex-markdown-sniff-guards): coverage went 282->717 files / 891->2159 records; sec5_authenticators.md, sp800-218 tree and the 171r3/172r3 control files now index. Q1/Q4/Q5 expect files ARE retrievable now, but paraphrase competition (FAQ files, sibling controls PW.4/MP-7) outranks them \u2014 same conversational-vs-normative class as irs/otel, not a coverage defect.",
+    "evidence": "backlog/g7-tonight-2026-10-03-graded.json",
+    "graded_at": "2026-10-04",
+    "next": "PARKED under the semantic/neural lane (issue #66). No further lexical rounds: round-2 proved ranking, not scope, is the binding constraint (prediction recorded before retrieval, scored WRONG).",
+    "prediction": "4/5 \u2014 WRONG (round 2)",
+    "round": 2,
+    "score": "1/5 pass 1/5 relevant",
+    "verdict": "FAIL"
+   },
+   "lane": "B",
+   "refresh": "pinned",
+   "slug": "nist-sp800-sec",
+   "sources": [
+    {
+     "licence_hint": "INTAKE RE-SCOPED 2026-10-04 from source survey (planned csrc.nist.gov/pubs/sp/800 is 404; CSRC has no bulk API and per-pub downloads are PDF-only \u2014 the famous prose pubs are unfetchable as text). Build instead from GitHub text sources: usnistgov/800-63-3 (SP 800-63-3 + vols A/B/C + FAQ as per-section Jekyll markdown \u2014 licence 'NIST Technical Series Publications': USG work, worldwide perpetual royalty-free reprint right granted, attribute 'Republished courtesy of NIST', third-party portions may carry copyright) + usnistgov/oscal-content (SP 800-53r5 + 4 baselines, 800-171r3, 800-172r3, 800-218, CSF 2.0 as OSCAL JSON \u2014 LICENSE.md is worldwide public domain + CC0-1.0, cleanest). Chunk OSCAL at control level. 10-13 documents; pin commit SHAs. TRAP: usnistgov/zero-trust-architecture contains NO 800-207 text (verified all branches \u2014 stubs + a different NCCoE practice guide). G7 graded 2026-10-04 vs PR #1140 engine: 1/5 -> FAIL. Root cause is NOT corpus scope: engine #1142 (autoindex sniffs markdown-with-bare-YAML-header as YAML and markdown-with-HTML-prefix as XML, then silently drops the file \u2014 440/722 mirror files never indexed, incl. sec5_authenticators.md, the whole sp800-218 tree, and the 171r3/172r3 control files). ROUND-2 FIX PRE-REGISTERED before any re-retrieval: engine fix #1142 (markdown-signature guard in classify_text before the YAML-ratio/XML-prefix branches); corpus UNCHANGED (mutating 440 files to dodge a classifier bug would falsify the verbatim-mirror policy). PREDICTION: 4/5 (Q1/Q4/Q5 expect files are in the junked classes; Q2 already passes; Q3 may stay a miss \u2014 FAQ-title ranking competition, a different defect class).",
+     "url": "https://github.com/usnistgov/800-63-3"
+    },
+    {
+     "licence_hint": "see 800-63-3 entry",
+     "url": "https://github.com/usnistgov/oscal-content"
+    }
+   ],
+   "status": "candidate"
+  },
+  {
+   "cat": "SEC",
+   "domain": "an agent hardening infrastructure queries this for NSA/CISA joint guidance specifics (MTIG, memory-safe roadmaps, KPMs)",
+   "lane": "B",
+   "refresh": "weekly",
+   "slug": "nsa-cyber-advisories",
+   "sources": [
+    {
+     "licence_hint": "DEFERRED 2026-10-04 on survey evidence: NSA advisories are PDF-only on media.defense.gov, both nsa.gov and media.defense.gov 403 non-browser clients (Akamai), and no licence-clean text mirror exists. GitHub NSAcyber org = 39 tool/guidance repos, NOT advisories. Re-scope candidate if a slot is needed: 'nsacyber-guidance' = the ~10 config-guidance repos' markdown (CC0/\u00a7105 verified on spot-checked repos, but several repos lack LICENSE files \u2014 per-repo read required; Hardware-and-Firmware-Security-Guidance has none). Do not name any such corpus 'advisories'.",
+     "url": "https://www.nsa.gov/Cybersecurity/Cybersecurity-Advisories-Guidance"
+    }
+   ],
+   "status": "deferred"
+  },
+  {
+   "cat": "SEC",
+   "domain": "an agent triaging an active campaign queries this for the alert's IOCs, required actions and mitigations",
+   "g7": {
+    "engine": "PR #1140 (0ae1439bb+35903648c)",
+    "evidence": "backlog/g7-tonight-2026-10-03-graded.json",
+    "graded_at": "2026-10-04",
+    "round": 1,
+    "score": "3/5 pass 3/5 relevant",
+    "verdict": "PASS"
+   },
+   "lane": "A",
+   "refresh": "weekly",
+   "slug": "cisa-alerts",
+   "sources": [
+    {
+     "licence_hint": "US federal works public domain (17 USC 105), mirror LICENSE.md; co-published advisories (9 flagged) may carry partner-nation copyright \u2014 per-partner review. MIRROR LIVE @b4d2547 (xerj-org/corpus-cisa-alerts, master branch \u2014 repo has no main): 324 advisory docs 2025-05..2026-10 after same-day quality pass (79 Page-Not-Found captures dropped, feed chrome stripped; MANIFEST.tsv marks drops). Fetch traps in mirror README: www.cisa.gov 403s curl (Akamai TLS fingerprint) \u2192 browser-grade fetcher; listing paginates via JS; reader 'page' param collides with ?page=N and serves stale cache without X-No-Cache: true. Refresh = poll all.xml + ics feeds, walk new listing pages.",
+     "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "SEC",
+   "domain": "an agent prioritising remediation queries this for a CVE's EPSS score and percentile to rank patch order",
+   "lane": "B",
+   "refresh": "daily",
+   "slug": "first-epss",
+   "sources": [
+    {
+     "licence_hint": "DEFERRED 2026-10-04 on TWO measured/verified blockers, not vibes: (1) LICENCE NOT VERIFIED \u2014 FIRST publishes scores \"free of charge\" with attribution requested, but no licence statement could be found on first.org/epss pages, the site footer asserts copyright, and the official archive repo (empiricalsec/epss_scores) has license:null; do not ship an unverified licence. (2) THROUGHPUT \u2014 382,621 files at the measured ~1 file/s corpus-index rate (issue #1147) = ~4.4 days serial ingest. Mirror xerj-org/corpus-first-epss @1c3552ed was fully built (382,621 per-CVE files, model v2026.06.15 from the CSV header) and stays published; un-defer when FIRST states a licence or the pack lane batches records.",
+     "url": "https://www.first.org/epss/data-stats"
+    }
+   ],
+   "status": "deferred"
+  },
+  {
+   "cat": "STD",
+   "domain": "an agent implementing or debugging a protocol queries this for what the RFC actually says at clause level (TLP permits unmodified redistribution)",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "ietf-rfc",
+   "sources": [
+    {
+     "licence_hint": "IETF TLP (unmodified redistribution permitted); DEFERRED: no maintained full-text git mirror exists (mcpherrinm/rfc-mirror is ~2014-stale) \u2014 needs an http tar.gz dir-fetch recipe, not a manifest",
+     "url": "https://www.rfc-editor.org/rfc/rfc-txt.tar.gz"
+    }
+   ],
+   "status": "deferred"
+  },
+  {
+   "cat": "STD",
+   "domain": "an agent building browser-adjacent tooling queries this for the living standard's exact normative statements (html/url/fetch/dom)",
+   "g7": {
+    "engine": "fix/xccode-g7-retrieval-1 (PR #1140, 0ae1439bb+35903648c)",
+    "evidence": "backlog/g7-tonight-2026-10-03-graded.json",
+    "graded_at": "2026-10-05",
+    "round": 2
+   },
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "whatwg-specs",
+   "sources": [
+    {
+     "licence_hint": "RE-PINNED after G7 fail 2026-10-02 (mirror fix): upstream whatwg/html+url are multi-MB single-page specs \u2014 whole-file indexing skips what it cannot chunk (the ecma262 G2 failure class). Mirror = html split into 753 section files + url into 36 (breadcrumb header, verbatim bodies), dual licence per source: CC-BY-4.0 text / BSD-3-Clause code (hand-verified per repo). Upstream SHAs pinned in the mirror README. Suite re-runs with expect_file remapped to section paths. G7 round-2 2026-10-05 graded 5/5 pass 5/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 5/5 \u2014 the html-dominance verdict was an artifact of #1139 (txt records unsearchable). FLIPPED live 2026-10-05: G7 5/5 pass 5/5 relevant -> PASS vs PR #1140 engine (0ae1439bb+35903648c). Manifest hub/whatwg-specs.json written.",
+     "url": "https://github.com/xerj-org/corpus-whatwg-sections"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "STD",
+   "domain": "an agent working on layout/selector internals queries this for the csswg draft's algorithm text (the resolution and cascade algorithms are unmemorisable prose)",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "w3c-css",
+   "sources": [
+    {
+     "licence_hint": "W3C document licence (verify redistribution terms at pin)",
+     "url": "https://github.com/w3c/csswg-drafts"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "STD",
+   "domain": "an agent building a JS-adjacent tool queries this for the spec's abstract operations and completion-record semantics",
+   "g7": {
+    "engine": "fix/xccode-g7-retrieval-1 (PR #1140, 0ae1439bb+35903648c)",
+    "evidence": "backlog/g7-tonight-2026-10-03-graded.json",
+    "graded_at": "2026-10-05",
+    "round": 2
+   },
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "ecma262",
+   "sources": [
+    {
+     "licence_hint": "LICENCE CORRECTED 2026-10-03 (the row previously claimed 'CC-BY-4.0 at pin' \u2014 wrong): GitHub reports tc39/ecma262 as NOASSERTION; the actual terms are Ecma's ALTERNATIVE copyright notice for the spec text (permissive-with-conditions: copy/modify/distribute for any purpose without fee, provided the full notice text stays viewable, pre-existing disclaimers carry, and changes are stated \u2014 derived from the W3C Software and Document Notice) plus Ecma's BSD-style software policy for code portions. The mirror carries NOTICE.md with the full notice and the changes statement, so redistribution is within the grant. G2 fix = section split: 2,341 files (one per emu-clause/emu-annex/emu-intro), upstream SHA pinned in the mirror README. G7 round-2 2026-10-05 graded 3/5 pass 3/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 3/5 on the sections mirror (3,227 records, CLEAN on (file,locator)). FLIPPED live 2026-10-05: G7 3/5 pass 3/5 relevant -> PASS vs PR #1140 engine (0ae1439bb+35903648c). Manifest hub/ecma262.json written; corpus.json licence corrected to the Ecma alternative-notice terms.",
+     "url": "https://github.com/xerj-org/corpus-ecma262-sections"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "STD",
+   "domain": "an agent formatting dates/numbers/names queries this for locale-specific CLDR rules and plural/data tables no model recalls",
+   "g7": {
+    "engine": "fix/xccode-g7-retrieval-1 (PR #1140, 0ae1439bb+35903648c)",
+    "evidence": "backlog/g7-tonight-2026-10-03-graded.json",
+    "graded_at": "2026-10-05",
+    "round": 2
+   },
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "unicode-cldr",
+   "sources": [
+    {
+     "licence_hint": "RE-PINNED (round 2, LDML split) 2026-10-05 after the 2/5 G7: mirror = docs/ldml + common/supplemental + en locale XML with the 486KB en.xml split one file per LDML top-level element (bodies byte-verbatim), tools/ and ~440 other locale trees dropped; upstream c1159fe6c pinned in mirror README; Unicode-3.0 hand-verified. Remap g7-cldr-ldml-2026-10.json pre-registered before retrieval (all 5 clauses verified on disk, 1 hit each). Prediction 4/5. FLIPPED live 2026-10-05: G7 5/5 pass 5/5 relevant -> PASS vs PR #1140 engine (0ae1439bb+35903648c); prediction was 4/5 \u2014 actual 5/5. Manifest hub/unicode-cldr.json written.",
+     "url": "https://github.com/xerj-org/corpus-unicode-cldr"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "STD",
+   "domain": "an agent generating or validating an API description queries this for the OpenAPI schema's exact keywords and resolution rules",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "openapi-spec",
+   "sources": [
+    {
+     "licence_hint": "verify at pin (Apache-2.0 reported)",
+     "url": "https://github.com/OAI/OpenAPI-Specification"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "STD",
+   "domain": "an agent writing validators queries this for the dialect's exact keyword semantics (2019-09 vs 2020-12 differences bite)",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "json-schema-spec",
+   "sources": [
+    {
+     "licence_hint": "verify at pin",
+     "url": "https://github.com/json-schema-org/json-schema-spec"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "STD",
+   "domain": "an agent building a GraphQL server queries this for execution, defer/stream and introspection semantics",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "graphql-spec",
+   "sources": [
+    {
+     "licence_hint": "OWFa-1.0 patents + CC-BY-4.0 text (verify at pin)",
+     "url": "https://github.com/graphql/graphql-spec"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "STD",
+   "domain": "an agent implementing a NATS client queries this for the wire protocol, verbs and semantics text",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "nats-protocol",
+   "sources": [
+    {
+     "licence_hint": "Apache-2.0 (verify at pin)",
+     "url": "https://github.com/nats-io/nats-architecture-and-design"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "STD",
+   "domain": "an agent implementing a Kafka client queries this for the protocol guide's exact request/response schemas and error codes",
+   "g7": {
+    "engine": "fix/xccode-g7-retrieval-1 (PR #1140, 0ae1439bb+35903648c)",
+    "evidence": "backlog/g7-tonight-2026-10-03-graded.json",
+    "graded_at": "2026-10-05",
+    "round": 2
+   },
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "kafka-protocol",
+   "sources": [
+    {
+     "licence_hint": "RE-PINNED after G7 fail 2026-10-04 (mirror fix): scope = CURRENT docs only \u2014 content/en/43 + the current root docs (141 files, 3.4MB) from kafka-site @7bf6e996. static/ (750MB, ~20 vendored javadoc copies) dropped, and the 40 old doc-version dirs dropped (AMENDMENT pre-retrieval to the original note, which ambiguously said '+ per-version dirs': the graded Q2 miss retrieved upgrade.md from three different old versions ahead of the answer \u2014 version clones are dilution the same way locale forks were in tldr). Apache-2.0 at pin (LICENSE verbatim). Same wave-1 suite re-runs; expect_files under content/en/43/ suffix-match the mirror's 43/ paths \u2014 no remap needed. G7 round-2 2026-10-05 graded 3/5 pass 3/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 3/5 on the scoped docs mirror (2,768 records CLEAN). FLIPPED live 2026-10-05: G7 3/5 pass 3/5 relevant -> PASS vs PR #1140 engine (0ae1439bb+35903648c). Manifest hub/kafka-protocol.json written.",
+     "url": "https://github.com/xerj-org/corpus-kafka-docs"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "STD",
+   "domain": "an agent building against RESP queries this for command semantics, ranges and error cases (the open post-relicence fork of the Redis docs)",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "valkey-docs",
+   "sources": [
+    {
+     "licence_hint": "BSD-3 (verify at pin)",
+     "url": "https://github.com/valkey-io/valkey-doc"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "STD",
+   "domain": "an agent writing SQL against Postgres queries this for exact function semantics, GUC defaults and MVCC behaviour by version",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "postgres-docs",
+   "sources": [
+    {
+     "licence_hint": "killed: same repository as postgres-src \u2014 doc/ is inside it; a second corpus on one repo is padding",
+     "url": "superseded by postgres-src"
+    }
+   ],
+   "status": "killed"
+  },
+  {
+   "cat": "STD",
+   "domain": "an agent depending on SQLite's exact behaviour queries this for datatype, locking and pragma semantics",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "sqlite-docs",
+   "sources": [
+    {
+     "licence_hint": "killed: the github mirror's doc/ covers trunk docs; the separate docsrc tree is fossil-wiki source not worth its own corpus",
+     "url": "superseded by sqlite-src"
+    }
+   ],
+   "status": "killed"
+  },
+  {
+   "cat": "STD",
+   "domain": "an agent implementing an MQTT client/broker queries this for packet formats, QoS state machines and keepalive semantics",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "mqtt-spec",
+   "sources": [
+    {
+     "licence_hint": "OASIS CC-BY-4.0; DEFERRED 2026-10-02: mqtt/mqtt.org is site chrome \u2014 the repo does NOT contain the spec text (verified at pin faab2e8a05, _sites/mqtt-specification.md only links out); needs an http-fetch recipe + chunking decision like ietf-rfc",
+     "url": "https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html"
+    }
+   ],
+   "status": "deferred"
+  },
+  {
+   "cat": "OPS",
+   "domain": "an agent designing for failure queries this for how real outages of the same shape started, cascaded and were found",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "postmortems",
+   "sources": [
+    {
+     "licence_hint": "DEFERRED 2026-10-02: NO licence at pin 630562e5 (verified) AND the repo is a curated link index (7 files), not the postmortem text \u2014 real content sits on ~1k linked sites each with its own terms. Needs a Lane B curation with per-post licence review.",
+     "url": "https://github.com/danluu/post-mortems"
+    }
+   ],
+   "status": "deferred"
+  },
+  {
+   "cat": "OPS",
+   "domain": "an agent on call for a SaaS queries this for real alert definitions, escalations and mitigation playbooks from a large production fleet",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "gitlab-runbooks",
+   "sources": [
+    {
+     "licence_hint": "MIT (verify at pin \u2014 hosted on gitlab.com, not github)",
+     "url": "https://gitlab.com/gitlab-com/runbooks"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "OPS",
+   "domain": "an agent instrumenting a service queries this for metric semantics, recording-rule patterns and the query language's exact behaviour",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "prometheus-docs",
+   "sources": [
+    {
+     "licence_hint": "killed: same repository as prometheus-src \u2014 docs/ is inside it",
+     "url": "superseded by prometheus-src"
+    }
+   ],
+   "status": "killed"
+  },
+  {
+   "cat": "OPS",
+   "domain": "an agent wiring telemetry queries this for the exact semantic conventions and proto field semantics",
+   "g7": {
+    "corpus_unchanged": true,
+    "engine_fix": "#1142 fixed coverage: the semconv *-spans.md docs were sniffed as YAML/XML and never indexed; database-spans.md now ranks #1 (Q4 pass). Q1/Q3/Q5 remain misses on paraphrase ranking (conversational phrasing vs normative 'MUST/SHOULD' prose).",
+    "evidence": "backlog/g7-tonight-2026-10-03-graded.json",
+    "graded_at": "2026-10-04",
+    "next": "PARKED under the semantic/neural lane (issue #66) with irs-pubs and nist-sp800-sec. Corpus final: opentelemetry-proto + semantic-conventions docs @15f75ec3 (297 files, 4,938,096 B).",
+    "prediction": "3/5 \u2014 WRONG (round 4)",
+    "round": 4,
+    "score": "2/5 pass 2/5 relevant",
+    "verdict": "FAIL"
+   },
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "otel-proto",
+   "sources": [
+    {
+     "licence_hint": "RE-PINNED (scope fix) after G7 fail 2026-10-02: dropped open-telemetry/semantic-conventions from the corpus \u2014 its markdown docs diluted proto-field queries and its content duplicates opentelemetry-spec. Apache-2.0 (hand-verified). Corpus is now the proto repo alone; suite expect_files unchanged (they were proto files). ROUND 2 re-pinned 2026-10-05: the 2026-10-02 scope fix over-corrected \u2014 semconv docs are the only source for HTTP/database span conventions. Corpus = opentelemetry-proto @b3f75588 + semantic-conventions @60a64b66 (2,660 records). Remap g7-otel-round2-2026-10.json pre-registered before retrieval (all 5 clauses verified on disk); prediction 3-4/5 with engine #1137/#1139. ROUND 2 GRADED 2026-10-05: 1/5 \u2014 prediction 3-4/5 was WRONG. With both repos indexed (2,660 records) semconv prose (2,475 docs) dwarfs the 185 proto records: proto queries retrieve span-convention prose, and db/http queries get CHANGELOG and sibling chapter docs instead of the expected files. ROUND 3 fix (pre-registered, not yet run): scope the semantic-conventions clone to its docs/ subtree minus CHANGELOG (the model/ YAMLs, internal/, non-normative/ and the CHANGELOG are the measured diluters); prediction 3/5. G7 round-2 2026-10-05 graded 1/5 pass 1/5 relevant -> FAIL (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 1/5 round-2 \u2014 see round-3 note. ROUND 3 EXECUTED 2026-10-04 (mirror corpus-otel-semconv-docs @15f75ec3, docs/ minus non-normative, upstream 60a64b66c pinned): graded 1/5 \u2014 prediction 3/5 was WRONG. Root cause found post-grade: the two semconv expect files (docs/http/http-spans.md, docs/db/database-spans.md) are NOT IN THE INDEX \u2014 they open with a Hugo `<!---` comment, so the engine sniffs them XML (#1142, same defect class as nist-sp800-sec) and junks them. Scope change could not have fixed this. ROUND 4 PRE-REGISTERED before any re-retrieval: engine fix #1142 (markdown-signature guard + YAML parse tier), corpus UNCHANGED (corpus-otel-semconv-docs @15f75ec3), same round-2 suite, prediction 3/5 (Q2 passes today; Q3/Q4 expect files become indexable; Q1/Q5 are proto-vs-prose ranking and may still miss).",
+     "url": "https://github.com/open-telemetry/opentelemetry-proto"
+    }
+   ],
+   "status": "candidate"
+  },
+  {
+   "cat": "OPS",
+   "domain": "an agent operating a distributed system queries this for etcd's failure/restore/compaction semantics and tuning guides",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "etcd-docs",
+   "sources": [
+    {
+     "licence_hint": "Apache-2.0 (verify at pin)",
+     "url": "https://github.com/etcd-io/website"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "OPS",
+   "domain": "an agent administering a BSD system queries this for the handbook's exact rc/ZFS/jail/networking procedures",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "freebsd-handbook",
+   "sources": [
+    {
+     "licence_hint": "FreeBSD Documentation License (permissive \u2014 verify at pin)",
+     "url": "https://github.com/freebsd/freebsd-doc"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "OPS",
+   "domain": "an agent hardening an OpenBSD host queries this for the pf FAQ's rule grammar, upgrade procedures and faq-page hardening steps",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "openbsd-faq",
+   "sources": [
+    {
+     "licence_hint": "OpenBSD web content, per-page copyright (verify at pin; FAQ lives at faq/, repo is the www CVS module ~890MB) G7 round-2 2026-10-05 graded 3/5 pass 3/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 3/5 (was 4/5 pre-cap; still PASS).",
+     "url": "https://github.com/openbsd/www"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "OPS",
+   "domain": "an agent scripting an unfamiliar long-tail tool queries this for its example invocations (popular tools are memorised \u2014 G3 value is the tail only)",
+   "g7": {
+    "engine": "fix/xccode-g7-retrieval-1 (PR #1140, 0ae1439bb+35903648c)",
+    "evidence": "backlog/g7-tonight-2026-10-03-graded.json",
+    "graded_at": "2026-10-05",
+    "round": 2
+   },
+   "lane": "A",
+   "refresh": "weekly",
+   "slug": "tldr-pages",
+   "sources": [
+    {
+     "licence_hint": "RE-PINNED after G7 fail 2026-10-02 (mirror fix): upstream tldr-pages/tldr detector said MIT but the LICENSE is CC-BY-4.0 (hand-verified); full tree is ~40k pages across 30+ locales and the G7 miss was dilution \u2014 queries retrieved locale forks of the wrong page. Mirror = pages/common ONLY (4,705 en pages, the curated core), upstream SHA pinned in its README. Same wave-1 suite re-runs; expect_file paths remapped to pages/common layout, clauses and queries unchanged. G7 round-2 2026-10-05 graded 2/5 pass 2/5 relevant -> FAIL (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 2/5 pre-fix rows (unbracket rebuild pending). FLIPPED live 2026-10-05: G7 3/5 pass 4/5 relevant (1 partial: correct file, clause off-screen) -> PASS vs PR #1140 engine (0ae1439bb+35903648c) \u2014 the in-row 2/5 FAIL note was an intermediate pre-#1139 re-grade, superseded by the final g7-tonight-graded run. Manifest hub/tldr-pages.json written.",
+     "url": "https://github.com/xerj-org/corpus-tldr-common"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "OPS",
+   "domain": "an agent stepping into an SRE task queries this for the curriculum's concrete replication/signals/messaging/git/networking fundamentals (no incident-response or caching chapters exist \u2014 do not query for them)",
+   "g7": {
+    "engine": "fix/xccode-g7-retrieval-1 (PR #1140, 0ae1439bb+35903648c)",
+    "evidence": "backlog/g7-tonight-2026-10-03-graded.json",
+    "graded_at": "2026-10-05",
+    "round": 2
+   },
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "school-of-sre",
+   "sources": [
+    {
+     "licence_hint": "G4 licence hand-check 2026-10-03: repo LICENSE file = CC-BY-4.0 (detector said UNKNOWN). G7 fail 2026-10-02 was a G1 over-promise, not a corpus defect: the prior suite queried on-call/incident-response and storage-caching chapters that do not exist. Domain sentence rescoped to the actual curriculum; re-scoped suite (in-domain queries only, blind-authored from clone reads, 5/5 expects grep-verified) pre-registered at backlog/g7-sre-2026-10.json BEFORE any re-retrieval. Corpus itself unchanged (same upstream SHA). G7 round-2 2026-10-05 graded 5/5 pass 5/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 5/5 (423 records CLEAN). FLIPPED live 2026-10-05: G7 5/5 pass 5/5 relevant -> PASS vs PR #1140 engine (0ae1439bb+35903648c). Manifest hub/school-of-sre.json written; corpus.json licence corrected to CC-BY-4.0.",
+     "url": "https://github.com/linkedin/school-of-sre"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "GOOD",
+   "domain": "an agent designing a Rust library API queries this for the naming/convertibility/error conventions with their reasoning",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "rust-api-guidelines",
+   "sources": [
+    {
+     "licence_hint": "MIT OR Apache-2.0 (verify at pin)",
+     "url": "https://github.com/rust-lang/api-guidelines"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "GOOD",
+   "domain": "an agent reviewing code queries this for the review standard's concrete what-to-look-for and clangers",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "google-eng-practices",
+   "sources": [
+    {
+     "licence_hint": "CC-BY-4.0 (verify at pin)",
+     "url": "https://github.com/google/eng-practices"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "GOOD",
+   "domain": "an agent designing a REST surface queries this for the naming/paging/versioning/error rules with examples",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "msft-api-guidelines",
+   "sources": [
+    {
+     "licence_hint": "verify at pin (CC-BY reported)",
+     "url": "https://github.com/microsoft/api-guidelines"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "GOOD",
+   "domain": "an agent reviewing an API design queries this for the rule, its intent and propulated exceptions from a fleet of thousands",
+   "g7": {
+    "engine": "fix/xccode-g7-retrieval-1 (PR #1140, 0ae1439bb+35903648c)",
+    "evidence": "backlog/g7-tonight-2026-10-03-graded.json",
+    "graded_at": "2026-10-05",
+    "round": 2
+   },
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "zalando-restful-api-guidelines",
+   "sources": [
+    {
+     "licence_hint": "RE-PINNED after G7 fail 2026-10-02 (mirror fix): detector said UNKNOWN; LICENSE is CC-BY-4.0 (hand-verified). Upstream ships 21 chapters as ONE 1.1MB README monolith the indexer skips; mirror = one file per chapter, upstream SHA pinned. Same suite re-runs with expect_file remapped to the chapter files. ROUND 2 re-pinned 2026-10-05 after the 1/5 re-grade (g7-tonight graded): autoindex sections .adoc by asciidoc structure and compatibility.adoc's section records crowded every top-5. Mirror commit 88cdfdb renames chapters to .txt (content identical) = one whole-file record per chapter; remap g7-zalando-txt-2026-10.json pre-registered before retrieval; prediction 3-4/5. G7 round-2 2026-10-05 graded 5/5 pass 5/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): round-2 .txt remap; 5/5 with the engine fixes. FLIPPED live 2026-10-05: G7 5/5 pass 5/5 relevant -> PASS (final re-grade after engine fix/xccode-g7-retrieval-1 = PR #1140, commits 0ae1439bb+35903648c, #1137 per-file cap + #1139 txt-field search; the earlier 2/5 in-row note was graded pre-#1139). Manifest hub/zalando-restful-api-guidelines.json written; corpus.json re-pinned to mirror 88cdfdb1 (.txt tree actually graded) + CC-BY-4.0.",
+     "url": "https://github.com/xerj-org/corpus-zalando-guidelines"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "GOOD",
+   "domain": "an agent building a GitHub integration queries this for the machine-readable schema of a huge production REST API (the exemplar OpenGraph/OpenAPI corpus)",
+   "lane": "A",
+   "refresh": "weekly",
+   "slug": "github-api-description",
+   "sources": [
+    {
+     "licence_hint": "verify at pin (MIT reported) G7 round-2 2026-10-05 graded 3/5 pass 3/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 3/5 re-confirmed.",
+     "url": "https://github.com/github/rest-api-description"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "GOOD",
+   "domain": "an agent configuring TLS termination queries this for the recommended cipher/protocol sets per server and their security/cost tradeoffs",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "mozilla-ssl-configs",
+   "sources": [
+    {
+     "licence_hint": "MPL-2.0 (verify at pin)",
+     "url": "https://github.com/mozilla/server-side-tls"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "GOOD",
+   "domain": "an agent writing host detections queries this for battle-tested osquery SQL by objective (suid diffs, persistence paths, launch items)",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "osquery-config-examples",
+   "sources": [
+    {
+     "licence_hint": "Apache-2.0 (verify at pin)",
+     "url": "https://github.com/palantir/osquery-configuration"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "GOOD",
+   "domain": "an agent building accessible UI queries this for the component's exact accessibility criteria and edge cases",
+   "g7": {
+    "engine": "v1.0.0-rc.81 @9cefd8070 (PR #1144)",
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "graded_at": "2026-10-04",
+    "note": "round 0 failed 2026-10-02 (raw upstream tree ranked macros over criteria); re-pinned to the 39 component-doc mirror, round 1 5/5 pass 5/5 relevant",
+    "round": 1,
+    "suite": "backlog/g7-govuk-round1-2026-10.json"
+   },
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "govuk-design-system",
+   "sources": [
+    {
+     "licence_hint": "RE-PINNED after G7 fail 2026-10-02 (mirror fix): upstream alphagov/govuk-frontend buries the accessibility criteria in a 100k-line SCSS/Nunjucks app tree; queries hit macros not criteria. Mirror = the 39 component READMEs (where the criteria actually live), MIT (hand-verified). Upstream SHA pinned in the mirror README.",
+     "url": "https://github.com/xerj-org/corpus-govuk-components"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "GOOD",
+   "domain": "an agent containerising or configuring an app queries this for the factor's exact statement and rationale (G3 borderline: well-known prose \u2014 keep only if G7 shows retrieval value)",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "twelve-factor",
+   "sources": [
+    {
+     "licence_hint": "verify at pin (code MIT reported; content licence separate)",
+     "url": "https://github.com/heroku/12factor"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "BAD",
+   "domain": "an agent reviewing C code queries this for version-pinned vulnerable functions and their fix diffs, permissively-licensed projects only",
+   "lane": "B",
+   "refresh": "weekly",
+   "slug": "c-vulns",
+   "sources": [
+    {
+     "licence_hint": "per-record upstream licence; depends on the #61 S1/S3 harvester",
+     "url": "mined from CVE/GHSA fix commits (kernel and other GPL projects excluded by per-record licence)"
+    }
+   ],
+   "status": "deferred"
+  },
+  {
+   "cat": "BAD",
+   "domain": "an agent reviewing Go code queries this for vulnerable symbols with fix diffs (extends go-vulndb's symbols into code records)",
+   "lane": "B",
+   "refresh": "weekly",
+   "slug": "go-vuln-funcs",
+   "sources": [
+    {
+     "licence_hint": "per-record upstream licence; depends on the #61 harvester",
+     "url": "mined from go-vulndb-linked fix commits"
+    }
+   ],
+   "status": "deferred"
+  },
+  {
+   "cat": "BAD",
+   "domain": "an agent reviewing Python code queries this for vulnerable functions with fix diffs, PYSEC-linked",
+   "lane": "B",
+   "refresh": "weekly",
+   "slug": "py-vuln-funcs",
+   "sources": [
+    {
+     "licence_hint": "per-record upstream licence; depends on the #61 harvester",
+     "url": "mined from PYSEC/GHSA-linked fix commits"
+    }
+   ],
+   "status": "deferred"
+  },
+  {
+   "cat": "BAD",
+   "domain": "an agent vetting regex handling queries this for real ReDoS advisories with the pathological pattern and the bounded rewrite that fixed it",
+   "lane": "B",
+   "refresh": "weekly",
+   "slug": "redos-precedent",
+   "sources": [
+    {
+     "licence_hint": "CC-BY-4.0 upstream (verify per source)",
+     "url": "curated from GHSA/RUSTSEC/PYSEC ReDoS-class advisories"
+    }
+   ],
+   "status": "candidate"
+  },
+  {
+   "cat": "BAD",
+   "domain": "an agent reviewing crypto call sites queries this for real CWE-327/328/347-class advisories showing the misuse and the corrected construction",
+   "lane": "B",
+   "refresh": "weekly",
+   "slug": "crypto-misuse-precedent",
+   "sources": [
+    {
+     "licence_hint": "CC-BY-4.0 upstream (verify per source)",
+     "url": "curated from advisory databases by CWE class"
+    }
+   ],
+   "status": "candidate"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent working on query execution queries this for how a real embeddable OLAP engine does join ordering, expression rewrites and memory-aware operators",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "duckdb",
+   "sources": [
+    {
+     "licence_hint": "MIT (verify at pin)",
+     "url": "https://github.com/duckdb/duckdb"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent working on LSM stores queries this for compaction, WAL and recovery internals at production scale",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "rocksdb",
+   "sources": [
+    {
+     "licence_hint": "Apache-2.0 OR GPL-2 dual (verify at pin)",
+     "url": "https://github.com/facebook/rocksdb"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent learning LSM internals queries this for the original clean implementation (memtable/sstable/manifest split)",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "leveldb",
+   "sources": [
+    {
+     "licence_hint": "BSD-3 (verify at pin)",
+     "url": "https://github.com/google/leveldb"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent working on LSM stores queries this for a modern Go LSM with delete/RangeLock semantics",
+   "g7": {
+    "note": "pre-registered 2026-10-04 before indexing",
+    "round": 0,
+    "suite": "backlog/g7-pebble-2026-10.json"
+   },
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "pebble",
+   "sources": [
+    {
+     "licence_hint": "BSD-2-Clause VERIFIED at pin e0818dd07ec5 (LICENSE is the LevelDB-Go-derived BSD text; no BUSL anywhere in the tree \u2014 CockroachDB's BUSL does not apply to Pebble). 1,492 files. Un-deferred 2026-10-04: the deferral note said VERIFY FIRST; verified permissive.",
+     "url": "https://github.com/cockroachdb/pebble"
+    }
+   ],
+   "status": "candidate"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent working on pure-Go KV stores queries this for its LSM-with-value-log design and transaction implementation",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "badger",
+   "sources": [
+    {
+     "licence_hint": "MIT (verify at pin \u2014 dgraph BUSL era did not reach badger, confirm)",
+     "url": "https://github.com/dgraph-io/badger"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent working on memory-mapped B+trees queries this for LMDB's page/cursor/COW mechanics",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "lmdb",
+   "sources": [
+    {
+     "licence_hint": "OpenLDAP/ISCL family (verify file at pin; code lives at repo root of the mirror, default branch mdb.master3)",
+     "url": "https://github.com/LMDB/lmdb"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent working on ANN queries this for index construction, IVF/HNSW composition and GPU paths in the reference implementation",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "faiss",
+   "sources": [
+    {
+     "licence_hint": "MIT (verify at pin)",
+     "url": "https://github.com/facebookresearch/faiss"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent working on read-mostly ANN queries this for the forest-of-trees build and on-disk format",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "annoy",
+   "sources": [
+    {
+     "licence_hint": "verify at pin (Apache-2.0/'Other' reported)",
+     "url": "https://github.com/spotify/annoy"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent working on embedded DB internals queries this for the btree module, pager and the famously commented test harness",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "sqlite-src",
+   "sources": [
+    {
+     "licence_hint": "public domain (verify at pin; official read-only fossil\u2192git mirror)",
+     "url": "https://github.com/sqlite/sqlite"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent working on planners queries this for the real cost model, join ordering and executor nodes",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "postgres-src",
+   "sources": [
+    {
+     "licence_hint": "PostgreSQL Licence (verify at pin)",
+     "url": "https://github.com/postgres/postgres"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent reading/writing parquet queries this for encodings, logical types and the thrift metadata spec",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "parquet-format",
+   "sources": [
+    {
+     "licence_hint": "Apache-2.0 (verify at pin)",
+     "url": "https://github.com/apache/parquet-format"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent working on columnar memory queries this for the Rust arrow arrays, kernels and IPC paths",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "arrow-rs",
+   "sources": [
+    {
+     "licence_hint": "Apache-2.0 (verify at pin)",
+     "url": "https://github.com/apache/arrow-rs"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent building lakehouse tables queries this for spec semantics and the reference metadata/manifest handling",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "iceberg",
+   "sources": [
+    {
+     "licence_hint": "Apache-2.0 (verify at pin)",
+     "url": "https://github.com/apache/iceberg"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent working on log systems queries this for the log-cleaner, controller and replication protocol internals",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "kafka-src",
+   "sources": [
+    {
+     "licence_hint": "Apache-2.0 (verify at pin)",
+     "url": "https://github.com/apache/kafka"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent working on message brokers queries this for queue/exchange routing and mirrored-queue semantics",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "rabbitmq",
+   "sources": [
+    {
+     "licence_hint": "MPL-2.0 (verify at pin)",
+     "url": "https://github.com/rabbitmq/rabbitmq-server"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent working on pub/sub queries this for subject-tree routing, jetstream and clustering internals in readable Go",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "nats-server",
+   "sources": [
+    {
+     "licence_hint": "Apache-2.0 (verify at pin)",
+     "url": "https://github.com/nats-io/nats-server"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent working on coordination stores queries this for raft integration, watch semantics and backend compaction",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "etcd-src",
+   "sources": [
+    {
+     "licence_hint": "Apache-2.0 (verify at pin)",
+     "url": "https://github.com/etcd-io/etcd"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent implementing raft queries this for the log/ready/progress state machine the tikv fleet runs on",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "raft-rs",
+   "sources": [
+    {
+     "licence_hint": "Apache-2.0 (verify at pin)",
+     "url": "https://github.com/tikv/raft-rs"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent implementing multi-raft queries this for the sharded log and snapshot plumbing",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "dragonboat",
+   "sources": [
+    {
+     "licence_hint": "BSD-2 (verify at pin)",
+     "url": "https://github.com/lni/dragonboat"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent working on time series queries this for TSM/flux paths and downsampling semantics",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "influxdb",
+   "sources": [
+    {
+     "licence_hint": "verify at pin (MIT/Apache reported; iox era changed layout)",
+     "url": "https://github.com/influxdata/influxdb"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent working on TSDB queries this for the head-block/WAL/head-compaction paths and PromQL evaluation",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "prometheus-src",
+   "sources": [
+    {
+     "licence_hint": "Apache-2.0 (verify at pin)",
+     "url": "https://github.com/prometheus/prometheus"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent working on in-memory KV queries this for the event-loop, object encoding and replication paths of the open fork",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "valkey-src",
+   "sources": [
+    {
+     "licence_hint": "BSD-3 (verify at pin)",
+     "url": "https://github.com/valkey-io/valkey"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "NET",
+   "domain": "an agent implementing TLS in Rust queries this for the state machine, cipher dispatch and certificate verification",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "rustls",
+   "sources": [
+    {
+     "licence_hint": "Apache-2.0 OR MIT (verify at pin)",
+     "url": "https://github.com/rustls/rustls"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "NET",
+   "domain": "an agent debugging TLS/ASN.1 queries this for the reference provider's handshake, BIO and provider internals",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "openssl",
+   "sources": [
+    {
+     "licence_hint": "Apache-2.0 since 3.0 (verify at pin)",
+     "url": "https://github.com/openssl/openssl"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "NET",
+   "domain": "an agent hardening TLS queries this for the defensively-structured C state machine and its testing approach",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "s2n-tls",
+   "sources": [
+    {
+     "licence_hint": "Apache-2.0 (verify at pin)",
+     "url": "https://github.com/aws/s2n-tls"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "NET",
+   "domain": "an agent implementing a VPN data plane queries this for the wireguard protocol implementation and its async runtime use",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "boringtun",
+   "sources": [
+    {
+     "licence_hint": "verify at pin (Apache-2.0/BSD variants reported)",
+     "url": "https://github.com/cloudflare/boringtun"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "NET",
+   "domain": "an agent implementing QUIC queries this for congestion control, stream state and 0-RTT handling in idiomatic Rust",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "quinn",
+   "sources": [
+    {
+     "licence_hint": "Apache-2.0 OR MIT (verify at pin)",
+     "url": "https://github.com/quinn-rs/quinn"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "NET",
+   "domain": "an agent working with HTTP/2 queries this for flow control, HPACK and priority internals in the reference C library",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "nghttp2",
+   "sources": [
+    {
+     "licence_hint": "MIT (verify at pin)",
+     "url": "https://github.com/nghttp2/nghttp2"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "NET",
+   "domain": "an agent writing an HTTP client queries this for protocol handling, auth negotiation and the protocol-selection seams",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "curl-src",
+   "sources": [
+    {
+     "licence_hint": "curl licence (permissive \u2014 verify at pin)",
+     "url": "https://github.com/curl/curl"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "NET",
+   "domain": "an agent building an event loop queries this for the polling primitives and async threading patterns",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "libuv",
+   "sources": [
+    {
+     "licence_hint": "MIT (verify at pin)",
+     "url": "https://github.com/libuv/libuv"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "NET",
+   "domain": "an agent tuning compression queries this for frame/block formats, window and level internals",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "zstd",
+   "sources": [
+    {
+     "licence_hint": "BSD-3 OR GPL-2 dual (verify at pin)",
+     "url": "https://github.com/facebook/zstd"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "NET",
+   "domain": "an agent needing fast block compression queries this for the block format and decoder loop",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "lz4",
+   "sources": [
+    {
+     "licence_hint": "BSD-2 (verify at pin)",
+     "url": "https://github.com/lz4/lz4"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "NET",
+   "domain": "an agent working on web content encoding queries this for the static dictionary and transform handling",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "brotli",
+   "sources": [
+    {
+     "licence_hint": "MIT (verify at pin)",
+     "url": "https://github.com/google/brotli"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "NET",
+   "domain": "an agent working on deflate queries this for the modernised algorithms and SIMD paths",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "zlib-ng",
+   "sources": [
+    {
+     "licence_hint": "zlib (verify at pin)",
+     "url": "https://github.com/zlib-ng/zlib-ng"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "NET",
+   "domain": "an agent needing cheap compression queries this for the format and the reference encoder decisions",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "snappy",
+   "sources": [
+    {
+     "licence_hint": "verify at pin (BSD variants reported)",
+     "url": "https://github.com/google/snappy"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "NET",
+   "domain": "an agent generating or debugging protobuf code queries this for wire format, descriptor handling and the conformance suite",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "protobuf",
+   "sources": [
+    {
+     "licence_hint": "BSD-3 (verify at pin)",
+     "url": "https://github.com/protocolbuffers/protobuf"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "NET",
+   "domain": "an agent designing zero-copy serialisation queries this for the vtable layout and verifier approach",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "flatbuffers",
+   "sources": [
+    {
+     "licence_hint": "Apache-2.0 (verify at pin)",
+     "url": "https://github.com/google/flatbuffers"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "NET",
+   "domain": "an agent doing capability RPC queries this for the serialisation layout, promise pipelining and the security hardening history",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "capnproto",
+   "sources": [
+    {
+     "licence_hint": "MIT (verify at pin)",
+     "url": "https://github.com/capnproto/capnproto"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "NET",
+   "domain": "an agent implementing msgpack queries this for the format handling and unpack edge cases",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "msgpack-c",
+   "sources": [
+    {
+     "licence_hint": "Boost BSL-1.0 dual (verify at pin)",
+     "url": "https://github.com/msgpack/msgpack-c"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "NET",
+   "domain": "an agent working on secret stores queries this for the barrier, seal and lease internals of the open vault fork",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "openbao",
+   "sources": [
+    {
+     "licence_hint": "MPL-2.0 (verify at pin)",
+     "url": "https://github.com/openbao/openbao"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "NET",
+   "domain": "an agent building a TLS-serving reverse proxy queries this for cert automation and config-reload design",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "caddy",
+   "sources": [
+    {
+     "licence_hint": "Apache-2.0 (verify at pin)",
+     "url": "https://github.com/caddyserver/caddy"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "NET",
+   "domain": "an agent building a data plane queries this for filter-chain, xDS and overload-manager internals",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "envoy",
+   "sources": [
+    {
+     "licence_hint": "Apache-2.0 (verify at pin)",
+     "url": "https://github.com/envoyproxy/envoy"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "NET",
+   "domain": "an agent working on web servers queries this for the event-driven request cycle and module seams (note: very large)",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "nginx",
+   "sources": [
+    {
+     "licence_hint": "BSD-2 (verify at pin)",
+     "url": "https://github.com/nginx/nginx"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "STD",
+   "domain": "an agent answering workplace/employment questions queries this for what 29 CFR actually says \u2014 OSHA guardrail height, FMLA 12-month/1250-hour eligibility, FLSA overtime, youth-employment hours (demand: employment-HR Ask-HN volume 57)",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "ecfr-title-29",
+   "sources": [
+    {
+     "licence_hint": "public domain (US government work, 17 USC 105); pinned mirror github.com/xerj-org/corpus-ecfr-title-29",
+     "url": "https://www.govinfo.gov/bulkdata/ECFR/title-29/ECFR-title29.xml"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "STD",
+   "domain": "an agent answering federal tax questions queries this for what the Treasury regulations actually say \u2014 de minimis safe harbor, estimated-tax safe harbor, home-office exclusive use (demand: tax Ask-HN volume 40)",
+   "lane": "A",
+   "note": "G7 1/4 relevant (2026-10-02): paraphrase gap under lexical retrieval on tax phrasing; suite defect excluded (\u00a71.280A-2 proposed-only). Re-test pre-registered with neural embed mode. Pins and shape stand (WAVES.md wave N1).",
+   "refresh": "pinned",
+   "slug": "ecfr-title-26",
+   "sources": [
+    {
+     "licence_hint": "public domain (US government work, 17 USC 105); pinned mirror github.com/xerj-org/corpus-ecfr-title-26",
+     "url": "https://www.govinfo.gov/bulkdata/ECFR/title-26/ECFR-title26.xml"
+    }
+   ],
+   "status": "candidate"
+  },
+  {
+   "cat": "STD",
+   "domain": "an agent answering consumer-credit or mortgage questions queries this for what Regulation Z / TILA actually says \u2014 higher-priced APR triggers, ability-to-repay/QM, rescission windows, card late-fee safe harbors (demand: consumer-finance Ask-HN volume 71)",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "ecfr-title-12",
+   "sources": [
+    {
+     "licence_hint": "public domain (US government work, 17 USC 105); pinned mirror github.com/xerj-org/corpus-ecfr-title-12",
+     "url": "https://www.govinfo.gov/bulkdata/ECFR/title-12/ECFR-title12.xml"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "STD",
+   "domain": "an agent answering UK-law questions queries this for what the current statute actually says \u2014 Consumer Rights Act remedies, GDPR-adjacent DPA 2018 duties, Building Safety Act duties (demand: legal-courts Ask-HN volume 46; source chosen for best-in-class versioned OGL XML)",
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "uk-legislation",
+   "sources": [
+    {
+     "licence_hint": "OGL v3.0 (acknowledgement required); pinned mirror github.com/xerj-org/corpus-uk-legislation",
+     "url": "https://www.legislation.gov.uk/ukpga/<year>/<chapter>/data.xml"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent answering medication questions queries this for what the FDA-approved label actually says \u2014 indications, do-not-crush/dose-form rules, epidural-timing windows before/after anticoagulants, nitrate co-administration intervals, intraoperative floppy iris warnings (demand: patient-safety medication questions; 28k records over the current SPL set)",
+   "g7": {
+    "engine": "PR #1140 (0ae1439bb+35903648c)",
+    "evidence": "backlog/g7-tonight-2026-10-03-graded.json",
+    "graded_at": "2026-10-04",
+    "round": 1
+   },
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "dailymed",
+   "sources": [
+    {
+     "licence_hint": "G7 graded 2026-10-04 vs PR #1140 engine (0ae1439bb+35903648c): 5/5 pass 5/5 relevant -> PASS; FLIPPED live same day. Licence: no terms ship with the data; NLM pages quoted verbatim in the mirror README \u2014 US-government works not subject to copyright, reproduction free, attribution 'Courtesy of the National Library of Medicine' requested (corpus.json carries the same). Manifest hub/dailymed.json.",
+     "url": "https://github.com/xerj-org/corpus-dailymed"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "STD",
+   "domain": "a pilot or mechanic queries this for the current FAR text \u2014 visibility minimums, transponder airspace, inspection intervals, right-of-way",
+   "g7": {
+    "engine": "v1.0.0-rc.81 @9cefd8070 (PR #1144)",
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "graded_at": "2026-10-04",
+    "note": "5/5 pass 5/5 relevant on first grade; blind suite pre-registered before indexing",
+    "round": 0,
+    "suite": "backlog/g7-ecfr-title-14-2026-10.json"
+   },
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "ecfr-title-14",
+   "sources": [
+    {
+     "licence_hint": "US public domain (17 USC 105, government edict); GPO bulk data, no restriction. Mirror xerj-org/corpus-ecfr-title-14 @0520b312 (AMDDATE 2026-07-24, downloaded 2026-10-04): 6,421 per-section files, same split_ecfr.py pipeline as titles 12/26/29. Demand: legal/courts rank 8 overall; HN aviation volume 0 (HN skew \u2014 r/flying active), second-wave per demand-2026-10 action 3.",
+     "url": "https://www.govinfo.gov/bulkdata/ECFR/title-14/ECFR-title14.xml"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "a clinician or medical writer queries this for the current CDC-recommended STI regimen and dose, and measles clinical signs",
+   "g7": {
+    "engine": "v1.0.0-rc.81 @9cefd8070 (PR #1144)",
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "graded_at": "2026-10-04",
+    "note": "5/5 pass 5/5 relevant on first grade; blind suite pre-registered before indexing",
+    "round": 0,
+    "suite": "backlog/g7-cdc-clinical-2026-10.json"
+   },
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "cdc-clinical",
+   "sources": [
+    {
+     "licence_hint": "US public domain (CDC web content, 17 USC 105). Mirror xerj-org/corpus-cdc-clinical @3bd1ba62: STI Treatment Guidelines 2021 per-condition pages (56) + measles clinical overview (1), chrome stripped to main content, MANIFEST.json path->URL. ACIP vaccine pages fetched then DROPPED (link index to MMWR PDFs, not recommendation text) - immunization scope unmet until a PDF text lane exists; recorded honestly rather than padded. Demand: health/medical rank 3 (volume 87). Fetch trap: CDC WAF 403s python-urllib and generic Mozilla UAs, plain curl passes.",
+     "url": "https://www.cdc.gov/std/treatment-guidelines/toc.htm"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "STD",
+   "domain": "a mariner, boater, or agent writing navigation software queries this for the actual text of Rule 7 risk of collision, Rule 9 narrow channels, lights, sound signals",
+   "g7": {
+    "engine": "v1.0.0-rc.81 @9cefd8070 (PR #1144)",
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "graded_at": "2026-10-04",
+    "note": "4/5 pass 5/5 relevant on first grade; blind suite pre-registered before indexing",
+    "round": 0,
+    "suite": "backlog/g7-navrules-2026-10.json"
+   },
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "navrules",
+   "sources": [
+    {
+     "licence_hint": "US government work, public domain (17 USC 105). Mirror xerj-org/corpus-navrules @4d535668: per-rule files from the COMDTINST M16672.2D PDF still distributed at navcen's canonical URL; pypdf extraction (born-digital, no OCR); currency caveat (M16672.2F Handbook supersedes, not retrievable at build time) stated in the mirror README.",
+     "url": "https://www.navcen.uscg.gov/pdf/navRules/NavRules.pdf"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "STD",
+   "domain": "current UK Building Regulations 2010 text: what work must comply with, materials, loading, exemptions, notices",
+   "g7": {
+    "engine": "v1.0.0-rc.81 @9cefd8070 (PR #1144)",
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "graded_at": "2026-10-04",
+    "note": "passed on first grade; blind suite pre-registered before indexing",
+    "round": 0,
+    "suite": "backlog/g7-uk-building-regs-2026-10.json"
+   },
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "uk-building-regs",
+   "sources": [
+    {
+     "licence_hint": "UK Open Government Licence v3.0 (Crown); verified at the legislation.gov.uk per-page footer reuse statement. Mirror xerj-org/corpus-uk-building-regs @d4669402: 194 per-provision files from the CLML XML (England inline, differing Wales variants appended labelled), 44ZB/44ZC dual numbering and repealed Schedule 4A/5 handled and documented in the mirror README. Approved Documents deliberately out of scope.",
+     "url": "https://www.legislation.gov.uk/uksi/2010/2214/data.xml"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "STD",
+   "domain": "GDPR / AI Act / DSA / DMA / NIS2 article and recital text",
+   "g7": {
+    "engine": "v1.0.0-rc.81 @9cefd8070 (PR #1144)",
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "graded_at": "2026-10-04",
+    "note": "passed on first grade; blind suite pre-registered before indexing",
+    "round": 0,
+    "suite": "backlog/g7-eurlex-core-2026-10.json"
+   },
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "eurlex-core",
+   "sources": [
+    {
+     "licence_hint": "EU reuse: CC BY 4.0 (Commission Decision 2011/833/EU), verified at commission.europa.eu/legal-notice_en. Mirror xerj-org/corpus-eurlex-core @f407c938: 1,167 per-article/per-recital files across the five acts (405 articles + 762 recitals); eur-lex.europa.eu direct fetches WAF-blocked (AWS challenge), the Cellar content-negotiation lane used instead; annexes deliberately excluded and documented (AI Act Annex III absence flagged).",
+     "url": "https://publications.europa.eu/resource/celex/32016R0679 (Cellar CONVEX lane)"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "STD",
+   "domain": "ADA 2010 Standards for Accessible Design: exact dimensional and technical requirements",
+   "g7": {
+    "engine": "v1.0.0-rc.81 @9cefd8070 (PR #1144)",
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "graded_at": "2026-10-04",
+    "note": "passed on first grade; blind suite pre-registered before indexing",
+    "round": 0,
+    "suite": "backlog/g7-ada-2010-2026-10.json"
+   },
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "ada-2010",
+   "sources": [
+    {
+     "licence_hint": "US public domain (17 USC 105; no copyright notice on the source page). Mirror xerj-org/corpus-ada-2010 @d2be9eb3: 145 section files sliced at the page's own h2/h3 anchors (ada.gov now publishes the Standards as one page); chapters 1-10 complete; figures keep dimension-level alt text.",
+     "url": "https://www.ada.gov/law-and-regs/design-standards/2010-stds/"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "OPS",
+   "domain": "the current MUTCD: sign and signal warrants, markings, work-zone typical applications",
+   "g7": {
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "graded": "2026-10-04",
+    "note": "pre-registered 2026-10-04 before indexing",
+    "pass": 4,
+    "relevant": 4,
+    "round": 1,
+    "suite": "backlog/g7-mutcd-2026-10.json",
+    "verdict": "PASS"
+   },
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "mutcd",
+   "sources": [
+    {
+     "licence_hint": "US public domain (17 USC 105) \u2014 the Manual's own Section 1D.06 mandates it. Mirror xerj-org/corpus-mutcd @b70b9188: 11th Edition with Revision 1 (Dec 2025, 1,162 pp; FHWA no longer publishes an HTML lane) split into 955 per-section files via pypdf; monotonic-order heading check caught a corrupted 2G.19 boundary; documented source ligature defects. Source PDF sha256 in README.",
+     "url": "https://mutcd.fhwa.dot.gov/"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "FDA Food Code 2022 provisions: cooking/holding temperatures, sanitizer tables, reporting rules",
+   "g7": {
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "graded": "2026-10-04",
+    "note": "pre-registered 2026-10-04 before indexing",
+    "pass": 4,
+    "relevant": 4,
+    "round": 1,
+    "suite": "backlog/g7-fda-food-code-2026-10.json",
+    "verdict": "PASS"
+   },
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "fda-food-code",
+   "sources": [
+    {
+     "licence_hint": "US public domain (17 USC 105). Mirror xerj-org/corpus-fda-food-code @30a28444: 396 per-provision files + 7 annexes from the 2022 PDF (668 pp) via pypdf; 2- and 3-digit provision numbers handled (38 provisions recovered); degree-sign extraction artifact kept verbatim. 2022 Supplement and Food Code 2026 explicitly excluded, flagged as not-current in README.",
+     "url": "https://www.fda.gov/food/fda-food-code/food-code-2022"
+    }
+   ],
+   "status": "live"
+  },
+  {
+   "cat": "DATA",
+   "domain": "SSA program rules: disability waiting periods, SSI resource limits, payment mechanics",
+   "g7": {
+    "note": "pre-registered 2026-10-04 before indexing",
+    "round": 0,
+    "suite": "backlog/g7-ssa-poms-2026-10.json"
+   },
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "ssa-poms",
+   "sources": [
+    {
+     "licence_hint": "US public domain (17 USC 105). Mirror xerj-org/corpus-ssa-poms @3af36df5: 8,989 POMS section files scoped to GN+DI+SI (54% of POMS; full corpus is 16,545 sections \u2014 scope decision + reason in README); robots.txt allows /poms.nsf/; 8,989/8,989 fetched with 0 failures; every file header carries its live source URL.",
+     "url": "https://secure.ssa.gov/apps10/poms.nsf/"
+    }
+   ],
+   "status": "candidate"
+  }
+ ],
  "lanes": [
   "A",
   "B"
  ],
+ "note": "licence_hint is a HINT (memory + detector shape), never the verdict. Gate G4 requires a human review block at the pinned SHA; several hints below WILL be wrong \u2014 that is the point of the gate. domain is the G1 sentence. cat/lane drive wave assignment (PROGRAM-100.md \u00a74/\u00a78).",
+ "opened": "2026-10-02",
+ "program": "corpus-hub-100",
  "refreshes": [
   "pinned",
   "weekly",
   "daily"
  ],
- "corpora": [
-  {
-   "slug": "xerj-search",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on full-text search internals queries this for how lucene/tantivy/quickwit/meilisearch/sonic/elasticsearch do BM25, merge policy and the ES wire",
-   "sources": [
-    {
-     "url": "see hub/xerj-search.json",
-     "licence_hint": "mixed \u2014 per-repo review blocks in the manifest"
-    }
-   ]
-  },
-  {
-   "slug": "xerj-storage",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on storage engines queries this for how sled/fjall/redb do WAL, crash recovery and compaction",
-   "sources": [
-    {
-     "url": "see hub/xerj-storage.json",
-     "licence_hint": "per-repo review blocks in the manifest"
-    }
-   ]
-  },
-  {
-   "slug": "xerj-columnar",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on columnar layouts queries this for how clickhouse does codecs, layout and vectorised scans",
-   "sources": [
-    {
-     "url": "see hub/xerj-columnar.json",
-     "licence_hint": "per-repo review blocks in the manifest"
-    }
-   ]
-  },
-  {
-   "slug": "xerj-vector",
-   "cat": "NET",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on vector search queries this for how qdrant/usearch/instant-distance/hnswlib do HNSW construction, quantisation and filtered kNN",
-   "sources": [
-    {
-     "url": "see hub/xerj-vector.json",
-     "licence_hint": "per-repo review blocks in the manifest"
-    }
-   ]
-  },
-  {
-   "slug": "rust-vulns",
-   "cat": "BAD",
-   "lane": "B",
-   "refresh": "daily",
-   "status": "live",
-   "domain": "an agent reviewing Rust code queries this for vulnerability precedent \u2014 identity-resolved RUSTSEC/GHSA/CVE advisories with affected functions and fixed versions",
-   "sources": [
-    {
-     "url": "tools/packs/rust-vulns/recipe.toml",
-     "licence_hint": "per-source review blocks in the recipe"
-    }
-   ]
-  },
-  {
-   "slug": "cisa-kev",
-   "cat": "SEC",
-   "lane": "B",
-   "refresh": "daily",
-   "status": "candidate",
-   "domain": "an agent triaging findings queries this for whether a CVE is known-exploited in the wild, with ransomware-use and due-date fields",
-   "sources": [
-    {
-     "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
-     "licence_hint": "CC0 1.0 \u2014 VERIFIED verbatim from the licence file the catalog page links (Akamai-gated for non-browser clients): \"The KEV database is distributed under the Creative Commons 0 1.0 License.\" Mirror xerj-org/corpus-cisa-kev @1c09ebebd1e9: 1,734 per-CVE files (catalogVersion 2026.10.04), raw feed kept in source/ for verification; canonical CC0 text + provenance in LICENSE."
-    }
-   ],
-   "g7": {
-    "round": 0,
-    "suite": "backlog/g7-cisa-kev-2026-10.json",
-    "note": "pre-registered 2026-10-04 before indexing"
-   }
-  },
-  {
-   "slug": "ghsa-db",
-   "cat": "SEC",
-   "lane": "B",
-   "refresh": "weekly",
-   "status": "candidate",
-   "domain": "an agent auditing dependencies across ecosystems queries this for GitHub-reviewed advisories with CVSS and patched ranges",
-   "sources": [
-    {
-     "url": "https://github.com/github/advisory-database",
-     "licence_hint": "CC-BY-4.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "osv-ecosystems",
-   "cat": "SEC",
-   "lane": "B",
-   "refresh": "daily",
-   "status": "deferred",
-   "domain": "an agent pinning dependencies queries this for affected-version truth across Go/PyPI/npm, resolved to one record per vulnerability",
-   "sources": [
-    {
-     "url": "https://osv.dev",
-     "licence_hint": "DEFERRED 2026-10-04 on a measured throughput ceiling, NOT on licence or scope: 251,915 files at the measured corpus-index rate for many-small-files corpora (~1 file/s; cdc-clinical 62 files/62s, ghsa-db 36k files projecting 8-10h) = ~3 days of serial ingest for one corpus. The mirror's scope is sound (xerj-org/corpus-osv-ecosystems, 7 ecosystems, MAL npm 222k by design) and the per-file top-k cap (#1137) is the right protection for the MAL wall \u2014 but the corpus cannot be BUILT to a G7 grade until either (a) engine ingest throughput for many-small-files corpora improves (tracker to file) or (b) it moves to the Lane B pack builder (pattern-rust-vulns) which batches records instead of walking files. Neither is scope surgery; revisit after the engine work. CC-BY-4.0 for OSV data verified at mirror authoring."
-    }
-   ],
-   "g7": {
-    "round": 0,
-    "note": "deferred before any grading; suite exists in backlog/g7-tonight (osv-ecosystems, 5 queries, pre-registered 2026-10-03)"
-   }
-  },
-  {
-   "slug": "pysec",
-   "cat": "SEC",
-   "lane": "B",
-   "refresh": "weekly",
-   "status": "candidate",
-   "domain": "an agent reviewing Python dependency trees queries this for PYSEC advisory records with fixed versions",
-   "sources": [
-    {
-     "url": "https://github.com/pypa/advisory-database",
-     "licence_hint": "CC-BY-4.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "go-vulndb",
-   "cat": "SEC",
-   "lane": "B",
-   "refresh": "weekly",
-   "status": "candidate",
-   "domain": "an agent reviewing Go modules queries this for Go-team-curated advisories with symbols and fixed versions",
-   "sources": [
-    {
-     "url": "https://github.com/golang/vulndb",
-     "licence_hint": "verify at pin (CC-BY-4.0 / BSD variants reported)"
-    }
-   ]
-  },
-  {
-   "slug": "mitre-cwe",
-   "cat": "SEC",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent classifying a finding queries this for the CWE definition, its parents/children and detection notes",
-   "sources": [
-    {
-     "url": "https://github.com/xerj-org/corpus-mitre-cwe",
-     "licence_hint": "Built 2026-10-04 from cwec_latest.xml.zip \u2192 cwec_v4.20.xml (18,192,305 B; Version 4.20, Date 2026-04-30). Split: 1,450 element files (969 weaknesses/422 categories/59 views), largest 13,431 B, no caps triggered. TERMS (termsofuse.html, verbatim in LICENSE-TERMS): non-exclusive royalty-free license for research/development/commercial purposes; any copy authorized on condition MITRE's copyright designation + license are reproduced \u2014 condition satisfied. Detector reads licence as UNKNOWN (MITRE data terms are not a standard OSS licence); mirrors are retrieved-from. Suite g7-mitre-cwe-2026-10.json pre-registered (5 queries, 1 hard: symptom-words absent from the target file \u2014 the lexical risk named in shape note). G7 round-2 2026-10-05 graded 3/5 pass 3/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 3/5 re-confirmed under the diversity cap (no regression)."
-    }
-   ]
-  },
-  {
-   "slug": "mitre-attck",
-   "cat": "SEC",
-   "lane": "B",
-   "refresh": "weekly",
-   "status": "candidate",
-   "domain": "an agent writing or reviewing detections queries this for technique ids, tactics, detection data-sources and procedure examples",
-   "sources": [
-    {
-     "url": "https://github.com/mitre-attack/attack-stix-data",
-     "licence_hint": "verify at pin (MITRE Free License historically; CC-BY-4.0 reported for current data)"
-    }
-   ]
-  },
-  {
-   "slug": "mitre-capec",
-   "cat": "SEC",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent reasoning about attack surface queries this for attack-pattern enumerations with prerequisites and mitigations",
-   "sources": [
-    {
-     "url": "https://github.com/xerj-org/corpus-mitre-capec",
-     "licence_hint": "Built 2026-10-04 \u2014 NOTE upstream layout changed: /data/xml/capec_latest.xml.zip 404s; current = bare XML /data/xml/capec_latest.xml (3,849,998 B) + archive zip. Version 3.9 (Date 2023-01-24). Split: 615 CAPEC-N.md at root, largest 5,301 B; v3.x has no separate Summary element (Description carries it \u2014 README notes). Same MITRE terms class as cwe (verbatim in LICENSE-TERMS). Suite g7-mitre-capec-2026-10.json pre-registered (5 queries, 1 hard; precision-hazard shape note: verbatim-shared mitigation blocks across patterns). G7 round-2 2026-10-05 graded 3/5 pass 3/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 3/5 re-confirmed."
-    }
-   ]
-  },
-  {
-   "slug": "owasp-cheatsheets",
-   "cat": "SEC",
-   "lane": "B",
-   "refresh": "weekly",
-   "status": "candidate",
-   "domain": "an agent implementing an auth/upload/crypto feature queries this for the concrete cheatsheet: header lists, code shapes, test ideas",
-   "sources": [
-    {
-     "url": "https://github.com/OWASP/CheatSheetSeries",
-     "licence_hint": "CC-BY-SA-4.0 (verify at pin; SA term noted for pack emission)"
-    }
-   ]
-  },
-  {
-   "slug": "owasp-asvs",
-   "cat": "SEC",
-   "lane": "B",
-   "refresh": "pinned",
-   "status": "candidate",
-   "domain": "an agent reviewing an application's security posture queries this for the ASVS requirement and its verification level",
-   "sources": [
-    {
-     "url": "https://github.com/OWASP/ASVS",
-     "licence_hint": "CC-BY-SA-4.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "owasp-wstg",
-   "cat": "SEC",
-   "lane": "B",
-   "refresh": "pinned",
-   "status": "candidate",
-   "domain": "an agent planning a web test pass queries this for test categories, procedures and expected results",
-   "sources": [
-    {
-     "url": "https://github.com/OWASP/wstg",
-     "licence_hint": "CC-BY-SA-4.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "nist-sp800-sec",
-   "cat": "SEC",
-   "lane": "B",
-   "refresh": "pinned",
-   "status": "candidate",
-   "domain": "an agent designing a control or wipe procedure queries this for what SP 800-53/61/63/88/207 actually require, clause-level",
-   "sources": [
-    {
-     "url": "https://github.com/usnistgov/800-63-3",
-     "licence_hint": "INTAKE RE-SCOPED 2026-10-04 from source survey (planned csrc.nist.gov/pubs/sp/800 is 404; CSRC has no bulk API and per-pub downloads are PDF-only \u2014 the famous prose pubs are unfetchable as text). Build instead from GitHub text sources: usnistgov/800-63-3 (SP 800-63-3 + vols A/B/C + FAQ as per-section Jekyll markdown \u2014 licence 'NIST Technical Series Publications': USG work, worldwide perpetual royalty-free reprint right granted, attribute 'Republished courtesy of NIST', third-party portions may carry copyright) + usnistgov/oscal-content (SP 800-53r5 + 4 baselines, 800-171r3, 800-172r3, 800-218, CSF 2.0 as OSCAL JSON \u2014 LICENSE.md is worldwide public domain + CC0-1.0, cleanest). Chunk OSCAL at control level. 10-13 documents; pin commit SHAs. TRAP: usnistgov/zero-trust-architecture contains NO 800-207 text (verified all branches \u2014 stubs + a different NCCoE practice guide). G7 graded 2026-10-04 vs PR #1140 engine: 1/5 -> FAIL. Root cause is NOT corpus scope: engine #1142 (autoindex sniffs markdown-with-bare-YAML-header as YAML and markdown-with-HTML-prefix as XML, then silently drops the file \u2014 440/722 mirror files never indexed, incl. sec5_authenticators.md, the whole sp800-218 tree, and the 171r3/172r3 control files). ROUND-2 FIX PRE-REGISTERED before any re-retrieval: engine fix #1142 (markdown-signature guard in classify_text before the YAML-ratio/XML-prefix branches); corpus UNCHANGED (mutating 440 files to dodge a classifier bug would falsify the verbatim-mirror policy). PREDICTION: 4/5 (Q1/Q4/Q5 expect files are in the junked classes; Q2 already passes; Q3 may stay a miss \u2014 FAQ-title ranking competition, a different defect class)."
-    },
-    {
-     "url": "https://github.com/usnistgov/oscal-content",
-     "licence_hint": "see 800-63-3 entry"
-    }
-   ],
-   "g7": {
-    "round": 2,
-    "graded_at": "2026-10-04",
-    "verdict": "FAIL",
-    "score": "1/5 pass 1/5 relevant",
-    "prediction": "4/5 \u2014 WRONG (round 2)",
-    "engine_fix": "#1142 landed on the grading branch (fix/autoindex-markdown-sniff-guards): coverage went 282->717 files / 891->2159 records; sec5_authenticators.md, sp800-218 tree and the 171r3/172r3 control files now index. Q1/Q4/Q5 expect files ARE retrievable now, but paraphrase competition (FAQ files, sibling controls PW.4/MP-7) outranks them \u2014 same conversational-vs-normative class as irs/otel, not a coverage defect.",
-    "next": "PARKED under the semantic/neural lane (issue #66). No further lexical rounds: round-2 proved ranking, not scope, is the binding constraint (prediction recorded before retrieval, scored WRONG).",
-    "corpus_unchanged": true,
-    "evidence": "backlog/g7-tonight-2026-10-03-graded.json"
-   }
-  },
-  {
-   "slug": "nsa-cyber-advisories",
-   "cat": "SEC",
-   "lane": "B",
-   "refresh": "weekly",
-   "status": "deferred",
-   "domain": "an agent hardening infrastructure queries this for NSA/CISA joint guidance specifics (MTIG, memory-safe roadmaps, KPMs)",
-   "sources": [
-    {
-     "url": "https://www.nsa.gov/Cybersecurity/Cybersecurity-Advisories-Guidance",
-     "licence_hint": "DEFERRED 2026-10-04 on survey evidence: NSA advisories are PDF-only on media.defense.gov, both nsa.gov and media.defense.gov 403 non-browser clients (Akamai), and no licence-clean text mirror exists. GitHub NSAcyber org = 39 tool/guidance repos, NOT advisories. Re-scope candidate if a slot is needed: 'nsacyber-guidance' = the ~10 config-guidance repos' markdown (CC0/\u00a7105 verified on spot-checked repos, but several repos lack LICENSE files \u2014 per-repo read required; Hardware-and-Firmware-Security-Guidance has none). Do not name any such corpus 'advisories'."
-    }
-   ]
-  },
-  {
-   "slug": "cisa-alerts",
-   "cat": "SEC",
-   "lane": "A",
-   "refresh": "weekly",
-   "status": "live",
-   "domain": "an agent triaging an active campaign queries this for the alert's IOCs, required actions and mitigations",
-   "sources": [
-    {
-     "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
-     "licence_hint": "US federal works public domain (17 USC 105), mirror LICENSE.md; co-published advisories (9 flagged) may carry partner-nation copyright \u2014 per-partner review. MIRROR LIVE @b4d2547 (xerj-org/corpus-cisa-alerts, master branch \u2014 repo has no main): 324 advisory docs 2025-05..2026-10 after same-day quality pass (79 Page-Not-Found captures dropped, feed chrome stripped; MANIFEST.tsv marks drops). Fetch traps in mirror README: www.cisa.gov 403s curl (Akamai TLS fingerprint) \u2192 browser-grade fetcher; listing paginates via JS; reader 'page' param collides with ?page=N and serves stale cache without X-No-Cache: true. Refresh = poll all.xml + ics feeds, walk new listing pages."
-    }
-   ],
-   "g7": {
-    "round": 1,
-    "graded_at": "2026-10-04",
-    "verdict": "PASS",
-    "score": "3/5 pass 3/5 relevant",
-    "engine": "PR #1140 (0ae1439bb+35903648c)",
-    "evidence": "backlog/g7-tonight-2026-10-03-graded.json"
-   }
-  },
-  {
-   "slug": "first-epss",
-   "cat": "SEC",
-   "lane": "B",
-   "refresh": "daily",
-   "status": "deferred",
-   "domain": "an agent prioritising remediation queries this for a CVE's EPSS score and percentile to rank patch order",
-   "sources": [
-    {
-     "url": "https://www.first.org/epss/data-stats",
-     "licence_hint": "DEFERRED 2026-10-04 on TWO measured/verified blockers, not vibes: (1) LICENCE NOT VERIFIED \u2014 FIRST publishes scores \"free of charge\" with attribution requested, but no licence statement could be found on first.org/epss pages, the site footer asserts copyright, and the official archive repo (empiricalsec/epss_scores) has license:null; do not ship an unverified licence. (2) THROUGHPUT \u2014 382,621 files at the measured ~1 file/s corpus-index rate (issue #1147) = ~4.4 days serial ingest. Mirror xerj-org/corpus-first-epss @1c3552ed was fully built (382,621 per-CVE files, model v2026.06.15 from the CSV header) and stays published; un-defer when FIRST states a licence or the pack lane batches records."
-    }
-   ]
-  },
-  {
-   "slug": "ietf-rfc",
-   "cat": "STD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "deferred",
-   "domain": "an agent implementing or debugging a protocol queries this for what the RFC actually says at clause level (TLP permits unmodified redistribution)",
-   "sources": [
-    {
-     "url": "https://www.rfc-editor.org/rfc/rfc-txt.tar.gz",
-     "licence_hint": "IETF TLP (unmodified redistribution permitted); DEFERRED: no maintained full-text git mirror exists (mcpherrinm/rfc-mirror is ~2014-stale) \u2014 needs an http tar.gz dir-fetch recipe, not a manifest"
-    }
-   ]
-  },
-  {
-   "slug": "whatwg-specs",
-   "cat": "STD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent building browser-adjacent tooling queries this for the living standard's exact normative statements (html/url/fetch/dom)",
-   "sources": [
-    {
-     "url": "https://github.com/xerj-org/corpus-whatwg-sections",
-     "licence_hint": "RE-PINNED after G7 fail 2026-10-02 (mirror fix): upstream whatwg/html+url are multi-MB single-page specs \u2014 whole-file indexing skips what it cannot chunk (the ecma262 G2 failure class). Mirror = html split into 753 section files + url into 36 (breadcrumb header, verbatim bodies), dual licence per source: CC-BY-4.0 text / BSD-3-Clause code (hand-verified per repo). Upstream SHAs pinned in the mirror README. Suite re-runs with expect_file remapped to section paths. G7 round-2 2026-10-05 graded 5/5 pass 5/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 5/5 \u2014 the html-dominance verdict was an artifact of #1139 (txt records unsearchable). FLIPPED live 2026-10-05: G7 5/5 pass 5/5 relevant -> PASS vs PR #1140 engine (0ae1439bb+35903648c). Manifest hub/whatwg-specs.json written."
-    }
-   ],
-   "g7": {
-    "round": 2,
-    "graded_at": "2026-10-05",
-    "engine": "fix/xccode-g7-retrieval-1 (PR #1140, 0ae1439bb+35903648c)",
-    "evidence": "backlog/g7-tonight-2026-10-03-graded.json"
-   }
-  },
-  {
-   "slug": "w3c-css",
-   "cat": "STD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on layout/selector internals queries this for the csswg draft's algorithm text (the resolution and cascade algorithms are unmemorisable prose)",
-   "sources": [
-    {
-     "url": "https://github.com/w3c/csswg-drafts",
-     "licence_hint": "W3C document licence (verify redistribution terms at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "ecma262",
-   "cat": "STD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent building a JS-adjacent tool queries this for the spec's abstract operations and completion-record semantics",
-   "sources": [
-    {
-     "url": "https://github.com/xerj-org/corpus-ecma262-sections",
-     "licence_hint": "LICENCE CORRECTED 2026-10-03 (the row previously claimed 'CC-BY-4.0 at pin' \u2014 wrong): GitHub reports tc39/ecma262 as NOASSERTION; the actual terms are Ecma's ALTERNATIVE copyright notice for the spec text (permissive-with-conditions: copy/modify/distribute for any purpose without fee, provided the full notice text stays viewable, pre-existing disclaimers carry, and changes are stated \u2014 derived from the W3C Software and Document Notice) plus Ecma's BSD-style software policy for code portions. The mirror carries NOTICE.md with the full notice and the changes statement, so redistribution is within the grant. G2 fix = section split: 2,341 files (one per emu-clause/emu-annex/emu-intro), upstream SHA pinned in the mirror README. G7 round-2 2026-10-05 graded 3/5 pass 3/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 3/5 on the sections mirror (3,227 records, CLEAN on (file,locator)). FLIPPED live 2026-10-05: G7 3/5 pass 3/5 relevant -> PASS vs PR #1140 engine (0ae1439bb+35903648c). Manifest hub/ecma262.json written; corpus.json licence corrected to the Ecma alternative-notice terms."
-    }
-   ],
-   "g7": {
-    "round": 2,
-    "graded_at": "2026-10-05",
-    "engine": "fix/xccode-g7-retrieval-1 (PR #1140, 0ae1439bb+35903648c)",
-    "evidence": "backlog/g7-tonight-2026-10-03-graded.json"
-   }
-  },
-  {
-   "slug": "unicode-cldr",
-   "cat": "STD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent formatting dates/numbers/names queries this for locale-specific CLDR rules and plural/data tables no model recalls",
-   "sources": [
-    {
-     "url": "https://github.com/xerj-org/corpus-unicode-cldr",
-     "licence_hint": "RE-PINNED (round 2, LDML split) 2026-10-05 after the 2/5 G7: mirror = docs/ldml + common/supplemental + en locale XML with the 486KB en.xml split one file per LDML top-level element (bodies byte-verbatim), tools/ and ~440 other locale trees dropped; upstream c1159fe6c pinned in mirror README; Unicode-3.0 hand-verified. Remap g7-cldr-ldml-2026-10.json pre-registered before retrieval (all 5 clauses verified on disk, 1 hit each). Prediction 4/5. FLIPPED live 2026-10-05: G7 5/5 pass 5/5 relevant -> PASS vs PR #1140 engine (0ae1439bb+35903648c); prediction was 4/5 \u2014 actual 5/5. Manifest hub/unicode-cldr.json written."
-    }
-   ],
-   "g7": {
-    "round": 2,
-    "graded_at": "2026-10-05",
-    "engine": "fix/xccode-g7-retrieval-1 (PR #1140, 0ae1439bb+35903648c)",
-    "evidence": "backlog/g7-tonight-2026-10-03-graded.json"
-   }
-  },
-  {
-   "slug": "openapi-spec",
-   "cat": "STD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent generating or validating an API description queries this for the OpenAPI schema's exact keywords and resolution rules",
-   "sources": [
-    {
-     "url": "https://github.com/OAI/OpenAPI-Specification",
-     "licence_hint": "verify at pin (Apache-2.0 reported)"
-    }
-   ]
-  },
-  {
-   "slug": "json-schema-spec",
-   "cat": "STD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent writing validators queries this for the dialect's exact keyword semantics (2019-09 vs 2020-12 differences bite)",
-   "sources": [
-    {
-     "url": "https://github.com/json-schema-org/json-schema-spec",
-     "licence_hint": "verify at pin"
-    }
-   ]
-  },
-  {
-   "slug": "graphql-spec",
-   "cat": "STD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent building a GraphQL server queries this for execution, defer/stream and introspection semantics",
-   "sources": [
-    {
-     "url": "https://github.com/graphql/graphql-spec",
-     "licence_hint": "OWFa-1.0 patents + CC-BY-4.0 text (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "nats-protocol",
-   "cat": "STD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent implementing a NATS client queries this for the wire protocol, verbs and semantics text",
-   "sources": [
-    {
-     "url": "https://github.com/nats-io/nats-architecture-and-design",
-     "licence_hint": "Apache-2.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "kafka-protocol",
-   "cat": "STD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent implementing a Kafka client queries this for the protocol guide's exact request/response schemas and error codes",
-   "sources": [
-    {
-     "url": "https://github.com/xerj-org/corpus-kafka-docs",
-     "licence_hint": "RE-PINNED after G7 fail 2026-10-04 (mirror fix): scope = CURRENT docs only \u2014 content/en/43 + the current root docs (141 files, 3.4MB) from kafka-site @7bf6e996. static/ (750MB, ~20 vendored javadoc copies) dropped, and the 40 old doc-version dirs dropped (AMENDMENT pre-retrieval to the original note, which ambiguously said '+ per-version dirs': the graded Q2 miss retrieved upgrade.md from three different old versions ahead of the answer \u2014 version clones are dilution the same way locale forks were in tldr). Apache-2.0 at pin (LICENSE verbatim). Same wave-1 suite re-runs; expect_files under content/en/43/ suffix-match the mirror's 43/ paths \u2014 no remap needed. G7 round-2 2026-10-05 graded 3/5 pass 3/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 3/5 on the scoped docs mirror (2,768 records CLEAN). FLIPPED live 2026-10-05: G7 3/5 pass 3/5 relevant -> PASS vs PR #1140 engine (0ae1439bb+35903648c). Manifest hub/kafka-protocol.json written."
-    }
-   ],
-   "g7": {
-    "round": 2,
-    "graded_at": "2026-10-05",
-    "engine": "fix/xccode-g7-retrieval-1 (PR #1140, 0ae1439bb+35903648c)",
-    "evidence": "backlog/g7-tonight-2026-10-03-graded.json"
-   }
-  },
-  {
-   "slug": "valkey-docs",
-   "cat": "STD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent building against RESP queries this for command semantics, ranges and error cases (the open post-relicence fork of the Redis docs)",
-   "sources": [
-    {
-     "url": "https://github.com/valkey-io/valkey-doc",
-     "licence_hint": "BSD-3 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "postgres-docs",
-   "cat": "STD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "killed",
-   "domain": "an agent writing SQL against Postgres queries this for exact function semantics, GUC defaults and MVCC behaviour by version",
-   "sources": [
-    {
-     "url": "superseded by postgres-src",
-     "licence_hint": "killed: same repository as postgres-src \u2014 doc/ is inside it; a second corpus on one repo is padding"
-    }
-   ]
-  },
-  {
-   "slug": "sqlite-docs",
-   "cat": "STD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "killed",
-   "domain": "an agent depending on SQLite's exact behaviour queries this for datatype, locking and pragma semantics",
-   "sources": [
-    {
-     "url": "superseded by sqlite-src",
-     "licence_hint": "killed: the github mirror's doc/ covers trunk docs; the separate docsrc tree is fossil-wiki source not worth its own corpus"
-    }
-   ]
-  },
-  {
-   "slug": "mqtt-spec",
-   "cat": "STD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "deferred",
-   "domain": "an agent implementing an MQTT client/broker queries this for packet formats, QoS state machines and keepalive semantics",
-   "sources": [
-    {
-     "url": "https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html",
-     "licence_hint": "OASIS CC-BY-4.0; DEFERRED 2026-10-02: mqtt/mqtt.org is site chrome \u2014 the repo does NOT contain the spec text (verified at pin faab2e8a05, _sites/mqtt-specification.md only links out); needs an http-fetch recipe + chunking decision like ietf-rfc"
-    }
-   ]
-  },
-  {
-   "slug": "postmortems",
-   "cat": "OPS",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "deferred",
-   "domain": "an agent designing for failure queries this for how real outages of the same shape started, cascaded and were found",
-   "sources": [
-    {
-     "url": "https://github.com/danluu/post-mortems",
-     "licence_hint": "DEFERRED 2026-10-02: NO licence at pin 630562e5 (verified) AND the repo is a curated link index (7 files), not the postmortem text \u2014 real content sits on ~1k linked sites each with its own terms. Needs a Lane B curation with per-post licence review."
-    }
-   ]
-  },
-  {
-   "slug": "gitlab-runbooks",
-   "cat": "OPS",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent on call for a SaaS queries this for real alert definitions, escalations and mitigation playbooks from a large production fleet",
-   "sources": [
-    {
-     "url": "https://gitlab.com/gitlab-com/runbooks",
-     "licence_hint": "MIT (verify at pin \u2014 hosted on gitlab.com, not github)"
-    }
-   ]
-  },
-  {
-   "slug": "prometheus-docs",
-   "cat": "OPS",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "killed",
-   "domain": "an agent instrumenting a service queries this for metric semantics, recording-rule patterns and the query language's exact behaviour",
-   "sources": [
-    {
-     "url": "superseded by prometheus-src",
-     "licence_hint": "killed: same repository as prometheus-src \u2014 docs/ is inside it"
-    }
-   ]
-  },
-  {
-   "slug": "otel-proto",
-   "cat": "OPS",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "candidate",
-   "domain": "an agent wiring telemetry queries this for the exact semantic conventions and proto field semantics",
-   "sources": [
-    {
-     "url": "https://github.com/open-telemetry/opentelemetry-proto",
-     "licence_hint": "RE-PINNED (scope fix) after G7 fail 2026-10-02: dropped open-telemetry/semantic-conventions from the corpus \u2014 its markdown docs diluted proto-field queries and its content duplicates opentelemetry-spec. Apache-2.0 (hand-verified). Corpus is now the proto repo alone; suite expect_files unchanged (they were proto files). ROUND 2 re-pinned 2026-10-05: the 2026-10-02 scope fix over-corrected \u2014 semconv docs are the only source for HTTP/database span conventions. Corpus = opentelemetry-proto @b3f75588 + semantic-conventions @60a64b66 (2,660 records). Remap g7-otel-round2-2026-10.json pre-registered before retrieval (all 5 clauses verified on disk); prediction 3-4/5 with engine #1137/#1139. ROUND 2 GRADED 2026-10-05: 1/5 \u2014 prediction 3-4/5 was WRONG. With both repos indexed (2,660 records) semconv prose (2,475 docs) dwarfs the 185 proto records: proto queries retrieve span-convention prose, and db/http queries get CHANGELOG and sibling chapter docs instead of the expected files. ROUND 3 fix (pre-registered, not yet run): scope the semantic-conventions clone to its docs/ subtree minus CHANGELOG (the model/ YAMLs, internal/, non-normative/ and the CHANGELOG are the measured diluters); prediction 3/5. G7 round-2 2026-10-05 graded 1/5 pass 1/5 relevant -> FAIL (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 1/5 round-2 \u2014 see round-3 note. ROUND 3 EXECUTED 2026-10-04 (mirror corpus-otel-semconv-docs @15f75ec3, docs/ minus non-normative, upstream 60a64b66c pinned): graded 1/5 \u2014 prediction 3/5 was WRONG. Root cause found post-grade: the two semconv expect files (docs/http/http-spans.md, docs/db/database-spans.md) are NOT IN THE INDEX \u2014 they open with a Hugo `<!---` comment, so the engine sniffs them XML (#1142, same defect class as nist-sp800-sec) and junks them. Scope change could not have fixed this. ROUND 4 PRE-REGISTERED before any re-retrieval: engine fix #1142 (markdown-signature guard + YAML parse tier), corpus UNCHANGED (corpus-otel-semconv-docs @15f75ec3), same round-2 suite, prediction 3/5 (Q2 passes today; Q3/Q4 expect files become indexable; Q1/Q5 are proto-vs-prose ranking and may still miss)."
-    }
-   ],
-   "g7": {
-    "round": 4,
-    "graded_at": "2026-10-04",
-    "verdict": "FAIL",
-    "score": "2/5 pass 2/5 relevant",
-    "prediction": "3/5 \u2014 WRONG (round 4)",
-    "engine_fix": "#1142 fixed coverage: the semconv *-spans.md docs were sniffed as YAML/XML and never indexed; database-spans.md now ranks #1 (Q4 pass). Q1/Q3/Q5 remain misses on paraphrase ranking (conversational phrasing vs normative 'MUST/SHOULD' prose).",
-    "next": "PARKED under the semantic/neural lane (issue #66) with irs-pubs and nist-sp800-sec. Corpus final: opentelemetry-proto + semantic-conventions docs @15f75ec3 (297 files, 4,938,096 B).",
-    "corpus_unchanged": true,
-    "evidence": "backlog/g7-tonight-2026-10-03-graded.json"
-   }
-  },
-  {
-   "slug": "etcd-docs",
-   "cat": "OPS",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent operating a distributed system queries this for etcd's failure/restore/compaction semantics and tuning guides",
-   "sources": [
-    {
-     "url": "https://github.com/etcd-io/website",
-     "licence_hint": "Apache-2.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "freebsd-handbook",
-   "cat": "OPS",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent administering a BSD system queries this for the handbook's exact rc/ZFS/jail/networking procedures",
-   "sources": [
-    {
-     "url": "https://github.com/freebsd/freebsd-doc",
-     "licence_hint": "FreeBSD Documentation License (permissive \u2014 verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "openbsd-faq",
-   "cat": "OPS",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent hardening an OpenBSD host queries this for the pf FAQ's rule grammar, upgrade procedures and faq-page hardening steps",
-   "sources": [
-    {
-     "url": "https://github.com/openbsd/www",
-     "licence_hint": "OpenBSD web content, per-page copyright (verify at pin; FAQ lives at faq/, repo is the www CVS module ~890MB) G7 round-2 2026-10-05 graded 3/5 pass 3/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 3/5 (was 4/5 pre-cap; still PASS)."
-    }
-   ]
-  },
-  {
-   "slug": "tldr-pages",
-   "cat": "OPS",
-   "lane": "A",
-   "refresh": "weekly",
-   "status": "live",
-   "domain": "an agent scripting an unfamiliar long-tail tool queries this for its example invocations (popular tools are memorised \u2014 G3 value is the tail only)",
-   "sources": [
-    {
-     "url": "https://github.com/xerj-org/corpus-tldr-common",
-     "licence_hint": "RE-PINNED after G7 fail 2026-10-02 (mirror fix): upstream tldr-pages/tldr detector said MIT but the LICENSE is CC-BY-4.0 (hand-verified); full tree is ~40k pages across 30+ locales and the G7 miss was dilution \u2014 queries retrieved locale forks of the wrong page. Mirror = pages/common ONLY (4,705 en pages, the curated core), upstream SHA pinned in its README. Same wave-1 suite re-runs; expect_file paths remapped to pages/common layout, clauses and queries unchanged. G7 round-2 2026-10-05 graded 2/5 pass 2/5 relevant -> FAIL (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 2/5 pre-fix rows (unbracket rebuild pending). FLIPPED live 2026-10-05: G7 3/5 pass 4/5 relevant (1 partial: correct file, clause off-screen) -> PASS vs PR #1140 engine (0ae1439bb+35903648c) \u2014 the in-row 2/5 FAIL note was an intermediate pre-#1139 re-grade, superseded by the final g7-tonight-graded run. Manifest hub/tldr-pages.json written."
-    }
-   ],
-   "g7": {
-    "round": 2,
-    "graded_at": "2026-10-05",
-    "engine": "fix/xccode-g7-retrieval-1 (PR #1140, 0ae1439bb+35903648c)",
-    "evidence": "backlog/g7-tonight-2026-10-03-graded.json"
-   }
-  },
-  {
-   "slug": "school-of-sre",
-   "cat": "OPS",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent stepping into an SRE task queries this for the curriculum's concrete replication/signals/messaging/git/networking fundamentals (no incident-response or caching chapters exist \u2014 do not query for them)",
-   "sources": [
-    {
-     "url": "https://github.com/linkedin/school-of-sre",
-     "licence_hint": "G4 licence hand-check 2026-10-03: repo LICENSE file = CC-BY-4.0 (detector said UNKNOWN). G7 fail 2026-10-02 was a G1 over-promise, not a corpus defect: the prior suite queried on-call/incident-response and storage-caching chapters that do not exist. Domain sentence rescoped to the actual curriculum; re-scoped suite (in-domain queries only, blind-authored from clone reads, 5/5 expects grep-verified) pre-registered at backlog/g7-sre-2026-10.json BEFORE any re-retrieval. Corpus itself unchanged (same upstream SHA). G7 round-2 2026-10-05 graded 5/5 pass 5/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 5/5 (423 records CLEAN). FLIPPED live 2026-10-05: G7 5/5 pass 5/5 relevant -> PASS vs PR #1140 engine (0ae1439bb+35903648c). Manifest hub/school-of-sre.json written; corpus.json licence corrected to CC-BY-4.0."
-    }
-   ],
-   "g7": {
-    "round": 2,
-    "graded_at": "2026-10-05",
-    "engine": "fix/xccode-g7-retrieval-1 (PR #1140, 0ae1439bb+35903648c)",
-    "evidence": "backlog/g7-tonight-2026-10-03-graded.json"
-   }
-  },
-  {
-   "slug": "rust-api-guidelines",
-   "cat": "GOOD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent designing a Rust library API queries this for the naming/convertibility/error conventions with their reasoning",
-   "sources": [
-    {
-     "url": "https://github.com/rust-lang/api-guidelines",
-     "licence_hint": "MIT OR Apache-2.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "google-eng-practices",
-   "cat": "GOOD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent reviewing code queries this for the review standard's concrete what-to-look-for and clangers",
-   "sources": [
-    {
-     "url": "https://github.com/google/eng-practices",
-     "licence_hint": "CC-BY-4.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "msft-api-guidelines",
-   "cat": "GOOD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent designing a REST surface queries this for the naming/paging/versioning/error rules with examples",
-   "sources": [
-    {
-     "url": "https://github.com/microsoft/api-guidelines",
-     "licence_hint": "verify at pin (CC-BY reported)"
-    }
-   ]
-  },
-  {
-   "slug": "zalando-restful-api-guidelines",
-   "cat": "GOOD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent reviewing an API design queries this for the rule, its intent and propulated exceptions from a fleet of thousands",
-   "sources": [
-    {
-     "url": "https://github.com/xerj-org/corpus-zalando-guidelines",
-     "licence_hint": "RE-PINNED after G7 fail 2026-10-02 (mirror fix): detector said UNKNOWN; LICENSE is CC-BY-4.0 (hand-verified). Upstream ships 21 chapters as ONE 1.1MB README monolith the indexer skips; mirror = one file per chapter, upstream SHA pinned. Same suite re-runs with expect_file remapped to the chapter files. ROUND 2 re-pinned 2026-10-05 after the 1/5 re-grade (g7-tonight graded): autoindex sections .adoc by asciidoc structure and compatibility.adoc's section records crowded every top-5. Mirror commit 88cdfdb renames chapters to .txt (content identical) = one whole-file record per chapter; remap g7-zalando-txt-2026-10.json pre-registered before retrieval; prediction 3-4/5. G7 round-2 2026-10-05 graded 5/5 pass 5/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): round-2 .txt remap; 5/5 with the engine fixes. FLIPPED live 2026-10-05: G7 5/5 pass 5/5 relevant -> PASS (final re-grade after engine fix/xccode-g7-retrieval-1 = PR #1140, commits 0ae1439bb+35903648c, #1137 per-file cap + #1139 txt-field search; the earlier 2/5 in-row note was graded pre-#1139). Manifest hub/zalando-restful-api-guidelines.json written; corpus.json re-pinned to mirror 88cdfdb1 (.txt tree actually graded) + CC-BY-4.0."
-    }
-   ],
-   "g7": {
-    "round": 2,
-    "graded_at": "2026-10-05",
-    "engine": "fix/xccode-g7-retrieval-1 (PR #1140, 0ae1439bb+35903648c)",
-    "evidence": "backlog/g7-tonight-2026-10-03-graded.json"
-   }
-  },
-  {
-   "slug": "github-api-description",
-   "cat": "GOOD",
-   "lane": "A",
-   "refresh": "weekly",
-   "status": "live",
-   "domain": "an agent building a GitHub integration queries this for the machine-readable schema of a huge production REST API (the exemplar OpenGraph/OpenAPI corpus)",
-   "sources": [
-    {
-     "url": "https://github.com/github/rest-api-description",
-     "licence_hint": "verify at pin (MIT reported) G7 round-2 2026-10-05 graded 3/5 pass 3/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 3/5 re-confirmed."
-    }
-   ]
-  },
-  {
-   "slug": "mozilla-ssl-configs",
-   "cat": "GOOD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent configuring TLS termination queries this for the recommended cipher/protocol sets per server and their security/cost tradeoffs",
-   "sources": [
-    {
-     "url": "https://github.com/mozilla/server-side-tls",
-     "licence_hint": "MPL-2.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "osquery-config-examples",
-   "cat": "GOOD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent writing host detections queries this for battle-tested osquery SQL by objective (suid diffs, persistence paths, launch items)",
-   "sources": [
-    {
-     "url": "https://github.com/palantir/osquery-configuration",
-     "licence_hint": "Apache-2.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "govuk-design-system",
-   "cat": "GOOD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent building accessible UI queries this for the component's exact accessibility criteria and edge cases",
-   "sources": [
-    {
-     "url": "https://github.com/xerj-org/corpus-govuk-components",
-     "licence_hint": "RE-PINNED after G7 fail 2026-10-02 (mirror fix): upstream alphagov/govuk-frontend buries the accessibility criteria in a 100k-line SCSS/Nunjucks app tree; queries hit macros not criteria. Mirror = the 39 component READMEs (where the criteria actually live), MIT (hand-verified). Upstream SHA pinned in the mirror README."
-    }
-   ],
-   "g7": {
-    "round": 1,
-    "suite": "backlog/g7-govuk-round1-2026-10.json",
-    "graded_at": "2026-10-04",
-    "engine": "v1.0.0-rc.81 @9cefd8070 (PR #1144)",
-    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
-    "note": "round 0 failed 2026-10-02 (raw upstream tree ranked macros over criteria); re-pinned to the 39 component-doc mirror, round 1 5/5 pass 5/5 relevant"
-   }
-  },
-  {
-   "slug": "twelve-factor",
-   "cat": "GOOD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent containerising or configuring an app queries this for the factor's exact statement and rationale (G3 borderline: well-known prose \u2014 keep only if G7 shows retrieval value)",
-   "sources": [
-    {
-     "url": "https://github.com/heroku/12factor",
-     "licence_hint": "verify at pin (code MIT reported; content licence separate)"
-    }
-   ]
-  },
-  {
-   "slug": "c-vulns",
-   "cat": "BAD",
-   "lane": "B",
-   "refresh": "weekly",
-   "status": "deferred",
-   "domain": "an agent reviewing C code queries this for version-pinned vulnerable functions and their fix diffs, permissively-licensed projects only",
-   "sources": [
-    {
-     "url": "mined from CVE/GHSA fix commits (kernel and other GPL projects excluded by per-record licence)",
-     "licence_hint": "per-record upstream licence; depends on the #61 S1/S3 harvester"
-    }
-   ]
-  },
-  {
-   "slug": "go-vuln-funcs",
-   "cat": "BAD",
-   "lane": "B",
-   "refresh": "weekly",
-   "status": "deferred",
-   "domain": "an agent reviewing Go code queries this for vulnerable symbols with fix diffs (extends go-vulndb's symbols into code records)",
-   "sources": [
-    {
-     "url": "mined from go-vulndb-linked fix commits",
-     "licence_hint": "per-record upstream licence; depends on the #61 harvester"
-    }
-   ]
-  },
-  {
-   "slug": "py-vuln-funcs",
-   "cat": "BAD",
-   "lane": "B",
-   "refresh": "weekly",
-   "status": "deferred",
-   "domain": "an agent reviewing Python code queries this for vulnerable functions with fix diffs, PYSEC-linked",
-   "sources": [
-    {
-     "url": "mined from PYSEC/GHSA-linked fix commits",
-     "licence_hint": "per-record upstream licence; depends on the #61 harvester"
-    }
-   ]
-  },
-  {
-   "slug": "redos-precedent",
-   "cat": "BAD",
-   "lane": "B",
-   "refresh": "weekly",
-   "status": "candidate",
-   "domain": "an agent vetting regex handling queries this for real ReDoS advisories with the pathological pattern and the bounded rewrite that fixed it",
-   "sources": [
-    {
-     "url": "curated from GHSA/RUSTSEC/PYSEC ReDoS-class advisories",
-     "licence_hint": "CC-BY-4.0 upstream (verify per source)"
-    }
-   ]
-  },
-  {
-   "slug": "crypto-misuse-precedent",
-   "cat": "BAD",
-   "lane": "B",
-   "refresh": "weekly",
-   "status": "candidate",
-   "domain": "an agent reviewing crypto call sites queries this for real CWE-327/328/347-class advisories showing the misuse and the corrected construction",
-   "sources": [
-    {
-     "url": "curated from advisory databases by CWE class",
-     "licence_hint": "CC-BY-4.0 upstream (verify per source)"
-    }
-   ]
-  },
-  {
-   "slug": "duckdb",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on query execution queries this for how a real embeddable OLAP engine does join ordering, expression rewrites and memory-aware operators",
-   "sources": [
-    {
-     "url": "https://github.com/duckdb/duckdb",
-     "licence_hint": "MIT (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "rocksdb",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on LSM stores queries this for compaction, WAL and recovery internals at production scale",
-   "sources": [
-    {
-     "url": "https://github.com/facebook/rocksdb",
-     "licence_hint": "Apache-2.0 OR GPL-2 dual (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "leveldb",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent learning LSM internals queries this for the original clean implementation (memtable/sstable/manifest split)",
-   "sources": [
-    {
-     "url": "https://github.com/google/leveldb",
-     "licence_hint": "BSD-3 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "pebble",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "candidate",
-   "domain": "an agent working on LSM stores queries this for a modern Go LSM with delete/RangeLock semantics",
-   "sources": [
-    {
-     "url": "https://github.com/cockroachdb/pebble",
-     "licence_hint": "BSD-2-Clause VERIFIED at pin e0818dd07ec5 (LICENSE is the LevelDB-Go-derived BSD text; no BUSL anywhere in the tree \u2014 CockroachDB's BUSL does not apply to Pebble). 1,492 files. Un-deferred 2026-10-04: the deferral note said VERIFY FIRST; verified permissive."
-    }
-   ],
-   "g7": {
-    "round": 0,
-    "suite": "backlog/g7-pebble-2026-10.json",
-    "note": "pre-registered 2026-10-04 before indexing"
-   }
-  },
-  {
-   "slug": "badger",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on pure-Go KV stores queries this for its LSM-with-value-log design and transaction implementation",
-   "sources": [
-    {
-     "url": "https://github.com/dgraph-io/badger",
-     "licence_hint": "MIT (verify at pin \u2014 dgraph BUSL era did not reach badger, confirm)"
-    }
-   ]
-  },
-  {
-   "slug": "lmdb",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on memory-mapped B+trees queries this for LMDB's page/cursor/COW mechanics",
-   "sources": [
-    {
-     "url": "https://github.com/LMDB/lmdb",
-     "licence_hint": "OpenLDAP/ISCL family (verify file at pin; code lives at repo root of the mirror, default branch mdb.master3)"
-    }
-   ]
-  },
-  {
-   "slug": "faiss",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on ANN queries this for index construction, IVF/HNSW composition and GPU paths in the reference implementation",
-   "sources": [
-    {
-     "url": "https://github.com/facebookresearch/faiss",
-     "licence_hint": "MIT (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "annoy",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on read-mostly ANN queries this for the forest-of-trees build and on-disk format",
-   "sources": [
-    {
-     "url": "https://github.com/spotify/annoy",
-     "licence_hint": "verify at pin (Apache-2.0/'Other' reported)"
-    }
-   ]
-  },
-  {
-   "slug": "sqlite-src",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on embedded DB internals queries this for the btree module, pager and the famously commented test harness",
-   "sources": [
-    {
-     "url": "https://github.com/sqlite/sqlite",
-     "licence_hint": "public domain (verify at pin; official read-only fossil\u2192git mirror)"
-    }
-   ]
-  },
-  {
-   "slug": "postgres-src",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on planners queries this for the real cost model, join ordering and executor nodes",
-   "sources": [
-    {
-     "url": "https://github.com/postgres/postgres",
-     "licence_hint": "PostgreSQL Licence (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "parquet-format",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent reading/writing parquet queries this for encodings, logical types and the thrift metadata spec",
-   "sources": [
-    {
-     "url": "https://github.com/apache/parquet-format",
-     "licence_hint": "Apache-2.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "arrow-rs",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on columnar memory queries this for the Rust arrow arrays, kernels and IPC paths",
-   "sources": [
-    {
-     "url": "https://github.com/apache/arrow-rs",
-     "licence_hint": "Apache-2.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "iceberg",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent building lakehouse tables queries this for spec semantics and the reference metadata/manifest handling",
-   "sources": [
-    {
-     "url": "https://github.com/apache/iceberg",
-     "licence_hint": "Apache-2.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "kafka-src",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on log systems queries this for the log-cleaner, controller and replication protocol internals",
-   "sources": [
-    {
-     "url": "https://github.com/apache/kafka",
-     "licence_hint": "Apache-2.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "rabbitmq",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on message brokers queries this for queue/exchange routing and mirrored-queue semantics",
-   "sources": [
-    {
-     "url": "https://github.com/rabbitmq/rabbitmq-server",
-     "licence_hint": "MPL-2.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "nats-server",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on pub/sub queries this for subject-tree routing, jetstream and clustering internals in readable Go",
-   "sources": [
-    {
-     "url": "https://github.com/nats-io/nats-server",
-     "licence_hint": "Apache-2.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "etcd-src",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on coordination stores queries this for raft integration, watch semantics and backend compaction",
-   "sources": [
-    {
-     "url": "https://github.com/etcd-io/etcd",
-     "licence_hint": "Apache-2.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "raft-rs",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent implementing raft queries this for the log/ready/progress state machine the tikv fleet runs on",
-   "sources": [
-    {
-     "url": "https://github.com/tikv/raft-rs",
-     "licence_hint": "Apache-2.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "dragonboat",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent implementing multi-raft queries this for the sharded log and snapshot plumbing",
-   "sources": [
-    {
-     "url": "https://github.com/lni/dragonboat",
-     "licence_hint": "BSD-2 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "influxdb",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on time series queries this for TSM/flux paths and downsampling semantics",
-   "sources": [
-    {
-     "url": "https://github.com/influxdata/influxdb",
-     "licence_hint": "verify at pin (MIT/Apache reported; iox era changed layout)"
-    }
-   ]
-  },
-  {
-   "slug": "prometheus-src",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on TSDB queries this for the head-block/WAL/head-compaction paths and PromQL evaluation",
-   "sources": [
-    {
-     "url": "https://github.com/prometheus/prometheus",
-     "licence_hint": "Apache-2.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "valkey-src",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on in-memory KV queries this for the event-loop, object encoding and replication paths of the open fork",
-   "sources": [
-    {
-     "url": "https://github.com/valkey-io/valkey",
-     "licence_hint": "BSD-3 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "rustls",
-   "cat": "NET",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent implementing TLS in Rust queries this for the state machine, cipher dispatch and certificate verification",
-   "sources": [
-    {
-     "url": "https://github.com/rustls/rustls",
-     "licence_hint": "Apache-2.0 OR MIT (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "openssl",
-   "cat": "NET",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent debugging TLS/ASN.1 queries this for the reference provider's handshake, BIO and provider internals",
-   "sources": [
-    {
-     "url": "https://github.com/openssl/openssl",
-     "licence_hint": "Apache-2.0 since 3.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "s2n-tls",
-   "cat": "NET",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent hardening TLS queries this for the defensively-structured C state machine and its testing approach",
-   "sources": [
-    {
-     "url": "https://github.com/aws/s2n-tls",
-     "licence_hint": "Apache-2.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "boringtun",
-   "cat": "NET",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent implementing a VPN data plane queries this for the wireguard protocol implementation and its async runtime use",
-   "sources": [
-    {
-     "url": "https://github.com/cloudflare/boringtun",
-     "licence_hint": "verify at pin (Apache-2.0/BSD variants reported)"
-    }
-   ]
-  },
-  {
-   "slug": "quinn",
-   "cat": "NET",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent implementing QUIC queries this for congestion control, stream state and 0-RTT handling in idiomatic Rust",
-   "sources": [
-    {
-     "url": "https://github.com/quinn-rs/quinn",
-     "licence_hint": "Apache-2.0 OR MIT (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "nghttp2",
-   "cat": "NET",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working with HTTP/2 queries this for flow control, HPACK and priority internals in the reference C library",
-   "sources": [
-    {
-     "url": "https://github.com/nghttp2/nghttp2",
-     "licence_hint": "MIT (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "curl-src",
-   "cat": "NET",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent writing an HTTP client queries this for protocol handling, auth negotiation and the protocol-selection seams",
-   "sources": [
-    {
-     "url": "https://github.com/curl/curl",
-     "licence_hint": "curl licence (permissive \u2014 verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "libuv",
-   "cat": "NET",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent building an event loop queries this for the polling primitives and async threading patterns",
-   "sources": [
-    {
-     "url": "https://github.com/libuv/libuv",
-     "licence_hint": "MIT (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "zstd",
-   "cat": "NET",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent tuning compression queries this for frame/block formats, window and level internals",
-   "sources": [
-    {
-     "url": "https://github.com/facebook/zstd",
-     "licence_hint": "BSD-3 OR GPL-2 dual (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "lz4",
-   "cat": "NET",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent needing fast block compression queries this for the block format and decoder loop",
-   "sources": [
-    {
-     "url": "https://github.com/lz4/lz4",
-     "licence_hint": "BSD-2 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "brotli",
-   "cat": "NET",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on web content encoding queries this for the static dictionary and transform handling",
-   "sources": [
-    {
-     "url": "https://github.com/google/brotli",
-     "licence_hint": "MIT (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "zlib-ng",
-   "cat": "NET",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on deflate queries this for the modernised algorithms and SIMD paths",
-   "sources": [
-    {
-     "url": "https://github.com/zlib-ng/zlib-ng",
-     "licence_hint": "zlib (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "snappy",
-   "cat": "NET",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent needing cheap compression queries this for the format and the reference encoder decisions",
-   "sources": [
-    {
-     "url": "https://github.com/google/snappy",
-     "licence_hint": "verify at pin (BSD variants reported)"
-    }
-   ]
-  },
-  {
-   "slug": "protobuf",
-   "cat": "NET",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent generating or debugging protobuf code queries this for wire format, descriptor handling and the conformance suite",
-   "sources": [
-    {
-     "url": "https://github.com/protocolbuffers/protobuf",
-     "licence_hint": "BSD-3 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "flatbuffers",
-   "cat": "NET",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent designing zero-copy serialisation queries this for the vtable layout and verifier approach",
-   "sources": [
-    {
-     "url": "https://github.com/google/flatbuffers",
-     "licence_hint": "Apache-2.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "capnproto",
-   "cat": "NET",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent doing capability RPC queries this for the serialisation layout, promise pipelining and the security hardening history",
-   "sources": [
-    {
-     "url": "https://github.com/capnproto/capnproto",
-     "licence_hint": "MIT (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "msgpack-c",
-   "cat": "NET",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent implementing msgpack queries this for the format handling and unpack edge cases",
-   "sources": [
-    {
-     "url": "https://github.com/msgpack/msgpack-c",
-     "licence_hint": "Boost BSL-1.0 dual (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "openbao",
-   "cat": "NET",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on secret stores queries this for the barrier, seal and lease internals of the open vault fork",
-   "sources": [
-    {
-     "url": "https://github.com/openbao/openbao",
-     "licence_hint": "MPL-2.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "caddy",
-   "cat": "NET",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent building a TLS-serving reverse proxy queries this for cert automation and config-reload design",
-   "sources": [
-    {
-     "url": "https://github.com/caddyserver/caddy",
-     "licence_hint": "Apache-2.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "envoy",
-   "cat": "NET",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent building a data plane queries this for filter-chain, xDS and overload-manager internals",
-   "sources": [
-    {
-     "url": "https://github.com/envoyproxy/envoy",
-     "licence_hint": "Apache-2.0 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "nginx",
-   "cat": "NET",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent working on web servers queries this for the event-driven request cycle and module seams (note: very large)",
-   "sources": [
-    {
-     "url": "https://github.com/nginx/nginx",
-     "licence_hint": "BSD-2 (verify at pin)"
-    }
-   ]
-  },
-  {
-   "slug": "ecfr-title-29",
-   "cat": "STD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent answering workplace/employment questions queries this for what 29 CFR actually says \u2014 OSHA guardrail height, FMLA 12-month/1250-hour eligibility, FLSA overtime, youth-employment hours (demand: employment-HR Ask-HN volume 57)",
-   "sources": [
-    {
-     "url": "https://www.govinfo.gov/bulkdata/ECFR/title-29/ECFR-title29.xml",
-     "licence_hint": "public domain (US government work, 17 USC 105); pinned mirror github.com/xerj-org/corpus-ecfr-title-29"
-    }
-   ]
-  },
-  {
-   "slug": "ecfr-title-26",
-   "cat": "STD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "candidate",
-   "domain": "an agent answering federal tax questions queries this for what the Treasury regulations actually say \u2014 de minimis safe harbor, estimated-tax safe harbor, home-office exclusive use (demand: tax Ask-HN volume 40)",
-   "sources": [
-    {
-     "url": "https://www.govinfo.gov/bulkdata/ECFR/title-26/ECFR-title26.xml",
-     "licence_hint": "public domain (US government work, 17 USC 105); pinned mirror github.com/xerj-org/corpus-ecfr-title-26"
-    }
-   ],
-   "note": "G7 1/4 relevant (2026-10-02): paraphrase gap under lexical retrieval on tax phrasing; suite defect excluded (\u00a71.280A-2 proposed-only). Re-test pre-registered with neural embed mode. Pins and shape stand (WAVES.md wave N1)."
-  },
-  {
-   "slug": "ecfr-title-12",
-   "cat": "STD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent answering consumer-credit or mortgage questions queries this for what Regulation Z / TILA actually says \u2014 higher-priced APR triggers, ability-to-repay/QM, rescission windows, card late-fee safe harbors (demand: consumer-finance Ask-HN volume 71)",
-   "sources": [
-    {
-     "url": "https://www.govinfo.gov/bulkdata/ECFR/title-12/ECFR-title12.xml",
-     "licence_hint": "public domain (US government work, 17 USC 105); pinned mirror github.com/xerj-org/corpus-ecfr-title-12"
-    }
-   ]
-  },
-  {
-   "slug": "uk-legislation",
-   "cat": "STD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent answering UK-law questions queries this for what the current statute actually says \u2014 Consumer Rights Act remedies, GDPR-adjacent DPA 2018 duties, Building Safety Act duties (demand: legal-courts Ask-HN volume 46; source chosen for best-in-class versioned OGL XML)",
-   "sources": [
-    {
-     "url": "https://www.legislation.gov.uk/ukpga/<year>/<chapter>/data.xml",
-     "licence_hint": "OGL v3.0 (acknowledgement required); pinned mirror github.com/xerj-org/corpus-uk-legislation"
-    }
-   ]
-  },
-  {
-   "slug": "dailymed",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "an agent answering medication questions queries this for what the FDA-approved label actually says \u2014 indications, do-not-crush/dose-form rules, epidural-timing windows before/after anticoagulants, nitrate co-administration intervals, intraoperative floppy iris warnings (demand: patient-safety medication questions; 28k records over the current SPL set)",
-   "sources": [
-    {
-     "url": "https://github.com/xerj-org/corpus-dailymed",
-     "licence_hint": "G7 graded 2026-10-04 vs PR #1140 engine (0ae1439bb+35903648c): 5/5 pass 5/5 relevant -> PASS; FLIPPED live same day. Licence: no terms ship with the data; NLM pages quoted verbatim in the mirror README \u2014 US-government works not subject to copyright, reproduction free, attribution 'Courtesy of the National Library of Medicine' requested (corpus.json carries the same). Manifest hub/dailymed.json."
-    }
-   ],
-   "g7": {
-    "round": 1,
-    "graded_at": "2026-10-04",
-    "engine": "PR #1140 (0ae1439bb+35903648c)",
-    "evidence": "backlog/g7-tonight-2026-10-03-graded.json"
-   }
-  },
-  {
-   "slug": "ecfr-title-14",
-   "cat": "STD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "a pilot or mechanic queries this for the current FAR text \u2014 visibility minimums, transponder airspace, inspection intervals, right-of-way",
-   "sources": [
-    {
-     "url": "https://www.govinfo.gov/bulkdata/ECFR/title-14/ECFR-title14.xml",
-     "licence_hint": "US public domain (17 USC 105, government edict); GPO bulk data, no restriction. Mirror xerj-org/corpus-ecfr-title-14 @0520b312 (AMDDATE 2026-07-24, downloaded 2026-10-04): 6,421 per-section files, same split_ecfr.py pipeline as titles 12/26/29. Demand: legal/courts rank 8 overall; HN aviation volume 0 (HN skew \u2014 r/flying active), second-wave per demand-2026-10 action 3."
-    }
-   ],
-   "g7": {
-    "round": 0,
-    "suite": "backlog/g7-ecfr-title-14-2026-10.json",
-    "graded_at": "2026-10-04",
-    "engine": "v1.0.0-rc.81 @9cefd8070 (PR #1144)",
-    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
-    "note": "5/5 pass 5/5 relevant on first grade; blind suite pre-registered before indexing"
-   }
-  },
-  {
-   "slug": "cdc-clinical",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "a clinician or medical writer queries this for the current CDC-recommended STI regimen and dose, and measles clinical signs",
-   "sources": [
-    {
-     "url": "https://www.cdc.gov/std/treatment-guidelines/toc.htm",
-     "licence_hint": "US public domain (CDC web content, 17 USC 105). Mirror xerj-org/corpus-cdc-clinical @3bd1ba62: STI Treatment Guidelines 2021 per-condition pages (56) + measles clinical overview (1), chrome stripped to main content, MANIFEST.json path->URL. ACIP vaccine pages fetched then DROPPED (link index to MMWR PDFs, not recommendation text) - immunization scope unmet until a PDF text lane exists; recorded honestly rather than padded. Demand: health/medical rank 3 (volume 87). Fetch trap: CDC WAF 403s python-urllib and generic Mozilla UAs, plain curl passes."
-    }
-   ],
-   "g7": {
-    "round": 0,
-    "suite": "backlog/g7-cdc-clinical-2026-10.json",
-    "graded_at": "2026-10-04",
-    "engine": "v1.0.0-rc.81 @9cefd8070 (PR #1144)",
-    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
-    "note": "5/5 pass 5/5 relevant on first grade; blind suite pre-registered before indexing"
-   }
-  },
-  {
-   "slug": "navrules",
-   "cat": "STD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "a mariner, boater, or agent writing navigation software queries this for the actual text of Rule 7 risk of collision, Rule 9 narrow channels, lights, sound signals",
-   "sources": [
-    {
-     "url": "https://www.navcen.uscg.gov/pdf/navRules/NavRules.pdf",
-     "licence_hint": "US government work, public domain (17 USC 105). Mirror xerj-org/corpus-navrules @4d535668: per-rule files from the COMDTINST M16672.2D PDF still distributed at navcen's canonical URL; pypdf extraction (born-digital, no OCR); currency caveat (M16672.2F Handbook supersedes, not retrievable at build time) stated in the mirror README."
-    }
-   ],
-   "g7": {
-    "round": 0,
-    "suite": "backlog/g7-navrules-2026-10.json",
-    "graded_at": "2026-10-04",
-    "engine": "v1.0.0-rc.81 @9cefd8070 (PR #1144)",
-    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
-    "note": "4/5 pass 5/5 relevant on first grade; blind suite pre-registered before indexing"
-   }
-  },
-  {
-   "slug": "uk-building-regs",
-   "cat": "STD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "current UK Building Regulations 2010 text: what work must comply with, materials, loading, exemptions, notices",
-   "sources": [
-    {
-     "url": "https://www.legislation.gov.uk/uksi/2010/2214/data.xml",
-     "licence_hint": "UK Open Government Licence v3.0 (Crown); verified at the legislation.gov.uk per-page footer reuse statement. Mirror xerj-org/corpus-uk-building-regs @d4669402: 194 per-provision files from the CLML XML (England inline, differing Wales variants appended labelled), 44ZB/44ZC dual numbering and repealed Schedule 4A/5 handled and documented in the mirror README. Approved Documents deliberately out of scope."
-    }
-   ],
-   "g7": {
-    "round": 0,
-    "suite": "backlog/g7-uk-building-regs-2026-10.json",
-    "graded_at": "2026-10-04",
-    "engine": "v1.0.0-rc.81 @9cefd8070 (PR #1144)",
-    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
-    "note": "passed on first grade; blind suite pre-registered before indexing"
-   }
-  },
-  {
-   "slug": "eurlex-core",
-   "cat": "STD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "GDPR / AI Act / DSA / DMA / NIS2 article and recital text",
-   "sources": [
-    {
-     "url": "https://publications.europa.eu/resource/celex/32016R0679 (Cellar CONVEX lane)",
-     "licence_hint": "EU reuse: CC BY 4.0 (Commission Decision 2011/833/EU), verified at commission.europa.eu/legal-notice_en. Mirror xerj-org/corpus-eurlex-core @f407c938: 1,167 per-article/per-recital files across the five acts (405 articles + 762 recitals); eur-lex.europa.eu direct fetches WAF-blocked (AWS challenge), the Cellar content-negotiation lane used instead; annexes deliberately excluded and documented (AI Act Annex III absence flagged)."
-    }
-   ],
-   "g7": {
-    "round": 0,
-    "suite": "backlog/g7-eurlex-core-2026-10.json",
-    "graded_at": "2026-10-04",
-    "engine": "v1.0.0-rc.81 @9cefd8070 (PR #1144)",
-    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
-    "note": "passed on first grade; blind suite pre-registered before indexing"
-   }
-  },
-  {
-   "slug": "ada-2010",
-   "cat": "STD",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "live",
-   "domain": "ADA 2010 Standards for Accessible Design: exact dimensional and technical requirements",
-   "sources": [
-    {
-     "url": "https://www.ada.gov/law-and-regs/design-standards/2010-stds/",
-     "licence_hint": "US public domain (17 USC 105; no copyright notice on the source page). Mirror xerj-org/corpus-ada-2010 @d2be9eb3: 145 section files sliced at the page's own h2/h3 anchors (ada.gov now publishes the Standards as one page); chapters 1-10 complete; figures keep dimension-level alt text."
-    }
-   ],
-   "g7": {
-    "round": 0,
-    "suite": "backlog/g7-ada-2010-2026-10.json",
-    "graded_at": "2026-10-04",
-    "engine": "v1.0.0-rc.81 @9cefd8070 (PR #1144)",
-    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
-    "note": "passed on first grade; blind suite pre-registered before indexing"
-   }
-  },
-  {
-   "slug": "mutcd",
-   "cat": "OPS",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "candidate",
-   "domain": "the current MUTCD: sign and signal warrants, markings, work-zone typical applications",
-   "sources": [
-    {
-     "url": "https://mutcd.fhwa.dot.gov/",
-     "licence_hint": "US public domain (17 USC 105) \u2014 the Manual's own Section 1D.06 mandates it. Mirror xerj-org/corpus-mutcd @b70b9188: 11th Edition with Revision 1 (Dec 2025, 1,162 pp; FHWA no longer publishes an HTML lane) split into 955 per-section files via pypdf; monotonic-order heading check caught a corrupted 2G.19 boundary; documented source ligature defects. Source PDF sha256 in README."
-    }
-   ],
-   "g7": {
-    "round": 0,
-    "suite": "backlog/g7-mutcd-2026-10.json",
-    "note": "pre-registered 2026-10-04 before indexing"
-   }
-  },
-  {
-   "slug": "fda-food-code",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "candidate",
-   "domain": "FDA Food Code 2022 provisions: cooking/holding temperatures, sanitizer tables, reporting rules",
-   "sources": [
-    {
-     "url": "https://www.fda.gov/food/fda-food-code/food-code-2022",
-     "licence_hint": "US public domain (17 USC 105). Mirror xerj-org/corpus-fda-food-code @30a28444: 396 per-provision files + 7 annexes from the 2022 PDF (668 pp) via pypdf; 2- and 3-digit provision numbers handled (38 provisions recovered); degree-sign extraction artifact kept verbatim. 2022 Supplement and Food Code 2026 explicitly excluded, flagged as not-current in README."
-    }
-   ],
-   "g7": {
-    "round": 0,
-    "suite": "backlog/g7-fda-food-code-2026-10.json",
-    "note": "pre-registered 2026-10-04 before indexing"
-   }
-  },
-  {
-   "slug": "ssa-poms",
-   "cat": "DATA",
-   "lane": "A",
-   "refresh": "pinned",
-   "status": "candidate",
-   "domain": "SSA program rules: disability waiting periods, SSI resource limits, payment mechanics",
-   "sources": [
-    {
-     "url": "https://secure.ssa.gov/apps10/poms.nsf/",
-     "licence_hint": "US public domain (17 USC 105). Mirror xerj-org/corpus-ssa-poms @3af36df5: 8,989 POMS section files scoped to GN+DI+SI (54% of POMS; full corpus is 16,545 sections \u2014 scope decision + reason in README); robots.txt allows /poms.nsf/; 8,989/8,989 fetched with 0 failures; every file header carries its live source URL."
-    }
-   ],
-   "g7": {
-    "round": 0,
-    "suite": "backlog/g7-ssa-poms-2026-10.json",
-    "note": "pre-registered 2026-10-04 before indexing"
-   }
-  }
+ "schema": 1,
+ "statuses": [
+  "live",
+  "candidate",
+  "planned",
+  "deferred",
+  "killed",
+  "withdrawn"
  ]
 }

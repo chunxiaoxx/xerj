@@ -1,546 +1,700 @@
 {
- "graded_at": "2026-10-04",
- "engine": "v1.0.0-rc.81 @9cefd8070 (autoindex sniff guards, PR #1144)",
- "grader": "expect-clause whitespace-normalized in any top-5 hit; partial = same-basename file",
  "corpora": {
-  "cdc-clinical": {
-   "queries": [
-    {
-     "q": "first-line treatment uncomplicated gonorrhea in adults ceftriaxone dosing",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-cdc-clinical/sti-tx/gonorrhea-adults.md",
-     "expect_file": "sti-tx/gonorrhea-adults.md",
-     "top5": [
-      "corpus-cdc-clinical/sti-tx/references.md",
-      "corpus-cdc-clinical/sti-tx/gonorrhea-adults.md",
-      "corpus-cdc-clinical/sti-tx/gonorrhea-children.md",
-      "corpus-cdc-clinical/sti-tx/gonorrhea-adults.md",
-      "corpus-cdc-clinical/sti-tx/sexual-assault-adults.md"
-     ]
-    },
-    {
-     "q": "recommended regimen for chlamydia infection in adolescents and adults",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-cdc-clinical/sti-tx/chlamydia.md",
-     "expect_file": "sti-tx/chlamydia.md",
-     "top5": [
-      "corpus-cdc-clinical/sti-tx/sexual-assault-adults.md",
-      "corpus-cdc-clinical/sti-tx/chlamydia.md",
-      "corpus-cdc-clinical/sti-tx/gonorrhea-adults.md",
-      "corpus-cdc-clinical/sti-tx/chlamydia.md",
-      "corpus-cdc-clinical/sti-tx/adolescents.md"
-     ]
-    },
-    {
-     "q": "treating primary syphilis in a pregnant woman allergic to penicillin",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-cdc-clinical/sti-tx/p-and-s-syphilis.md",
-     "expect_file": "sti-tx/p-and-s-syphilis.md",
-     "top5": [
-      "corpus-cdc-clinical/sti-tx/p-and-s-syphilis.md",
-      "corpus-cdc-clinical/sti-tx/latent-syphilis.md",
-      "corpus-cdc-clinical/sti-tx/tertiary-syphilis.md",
-      "corpus-cdc-clinical/sti-tx/syphilis-hiv.md",
-      "corpus-cdc-clinical/sti-tx/syphilis-pregnancy.md"
-     ]
-    },
-    {
-     "q": "dose of benzathine penicillin for primary and secondary syphilis",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-cdc-clinical/sti-tx/p-and-s-syphilis.md",
-     "expect_file": "sti-tx/p-and-s-syphilis.md",
-     "top5": [
-      "corpus-cdc-clinical/sti-tx/syphilis-hiv.md",
-      "corpus-cdc-clinical/sti-tx/p-and-s-syphilis.md",
-      "corpus-cdc-clinical/sti-tx/syphilis-hiv.md",
-      "corpus-cdc-clinical/sti-tx/p-and-s-syphilis.md",
-      "corpus-cdc-clinical/sti-tx/syphilis-pregnancy.md"
-     ]
-    },
-    {
-     "q": "pathognomonic enanthem of measles in the mouth",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-cdc-clinical/measles/clinical-overview.md",
-     "expect_file": "measles/clinical-overview.md",
-     "top5": [
-      "corpus-cdc-clinical/measles/clinical-overview.md",
-      "corpus-cdc-clinical/measles/clinical-overview.md",
-      "corpus-cdc-clinical/tools/fetch_cdc.py",
-      "corpus-cdc-clinical/README.md",
-      "corpus-cdc-clinical/sti-tx/clinical-risk.md"
-     ]
-    }
-   ],
-   "pass": 5,
-   "relevant": 5,
-   "verdict": "PASS"
-  },
-  "ecfr-title-14": {
-   "queries": [
-    {
-     "q": "VFR minimum flight visibility and distance from clouds by airspace class",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-ecfr-title-14/parts/part-91/sec-91.155.txt",
-     "expect_file": "parts/part-91/sec-91.155.txt",
-     "top5": [
-      "corpus-ecfr-title-14/parts/part-91/sec-91.155.txt",
-      "corpus-ecfr-title-14/parts/part-103/sec-103.23.txt",
-      "corpus-ecfr-title-14/parts/part-135/sec-135.613.txt",
-      "corpus-ecfr-title-14/parts/part-91/sec-91.129.txt",
-      "corpus-ecfr-title-14/parts/part-91/sec-91.155.txt"
-     ]
-    },
-    {
-     "q": "when is an operable transponder with Mode C required to operate an aircraft",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-ecfr-title-14/parts/part-91/sec-91.215.txt",
-     "expect_file": "parts/part-91/sec-91.215.txt",
-     "top5": [
-      "corpus-ecfr-title-14/parts/part-91/sec-91.215.txt",
-      "corpus-ecfr-title-14/parts/part-91/sec-91.215.txt",
-      "corpus-ecfr-title-14/parts/part-91/sec-91.217.txt",
-      "corpus-ecfr-title-14/parts/part-99/sec-99.13.txt",
-      "corpus-ecfr-title-14/parts/part-93/sec-93.339.txt"
-     ]
-    },
-    {
-     "q": "minimum safe altitude flying over a congested city",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-ecfr-title-14/parts/part-91/sec-91.119.txt",
-     "expect_file": "parts/part-91/sec-91.119.txt",
-     "top5": [
-      "corpus-ecfr-title-14/parts/part-91/sec-91.119.txt",
-      "corpus-ecfr-title-14/parts/part-103/sec-103.15.txt",
-      "corpus-ecfr-title-14/parts/part-137/sec-137.51.txt",
-      "corpus-ecfr-title-14/parts/part-105/sec-105.21.txt",
-      "corpus-ecfr-title-14/parts/part-91/sec-91.303.txt"
-     ]
-    },
-    {
-     "q": "how often must an aircraft have an annual inspection to be operated",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-ecfr-title-14/parts/part-91/sec-91.409.txt",
-     "expect_file": "parts/part-91/sec-91.409.txt",
-     "top5": [
-      "corpus-ecfr-title-14/parts/part-91/sec-91.409.txt",
-      "corpus-ecfr-title-14/parts/part-145/sec-145.211.txt",
-      "corpus-ecfr-title-14/parts/part-121/sec-121.629.txt",
-      "corpus-ecfr-title-14/parts/part-136/sec-136.1.txt",
-      "corpus-ecfr-title-14/parts/part-137/sec-137.53.txt"
-     ]
-    },
-    {
-     "q": "which aircraft has the right of way when two aircraft are converging",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-ecfr-title-14/parts/part-91/sec-91.113.txt",
-     "expect_file": "parts/part-91/sec-91.113.txt",
-     "top5": [
-      "corpus-ecfr-title-14/parts/part-91/sec-91.113.txt",
-      "corpus-ecfr-title-14/parts/part-91/sec-91.113.txt",
-      "corpus-ecfr-title-14/parts/part-91/sec-91.115.txt",
-      "corpus-ecfr-title-14/parts/part-93/sec-93.163.txt",
-      "corpus-ecfr-title-14/parts/part-107/sec-107.37.txt"
-     ]
-    }
-   ],
-   "pass": 5,
-   "relevant": 5,
-   "verdict": "PASS"
-  },
-  "navrules": {
-   "queries": [
-    {
-     "q": "how must a vessel determine if risk of collision exists",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-navrules/rules/rule-07-risk-of-collision.txt:1",
-     "expect_file": "rules/rule-07-risk-of-collision.txt",
-     "top5": [
-      "corpus-navrules/rules/rule-07-risk-of-collision.txt:1",
-      "corpus-navrules/src/navrules.pdf",
-      "corpus-navrules/src/navrules.pdf",
-      "corpus-navrules/rules/rule-07-risk-of-collision.txt:33",
-      "corpus-navrules/rules/rule-19-conduct-of-vessels-in-restricted-visibility.txt:33"
-     ]
-    },
-    {
-     "q": "lookout requirement sight and hearing",
-     "hard": false,
-     "verdict": "partial",
-     "hit": "corpus-navrules/rules/rule-05-look-out.txt:1",
-     "expect_file": "rules/rule-05-look-out.txt",
-     "top5": [
-      "corpus-navrules/rules/rule-05-look-out.txt:1",
-      "corpus-navrules/src/navrules.pdf",
-      "corpus-navrules/src/navrules.pdf",
-      "corpus-navrules/rules/rule-34-maneuvering-and-warning-signals.txt:1",
-      "corpus-navrules/rules/rule-34-maneuvering-and-warning-signals.txt:33"
-     ]
-    },
-    {
-     "q": "factors to consider in determining safe speed",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-navrules/rules/rule-06-safe-speed.txt:1",
-     "expect_file": "rules/rule-06-safe-speed.txt",
-     "top5": [
-      "corpus-navrules/rules/rule-06-safe-speed.txt:1",
-      "corpus-navrules/rules/rule-06-safe-speed.txt:32",
-      "corpus-navrules/src/navrules.pdf",
-      "corpus-navrules/src/navrules.pdf",
-      "corpus-navrules/rules/rule-19-conduct-of-vessels-in-restricted-visibility.txt:1"
-     ]
-    },
-    {
-     "q": "proceeding along a narrow channel which side to keep",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-navrules/rules/rule-09-narrow-channels.txt",
-     "expect_file": "rules/rule-09-narrow-channels.txt",
-     "top5": [
-      "corpus-navrules/src/navrules.pdf",
-      "corpus-navrules/src/navrules.pdf",
-      "corpus-navrules/rules/rule-09-narrow-channels.txt",
-      "corpus-navrules/rules/rule-09-narrow-channels.txt",
-      "corpus-navrules/rules/rule-15-crossing-situation.txt:1"
-     ]
-    },
-    {
-     "q": "two power-driven vessels crossing which vessel gives way",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-navrules/rules/rule-15-crossing-situation.txt:34",
-     "expect_file": "rules/rule-15-crossing-situation.txt",
-     "top5": [
-      "corpus-navrules/rules/rule-15-crossing-situation.txt:34",
-      "corpus-navrules/rules/rule-15-crossing-situation.txt:1",
-      "corpus-navrules/rules/rule-17-action-by-stand-on-vessel.txt",
-      "corpus-navrules/src/navrules.pdf",
-      "corpus-navrules/src/navrules.pdf"
-     ]
-    }
-   ],
-   "pass": 4,
-   "relevant": 5,
-   "verdict": "PASS"
-  },
-  "govuk-design-system": {
-   "queries": [
-    {
-     "q": "error summary what should happen to focus when the page loads",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-govuk-components/components/error-summary.txt:38",
-     "expect_file": "components/error-summary.txt",
-     "top5": [
-      "corpus-govuk-components/components/error-summary.txt:38",
-      "corpus-govuk-components/components/error-summary.txt:68",
-      "corpus-govuk-components/components/checkboxes.txt:128",
-      "corpus-govuk-components/components/radios.txt:128",
-      "corpus-govuk-components/components/error-message.txt:38"
-     ]
-    },
-    {
-     "q": "why must the accordion id be unique across the service",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-govuk-components/components/accordion.txt:1",
-     "expect_file": "components/accordion.txt",
-     "top5": [
-      "corpus-govuk-components/components/accordion.txt:1",
-      "corpus-govuk-components/components/textarea.txt:98",
-      "corpus-govuk-components/components/textarea.txt:130",
-      "corpus-govuk-components/components/accordion.txt:38",
-      "corpus-govuk-components/components/footer.txt:129"
-     ]
-    },
-    {
-     "q": "checkboxes text separating the last item in a list",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-govuk-components/components/checkboxes.txt:128",
-     "expect_file": "components/checkboxes.txt",
-     "top5": [
-      "corpus-govuk-components/components/checkboxes.txt:128",
-      "corpus-govuk-components/components/checkboxes.txt:98",
-      "corpus-govuk-components/components/task-list.txt:68",
-      "corpus-govuk-components/components/service-navigation.txt:98",
-      "corpus-govuk-components/components/inset-text.txt:38"
-     ]
-    },
-    {
-     "q": "character count what happens if both max words and max characters are set",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-govuk-components/components/character-count.txt:378",
-     "expect_file": "components/character-count.txt",
-     "top5": [
-      "corpus-govuk-components/components/character-count.txt:378",
-      "corpus-govuk-components/components/character-count.txt:1",
-      "corpus-govuk-components/components/footer.txt:68",
-      "corpus-govuk-components/components/checkboxes.txt:718",
-      "corpus-govuk-components/components/date-input.txt:38"
-     ]
-    },
-    {
-     "q": "exit this page how many times must the user press shift",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-govuk-components/components/exit-this-page.txt:38",
-     "expect_file": "components/exit-this-page.txt",
-     "top5": [
-      "corpus-govuk-components/components/exit-this-page.txt:38",
-      "corpus-govuk-components/components/exit-this-page.txt:70",
-      "corpus-govuk-components/components/error-message.txt:38",
-      "corpus-govuk-components/components/hint.txt:38",
-      "corpus-govuk-components/components/table.txt:38"
-     ]
-    }
-   ],
-   "pass": 5,
-   "relevant": 5,
-   "verdict": "PASS"
-  },
-  "uk-building-regs": {
-   "queries": [
-    {
-     "q": "what must building work comply with in schedule 1",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-uk-building-regs/regs/reg-04.txt",
-     "expect_file": "regs/reg-04.txt",
-     "top5": [
-      "corpus-uk-building-regs/regs/reg-18.txt",
-      "corpus-uk-building-regs/regs/reg-18.txt",
-      "corpus-uk-building-regs/regs/reg-04.txt",
-      "corpus-uk-building-regs/regs/reg-14.txt",
-      "corpus-uk-building-regs/regs/reg-20a.txt"
-     ]
-    },
-    {
-     "q": "materials for building work must be what",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-uk-building-regs/regs/reg-07.txt",
-     "expect_file": "regs/reg-07.txt",
-     "top5": [
-      "corpus-uk-building-regs/regs/reg-16.txt",
-      "corpus-uk-building-regs/regs/reg-18.txt",
-      "corpus-uk-building-regs/regs/reg-07.txt",
-      "corpus-uk-building-regs/regs/reg-18.txt",
-      "corpus-uk-building-regs/regs/reg-04.txt"
-     ]
-    },
-    {
-     "q": "structural loading dead imposed wind loads transmitted to the ground",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-uk-building-regs/schedules/sched-1.txt",
-     "expect_file": "schedules/sched-1.txt",
-     "top5": [
-      "corpus-uk-building-regs/schedules/sched-1.txt",
-      "corpus-uk-building-regs/schedules/sched-1.txt",
-      "corpus-uk-building-regs/schedules/sched-3.txt",
-      "corpus-uk-building-regs/regs/reg-46a.txt",
-      "corpus-uk-building-regs/regs/reg-46b.txt"
-     ]
-    },
-    {
-     "q": "exempt small detached buildings floor area limit",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-uk-building-regs/schedules/sched-2.txt",
-     "expect_file": "schedules/sched-2.txt",
-     "top5": [
-      "corpus-uk-building-regs/schedules/sched-2.txt",
-      "corpus-uk-building-regs/regs/reg-09.txt",
-      "corpus-uk-building-regs/regs/reg-02.txt",
-      "corpus-uk-building-regs/schedules/sched-4.txt",
-      "corpus-uk-building-regs/schedules/sched-3a.txt"
-     ]
-    },
-    {
-     "q": "how much notice before starting building work",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-uk-building-regs/regs/reg-16.txt",
-     "expect_file": "regs/reg-16.txt",
-     "top5": [
-      "corpus-uk-building-regs/regs/reg-52.txt",
-      "corpus-uk-building-regs/regs/reg-50.txt",
-      "corpus-uk-building-regs/regs/reg-19b.txt",
-      "corpus-uk-building-regs/regs/reg-14.txt",
-      "corpus-uk-building-regs/regs/reg-16.txt"
-     ]
-    }
-   ],
-   "pass": 5,
-   "relevant": 5,
-   "verdict": "PASS"
-  },
-  "eurlex-core": {
-   "queries": [
-    {
-     "q": "gdpr principles for processing personal data lawfulness fairness transparency",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-eurlex-core/gdpr/art-5.txt",
-     "expect_file": "gdpr/art-5.txt",
-     "top5": [
-      "corpus-eurlex-core/gdpr/recital-39.txt",
-      "corpus-eurlex-core/gdpr/recital-60.txt",
-      "corpus-eurlex-core/ai-act/recital-94.txt",
-      "corpus-eurlex-core/gdpr/art-5.txt",
-      "corpus-eurlex-core/gdpr/recital-4.txt"
-     ]
-    },
-    {
-     "q": "is pseudonymised data personal data under the gdpr",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-eurlex-core/gdpr/recital-26.txt",
-     "expect_file": "gdpr/recital-26.txt",
-     "top5": [
-      "corpus-eurlex-core/gdpr/recital-29.txt",
-      "corpus-eurlex-core/gdpr/recital-28.txt",
-      "corpus-eurlex-core/gdpr/recital-85.txt",
-      "corpus-eurlex-core/gdpr/recital-26.txt",
-      "corpus-eurlex-core/gdpr/recital-75.txt"
-     ]
-    },
-    {
-     "q": "which ai practices are prohibited subliminal manipulation",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-eurlex-core/ai-act/art-5.txt",
-     "expect_file": "ai-act/art-5.txt",
-     "top5": [
-      "corpus-eurlex-core/ai-act/recital-29.txt",
-      "corpus-eurlex-core/ai-act/art-5.txt",
-      "corpus-eurlex-core/ai-act/recital-28.txt",
-      "corpus-eurlex-core/ai-act/art-50.txt",
-      "corpus-eurlex-core/ai-act/recital-31.txt"
-     ]
-    },
-    {
-     "q": "dma gatekeeper combining personal data across services for advertising",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-eurlex-core/dma/art-5.txt",
-     "expect_file": "dma/art-5.txt",
-     "top5": [
-      "corpus-eurlex-core/dma/recital-36.txt",
-      "corpus-eurlex-core/dma/art-5.txt",
-      "corpus-eurlex-core/dma/recital-58.txt",
-      "corpus-eurlex-core/dma/recital-47.txt",
-      "corpus-eurlex-core/dma/recital-45.txt"
-     ]
-    },
-    {
-     "q": "nis2 what security measures must entities take",
-     "hard": false,
-     "verdict": "miss",
-     "hit": null,
-     "expect_file": "nis2/art-21.txt",
-     "top5": [
-      "corpus-eurlex-core/nis2/recital-78.txt",
-      "corpus-eurlex-core/nis2/recital-88.txt",
-      "corpus-eurlex-core/nis2/recital-85.txt",
-      "corpus-eurlex-core/nis2/recital-103.txt",
-      "corpus-eurlex-core/nis2/recital-97.txt"
-     ]
-    }
-   ],
-   "pass": 4,
-   "relevant": 4,
-   "verdict": "PASS"
-  },
   "ada-2010": {
+   "pass": 5,
    "queries": [
     {
-     "q": "minimum clearance around a water closet",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
      "expect_file": "sections/604-water-closets-and-toilet-compartments.txt",
+     "hard": false,
+     "hit": "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
+     "q": "minimum clearance around a water closet",
      "top5": [
       "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
       "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
       "corpus-ada-2010/sections/213-toilet-facilities-and-bathing-facilities.txt",
       "corpus-ada-2010/sections/1003-recreational-boating-facilities.txt",
       "corpus-ada-2010/sections/602-drinking-fountains.txt"
-     ]
+     ],
+     "verdict": "pass"
     },
     {
-     "q": "water closet seat height range",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
      "expect_file": "sections/604-water-closets-and-toilet-compartments.txt",
+     "hard": false,
+     "hit": "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
+     "q": "water closet seat height range",
      "top5": [
       "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
       "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
       "corpus-ada-2010/sections/1009-swimming-pools-wading-pools-and-spas.txt",
       "corpus-ada-2010/sections/213-toilet-facilities-and-bathing-facilities.txt",
       "corpus-ada-2010/sections/1009-swimming-pools-wading-pools-and-spas.txt"
-     ]
+     ],
+     "verdict": "pass"
     },
     {
-     "q": "side wall grab bar length at water closet",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
      "expect_file": "sections/604-water-closets-and-toilet-compartments.txt",
+     "hard": false,
+     "hit": "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
+     "q": "side wall grab bar length at water closet",
      "top5": [
       "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
       "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
       "corpus-ada-2010/sections/1009-swimming-pools-wading-pools-and-spas.txt",
       "corpus-ada-2010/sections/607-bathtubs.txt",
       "corpus-ada-2010/sections/608-shower-compartments.txt"
-     ]
+     ],
+     "verdict": "pass"
     },
     {
-     "q": "drinking fountain spout height for standing persons",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-ada-2010/sections/602-drinking-fountains.txt",
      "expect_file": "sections/602-drinking-fountains.txt",
+     "hard": false,
+     "hit": "corpus-ada-2010/sections/602-drinking-fountains.txt",
+     "q": "drinking fountain spout height for standing persons",
      "top5": [
       "corpus-ada-2010/sections/602-drinking-fountains.txt",
       "corpus-ada-2010/sections/211-drinking-fountains.txt",
       "corpus-ada-2010/sections/602-drinking-fountains.txt",
       "corpus-ada-2010/sections/28-cfr-35151-new-construction-and-alterations.txt",
       "corpus-ada-2010/sections/36403-alterations-path-of-travel.txt"
-     ]
+     ],
+     "verdict": "pass"
     },
     {
-     "q": "turning space required inside a toilet room",
-     "hard": false,
-     "verdict": "pass",
-     "hit": "corpus-ada-2010/sections/603-toilet-and-bathing-rooms.txt",
      "expect_file": "sections/603-toilet-and-bathing-rooms.txt",
+     "hard": false,
+     "hit": "corpus-ada-2010/sections/603-toilet-and-bathing-rooms.txt",
+     "q": "turning space required inside a toilet room",
      "top5": [
       "corpus-ada-2010/sections/603-toilet-and-bathing-rooms.txt",
       "corpus-ada-2010/sections/805-medical-care-and-long-term-care-facilities.txt",
       "corpus-ada-2010/sections/806-transient-lodging-guest-rooms.txt",
       "corpus-ada-2010/sections/807-holding-cells-and-housing-cells.txt",
       "corpus-ada-2010/sections/407-elevators.txt"
-     ]
+     ],
+     "verdict": "pass"
     }
    ],
+   "relevant": 5,
+   "verdict": "PASS"
+  },
+  "cdc-clinical": {
    "pass": 5,
+   "queries": [
+    {
+     "expect_file": "sti-tx/gonorrhea-adults.md",
+     "hard": false,
+     "hit": "corpus-cdc-clinical/sti-tx/gonorrhea-adults.md",
+     "q": "first-line treatment uncomplicated gonorrhea in adults ceftriaxone dosing",
+     "top5": [
+      "corpus-cdc-clinical/sti-tx/references.md",
+      "corpus-cdc-clinical/sti-tx/gonorrhea-adults.md",
+      "corpus-cdc-clinical/sti-tx/gonorrhea-children.md",
+      "corpus-cdc-clinical/sti-tx/gonorrhea-adults.md",
+      "corpus-cdc-clinical/sti-tx/sexual-assault-adults.md"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "sti-tx/chlamydia.md",
+     "hard": false,
+     "hit": "corpus-cdc-clinical/sti-tx/chlamydia.md",
+     "q": "recommended regimen for chlamydia infection in adolescents and adults",
+     "top5": [
+      "corpus-cdc-clinical/sti-tx/sexual-assault-adults.md",
+      "corpus-cdc-clinical/sti-tx/chlamydia.md",
+      "corpus-cdc-clinical/sti-tx/gonorrhea-adults.md",
+      "corpus-cdc-clinical/sti-tx/chlamydia.md",
+      "corpus-cdc-clinical/sti-tx/adolescents.md"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "sti-tx/p-and-s-syphilis.md",
+     "hard": false,
+     "hit": "corpus-cdc-clinical/sti-tx/p-and-s-syphilis.md",
+     "q": "treating primary syphilis in a pregnant woman allergic to penicillin",
+     "top5": [
+      "corpus-cdc-clinical/sti-tx/p-and-s-syphilis.md",
+      "corpus-cdc-clinical/sti-tx/latent-syphilis.md",
+      "corpus-cdc-clinical/sti-tx/tertiary-syphilis.md",
+      "corpus-cdc-clinical/sti-tx/syphilis-hiv.md",
+      "corpus-cdc-clinical/sti-tx/syphilis-pregnancy.md"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "sti-tx/p-and-s-syphilis.md",
+     "hard": false,
+     "hit": "corpus-cdc-clinical/sti-tx/p-and-s-syphilis.md",
+     "q": "dose of benzathine penicillin for primary and secondary syphilis",
+     "top5": [
+      "corpus-cdc-clinical/sti-tx/syphilis-hiv.md",
+      "corpus-cdc-clinical/sti-tx/p-and-s-syphilis.md",
+      "corpus-cdc-clinical/sti-tx/syphilis-hiv.md",
+      "corpus-cdc-clinical/sti-tx/p-and-s-syphilis.md",
+      "corpus-cdc-clinical/sti-tx/syphilis-pregnancy.md"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "measles/clinical-overview.md",
+     "hard": false,
+     "hit": "corpus-cdc-clinical/measles/clinical-overview.md",
+     "q": "pathognomonic enanthem of measles in the mouth",
+     "top5": [
+      "corpus-cdc-clinical/measles/clinical-overview.md",
+      "corpus-cdc-clinical/measles/clinical-overview.md",
+      "corpus-cdc-clinical/tools/fetch_cdc.py",
+      "corpus-cdc-clinical/README.md",
+      "corpus-cdc-clinical/sti-tx/clinical-risk.md"
+     ],
+     "verdict": "pass"
+    }
+   ],
+   "relevant": 5,
+   "verdict": "PASS"
+  },
+  "ecfr-title-14": {
+   "pass": 5,
+   "queries": [
+    {
+     "expect_file": "parts/part-91/sec-91.155.txt",
+     "hard": false,
+     "hit": "corpus-ecfr-title-14/parts/part-91/sec-91.155.txt",
+     "q": "VFR minimum flight visibility and distance from clouds by airspace class",
+     "top5": [
+      "corpus-ecfr-title-14/parts/part-91/sec-91.155.txt",
+      "corpus-ecfr-title-14/parts/part-103/sec-103.23.txt",
+      "corpus-ecfr-title-14/parts/part-135/sec-135.613.txt",
+      "corpus-ecfr-title-14/parts/part-91/sec-91.129.txt",
+      "corpus-ecfr-title-14/parts/part-91/sec-91.155.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "parts/part-91/sec-91.215.txt",
+     "hard": false,
+     "hit": "corpus-ecfr-title-14/parts/part-91/sec-91.215.txt",
+     "q": "when is an operable transponder with Mode C required to operate an aircraft",
+     "top5": [
+      "corpus-ecfr-title-14/parts/part-91/sec-91.215.txt",
+      "corpus-ecfr-title-14/parts/part-91/sec-91.215.txt",
+      "corpus-ecfr-title-14/parts/part-91/sec-91.217.txt",
+      "corpus-ecfr-title-14/parts/part-99/sec-99.13.txt",
+      "corpus-ecfr-title-14/parts/part-93/sec-93.339.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "parts/part-91/sec-91.119.txt",
+     "hard": false,
+     "hit": "corpus-ecfr-title-14/parts/part-91/sec-91.119.txt",
+     "q": "minimum safe altitude flying over a congested city",
+     "top5": [
+      "corpus-ecfr-title-14/parts/part-91/sec-91.119.txt",
+      "corpus-ecfr-title-14/parts/part-103/sec-103.15.txt",
+      "corpus-ecfr-title-14/parts/part-137/sec-137.51.txt",
+      "corpus-ecfr-title-14/parts/part-105/sec-105.21.txt",
+      "corpus-ecfr-title-14/parts/part-91/sec-91.303.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "parts/part-91/sec-91.409.txt",
+     "hard": false,
+     "hit": "corpus-ecfr-title-14/parts/part-91/sec-91.409.txt",
+     "q": "how often must an aircraft have an annual inspection to be operated",
+     "top5": [
+      "corpus-ecfr-title-14/parts/part-91/sec-91.409.txt",
+      "corpus-ecfr-title-14/parts/part-145/sec-145.211.txt",
+      "corpus-ecfr-title-14/parts/part-121/sec-121.629.txt",
+      "corpus-ecfr-title-14/parts/part-136/sec-136.1.txt",
+      "corpus-ecfr-title-14/parts/part-137/sec-137.53.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "parts/part-91/sec-91.113.txt",
+     "hard": false,
+     "hit": "corpus-ecfr-title-14/parts/part-91/sec-91.113.txt",
+     "q": "which aircraft has the right of way when two aircraft are converging",
+     "top5": [
+      "corpus-ecfr-title-14/parts/part-91/sec-91.113.txt",
+      "corpus-ecfr-title-14/parts/part-91/sec-91.113.txt",
+      "corpus-ecfr-title-14/parts/part-91/sec-91.115.txt",
+      "corpus-ecfr-title-14/parts/part-93/sec-93.163.txt",
+      "corpus-ecfr-title-14/parts/part-107/sec-107.37.txt"
+     ],
+     "verdict": "pass"
+    }
+   ],
+   "relevant": 5,
+   "verdict": "PASS"
+  },
+  "eurlex-core": {
+   "pass": 4,
+   "queries": [
+    {
+     "expect_file": "gdpr/art-5.txt",
+     "hard": false,
+     "hit": "corpus-eurlex-core/gdpr/art-5.txt",
+     "q": "gdpr principles for processing personal data lawfulness fairness transparency",
+     "top5": [
+      "corpus-eurlex-core/gdpr/recital-39.txt",
+      "corpus-eurlex-core/gdpr/recital-60.txt",
+      "corpus-eurlex-core/ai-act/recital-94.txt",
+      "corpus-eurlex-core/gdpr/art-5.txt",
+      "corpus-eurlex-core/gdpr/recital-4.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "gdpr/recital-26.txt",
+     "hard": false,
+     "hit": "corpus-eurlex-core/gdpr/recital-26.txt",
+     "q": "is pseudonymised data personal data under the gdpr",
+     "top5": [
+      "corpus-eurlex-core/gdpr/recital-29.txt",
+      "corpus-eurlex-core/gdpr/recital-28.txt",
+      "corpus-eurlex-core/gdpr/recital-85.txt",
+      "corpus-eurlex-core/gdpr/recital-26.txt",
+      "corpus-eurlex-core/gdpr/recital-75.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "ai-act/art-5.txt",
+     "hard": false,
+     "hit": "corpus-eurlex-core/ai-act/art-5.txt",
+     "q": "which ai practices are prohibited subliminal manipulation",
+     "top5": [
+      "corpus-eurlex-core/ai-act/recital-29.txt",
+      "corpus-eurlex-core/ai-act/art-5.txt",
+      "corpus-eurlex-core/ai-act/recital-28.txt",
+      "corpus-eurlex-core/ai-act/art-50.txt",
+      "corpus-eurlex-core/ai-act/recital-31.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "dma/art-5.txt",
+     "hard": false,
+     "hit": "corpus-eurlex-core/dma/art-5.txt",
+     "q": "dma gatekeeper combining personal data across services for advertising",
+     "top5": [
+      "corpus-eurlex-core/dma/recital-36.txt",
+      "corpus-eurlex-core/dma/art-5.txt",
+      "corpus-eurlex-core/dma/recital-58.txt",
+      "corpus-eurlex-core/dma/recital-47.txt",
+      "corpus-eurlex-core/dma/recital-45.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "nis2/art-21.txt",
+     "hard": false,
+     "hit": null,
+     "q": "nis2 what security measures must entities take",
+     "top5": [
+      "corpus-eurlex-core/nis2/recital-78.txt",
+      "corpus-eurlex-core/nis2/recital-88.txt",
+      "corpus-eurlex-core/nis2/recital-85.txt",
+      "corpus-eurlex-core/nis2/recital-103.txt",
+      "corpus-eurlex-core/nis2/recital-97.txt"
+     ],
+     "verdict": "miss"
+    }
+   ],
+   "relevant": 4,
+   "verdict": "PASS"
+  },
+  "fda-food-code": {
+   "pass": 4,
+   "queries": [
+    {
+     "expect_file": "provisions/3-401-11.txt",
+     "hard": false,
+     "hit": "corpus-fda-food-code/provisions/3-401-11.txt:1",
+     "q": "cooking temperature for raw eggs prepared to order",
+     "top5": [
+      "corpus-fda-food-code/provisions/3-401-11.txt:1",
+      "corpus-fda-food-code/provisions/3-801-11.txt:32",
+      "corpus-fda-food-code/annexes/annex-3.txt",
+      "corpus-fda-food-code/downloads/fda-food-code-2022.pdf",
+      "corpus-fda-food-code/downloads/fda-food-code-2022.pdf"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "provisions/3-501-16.txt",
+     "hard": false,
+     "hit": "corpus-fda-food-code/provisions/3-501-16.txt:1",
+     "q": "holding temperature for time/temperature control for safety food",
+     "top5": [
+      "corpus-fda-food-code/MANIFEST.tsv",
+      "corpus-fda-food-code/MANIFEST.tsv",
+      "corpus-fda-food-code/provisions/3-501-16.txt:1",
+      "corpus-fda-food-code/provisions/3-501-19.txt:32",
+      "corpus-fda-food-code/provisions/3-501-19.txt:1"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "provisions/4-501-110.txt",
+     "hard": false,
+     "hit": "corpus-fda-food-code/provisions/4-501-110.txt:1",
+     "q": "hot water sanitizing rinse temperature stationary rack single temperature machine",
+     "top5": [
+      "corpus-fda-food-code/provisions/4-501-110.txt:1",
+      "corpus-fda-food-code/provisions/4-501-112.txt",
+      "corpus-fda-food-code/annexes/annex-3.txt",
+      "corpus-fda-food-code/downloads/fda-food-code-2022.pdf",
+      "corpus-fda-food-code/downloads/fda-food-code-2022.pdf"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "provisions/2-201-11.txt",
+     "hard": false,
+     "hit": null,
+     "q": "what must food employees report to the person in charge",
+     "top5": [
+      "corpus-fda-food-code/annexes/annex-3.txt",
+      "corpus-fda-food-code/annexes/annex-5.txt",
+      "corpus-fda-food-code/downloads/fda-food-code-2022.pdf",
+      "corpus-fda-food-code/MANIFEST.tsv",
+      "corpus-fda-food-code/annexes/annex-3.txt"
+     ],
+     "verdict": "miss"
+    },
+    {
+     "expect_file": "provisions/4-501-114.txt",
+     "hard": false,
+     "hit": "corpus-fda-food-code/provisions/4-501-114.txt:1",
+     "q": "chlorine sanitizer concentration and temperature",
+     "top5": [
+      "corpus-fda-food-code/provisions/4-501-114.txt:1",
+      "corpus-fda-food-code/downloads/fda-food-code-2022.pdf",
+      "corpus-fda-food-code/annexes/annex-3.txt",
+      "corpus-fda-food-code/annexes/annex-3.txt",
+      "corpus-fda-food-code/downloads/fda-food-code-2022.pdf"
+     ],
+     "verdict": "pass"
+    }
+   ],
+   "relevant": 4,
+   "verdict": "PASS"
+  },
+  "govuk-design-system": {
+   "pass": 5,
+   "queries": [
+    {
+     "expect_file": "components/error-summary.txt",
+     "hard": false,
+     "hit": "corpus-govuk-components/components/error-summary.txt:38",
+     "q": "error summary what should happen to focus when the page loads",
+     "top5": [
+      "corpus-govuk-components/components/error-summary.txt:38",
+      "corpus-govuk-components/components/error-summary.txt:68",
+      "corpus-govuk-components/components/checkboxes.txt:128",
+      "corpus-govuk-components/components/radios.txt:128",
+      "corpus-govuk-components/components/error-message.txt:38"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "components/accordion.txt",
+     "hard": false,
+     "hit": "corpus-govuk-components/components/accordion.txt:1",
+     "q": "why must the accordion id be unique across the service",
+     "top5": [
+      "corpus-govuk-components/components/accordion.txt:1",
+      "corpus-govuk-components/components/textarea.txt:98",
+      "corpus-govuk-components/components/textarea.txt:130",
+      "corpus-govuk-components/components/accordion.txt:38",
+      "corpus-govuk-components/components/footer.txt:129"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "components/checkboxes.txt",
+     "hard": false,
+     "hit": "corpus-govuk-components/components/checkboxes.txt:128",
+     "q": "checkboxes text separating the last item in a list",
+     "top5": [
+      "corpus-govuk-components/components/checkboxes.txt:128",
+      "corpus-govuk-components/components/checkboxes.txt:98",
+      "corpus-govuk-components/components/task-list.txt:68",
+      "corpus-govuk-components/components/service-navigation.txt:98",
+      "corpus-govuk-components/components/inset-text.txt:38"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "components/character-count.txt",
+     "hard": false,
+     "hit": "corpus-govuk-components/components/character-count.txt:378",
+     "q": "character count what happens if both max words and max characters are set",
+     "top5": [
+      "corpus-govuk-components/components/character-count.txt:378",
+      "corpus-govuk-components/components/character-count.txt:1",
+      "corpus-govuk-components/components/footer.txt:68",
+      "corpus-govuk-components/components/checkboxes.txt:718",
+      "corpus-govuk-components/components/date-input.txt:38"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "components/exit-this-page.txt",
+     "hard": false,
+     "hit": "corpus-govuk-components/components/exit-this-page.txt:38",
+     "q": "exit this page how many times must the user press shift",
+     "top5": [
+      "corpus-govuk-components/components/exit-this-page.txt:38",
+      "corpus-govuk-components/components/exit-this-page.txt:70",
+      "corpus-govuk-components/components/error-message.txt:38",
+      "corpus-govuk-components/components/hint.txt:38",
+      "corpus-govuk-components/components/table.txt:38"
+     ],
+     "verdict": "pass"
+    }
+   ],
+   "relevant": 5,
+   "verdict": "PASS"
+  },
+  "mutcd": {
+   "pass": 4,
+   "queries": [
+    {
+     "expect_file": "sections/sec-2b-04.txt",
+     "hard": false,
+     "hit": "corpus-mutcd/sections/sec-2b-04.txt",
+     "q": "when is a STOP sign required at an intersection",
+     "top5": [
+      "corpus-mutcd/sections/sec-4a-04.txt",
+      "corpus-mutcd/downloads/mutcd11theditionr1hl.pdf",
+      "corpus-mutcd/downloads/mutcd11theditionr1hl.pdf",
+      "corpus-mutcd/sections/sec-2b-04.txt",
+      "corpus-mutcd/sections/sec-3b-19.txt:32"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "sections/sec-2b-07.txt",
+     "hard": false,
+     "hit": null,
+     "q": "how to choose which road gets the STOP or YIELD sign",
+     "top5": [
+      "corpus-mutcd/sections/sec-9b-02.txt:1",
+      "corpus-mutcd/sections/sec-8c-03.txt:1",
+      "corpus-mutcd/sections/sec-3b-19.txt:1",
+      "corpus-mutcd/downloads/mutcd11theditionr1hl.pdf",
+      "corpus-mutcd/downloads/mutcd11theditionr1hl.pdf"
+     ],
+     "verdict": "miss"
+    },
+    {
+     "expect_file": "sections/sec-4c-04.txt",
+     "hard": false,
+     "hit": "corpus-mutcd/sections/sec-4c-04.txt",
+     "q": "peak hour signal warrant what is it for",
+     "top5": [
+      "corpus-mutcd/sections/sec-4c-04.txt",
+      "corpus-mutcd/sections/sec-4c-09.txt",
+      "corpus-mutcd/front-matter/toc-and-lists.txt",
+      "corpus-mutcd/front-matter/toc-and-lists.txt",
+      "corpus-mutcd/downloads/mutcd11theditionr1hl.pdf"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "sections/sec-3b-05.txt",
+     "hard": false,
+     "hit": "corpus-mutcd/sections/sec-3b-05.txt:1",
+     "q": "pavement markings for a two-way left-turn lane",
+     "top5": [
+      "corpus-mutcd/downloads/mutcd11theditionr1hl.pdf",
+      "corpus-mutcd/sections/sec-2b-32.txt",
+      "corpus-mutcd/sections/sec-3b-05.txt:1",
+      "corpus-mutcd/downloads/mutcd11theditionr1hl.pdf",
+      "corpus-mutcd/sections/sec-3b-05.txt:92"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "sections/sec-4d-01.txt",
+     "hard": false,
+     "hit": "corpus-mutcd/sections/sec-4d-01.txt",
+     "q": "dilemma zone high speed approaches yellow change interval",
+     "top5": [
+      "corpus-mutcd/downloads/mutcd11theditionr1hl.pdf",
+      "corpus-mutcd/sections/sec-4d-01.txt",
+      "corpus-mutcd/sections/sec-6l-04.txt:62",
+      "corpus-mutcd/downloads/mutcd11theditionr1hl.pdf",
+      "corpus-mutcd/sections/sec-4j-03.txt:62"
+     ],
+     "verdict": "pass"
+    }
+   ],
+   "relevant": 4,
+   "verdict": "PASS"
+  },
+  "navrules": {
+   "pass": 4,
+   "queries": [
+    {
+     "expect_file": "rules/rule-07-risk-of-collision.txt",
+     "hard": false,
+     "hit": "corpus-navrules/rules/rule-07-risk-of-collision.txt:1",
+     "q": "how must a vessel determine if risk of collision exists",
+     "top5": [
+      "corpus-navrules/rules/rule-07-risk-of-collision.txt:1",
+      "corpus-navrules/src/navrules.pdf",
+      "corpus-navrules/src/navrules.pdf",
+      "corpus-navrules/rules/rule-07-risk-of-collision.txt:33",
+      "corpus-navrules/rules/rule-19-conduct-of-vessels-in-restricted-visibility.txt:33"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "rules/rule-05-look-out.txt",
+     "hard": false,
+     "hit": "corpus-navrules/rules/rule-05-look-out.txt:1",
+     "q": "lookout requirement sight and hearing",
+     "top5": [
+      "corpus-navrules/rules/rule-05-look-out.txt:1",
+      "corpus-navrules/src/navrules.pdf",
+      "corpus-navrules/src/navrules.pdf",
+      "corpus-navrules/rules/rule-34-maneuvering-and-warning-signals.txt:1",
+      "corpus-navrules/rules/rule-34-maneuvering-and-warning-signals.txt:33"
+     ],
+     "verdict": "partial"
+    },
+    {
+     "expect_file": "rules/rule-06-safe-speed.txt",
+     "hard": false,
+     "hit": "corpus-navrules/rules/rule-06-safe-speed.txt:1",
+     "q": "factors to consider in determining safe speed",
+     "top5": [
+      "corpus-navrules/rules/rule-06-safe-speed.txt:1",
+      "corpus-navrules/rules/rule-06-safe-speed.txt:32",
+      "corpus-navrules/src/navrules.pdf",
+      "corpus-navrules/src/navrules.pdf",
+      "corpus-navrules/rules/rule-19-conduct-of-vessels-in-restricted-visibility.txt:1"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "rules/rule-09-narrow-channels.txt",
+     "hard": false,
+     "hit": "corpus-navrules/rules/rule-09-narrow-channels.txt",
+     "q": "proceeding along a narrow channel which side to keep",
+     "top5": [
+      "corpus-navrules/src/navrules.pdf",
+      "corpus-navrules/src/navrules.pdf",
+      "corpus-navrules/rules/rule-09-narrow-channels.txt",
+      "corpus-navrules/rules/rule-09-narrow-channels.txt",
+      "corpus-navrules/rules/rule-15-crossing-situation.txt:1"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "rules/rule-15-crossing-situation.txt",
+     "hard": false,
+     "hit": "corpus-navrules/rules/rule-15-crossing-situation.txt:34",
+     "q": "two power-driven vessels crossing which vessel gives way",
+     "top5": [
+      "corpus-navrules/rules/rule-15-crossing-situation.txt:34",
+      "corpus-navrules/rules/rule-15-crossing-situation.txt:1",
+      "corpus-navrules/rules/rule-17-action-by-stand-on-vessel.txt",
+      "corpus-navrules/src/navrules.pdf",
+      "corpus-navrules/src/navrules.pdf"
+     ],
+     "verdict": "pass"
+    }
+   ],
+   "relevant": 5,
+   "verdict": "PASS"
+  },
+  "uk-building-regs": {
+   "pass": 5,
+   "queries": [
+    {
+     "expect_file": "regs/reg-04.txt",
+     "hard": false,
+     "hit": "corpus-uk-building-regs/regs/reg-04.txt",
+     "q": "what must building work comply with in schedule 1",
+     "top5": [
+      "corpus-uk-building-regs/regs/reg-18.txt",
+      "corpus-uk-building-regs/regs/reg-18.txt",
+      "corpus-uk-building-regs/regs/reg-04.txt",
+      "corpus-uk-building-regs/regs/reg-14.txt",
+      "corpus-uk-building-regs/regs/reg-20a.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "regs/reg-07.txt",
+     "hard": false,
+     "hit": "corpus-uk-building-regs/regs/reg-07.txt",
+     "q": "materials for building work must be what",
+     "top5": [
+      "corpus-uk-building-regs/regs/reg-16.txt",
+      "corpus-uk-building-regs/regs/reg-18.txt",
+      "corpus-uk-building-regs/regs/reg-07.txt",
+      "corpus-uk-building-regs/regs/reg-18.txt",
+      "corpus-uk-building-regs/regs/reg-04.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "schedules/sched-1.txt",
+     "hard": false,
+     "hit": "corpus-uk-building-regs/schedules/sched-1.txt",
+     "q": "structural loading dead imposed wind loads transmitted to the ground",
+     "top5": [
+      "corpus-uk-building-regs/schedules/sched-1.txt",
+      "corpus-uk-building-regs/schedules/sched-1.txt",
+      "corpus-uk-building-regs/schedules/sched-3.txt",
+      "corpus-uk-building-regs/regs/reg-46a.txt",
+      "corpus-uk-building-regs/regs/reg-46b.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "schedules/sched-2.txt",
+     "hard": false,
+     "hit": "corpus-uk-building-regs/schedules/sched-2.txt",
+     "q": "exempt small detached buildings floor area limit",
+     "top5": [
+      "corpus-uk-building-regs/schedules/sched-2.txt",
+      "corpus-uk-building-regs/regs/reg-09.txt",
+      "corpus-uk-building-regs/regs/reg-02.txt",
+      "corpus-uk-building-regs/schedules/sched-4.txt",
+      "corpus-uk-building-regs/schedules/sched-3a.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect_file": "regs/reg-16.txt",
+     "hard": false,
+     "hit": "corpus-uk-building-regs/regs/reg-16.txt",
+     "q": "how much notice before starting building work",
+     "top5": [
+      "corpus-uk-building-regs/regs/reg-52.txt",
+      "corpus-uk-building-regs/regs/reg-50.txt",
+      "corpus-uk-building-regs/regs/reg-19b.txt",
+      "corpus-uk-building-regs/regs/reg-14.txt",
+      "corpus-uk-building-regs/regs/reg-16.txt"
+     ],
+     "verdict": "pass"
+    }
+   ],
    "relevant": 5,
    "verdict": "PASS"
   }
- }
+ },
+ "engine": "v1.0.0-rc.81 @9cefd8070 (autoindex sniff guards, PR #1144)",
+ "graded_at": "2026-10-04",
+ "grader": "expect-clause whitespace-normalized in any top-5 hit; partial = same-basename file"
 }
