@@ -82,8 +82,13 @@ def parse_graded_suites():
             data = json.loads(p.read_text())
         except json.JSONDecodeError:
             continue
-        for slug, suite in data.get("graded", data.get("suites", {})).items():
+        for slug, suite in data.get("graded", data.get("suites", data.get("corpora", {}))).items():
             if isinstance(suite, dict) and "queries" in suite:
+                # score on the 0-5 scale the WAVES.md table uses (relevant=1,
+                # partial=0.5) when the suite does not carry its own
+                if "median" not in suite:
+                    num = {"relevant": 1.0, "partial": 0.5}
+                    suite["median"] = sum(num.get(q.get("grade"), 0.0) for q in suite["queries"])
                 out[slug] = suite
     return out
 
@@ -153,8 +158,8 @@ def corpus_stats(c):
 
 def g7_badge(slug, g7, graded):
     if slug in graded:
-        med = graded[slug].get("median")
-        cls = "ok" if med and med >= 3 else "bad"
+        med = graded[slug].get("median") or 0.0
+        cls = "ok" if med >= 3 else "bad"
         return f'<span class="badge g7 {cls}" title="retrieval spot-check, median relevant of 5 queries">G7 {med:.1f}/5</span>'
     if slug in g7:
         g = g7[slug]

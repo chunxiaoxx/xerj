@@ -1,10 +1,13 @@
 {
  "corpora": {
   "ada-2010": {
+   "median": 5.0,
    "pass": 5,
    "queries": [
     {
+     "expect": "sections/604-water-closets-and-toilet-compartments.txt",
      "expect_file": "sections/604-water-closets-and-toilet-compartments.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
      "q": "minimum clearance around a water closet",
@@ -18,7 +21,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "sections/604-water-closets-and-toilet-compartments.txt",
      "expect_file": "sections/604-water-closets-and-toilet-compartments.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
      "q": "water closet seat height range",
@@ -32,7 +37,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "sections/604-water-closets-and-toilet-compartments.txt",
      "expect_file": "sections/604-water-closets-and-toilet-compartments.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-ada-2010/sections/604-water-closets-and-toilet-compartments.txt",
      "q": "side wall grab bar length at water closet",
@@ -46,7 +53,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "sections/602-drinking-fountains.txt",
      "expect_file": "sections/602-drinking-fountains.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-ada-2010/sections/602-drinking-fountains.txt",
      "q": "drinking fountain spout height for standing persons",
@@ -60,7 +69,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "sections/603-toilet-and-bathing-rooms.txt",
      "expect_file": "sections/603-toilet-and-bathing-rooms.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-ada-2010/sections/603-toilet-and-bathing-rooms.txt",
      "q": "turning space required inside a toilet room",
@@ -78,10 +89,13 @@
    "verdict": "PASS"
   },
   "cdc-clinical": {
+   "median": 5.0,
    "pass": 5,
    "queries": [
     {
+     "expect": "sti-tx/gonorrhea-adults.md",
      "expect_file": "sti-tx/gonorrhea-adults.md",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-cdc-clinical/sti-tx/gonorrhea-adults.md",
      "q": "first-line treatment uncomplicated gonorrhea in adults ceftriaxone dosing",
@@ -95,7 +109,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "sti-tx/chlamydia.md",
      "expect_file": "sti-tx/chlamydia.md",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-cdc-clinical/sti-tx/chlamydia.md",
      "q": "recommended regimen for chlamydia infection in adolescents and adults",
@@ -109,7 +125,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "sti-tx/p-and-s-syphilis.md",
      "expect_file": "sti-tx/p-and-s-syphilis.md",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-cdc-clinical/sti-tx/p-and-s-syphilis.md",
      "q": "treating primary syphilis in a pregnant woman allergic to penicillin",
@@ -123,7 +141,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "sti-tx/p-and-s-syphilis.md",
      "expect_file": "sti-tx/p-and-s-syphilis.md",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-cdc-clinical/sti-tx/p-and-s-syphilis.md",
      "q": "dose of benzathine penicillin for primary and secondary syphilis",
@@ -137,7 +157,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "measles/clinical-overview.md",
      "expect_file": "measles/clinical-overview.md",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-cdc-clinical/measles/clinical-overview.md",
      "q": "pathognomonic enanthem of measles in the mouth",
@@ -155,10 +177,13 @@
    "verdict": "PASS"
   },
   "ecfr-title-14": {
+   "median": 5.0,
    "pass": 5,
    "queries": [
     {
+     "expect": "parts/part-91/sec-91.155.txt",
      "expect_file": "parts/part-91/sec-91.155.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-ecfr-title-14/parts/part-91/sec-91.155.txt",
      "q": "VFR minimum flight visibility and distance from clouds by airspace class",
@@ -172,7 +197,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "parts/part-91/sec-91.215.txt",
      "expect_file": "parts/part-91/sec-91.215.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-ecfr-title-14/parts/part-91/sec-91.215.txt",
      "q": "when is an operable transponder with Mode C required to operate an aircraft",
@@ -186,7 +213,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "parts/part-91/sec-91.119.txt",
      "expect_file": "parts/part-91/sec-91.119.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-ecfr-title-14/parts/part-91/sec-91.119.txt",
      "q": "minimum safe altitude flying over a congested city",
@@ -200,7 +229,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "parts/part-91/sec-91.409.txt",
      "expect_file": "parts/part-91/sec-91.409.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-ecfr-title-14/parts/part-91/sec-91.409.txt",
      "q": "how often must an aircraft have an annual inspection to be operated",
@@ -214,7 +245,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "parts/part-91/sec-91.113.txt",
      "expect_file": "parts/part-91/sec-91.113.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-ecfr-title-14/parts/part-91/sec-91.113.txt",
      "q": "which aircraft has the right of way when two aircraft are converging",
@@ -232,10 +265,13 @@
    "verdict": "PASS"
   },
   "eurlex-core": {
+   "median": 4.0,
    "pass": 4,
    "queries": [
     {
+     "expect": "gdpr/art-5.txt",
      "expect_file": "gdpr/art-5.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-eurlex-core/gdpr/art-5.txt",
      "q": "gdpr principles for processing personal data lawfulness fairness transparency",
@@ -249,7 +285,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "gdpr/recital-26.txt",
      "expect_file": "gdpr/recital-26.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-eurlex-core/gdpr/recital-26.txt",
      "q": "is pseudonymised data personal data under the gdpr",
@@ -263,7 +301,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "ai-act/art-5.txt",
      "expect_file": "ai-act/art-5.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-eurlex-core/ai-act/art-5.txt",
      "q": "which ai practices are prohibited subliminal manipulation",
@@ -277,7 +317,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "dma/art-5.txt",
      "expect_file": "dma/art-5.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-eurlex-core/dma/art-5.txt",
      "q": "dma gatekeeper combining personal data across services for advertising",
@@ -291,7 +333,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "nis2/art-21.txt",
      "expect_file": "nis2/art-21.txt",
+     "grade": "irrelevant",
      "hard": false,
      "hit": null,
      "q": "nis2 what security measures must entities take",
@@ -309,10 +353,13 @@
    "verdict": "PASS"
   },
   "fda-food-code": {
+   "median": 4.0,
    "pass": 4,
    "queries": [
     {
+     "expect": "provisions/3-401-11.txt",
      "expect_file": "provisions/3-401-11.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-fda-food-code/provisions/3-401-11.txt:1",
      "q": "cooking temperature for raw eggs prepared to order",
@@ -326,7 +373,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "provisions/3-501-16.txt",
      "expect_file": "provisions/3-501-16.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-fda-food-code/provisions/3-501-16.txt:1",
      "q": "holding temperature for time/temperature control for safety food",
@@ -340,7 +389,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "provisions/4-501-110.txt",
      "expect_file": "provisions/4-501-110.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-fda-food-code/provisions/4-501-110.txt:1",
      "q": "hot water sanitizing rinse temperature stationary rack single temperature machine",
@@ -354,7 +405,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "provisions/2-201-11.txt",
      "expect_file": "provisions/2-201-11.txt",
+     "grade": "irrelevant",
      "hard": false,
      "hit": null,
      "q": "what must food employees report to the person in charge",
@@ -368,7 +421,9 @@
      "verdict": "miss"
     },
     {
+     "expect": "provisions/4-501-114.txt",
      "expect_file": "provisions/4-501-114.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-fda-food-code/provisions/4-501-114.txt:1",
      "q": "chlorine sanitizer concentration and temperature",
@@ -386,10 +441,13 @@
    "verdict": "PASS"
   },
   "govuk-design-system": {
+   "median": 5.0,
    "pass": 5,
    "queries": [
     {
+     "expect": "components/error-summary.txt",
      "expect_file": "components/error-summary.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-govuk-components/components/error-summary.txt:38",
      "q": "error summary what should happen to focus when the page loads",
@@ -403,7 +461,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "components/accordion.txt",
      "expect_file": "components/accordion.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-govuk-components/components/accordion.txt:1",
      "q": "why must the accordion id be unique across the service",
@@ -417,7 +477,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "components/checkboxes.txt",
      "expect_file": "components/checkboxes.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-govuk-components/components/checkboxes.txt:128",
      "q": "checkboxes text separating the last item in a list",
@@ -431,7 +493,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "components/character-count.txt",
      "expect_file": "components/character-count.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-govuk-components/components/character-count.txt:378",
      "q": "character count what happens if both max words and max characters are set",
@@ -445,7 +509,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "components/exit-this-page.txt",
      "expect_file": "components/exit-this-page.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-govuk-components/components/exit-this-page.txt:38",
      "q": "exit this page how many times must the user press shift",
@@ -463,10 +529,13 @@
    "verdict": "PASS"
   },
   "mutcd": {
+   "median": 4.0,
    "pass": 4,
    "queries": [
     {
+     "expect": "sections/sec-2b-04.txt",
      "expect_file": "sections/sec-2b-04.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-mutcd/sections/sec-2b-04.txt",
      "q": "when is a STOP sign required at an intersection",
@@ -480,7 +549,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "sections/sec-2b-07.txt",
      "expect_file": "sections/sec-2b-07.txt",
+     "grade": "irrelevant",
      "hard": false,
      "hit": null,
      "q": "how to choose which road gets the STOP or YIELD sign",
@@ -494,7 +565,9 @@
      "verdict": "miss"
     },
     {
+     "expect": "sections/sec-4c-04.txt",
      "expect_file": "sections/sec-4c-04.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-mutcd/sections/sec-4c-04.txt",
      "q": "peak hour signal warrant what is it for",
@@ -508,7 +581,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "sections/sec-3b-05.txt",
      "expect_file": "sections/sec-3b-05.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-mutcd/sections/sec-3b-05.txt:1",
      "q": "pavement markings for a two-way left-turn lane",
@@ -522,7 +597,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "sections/sec-4d-01.txt",
      "expect_file": "sections/sec-4d-01.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-mutcd/sections/sec-4d-01.txt",
      "q": "dilemma zone high speed approaches yellow change interval",
@@ -540,10 +617,13 @@
    "verdict": "PASS"
   },
   "navrules": {
+   "median": 4.5,
    "pass": 4,
    "queries": [
     {
+     "expect": "rules/rule-07-risk-of-collision.txt",
      "expect_file": "rules/rule-07-risk-of-collision.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-navrules/rules/rule-07-risk-of-collision.txt:1",
      "q": "how must a vessel determine if risk of collision exists",
@@ -557,7 +637,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "rules/rule-05-look-out.txt",
      "expect_file": "rules/rule-05-look-out.txt",
+     "grade": "partial",
      "hard": false,
      "hit": "corpus-navrules/rules/rule-05-look-out.txt:1",
      "q": "lookout requirement sight and hearing",
@@ -571,7 +653,9 @@
      "verdict": "partial"
     },
     {
+     "expect": "rules/rule-06-safe-speed.txt",
      "expect_file": "rules/rule-06-safe-speed.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-navrules/rules/rule-06-safe-speed.txt:1",
      "q": "factors to consider in determining safe speed",
@@ -585,7 +669,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "rules/rule-09-narrow-channels.txt",
      "expect_file": "rules/rule-09-narrow-channels.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-navrules/rules/rule-09-narrow-channels.txt",
      "q": "proceeding along a narrow channel which side to keep",
@@ -599,7 +685,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "rules/rule-15-crossing-situation.txt",
      "expect_file": "rules/rule-15-crossing-situation.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-navrules/rules/rule-15-crossing-situation.txt:34",
      "q": "two power-driven vessels crossing which vessel gives way",
@@ -617,10 +705,13 @@
    "verdict": "PASS"
   },
   "uk-building-regs": {
+   "median": 5.0,
    "pass": 5,
    "queries": [
     {
+     "expect": "regs/reg-04.txt",
      "expect_file": "regs/reg-04.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-uk-building-regs/regs/reg-04.txt",
      "q": "what must building work comply with in schedule 1",
@@ -634,7 +725,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "regs/reg-07.txt",
      "expect_file": "regs/reg-07.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-uk-building-regs/regs/reg-07.txt",
      "q": "materials for building work must be what",
@@ -648,7 +741,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "schedules/sched-1.txt",
      "expect_file": "schedules/sched-1.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-uk-building-regs/schedules/sched-1.txt",
      "q": "structural loading dead imposed wind loads transmitted to the ground",
@@ -662,7 +757,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "schedules/sched-2.txt",
      "expect_file": "schedules/sched-2.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-uk-building-regs/schedules/sched-2.txt",
      "q": "exempt small detached buildings floor area limit",
@@ -676,7 +773,9 @@
      "verdict": "pass"
     },
     {
+     "expect": "regs/reg-16.txt",
      "expect_file": "regs/reg-16.txt",
+     "grade": "relevant",
      "hard": false,
      "hit": "corpus-uk-building-regs/regs/reg-16.txt",
      "q": "how much notice before starting building work",
