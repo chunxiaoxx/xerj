@@ -1,0 +1,43 @@
+{
+ "suite": "g7-cisa-alerts-2026-10",
+ "pre_registered": "2026-10-04 (before any cisa-alerts indexing or retrieval)",
+ "authoring": "blind — authored from clone reads only; every expect clause grep-verified (whitespace-normalized substring) in the named file",
+ "corpora": {
+  "cisa-alerts": {
+   "shape_risk": "~40 KEV-catalog alerts share the identical BOD 22-01 paragraph, so Q5's span lives in many files (a top-5 hit on ANY of them passes); the other four spans are verbatim-unique to exactly 1 of 324 files. Mirror quality-fixed before this suite: 79 Page-Not-Found captures dropped, feed nav chrome stripped (commit 753ac0a66)",
+   "queries": [
+    {
+     "q": "What could an attacker achieve by exploiting the Oxford Nanopore MinKNOW vulnerabilities?",
+     "expect": "disrupt sequencing operations and processes, exfiltrate and manipulate data, and bypass authentication controls",
+     "expect_file": "ics/2025/icsma-25-294-01.md",
+     "_files_with_span": 1
+    },
+    {
+     "q": "What did CISA conclude about untuned detection tools from the two-SOC red team assessment?",
+     "expect": "Untuned detection tools lead to missed threats",
+     "expect_file": "alerts/2026/aa26-237a.md",
+     "_files_with_span": 1
+    },
+    {
+     "q": "How did the actors behind the Poland energy sector incident pivot onto the HMI and RTUs?",
+     "expect": "leveraged default credentials, a vulnerability not limited to specific vendors, to pivot onto the HMI and RTUs",
+     "expect_file": "alerts/2026/2026-02-10-poland-energy-sector-cyber-incident-highlights-ot-and-ics-security-gaps.md",
+     "_files_with_span": 1
+    },
+    {
+     "q": "What does exploiting the Yokogawa FAST/TOOLS CI Server vulnerability expose?",
+     "expect": "may return a response containing the CI Server setting information",
+     "expect_file": "ics/2026/icsa-26-176-01.md",
+     "_files_with_span": 1
+    },
+    {
+     "q": "Which directive requires federal agencies to remediate known exploited vulnerabilities by a due date?",
+     "expect": "requires Federal Civilian Executive Branch (FCEB) agencies to remediate identified vulnerabilities by the due date",
+     "expect_file": "alerts/2026/2026-02-03-cisa-adds-four-known-exploited-vulnerabilities-catalog.md",
+     "hard": false,
+     "_files_with_span": 38
+    }
+   ]
+  }
+ }
+}
