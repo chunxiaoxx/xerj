@@ -1,0 +1,21 @@
+{
+ "corpus": "tldr-pages",
+ "cloned_at": "2026-10-03T18:05:59Z",
+ "repos": [
+  {
+   "repo": "corpus-tldr-common",
+   "url": "https://github.com/xerj-org/corpus-tldr-common",
+   "licence": "CC-BY-4.0",
+   "sha": "87441be058258a7a14a5dd0a20b7b6f12e80ea2b",
+   "files": 4707,
+   "bytes": 2882488,
+   "review": {
+    "spdx": "CC-BY-4.0",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-05",
+    "note": "Mirror of tldr-pages/tldr scoped to pages/common ONLY (4,705 curated en pages); the full tree is ~40k pages across 30+ locales and round-1 misses retrieved locale forks of the wrong page. Detector said MIT; LICENSE hand-verified CC-BY-4.0. G7 round-2 2026-10-05: 3/5 pass, 4/5 relevant (one partial = correct file, clause off-screen) PASS graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file top-k cap, #1139 txt-field search), merged as PR #1140 2026-10-04T18:12:15Z. Evidence: backlog/g7-tonight-2026-10-03-graded.json."
+   }
+  }
+ ]
+}

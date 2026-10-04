@@ -1,0 +1,21 @@
+{
+ "corpus": "whatwg-specs",
+ "cloned_at": "2026-10-03T18:17:46Z",
+ "repos": [
+  {
+   "repo": "corpus-whatwg-sections",
+   "url": "https://github.com/xerj-org/corpus-whatwg-sections",
+   "licence": "CC-BY-4.0 + BSD-3-Clause (dual, per file)",
+   "sha": "4d844936f63b3b5839ae537c62804fd751de1a34",
+   "files": 793,
+   "bytes": 8213572,
+   "review": {
+    "spdx": "CC-BY-4.0 (text) + BSD-3-Clause (code), per file",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-05",
+    "note": "Mirror of whatwg/html + whatwg/url: multi-MB single-page specs (whole-file indexing skips what it cannot chunk — the ecma262 G2 failure class); mirror = html split into 753 section files + url into 36 (breadcrumb headers, verbatim bodies). Licences hand-verified per source repo. G7 round-2 2026-10-05: 5/5 pass 5/5 relevant PASS graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file top-k cap, #1139 txt-field search), merged as PR #1140 2026-10-04T18:12:15Z. Round-1 1/5 was an artifact of #1139 (txt records unsearchable). Evidence: backlog/g7-tonight-2026-10-03-graded.json."
+   }
+  }
+ ]
+}

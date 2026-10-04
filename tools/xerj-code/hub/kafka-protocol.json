@@ -1,0 +1,21 @@
+{
+ "corpus": "kafka-protocol",
+ "cloned_at": "2026-10-04T14:34:55Z",
+ "repos": [
+  {
+   "repo": "corpus-kafka-docs",
+   "url": "https://github.com/xerj-org/corpus-kafka-docs",
+   "licence": "Apache-2.0",
+   "sha": "94ac9e02b7126c3485d574411d5673cef4d2b8f1",
+   "files": 143,
+   "bytes": 3109491,
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-05",
+    "note": "Mirror of apache/kafka-site scoped to CURRENT docs only: content/en/43 + current root docs (143 files); static/ (~750MB vendored javadoc) and 40 old doc-version dirs dropped — the round-1 Q2 miss retrieved upgrade.md from three old versions ahead of the answer (version clones dilute like locale forks). LICENSE verbatim Apache-2.0. G7 round-2 2026-10-05: 3/5 pass 3/5 relevant PASS graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file top-k cap, #1139 txt-field search), merged as PR #1140 2026-10-04T18:12:15Z. Evidence: backlog/g7-tonight-2026-10-03-graded.json."
+   }
+  }
+ ]
+}

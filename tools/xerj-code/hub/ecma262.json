@@ -1,0 +1,21 @@
+{
+ "corpus": "ecma262",
+ "cloned_at": "2026-10-04T14:58:18Z",
+ "repos": [
+  {
+   "repo": "corpus-ecma262-sections",
+   "url": "https://github.com/xerj-org/corpus-ecma262-sections",
+   "licence": "Ecma-alternative-notice (spec text; W3C-derived) + BSD-style (code)",
+   "sha": "a51d83bd0a1cffd60f90d22d8d930afaf677fa33",
+   "files": 2344,
+   "bytes": 3608950,
+   "review": {
+    "spdx": "Ecma alternative notice (spec text; W3C-derived) + BSD-style (code)",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-05",
+    "note": "Mirror of tc39/ecma262: single 3MB emu-spec.html split into 2,341 section files (one per emu-clause/emu-annex/emu-intro; bodies verbatim) — the wave-1 G2 single-3MB-HTML failure class. GitHub reports NOASSERTION; actual terms = Ecma's ALTERNATIVE copyright notice (permissive-with-conditions: full notice stays viewable, changes stated — derived from the W3C Software and Document Notice) + BSD-style policy for code; mirror carries NOTICE.md with both. G7 round-2 2026-10-05: 3/5 pass 3/5 relevant PASS graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file top-k cap, #1139 txt-field search), merged as PR #1140 2026-10-04T18:12:15Z. Evidence: backlog/g7-tonight-2026-10-03-graded.json."
+   }
+  }
+ ]
+}

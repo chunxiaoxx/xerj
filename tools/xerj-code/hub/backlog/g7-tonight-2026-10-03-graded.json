@@ -238,76 +238,76 @@
      "q": "In CLDR plural rules, what does the operand v mean?",
      "hard": false,
      "verdict": "pass",
-     "hit": "unicode-cldr/docs/ldml/tr35-numbers.md",
+     "hit": "corpus-unicode-cldr/docs/ldml/tr35-numbers.md",
      "expect_file": "docs/ldml/tr35-numbers.md",
      "top5": [
-      "unicode-cldr/docs/ldml/tr35-numbers.md",
-      "unicode-cldr/docs/ldml/tr35-numbers.md",
-      "unicode-cldr/docs/ldml/tr35-numbers.md",
-      "unicode-cldr/docs/site/index/cldr-spec/collation-guidelines.md",
-      "unicode-cldr/docs/ldml/tr35-numbers.md"
+      "corpus-unicode-cldr/docs/ldml/tr35-numbers.md",
+      "corpus-unicode-cldr/docs/ldml/tr35-numbers.md",
+      "corpus-unicode-cldr/docs/ldml/tr35.md",
+      "corpus-unicode-cldr/docs/ldml/tr35-messageFormat.md",
+      "corpus-unicode-cldr/docs/ldml/tr35-messageFormat.md"
      ]
     },
     {
      "q": "Which IANA time zone does CLDR map the Windows zone Pacific Standard Time to?",
      "hard": false,
      "verdict": "pass",
-     "hit": "unicode-cldr/docs/ldml/tr35-dates.md",
+     "hit": "corpus-unicode-cldr/docs/ldml/tr35-dates.md",
      "expect_file": "common/supplemental/windowsZones.xml",
      "top5": [
-      "unicode-cldr/docs/site/development/development-process/design-proposals/extended-windows-olson-zid-mapping.md",
-      "unicode-cldr/docs/ldml/tr35-dates.md",
-      "unicode-cldr/docs/site/development/development-process/design-proposals/extended-windows-olson-zid-mapping.md",
-      "unicode-cldr/docs/ldml/tr35-dates.md",
-      "unicode-cldr/docs/ldml/tr35-dates.md"
+      "corpus-unicode-cldr/docs/ldml/tr35-dates.md",
+      "corpus-unicode-cldr/docs/ldml/tr35-dates.md",
+      "corpus-unicode-cldr/docs/ldml/tr35.md",
+      "corpus-unicode-cldr/docs/ldml/tr35.md",
+      "corpus-unicode-cldr/docs/ldml/tr35-messageFormat.md"
      ]
     },
     {
      "q": "What is the CLDR pattern for a full date in English, the one used for the full date style?",
      "hard": false,
-     "verdict": "miss",
-     "hit": null,
-     "expect_file": "common/main/en.xml",
+     "verdict": "pass",
+     "hit": "corpus-unicode-cldr/docs/ldml/tr35-dates.md",
+     "expect_file": "common/main/en/dates.xml",
      "top5": [
-      "unicode-cldr/tools/cldr-code/src/main/java/org/unicode/cldr/test/ExampleGenerator.java",
-      "unicode-cldr/tools/cldr-code/src/main/java/org/unicode/cldr/test/CheckDates.java",
-      "unicode-cldr/docs/site/translation/date-time/date-time-patterns.md",
-      "unicode-cldr/tools/cldr-code/src/main/java/org/unicode/cldr/util/CLDRFile.java",
-      "unicode-cldr/tools/cldr-code/src/test/java/org/unicode/cldr/unittest/TestExampleGenerator.java"
+      "corpus-unicode-cldr/docs/ldml/tr35-dates.md",
+      "corpus-unicode-cldr/docs/ldml/tr35-dates.md",
+      "corpus-unicode-cldr/docs/ldml/tr35.md",
+      "corpus-unicode-cldr/docs/ldml/tr35-modifications.md",
+      "corpus-unicode-cldr/docs/ldml/tr35.md"
      ]
     },
     {
      "q": "Which abbreviations such as U.S.A. does CLDR treat as sentence-break suppressions for English?",
      "hard": false,
-     "verdict": "miss",
-     "hit": null,
+     "verdict": "pass",
+     "hit": "corpus-unicode-cldr/common/segments/en.xml",
      "expect_file": "common/segments/en.xml",
      "top5": [
-      "unicode-cldr/docs/ldml/tr35-general.md",
-      "unicode-cldr/docs/site/translation/displaynames/locale-option-names-key.md",
-      "unicode-cldr/docs/site/development/development-process/design-proposals/specifying-text-break-variants-in-locale-ids.md",
-      "unicode-cldr/tools/cldr-code/src/main/java/org/unicode/cldr/test/ExampleGenerator.java",
-      "unicode-cldr/docs/site/development/development-process/design-proposals/specifying-text-break-variants-in-locale-ids.md"
+      "corpus-unicode-cldr/docs/ldml/tr35-general.md",
+      "corpus-unicode-cldr/docs/ldml/tr35.md",
+      "corpus-unicode-cldr/docs/ldml/tr35.md",
+      "corpus-unicode-cldr/docs/ldml/tr35-general.md",
+      "corpus-unicode-cldr/common/segments/en.xml"
      ]
     },
     {
      "q": "Where does CLDR keep the rules for writing numbers out as words, like spelling one hundred twenty-three?",
      "hard": true,
-     "verdict": "miss",
-     "hit": null,
+     "verdict": "pass",
+     "hit": "corpus-unicode-cldr/common/rbnf/en.xml",
      "expect_file": "common/rbnf/en.xml",
      "top5": [
-      "unicode-cldr/docs/ldml/tr35-numbers.md",
-      "unicode-cldr/docs/ldml/tr35-numbers.md",
-      "unicode-cldr/tools/cldr-code/src/main/java/org/unicode/cldr/json/Ldml2JsonConverter.java",
-      "unicode-cldr/tools/cldr-apps/src/main/java/org/unicode/cldr/web/SurveyAjax.java",
-      "unicode-cldr/docs/ldml/tr35-numbers.md"
+      "corpus-unicode-cldr/docs/ldml/tr35-numbers.md",
+      "corpus-unicode-cldr/docs/ldml/tr35-numbers.md",
+      "corpus-unicode-cldr/docs/ldml/tr35-general.md",
+      "corpus-unicode-cldr/common/rbnf/en.xml",
+      "corpus-unicode-cldr/docs/ldml/tr35-general.md"
      ]
     }
    ],
-   "pass": 2,
-   "relevant": 2,
-   "verdict": "FAIL"
+   "pass": 5,
+   "relevant": 5,
+   "verdict": "PASS"
   },
   "mitre-capec": {
    "queries": [
@@ -623,12 +623,12 @@
      "q": "How do I extract a tar archive into a specific target directory?",
      "hard": false,
      "verdict": "pass",
-     "hit": "corpus-tldr-common/pages/tar.md",
+     "hit": "corpus-tldr-common/pages/tar.md:1",
      "expect_file": "pages/tar.md",
      "top5": [
+      "corpus-tldr-common/pages/tar.md:1",
       "corpus-tldr-common/pages/dtrx.md",
       "corpus-tldr-common/pages/ptargrep.md",
-      "corpus-tldr-common/pages/tar.md",
       "corpus-tldr-common/pages/unzip.md",
       "corpus-tldr-common/pages/atool.md"
      ]
@@ -650,29 +650,29 @@
     {
      "q": "How do I give the owner of a file permission to execute it?",
      "hard": false,
-     "verdict": "miss",
-     "hit": null,
+     "verdict": "pass",
+     "hit": "corpus-tldr-common/pages/chmod.md:1",
      "expect_file": "pages/chmod.md",
      "top5": [
+      "corpus-tldr-common/pages/chmod.md:1",
+      "corpus-tldr-common/pages/umask.md:1",
       "corpus-tldr-common/pages/pueue-add.md",
       "corpus-tldr-common/pages/brave.md",
-      "corpus-tldr-common/pages/chgrp.md",
-      "corpus-tldr-common/pages/for.md",
-      "corpus-tldr-common/pages/yadm-perms.md"
+      "corpus-tldr-common/pages/chgrp.md"
      ]
     },
     {
      "q": "Which command opens the current user's crontab for editing?",
      "hard": false,
-     "verdict": "miss",
-     "hit": null,
+     "verdict": "partial",
+     "hit": "corpus-tldr-common/pages/crontab.md:1",
      "expect_file": "pages/crontab.md",
      "top5": [
+      "corpus-tldr-common/pages/crontab.md:1",
       "corpus-tldr-common/pages/cron.md",
       "corpus-tldr-common/pages/pinta.md",
       "corpus-tldr-common/pages/npm-edit.md",
-      "corpus-tldr-common/pages/pueue-edit.md",
-      "corpus-tldr-common/pages/nix-edit.md"
+      "corpus-tldr-common/pages/pueue-edit.md"
      ]
     },
     {
@@ -690,9 +690,9 @@
      ]
     }
    ],
-   "pass": 2,
-   "relevant": 2,
-   "verdict": "FAIL"
+   "pass": 3,
+   "relevant": 4,
+   "verdict": "PASS"
   },
   "whatwg-specs": {
    "queries": [
@@ -924,6 +924,83 @@
    "pass": 5,
    "relevant": 5,
    "verdict": "PASS"
+  },
+  "irs-pubs": {
+   "queries": [
+    {
+     "q": "How long do I have to own and live in my house before I can sell it without paying tax on the profit?",
+     "hard": false,
+     "verdict": "miss",
+     "hit": null,
+     "expect_file": "p523/02-does-your-home-sale-qualify-for-the-exclusion-of-gain.txt",
+     "top5": [
+      "corpus-irs-pubs/p17/18-publication-17-additional-material.txt:2643",
+      "corpus-irs-pubs/p17/18-publication-17-additional-material.txt:2703",
+      "corpus-irs-pubs/p54/09-publication-54-additional-material.txt",
+      "corpus-irs-pubs/p17/16-13-how-to-figure-your-tax.txt:601",
+      "corpus-irs-pubs/p54/09-publication-54-additional-material.txt"
+     ]
+    },
+    {
+     "q": "Can I count the miles I drive to medical appointments as a medical deduction, and at what rate?",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-irs-pubs/p502/05-what-medical-expenses-are-includible.txt",
+     "expect_file": "p502/05-what-medical-expenses-are-includible.txt",
+     "top5": [
+      "corpus-irs-pubs/p17/18-publication-17-additional-material.txt:2643",
+      "corpus-irs-pubs/p17/18-publication-17-additional-material.txt:2703",
+      "corpus-irs-pubs/p502/05-what-medical-expenses-are-includible.txt",
+      "corpus-irs-pubs/p590b/05-index.txt",
+      "corpus-irs-pubs/p463/07-6-how-to-report.txt"
+     ]
+    },
+    {
+     "q": "I just took a second job \u2014 what do I need to do about my withholding so I don't end up owing at tax time?",
+     "hard": false,
+     "verdict": "miss",
+     "hit": null,
+     "expect_file": "p17/05-4-tax-withholding-and-estimated-tax.txt",
+     "top5": [
+      "corpus-irs-pubs/p17/18-publication-17-additional-material.txt:2643",
+      "corpus-irs-pubs/p334/01-publication-334-introductory-material.txt",
+      "corpus-irs-pubs/p54/09-publication-54-additional-material.txt",
+      "corpus-irs-pubs/p17/18-publication-17-additional-material.txt:2703",
+      "corpus-irs-pubs/p54/09-publication-54-additional-material.txt"
+     ]
+    },
+    {
+     "q": "Is any of the college tuition credit refundable if I don't owe income tax this year?",
+     "hard": false,
+     "verdict": "pass",
+     "hit": "corpus-irs-pubs/p970/03-2-american-opportunity-credit.txt",
+     "expect_file": "p970/03-2-american-opportunity-credit.txt",
+     "top5": [
+      "corpus-irs-pubs/p17/16-13-how-to-figure-your-tax.txt:181",
+      "corpus-irs-pubs/p17/16-13-how-to-figure-your-tax.txt:121",
+      "corpus-irs-pubs/p17/18-publication-17-additional-material.txt:2343",
+      "corpus-irs-pubs/p17/18-publication-17-additional-material.txt:2583",
+      "corpus-irs-pubs/p970/03-2-american-opportunity-credit.txt"
+     ]
+    },
+    {
+     "q": "I only made about $19,000 working part-time, but I sold some stock this year \u2014 can I still get the earned income credit?",
+     "hard": true,
+     "verdict": "miss",
+     "hit": null,
+     "expect_file": "p596/02-1-rules-for-everyone.txt",
+     "top5": [
+      "corpus-irs-pubs/p54/09-publication-54-additional-material.txt",
+      "corpus-irs-pubs/p17/18-publication-17-additional-material.txt:2643",
+      "corpus-irs-pubs/p54/09-publication-54-additional-material.txt",
+      "corpus-irs-pubs/p17/16-13-how-to-figure-your-tax.txt:601",
+      "corpus-irs-pubs/p334/01-publication-334-introductory-material.txt"
+     ]
+    }
+   ],
+   "pass": 2,
+   "relevant": 2,
+   "verdict": "FAIL"
   }
  }
 }

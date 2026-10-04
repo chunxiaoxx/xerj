@@ -1,0 +1,21 @@
+{
+ "corpus": "zalando-restful-api-guidelines",
+ "cloned_at": "2026-10-03T19:06:31Z",
+ "repos": [
+  {
+   "repo": "corpus-zalando-guidelines",
+   "url": "https://github.com/xerj-org/corpus-zalando-guidelines",
+   "licence": "CC-BY-4.0",
+   "sha": "88cdfdb11219935bc52f13287b67489e73c2648e",
+   "files": 25,
+   "bytes": 335527,
+   "review": {
+    "spdx": "CC-BY-4.0",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-05",
+    "note": "Mirror of zalando/restful-api-guidelines: upstream ships 21 chapters as one 1.1MB README monolith the indexer skips; mirror = one .txt file per chapter (content verbatim), upstream SHA pinned in the mirror README. Detector said UNKNOWN; LICENSE hand-verified CC-BY-4.0. G7 round-2 2026-10-05: 5/5 pass 5/5 relevant PASS graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file top-k cap, #1139 txt-field search), merged as PR #1140 2026-10-04T18:12:15Z. Round-1 1/5 was an artifact of #1137+#1139, not corpus scope. Evidence: backlog/g7-tonight-2026-10-03-graded.json."
+   }
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+{
+ "corpus": "school-of-sre",
+ "cloned_at": "2026-10-02T01:04:00Z",
+ "repos": [
+  {
+   "repo": "school-of-sre",
+   "url": "https://github.com/linkedin/school-of-sre",
+   "licence": "CC-BY-4.0",
+   "sha": "22979a6e89d4194e76e2b4903e78154d808d048c",
+   "files": 360,
+   "bytes": 21817730,
+   "review": {
+    "spdx": "CC-BY-4.0",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-05",
+    "note": "Upstream linkedin/school-of-sre direct (no mirror). Detector said UNKNOWN; LICENSE hand-verified CC-BY-4.0. Round-1 G7 fail was a G1 over-promise, not a corpus defect: the prior suite queried chapters that do not exist; the re-scoped in-domain suite was pre-registered BEFORE re-retrieval. G7 round-2 2026-10-05: 5/5 pass 5/5 relevant PASS graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file top-k cap, #1139 txt-field search), merged as PR #1140 2026-10-04T18:12:15Z. Evidence: backlog/g7-tonight-2026-10-03-graded.json."
+   }
+  }
+ ]
+}

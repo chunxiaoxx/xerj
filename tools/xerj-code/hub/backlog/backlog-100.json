@@ -2,7 +2,7 @@
  "program": "corpus-hub-100",
  "schema": 1,
  "opened": "2026-10-02",
- "note": "licence_hint is a HINT (memory + detector shape), never the verdict. Gate G4 requires a human review block at the pinned SHA; several hints below WILL be wrong \u2014 that is the point of the gate. domain is the G1 sentence. cat/lane drive wave assignment (PROGRAM-100.md \u00a74/\u00a78).",
+ "note": "licence_hint is a HINT (memory + detector shape), never the verdict. Gate G4 requires a human review block at the pinned SHA; several hints below WILL be wrong — that is the point of the gate. domain is the G1 sentence. cat/lane drive wave assignment (PROGRAM-100.md §4/§8).",
  "statuses": [
   "live",
   "candidate",
@@ -40,7 +40,7 @@
    "sources": [
     {
      "url": "see hub/xerj-search.json",
-     "licence_hint": "mixed \u2014 per-repo review blocks in the manifest"
+     "licence_hint": "mixed — per-repo review blocks in the manifest"
     }
    ]
   },
@@ -92,7 +92,7 @@
    "lane": "B",
    "refresh": "daily",
    "status": "live",
-   "domain": "an agent reviewing Rust code queries this for vulnerability precedent \u2014 identity-resolved RUSTSEC/GHSA/CVE advisories with affected functions and fixed versions",
+   "domain": "an agent reviewing Rust code queries this for vulnerability precedent — identity-resolved RUSTSEC/GHSA/CVE advisories with affected functions and fixed versions",
    "sources": [
     {
      "url": "tools/packs/rust-vulns/recipe.toml",
@@ -110,7 +110,7 @@
    "sources": [
     {
      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
-     "licence_hint": "public domain (US gov); intake decides fetch mechanism (#1110 Part A owns this pack \u2014 coordinate, do not duplicate)"
+     "licence_hint": "public domain (US gov); intake decides fetch mechanism (#1110 Part A owns this pack — coordinate, do not duplicate)"
     }
    ]
   },
@@ -180,7 +180,7 @@
    "sources": [
     {
      "url": "https://github.com/xerj-org/corpus-mitre-cwe",
-     "licence_hint": "Built 2026-10-04 from cwec_latest.xml.zip \u2192 cwec_v4.20.xml (18,192,305 B; Version 4.20, Date 2026-04-30). Split: 1,450 element files (969 weaknesses/422 categories/59 views), largest 13,431 B, no caps triggered. TERMS (termsofuse.html, verbatim in LICENSE-TERMS): non-exclusive royalty-free license for research/development/commercial purposes; any copy authorized on condition MITRE's copyright designation + license are reproduced \u2014 condition satisfied. Detector reads licence as UNKNOWN (MITRE data terms are not a standard OSS licence); mirrors are retrieved-from. Suite g7-mitre-cwe-2026-10.json pre-registered (5 queries, 1 hard: symptom-words absent from the target file \u2014 the lexical risk named in shape note). G7 round-2 2026-10-05 graded 3/5 pass 3/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 3/5 re-confirmed under the diversity cap (no regression)."
+     "licence_hint": "Built 2026-10-04 from cwec_latest.xml.zip → cwec_v4.20.xml (18,192,305 B; Version 4.20, Date 2026-04-30). Split: 1,450 element files (969 weaknesses/422 categories/59 views), largest 13,431 B, no caps triggered. TERMS (termsofuse.html, verbatim in LICENSE-TERMS): non-exclusive royalty-free license for research/development/commercial purposes; any copy authorized on condition MITRE's copyright designation + license are reproduced — condition satisfied. Detector reads licence as UNKNOWN (MITRE data terms are not a standard OSS licence); mirrors are retrieved-from. Suite g7-mitre-cwe-2026-10.json pre-registered (5 queries, 1 hard: symptom-words absent from the target file — the lexical risk named in shape note). G7 round-2 2026-10-05 graded 3/5 pass 3/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 3/5 re-confirmed under the diversity cap (no regression)."
     }
    ]
   },
@@ -208,7 +208,7 @@
    "sources": [
     {
      "url": "https://github.com/xerj-org/corpus-mitre-capec",
-     "licence_hint": "Built 2026-10-04 \u2014 NOTE upstream layout changed: /data/xml/capec_latest.xml.zip 404s; current = bare XML /data/xml/capec_latest.xml (3,849,998 B) + archive zip. Version 3.9 (Date 2023-01-24). Split: 615 CAPEC-N.md at root, largest 5,301 B; v3.x has no separate Summary element (Description carries it \u2014 README notes). Same MITRE terms class as cwe (verbatim in LICENSE-TERMS). Suite g7-mitre-capec-2026-10.json pre-registered (5 queries, 1 hard; precision-hazard shape note: verbatim-shared mitigation blocks across patterns). G7 round-2 2026-10-05 graded 3/5 pass 3/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 3/5 re-confirmed."
+     "licence_hint": "Built 2026-10-04 — NOTE upstream layout changed: /data/xml/capec_latest.xml.zip 404s; current = bare XML /data/xml/capec_latest.xml (3,849,998 B) + archive zip. Version 3.9 (Date 2023-01-24). Split: 615 CAPEC-N.md at root, largest 5,301 B; v3.x has no separate Summary element (Description carries it — README notes). Same MITRE terms class as cwe (verbatim in LICENSE-TERMS). Suite g7-mitre-capec-2026-10.json pre-registered (5 queries, 1 hard; precision-hazard shape note: verbatim-shared mitigation blocks across patterns). G7 round-2 2026-10-05 graded 3/5 pass 3/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 3/5 re-confirmed."
     }
    ]
   },
@@ -264,7 +264,7 @@
    "sources": [
     {
      "url": "https://github.com/usnistgov/800-63-3",
-     "licence_hint": "INTAKE RE-SCOPED 2026-10-04 from source survey (planned csrc.nist.gov/pubs/sp/800 is 404; CSRC has no bulk API and per-pub downloads are PDF-only \u2014 the famous prose pubs are unfetchable as text). Build instead from GitHub text sources: usnistgov/800-63-3 (SP 800-63-3 + vols A/B/C + FAQ as per-section Jekyll markdown \u2014 licence 'NIST Technical Series Publications': USG work, worldwide perpetual royalty-free reprint right granted, attribute 'Republished courtesy of NIST', third-party portions may carry copyright) + usnistgov/oscal-content (SP 800-53r5 + 4 baselines, 800-171r3, 800-172r3, 800-218, CSF 2.0 as OSCAL JSON \u2014 LICENSE.md is worldwide public domain + CC0-1.0, cleanest). Chunk OSCAL at control level. 10-13 documents; pin commit SHAs. TRAP: usnistgov/zero-trust-architecture contains NO 800-207 text (verified all branches \u2014 stubs + a different NCCoE practice guide)."
+     "licence_hint": "INTAKE RE-SCOPED 2026-10-04 from source survey (planned csrc.nist.gov/pubs/sp/800 is 404; CSRC has no bulk API and per-pub downloads are PDF-only — the famous prose pubs are unfetchable as text). Build instead from GitHub text sources: usnistgov/800-63-3 (SP 800-63-3 + vols A/B/C + FAQ as per-section Jekyll markdown — licence 'NIST Technical Series Publications': USG work, worldwide perpetual royalty-free reprint right granted, attribute 'Republished courtesy of NIST', third-party portions may carry copyright) + usnistgov/oscal-content (SP 800-53r5 + 4 baselines, 800-171r3, 800-172r3, 800-218, CSF 2.0 as OSCAL JSON — LICENSE.md is worldwide public domain + CC0-1.0, cleanest). Chunk OSCAL at control level. 10-13 documents; pin commit SHAs. TRAP: usnistgov/zero-trust-architecture contains NO 800-207 text (verified all branches — stubs + a different NCCoE practice guide)."
     },
     {
      "url": "https://github.com/usnistgov/oscal-content",
@@ -282,7 +282,7 @@
    "sources": [
     {
      "url": "https://www.nsa.gov/Cybersecurity/Cybersecurity-Advisories-Guidance",
-     "licence_hint": "DEFERRED 2026-10-04 on survey evidence: NSA advisories are PDF-only on media.defense.gov, both nsa.gov and media.defense.gov 403 non-browser clients (Akamai), and no licence-clean text mirror exists. GitHub NSAcyber org = 39 tool/guidance repos, NOT advisories. Re-scope candidate if a slot is needed: 'nsacyber-guidance' = the ~10 config-guidance repos' markdown (CC0/\u00a7105 verified on spot-checked repos, but several repos lack LICENSE files \u2014 per-repo read required; Hardware-and-Firmware-Security-Guidance has none). Do not name any such corpus 'advisories'."
+     "licence_hint": "DEFERRED 2026-10-04 on survey evidence: NSA advisories are PDF-only on media.defense.gov, both nsa.gov and media.defense.gov 403 non-browser clients (Akamai), and no licence-clean text mirror exists. GitHub NSAcyber org = 39 tool/guidance repos, NOT advisories. Re-scope candidate if a slot is needed: 'nsacyber-guidance' = the ~10 config-guidance repos' markdown (CC0/§105 verified on spot-checked repos, but several repos lack LICENSE files — per-repo read required; Hardware-and-Firmware-Security-Guidance has none). Do not name any such corpus 'advisories'."
     }
    ]
   },
@@ -296,7 +296,7 @@
    "sources": [
     {
      "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
-     "licence_hint": "INTAKE PATH FOUND 2026-10-04 (survey): the remembered v1 JSON API is 404 (site migration). Full-text RSS exists at /cybersecurity-advisories/all.xml (complete advisory text in <description>; siblings ics-advisories.xml, ics-medical-advisories.xml). Archive = 508 paginated listing HTML pages, ~5,087 advisories, full text in HTML per page. US federal works (17 USC 105) public domain \u2014 CAVEAT: joint advisories co-published with foreign partners (ASD/NCSC et al.) may carry partner-nation copyright, per-partner terms unverified. TRAP: www.cisa.gov 403s curl even with browser UA (Akamai TLS fingerprinting) \u2014 fetcher must be browser-grade (WebFetch works). Scope the backfill; poll all.xml for incremental."
+     "licence_hint": "INTAKE PATH FOUND 2026-10-04 (survey): the remembered v1 JSON API is 404 (site migration). Full-text RSS exists at /cybersecurity-advisories/all.xml (complete advisory text in <description>; siblings ics-advisories.xml, ics-medical-advisories.xml). Archive = 508 paginated listing HTML pages, ~5,087 advisories, full text in HTML per page. US federal works (17 USC 105) public domain — CAVEAT: joint advisories co-published with foreign partners (ASD/NCSC et al.) may carry partner-nation copyright, per-partner terms unverified. TRAP: www.cisa.gov 403s curl even with browser UA (Akamai TLS fingerprinting) — fetcher must be browser-grade (WebFetch works). Scope the backfill; poll all.xml for incremental."
     }
    ]
   },
@@ -324,7 +324,7 @@
    "sources": [
     {
      "url": "https://www.rfc-editor.org/rfc/rfc-txt.tar.gz",
-     "licence_hint": "IETF TLP (unmodified redistribution permitted); DEFERRED: no maintained full-text git mirror exists (mcpherrinm/rfc-mirror is ~2014-stale) \u2014 needs an http tar.gz dir-fetch recipe, not a manifest"
+     "licence_hint": "IETF TLP (unmodified redistribution permitted); DEFERRED: no maintained full-text git mirror exists (mcpherrinm/rfc-mirror is ~2014-stale) — needs an http tar.gz dir-fetch recipe, not a manifest"
     }
    ]
   },
@@ -333,14 +333,20 @@
    "cat": "STD",
    "lane": "A",
    "refresh": "pinned",
-   "status": "candidate",
+   "status": "live",
    "domain": "an agent building browser-adjacent tooling queries this for the living standard's exact normative statements (html/url/fetch/dom)",
    "sources": [
     {
      "url": "https://github.com/xerj-org/corpus-whatwg-sections",
-     "licence_hint": "RE-PINNED after G7 fail 2026-10-02 (mirror fix): upstream whatwg/html+url are multi-MB single-page specs \u2014 whole-file indexing skips what it cannot chunk (the ecma262 G2 failure class). Mirror = html split into 753 section files + url into 36 (breadcrumb header, verbatim bodies), dual licence per source: CC-BY-4.0 text / BSD-3-Clause code (hand-verified per repo). Upstream SHAs pinned in the mirror README. Suite re-runs with expect_file remapped to section paths. G7 round-2 2026-10-05 graded 5/5 pass 5/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 5/5 \u2014 the html-dominance verdict was an artifact of #1139 (txt records unsearchable)."
+     "licence_hint": "RE-PINNED after G7 fail 2026-10-02 (mirror fix): upstream whatwg/html+url are multi-MB single-page specs — whole-file indexing skips what it cannot chunk (the ecma262 G2 failure class). Mirror = html split into 753 section files + url into 36 (breadcrumb header, verbatim bodies), dual licence per source: CC-BY-4.0 text / BSD-3-Clause code (hand-verified per repo). Upstream SHAs pinned in the mirror README. Suite re-runs with expect_file remapped to section paths. G7 round-2 2026-10-05 graded 5/5 pass 5/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 5/5 — the html-dominance verdict was an artifact of #1139 (txt records unsearchable). FLIPPED live 2026-10-05: G7 5/5 pass 5/5 relevant -> PASS vs PR #1140 engine (0ae1439bb+35903648c). Manifest hub/whatwg-specs.json written."
     }
-   ]
+   ],
+   "g7": {
+    "round": 2,
+    "graded_at": "2026-10-05",
+    "engine": "fix/xccode-g7-retrieval-1 (PR #1140, 0ae1439bb+35903648c)",
+    "evidence": "backlog/g7-tonight-2026-10-03-graded.json"
+   }
   },
   {
    "slug": "w3c-css",
@@ -361,28 +367,40 @@
    "cat": "STD",
    "lane": "A",
    "refresh": "pinned",
-   "status": "candidate",
+   "status": "live",
    "domain": "an agent building a JS-adjacent tool queries this for the spec's abstract operations and completion-record semantics",
    "sources": [
     {
      "url": "https://github.com/xerj-org/corpus-ecma262-sections",
-     "licence_hint": "LICENCE CORRECTED 2026-10-03 (the row previously claimed 'CC-BY-4.0 at pin' \u2014 wrong): GitHub reports tc39/ecma262 as NOASSERTION; the actual terms are Ecma's ALTERNATIVE copyright notice for the spec text (permissive-with-conditions: copy/modify/distribute for any purpose without fee, provided the full notice text stays viewable, pre-existing disclaimers carry, and changes are stated \u2014 derived from the W3C Software and Document Notice) plus Ecma's BSD-style software policy for code portions. The mirror carries NOTICE.md with the full notice and the changes statement, so redistribution is within the grant. G2 fix = section split: 2,341 files (one per emu-clause/emu-annex/emu-intro), upstream SHA pinned in the mirror README. G7 round-2 2026-10-05 graded 3/5 pass 3/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 3/5 on the sections mirror (3,227 records, CLEAN on (file,locator))."
+     "licence_hint": "LICENCE CORRECTED 2026-10-03 (the row previously claimed 'CC-BY-4.0 at pin' — wrong): GitHub reports tc39/ecma262 as NOASSERTION; the actual terms are Ecma's ALTERNATIVE copyright notice for the spec text (permissive-with-conditions: copy/modify/distribute for any purpose without fee, provided the full notice text stays viewable, pre-existing disclaimers carry, and changes are stated — derived from the W3C Software and Document Notice) plus Ecma's BSD-style software policy for code portions. The mirror carries NOTICE.md with the full notice and the changes statement, so redistribution is within the grant. G2 fix = section split: 2,341 files (one per emu-clause/emu-annex/emu-intro), upstream SHA pinned in the mirror README. G7 round-2 2026-10-05 graded 3/5 pass 3/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 3/5 on the sections mirror (3,227 records, CLEAN on (file,locator)). FLIPPED live 2026-10-05: G7 3/5 pass 3/5 relevant -> PASS vs PR #1140 engine (0ae1439bb+35903648c). Manifest hub/ecma262.json written; corpus.json licence corrected to the Ecma alternative-notice terms."
     }
-   ]
+   ],
+   "g7": {
+    "round": 2,
+    "graded_at": "2026-10-05",
+    "engine": "fix/xccode-g7-retrieval-1 (PR #1140, 0ae1439bb+35903648c)",
+    "evidence": "backlog/g7-tonight-2026-10-03-graded.json"
+   }
   },
   {
    "slug": "unicode-cldr",
    "cat": "STD",
    "lane": "A",
    "refresh": "pinned",
-   "status": "candidate",
+   "status": "live",
    "domain": "an agent formatting dates/numbers/names queries this for locale-specific CLDR rules and plural/data tables no model recalls",
    "sources": [
     {
      "url": "https://github.com/xerj-org/corpus-unicode-cldr",
-     "licence_hint": "RE-PINNED (round 2, LDML split) 2026-10-05 after the 2/5 G7: mirror = docs/ldml + common/supplemental + en locale XML with the 486KB en.xml split one file per LDML top-level element (bodies byte-verbatim), tools/ and ~440 other locale trees dropped; upstream c1159fe6c pinned in mirror README; Unicode-3.0 hand-verified. Remap g7-cldr-ldml-2026-10.json pre-registered before retrieval (all 5 clauses verified on disk, 1 hit each). Prediction 4/5."
+     "licence_hint": "RE-PINNED (round 2, LDML split) 2026-10-05 after the 2/5 G7: mirror = docs/ldml + common/supplemental + en locale XML with the 486KB en.xml split one file per LDML top-level element (bodies byte-verbatim), tools/ and ~440 other locale trees dropped; upstream c1159fe6c pinned in mirror README; Unicode-3.0 hand-verified. Remap g7-cldr-ldml-2026-10.json pre-registered before retrieval (all 5 clauses verified on disk, 1 hit each). Prediction 4/5. FLIPPED live 2026-10-05: G7 5/5 pass 5/5 relevant -> PASS vs PR #1140 engine (0ae1439bb+35903648c); prediction was 4/5 — actual 5/5. Manifest hub/unicode-cldr.json written."
     }
-   ]
+   ],
+   "g7": {
+    "round": 2,
+    "graded_at": "2026-10-05",
+    "engine": "fix/xccode-g7-retrieval-1 (PR #1140, 0ae1439bb+35903648c)",
+    "evidence": "backlog/g7-tonight-2026-10-03-graded.json"
+   }
   },
   {
    "slug": "openapi-spec",
@@ -445,14 +463,20 @@
    "cat": "STD",
    "lane": "A",
    "refresh": "pinned",
-   "status": "candidate",
+   "status": "live",
    "domain": "an agent implementing a Kafka client queries this for the protocol guide's exact request/response schemas and error codes",
    "sources": [
     {
      "url": "https://github.com/xerj-org/corpus-kafka-docs",
-     "licence_hint": "RE-PINNED after G7 fail 2026-10-04 (mirror fix): scope = CURRENT docs only \u2014 content/en/43 + the current root docs (141 files, 3.4MB) from kafka-site @7bf6e996. static/ (750MB, ~20 vendored javadoc copies) dropped, and the 40 old doc-version dirs dropped (AMENDMENT pre-retrieval to the original note, which ambiguously said '+ per-version dirs': the graded Q2 miss retrieved upgrade.md from three different old versions ahead of the answer \u2014 version clones are dilution the same way locale forks were in tldr). Apache-2.0 at pin (LICENSE verbatim). Same wave-1 suite re-runs; expect_files under content/en/43/ suffix-match the mirror's 43/ paths \u2014 no remap needed. G7 round-2 2026-10-05 graded 3/5 pass 3/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 3/5 on the scoped docs mirror (2,768 records CLEAN)."
+     "licence_hint": "RE-PINNED after G7 fail 2026-10-04 (mirror fix): scope = CURRENT docs only — content/en/43 + the current root docs (141 files, 3.4MB) from kafka-site @7bf6e996. static/ (750MB, ~20 vendored javadoc copies) dropped, and the 40 old doc-version dirs dropped (AMENDMENT pre-retrieval to the original note, which ambiguously said '+ per-version dirs': the graded Q2 miss retrieved upgrade.md from three different old versions ahead of the answer — version clones are dilution the same way locale forks were in tldr). Apache-2.0 at pin (LICENSE verbatim). Same wave-1 suite re-runs; expect_files under content/en/43/ suffix-match the mirror's 43/ paths — no remap needed. G7 round-2 2026-10-05 graded 3/5 pass 3/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 3/5 on the scoped docs mirror (2,768 records CLEAN). FLIPPED live 2026-10-05: G7 3/5 pass 3/5 relevant -> PASS vs PR #1140 engine (0ae1439bb+35903648c). Manifest hub/kafka-protocol.json written."
     }
-   ]
+   ],
+   "g7": {
+    "round": 2,
+    "graded_at": "2026-10-05",
+    "engine": "fix/xccode-g7-retrieval-1 (PR #1140, 0ae1439bb+35903648c)",
+    "evidence": "backlog/g7-tonight-2026-10-03-graded.json"
+   }
   },
   {
    "slug": "valkey-docs",
@@ -478,7 +502,7 @@
    "sources": [
     {
      "url": "superseded by postgres-src",
-     "licence_hint": "killed: same repository as postgres-src \u2014 doc/ is inside it; a second corpus on one repo is padding"
+     "licence_hint": "killed: same repository as postgres-src — doc/ is inside it; a second corpus on one repo is padding"
     }
    ]
   },
@@ -506,7 +530,7 @@
    "sources": [
     {
      "url": "https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html",
-     "licence_hint": "OASIS CC-BY-4.0; DEFERRED 2026-10-02: mqtt/mqtt.org is site chrome \u2014 the repo does NOT contain the spec text (verified at pin faab2e8a05, _sites/mqtt-specification.md only links out); needs an http-fetch recipe + chunking decision like ietf-rfc"
+     "licence_hint": "OASIS CC-BY-4.0; DEFERRED 2026-10-02: mqtt/mqtt.org is site chrome — the repo does NOT contain the spec text (verified at pin faab2e8a05, _sites/mqtt-specification.md only links out); needs an http-fetch recipe + chunking decision like ietf-rfc"
     }
    ]
   },
@@ -520,7 +544,7 @@
    "sources": [
     {
      "url": "https://github.com/danluu/post-mortems",
-     "licence_hint": "DEFERRED 2026-10-02: NO licence at pin 630562e5 (verified) AND the repo is a curated link index (7 files), not the postmortem text \u2014 real content sits on ~1k linked sites each with its own terms. Needs a Lane B curation with per-post licence review."
+     "licence_hint": "DEFERRED 2026-10-02: NO licence at pin 630562e5 (verified) AND the repo is a curated link index (7 files), not the postmortem text — real content sits on ~1k linked sites each with its own terms. Needs a Lane B curation with per-post licence review."
     }
    ]
   },
@@ -534,7 +558,7 @@
    "sources": [
     {
      "url": "https://gitlab.com/gitlab-com/runbooks",
-     "licence_hint": "MIT (verify at pin \u2014 hosted on gitlab.com, not github)"
+     "licence_hint": "MIT (verify at pin — hosted on gitlab.com, not github)"
     }
    ]
   },
@@ -548,7 +572,7 @@
    "sources": [
     {
      "url": "superseded by prometheus-src",
-     "licence_hint": "killed: same repository as prometheus-src \u2014 docs/ is inside it"
+     "licence_hint": "killed: same repository as prometheus-src — docs/ is inside it"
     }
    ]
   },
@@ -562,7 +586,7 @@
    "sources": [
     {
      "url": "https://github.com/open-telemetry/opentelemetry-proto",
-     "licence_hint": "RE-PINNED (scope fix) after G7 fail 2026-10-02: dropped open-telemetry/semantic-conventions from the corpus \u2014 its markdown docs diluted proto-field queries and its content duplicates opentelemetry-spec. Apache-2.0 (hand-verified). Corpus is now the proto repo alone; suite expect_files unchanged (they were proto files). ROUND 2 re-pinned 2026-10-05: the 2026-10-02 scope fix over-corrected \u2014 semconv docs are the only source for HTTP/database span conventions. Corpus = opentelemetry-proto @b3f75588 + semantic-conventions @60a64b66 (2,660 records). Remap g7-otel-round2-2026-10.json pre-registered before retrieval (all 5 clauses verified on disk); prediction 3-4/5 with engine #1137/#1139. ROUND 2 GRADED 2026-10-05: 1/5 \u2014 prediction 3-4/5 was WRONG. With both repos indexed (2,660 records) semconv prose (2,475 docs) dwarfs the 185 proto records: proto queries retrieve span-convention prose, and db/http queries get CHANGELOG and sibling chapter docs instead of the expected files. ROUND 3 fix (pre-registered, not yet run): scope the semantic-conventions clone to its docs/ subtree minus CHANGELOG (the model/ YAMLs, internal/, non-normative/ and the CHANGELOG are the measured diluters); prediction 3/5. G7 round-2 2026-10-05 graded 1/5 pass 1/5 relevant -> FAIL (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 1/5 round-2 \u2014 see round-3 note."
+     "licence_hint": "RE-PINNED (scope fix) after G7 fail 2026-10-02: dropped open-telemetry/semantic-conventions from the corpus — its markdown docs diluted proto-field queries and its content duplicates opentelemetry-spec. Apache-2.0 (hand-verified). Corpus is now the proto repo alone; suite expect_files unchanged (they were proto files). ROUND 2 re-pinned 2026-10-05: the 2026-10-02 scope fix over-corrected — semconv docs are the only source for HTTP/database span conventions. Corpus = opentelemetry-proto @b3f75588 + semantic-conventions @60a64b66 (2,660 records). Remap g7-otel-round2-2026-10.json pre-registered before retrieval (all 5 clauses verified on disk); prediction 3-4/5 with engine #1137/#1139. ROUND 2 GRADED 2026-10-05: 1/5 — prediction 3-4/5 was WRONG. With both repos indexed (2,660 records) semconv prose (2,475 docs) dwarfs the 185 proto records: proto queries retrieve span-convention prose, and db/http queries get CHANGELOG and sibling chapter docs instead of the expected files. ROUND 3 fix (pre-registered, not yet run): scope the semantic-conventions clone to its docs/ subtree minus CHANGELOG (the model/ YAMLs, internal/, non-normative/ and the CHANGELOG are the measured diluters); prediction 3/5. G7 round-2 2026-10-05 graded 1/5 pass 1/5 relevant -> FAIL (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 1/5 round-2 — see round-3 note."
     }
    ]
   },
@@ -590,7 +614,7 @@
    "sources": [
     {
      "url": "https://github.com/freebsd/freebsd-doc",
-     "licence_hint": "FreeBSD Documentation License (permissive \u2014 verify at pin)"
+     "licence_hint": "FreeBSD Documentation License (permissive — verify at pin)"
     }
    ]
   },
@@ -613,28 +637,40 @@
    "cat": "OPS",
    "lane": "A",
    "refresh": "weekly",
-   "status": "candidate",
-   "domain": "an agent scripting an unfamiliar long-tail tool queries this for its example invocations (popular tools are memorised \u2014 G3 value is the tail only)",
+   "status": "live",
+   "domain": "an agent scripting an unfamiliar long-tail tool queries this for its example invocations (popular tools are memorised — G3 value is the tail only)",
    "sources": [
     {
      "url": "https://github.com/xerj-org/corpus-tldr-common",
-     "licence_hint": "RE-PINNED after G7 fail 2026-10-02 (mirror fix): upstream tldr-pages/tldr detector said MIT but the LICENSE is CC-BY-4.0 (hand-verified); full tree is ~40k pages across 30+ locales and the G7 miss was dilution \u2014 queries retrieved locale forks of the wrong page. Mirror = pages/common ONLY (4,705 en pages, the curated core), upstream SHA pinned in its README. Same wave-1 suite re-runs; expect_file paths remapped to pages/common layout, clauses and queries unchanged. G7 round-2 2026-10-05 graded 2/5 pass 2/5 relevant -> FAIL (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 2/5 pre-fix rows (unbracket rebuild pending)."
+     "licence_hint": "RE-PINNED after G7 fail 2026-10-02 (mirror fix): upstream tldr-pages/tldr detector said MIT but the LICENSE is CC-BY-4.0 (hand-verified); full tree is ~40k pages across 30+ locales and the G7 miss was dilution — queries retrieved locale forks of the wrong page. Mirror = pages/common ONLY (4,705 en pages, the curated core), upstream SHA pinned in its README. Same wave-1 suite re-runs; expect_file paths remapped to pages/common layout, clauses and queries unchanged. G7 round-2 2026-10-05 graded 2/5 pass 2/5 relevant -> FAIL (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 2/5 pre-fix rows (unbracket rebuild pending). FLIPPED live 2026-10-05: G7 3/5 pass 4/5 relevant (1 partial: correct file, clause off-screen) -> PASS vs PR #1140 engine (0ae1439bb+35903648c) — the in-row 2/5 FAIL note was an intermediate pre-#1139 re-grade, superseded by the final g7-tonight-graded run. Manifest hub/tldr-pages.json written."
     }
-   ]
+   ],
+   "g7": {
+    "round": 2,
+    "graded_at": "2026-10-05",
+    "engine": "fix/xccode-g7-retrieval-1 (PR #1140, 0ae1439bb+35903648c)",
+    "evidence": "backlog/g7-tonight-2026-10-03-graded.json"
+   }
   },
   {
    "slug": "school-of-sre",
    "cat": "OPS",
    "lane": "A",
    "refresh": "pinned",
-   "status": "candidate",
-   "domain": "an agent stepping into an SRE task queries this for the curriculum's concrete replication/signals/messaging/git/networking fundamentals (no incident-response or caching chapters exist \u2014 do not query for them)",
+   "status": "live",
+   "domain": "an agent stepping into an SRE task queries this for the curriculum's concrete replication/signals/messaging/git/networking fundamentals (no incident-response or caching chapters exist — do not query for them)",
    "sources": [
     {
      "url": "https://github.com/linkedin/school-of-sre",
-     "licence_hint": "G4 licence hand-check 2026-10-03: repo LICENSE file = CC-BY-4.0 (detector said UNKNOWN). G7 fail 2026-10-02 was a G1 over-promise, not a corpus defect: the prior suite queried on-call/incident-response and storage-caching chapters that do not exist. Domain sentence rescoped to the actual curriculum; re-scoped suite (in-domain queries only, blind-authored from clone reads, 5/5 expects grep-verified) pre-registered at backlog/g7-sre-2026-10.json BEFORE any re-retrieval. Corpus itself unchanged (same upstream SHA). G7 round-2 2026-10-05 graded 5/5 pass 5/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 5/5 (423 records CLEAN)."
+     "licence_hint": "G4 licence hand-check 2026-10-03: repo LICENSE file = CC-BY-4.0 (detector said UNKNOWN). G7 fail 2026-10-02 was a G1 over-promise, not a corpus defect: the prior suite queried on-call/incident-response and storage-caching chapters that do not exist. Domain sentence rescoped to the actual curriculum; re-scoped suite (in-domain queries only, blind-authored from clone reads, 5/5 expects grep-verified) pre-registered at backlog/g7-sre-2026-10.json BEFORE any re-retrieval. Corpus itself unchanged (same upstream SHA). G7 round-2 2026-10-05 graded 5/5 pass 5/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): 5/5 (423 records CLEAN). FLIPPED live 2026-10-05: G7 5/5 pass 5/5 relevant -> PASS vs PR #1140 engine (0ae1439bb+35903648c). Manifest hub/school-of-sre.json written; corpus.json licence corrected to CC-BY-4.0."
     }
-   ]
+   ],
+   "g7": {
+    "round": 2,
+    "graded_at": "2026-10-05",
+    "engine": "fix/xccode-g7-retrieval-1 (PR #1140, 0ae1439bb+35903648c)",
+    "evidence": "backlog/g7-tonight-2026-10-03-graded.json"
+   }
   },
   {
    "slug": "rust-api-guidelines",
@@ -683,14 +719,20 @@
    "cat": "GOOD",
    "lane": "A",
    "refresh": "pinned",
-   "status": "candidate",
+   "status": "live",
    "domain": "an agent reviewing an API design queries this for the rule, its intent and propulated exceptions from a fleet of thousands",
    "sources": [
     {
      "url": "https://github.com/xerj-org/corpus-zalando-guidelines",
-     "licence_hint": "RE-PINNED after G7 fail 2026-10-02 (mirror fix): detector said UNKNOWN; LICENSE is CC-BY-4.0 (hand-verified). Upstream ships 21 chapters as ONE 1.1MB README monolith the indexer skips; mirror = one file per chapter, upstream SHA pinned. Same suite re-runs with expect_file remapped to the chapter files. ROUND 2 re-pinned 2026-10-05 after the 1/5 re-grade (g7-tonight graded): autoindex sections .adoc by asciidoc structure and compatibility.adoc's section records crowded every top-5. Mirror commit 88cdfdb renames chapters to .txt (content identical) = one whole-file record per chapter; remap g7-zalando-txt-2026-10.json pre-registered before retrieval; prediction 3-4/5. G7 round-2 2026-10-05 graded 5/5 pass 5/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): round-2 .txt remap; 5/5 with the engine fixes."
+     "licence_hint": "RE-PINNED after G7 fail 2026-10-02 (mirror fix): detector said UNKNOWN; LICENSE is CC-BY-4.0 (hand-verified). Upstream ships 21 chapters as ONE 1.1MB README monolith the indexer skips; mirror = one file per chapter, upstream SHA pinned. Same suite re-runs with expect_file remapped to the chapter files. ROUND 2 re-pinned 2026-10-05 after the 1/5 re-grade (g7-tonight graded): autoindex sections .adoc by asciidoc structure and compatibility.adoc's section records crowded every top-5. Mirror commit 88cdfdb renames chapters to .txt (content identical) = one whole-file record per chapter; remap g7-zalando-txt-2026-10.json pre-registered before retrieval; prediction 3-4/5. G7 round-2 2026-10-05 graded 5/5 pass 5/5 relevant -> PASS (graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file cap, #1139 txt-field search)): round-2 .txt remap; 5/5 with the engine fixes. FLIPPED live 2026-10-05: G7 5/5 pass 5/5 relevant -> PASS (final re-grade after engine fix/xccode-g7-retrieval-1 = PR #1140, commits 0ae1439bb+35903648c, #1137 per-file cap + #1139 txt-field search; the earlier 2/5 in-row note was graded pre-#1139). Manifest hub/zalando-restful-api-guidelines.json written; corpus.json re-pinned to mirror 88cdfdb1 (.txt tree actually graded) + CC-BY-4.0."
     }
-   ]
+   ],
+   "g7": {
+    "round": 2,
+    "graded_at": "2026-10-05",
+    "engine": "fix/xccode-g7-retrieval-1 (PR #1140, 0ae1439bb+35903648c)",
+    "evidence": "backlog/g7-tonight-2026-10-03-graded.json"
+   }
   },
   {
    "slug": "github-api-description",
@@ -754,7 +796,7 @@
    "lane": "A",
    "refresh": "pinned",
    "status": "live",
-   "domain": "an agent containerising or configuring an app queries this for the factor's exact statement and rationale (G3 borderline: well-known prose \u2014 keep only if G7 shows retrieval value)",
+   "domain": "an agent containerising or configuring an app queries this for the factor's exact statement and rationale (G3 borderline: well-known prose — keep only if G7 shows retrieval value)",
    "sources": [
     {
      "url": "https://github.com/heroku/12factor",
@@ -884,7 +926,7 @@
    "sources": [
     {
      "url": "https://github.com/cockroachdb/pebble",
-     "licence_hint": "VERIFY FIRST \u2014 CockroachDB-adjacent licensing has moved; if not permissive, rocksdb+badger cover the domain and this stays deferred"
+     "licence_hint": "VERIFY FIRST — CockroachDB-adjacent licensing has moved; if not permissive, rocksdb+badger cover the domain and this stays deferred"
     }
    ]
   },
@@ -898,7 +940,7 @@
    "sources": [
     {
      "url": "https://github.com/dgraph-io/badger",
-     "licence_hint": "MIT (verify at pin \u2014 dgraph BUSL era did not reach badger, confirm)"
+     "licence_hint": "MIT (verify at pin — dgraph BUSL era did not reach badger, confirm)"
     }
    ]
   },
@@ -954,7 +996,7 @@
    "sources": [
     {
      "url": "https://github.com/sqlite/sqlite",
-     "licence_hint": "public domain (verify at pin; official read-only fossil\u2192git mirror)"
+     "licence_hint": "public domain (verify at pin; official read-only fossil→git mirror)"
     }
    ]
   },
@@ -1234,7 +1276,7 @@
    "sources": [
     {
      "url": "https://github.com/curl/curl",
-     "licence_hint": "curl licence (permissive \u2014 verify at pin)"
+     "licence_hint": "curl licence (permissive — verify at pin)"
     }
    ]
   },
@@ -1440,7 +1482,7 @@
    "lane": "A",
    "refresh": "pinned",
    "status": "live",
-   "domain": "an agent answering workplace/employment questions queries this for what 29 CFR actually says \u2014 OSHA guardrail height, FMLA 12-month/1250-hour eligibility, FLSA overtime, youth-employment hours (demand: employment-HR Ask-HN volume 57)",
+   "domain": "an agent answering workplace/employment questions queries this for what 29 CFR actually says — OSHA guardrail height, FMLA 12-month/1250-hour eligibility, FLSA overtime, youth-employment hours (demand: employment-HR Ask-HN volume 57)",
    "sources": [
     {
      "url": "https://www.govinfo.gov/bulkdata/ECFR/title-29/ECFR-title29.xml",
@@ -1454,14 +1496,14 @@
    "lane": "A",
    "refresh": "pinned",
    "status": "candidate",
-   "domain": "an agent answering federal tax questions queries this for what the Treasury regulations actually say \u2014 de minimis safe harbor, estimated-tax safe harbor, home-office exclusive use (demand: tax Ask-HN volume 40)",
+   "domain": "an agent answering federal tax questions queries this for what the Treasury regulations actually say — de minimis safe harbor, estimated-tax safe harbor, home-office exclusive use (demand: tax Ask-HN volume 40)",
    "sources": [
     {
      "url": "https://www.govinfo.gov/bulkdata/ECFR/title-26/ECFR-title26.xml",
      "licence_hint": "public domain (US government work, 17 USC 105); pinned mirror github.com/xerj-org/corpus-ecfr-title-26"
     }
    ],
-   "note": "G7 1/4 relevant (2026-10-02): paraphrase gap under lexical retrieval on tax phrasing; suite defect excluded (\u00a71.280A-2 proposed-only). Re-test pre-registered with neural embed mode. Pins and shape stand (WAVES.md wave N1)."
+   "note": "G7 1/4 relevant (2026-10-02): paraphrase gap under lexical retrieval on tax phrasing; suite defect excluded (§1.280A-2 proposed-only). Re-test pre-registered with neural embed mode. Pins and shape stand (WAVES.md wave N1)."
   },
   {
    "slug": "ecfr-title-12",
@@ -1469,7 +1511,7 @@
    "lane": "A",
    "refresh": "pinned",
    "status": "live",
-   "domain": "an agent answering consumer-credit or mortgage questions queries this for what Regulation Z / TILA actually says \u2014 higher-priced APR triggers, ability-to-repay/QM, rescission windows, card late-fee safe harbors (demand: consumer-finance Ask-HN volume 71)",
+   "domain": "an agent answering consumer-credit or mortgage questions queries this for what Regulation Z / TILA actually says — higher-priced APR triggers, ability-to-repay/QM, rescission windows, card late-fee safe harbors (demand: consumer-finance Ask-HN volume 71)",
    "sources": [
     {
      "url": "https://www.govinfo.gov/bulkdata/ECFR/title-12/ECFR-title12.xml",
@@ -1483,7 +1525,7 @@
    "lane": "A",
    "refresh": "pinned",
    "status": "live",
-   "domain": "an agent answering UK-law questions queries this for what the current statute actually says \u2014 Consumer Rights Act remedies, GDPR-adjacent DPA 2018 duties, Building Safety Act duties (demand: legal-courts Ask-HN volume 46; source chosen for best-in-class versioned OGL XML)",
+   "domain": "an agent answering UK-law questions queries this for what the current statute actually says — Consumer Rights Act remedies, GDPR-adjacent DPA 2018 duties, Building Safety Act duties (demand: legal-courts Ask-HN volume 46; source chosen for best-in-class versioned OGL XML)",
    "sources": [
     {
      "url": "https://www.legislation.gov.uk/ukpga/<year>/<chapter>/data.xml",

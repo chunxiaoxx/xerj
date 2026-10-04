@@ -1,0 +1,21 @@
+{
+ "corpus": "unicode-cldr",
+ "cloned_at": "2026-10-05T00:00:00Z",
+ "repos": [
+  {
+   "repo": "corpus-unicode-cldr",
+   "url": "https://github.com/xerj-org/corpus-unicode-cldr",
+   "licence": "Unicode-3.0",
+   "sha": "cafab85f4d39697526336d7e3c6236756715edd8",
+   "files": 67,
+   "bytes": 4540382,
+   "review": {
+    "spdx": "Unicode-3.0",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-05",
+    "note": "Mirror of unicode-org/cldr: docs/ldml + common/supplemental + segments/rbnf + en locale XML, with the 486KB en.xml split one file per LDML top-level element (bodies byte-verbatim, provenance comment per file); tools/ and ~440 other locale trees dropped. Unicode-3.0 hand-verified; upstream c1159fe6c pinned in the mirror README. G7 2026-10-05 on the LDML-split mirror: 5/5 pass 5/5 relevant PASS graded against engine fix/xccode-g7-retrieval-1 commits 0ae1439bb+35903648c (#1137 per-file top-k cap, #1139 txt-field search), merged as PR #1140 2026-10-04T18:12:15Z; round-1 2/5 on the raw tree. Evidence: backlog/g7-tonight-2026-10-03-graded.json."
+   }
+  }
+ ]
+}
