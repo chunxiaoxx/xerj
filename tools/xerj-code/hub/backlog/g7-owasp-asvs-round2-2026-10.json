@@ -1,0 +1,37 @@
+{
+ "corpus": "owasp-asvs",
+ "registered": "2026-10-05",
+ "note": "ROUND 2. Round-1 failed 1/5: the mirror held both 4.0.3 and 5.0 trees and retrieval answered from 4.0. The mirror is re-pinned to 5.0-only (xerj-org/corpus-owasp-asvs @e7404423, 30 files). Queries and expect clauses are byte-identical to round 1; expect_file re-resolved against the 5.0-only tree. Pre-registered before round-2 retrieval.",
+ "queries": [
+  {
+   "q": "What does ASVS level 2 say about protecting the SMS or email verification channel from automated guessing?",
+   "expect": "a code based out-of-band authentication mechanism is protected against brute force attacks by using rate limiting",
+   "expect_file": "5.0/en/0x15-V6-Authentication.md",
+   "hard": false
+  },
+  {
+   "q": "How much randomness must a server-side session reference have under ASVS?",
+   "expect": "generated using a cryptographically secure pseudo-random number generator (CSPRNG) and possess at least 128 bits of entropy",
+   "expect_file": "5.0/en/0x16-V7-Session-Management.md",
+   "hard": false
+  },
+  {
+   "q": "What does ASVS require apps to do about restricting which JWT signing methods they accept?",
+   "expect": "The allowlist must include the permitted algorithms, ideally only either symmetric or asymmetric algorithms, and must not include the 'None' algorithm",
+   "expect_file": "5.0/en/0x18-V9-Self-contained-Tokens.md",
+   "hard": false
+  },
+  {
+   "q": "What extra transport-security requirement does ASVS impose at its highest assurance level?",
+   "expect": "L3 applications must only support cipher suites which provide forward secrecy",
+   "expect_file": "5.0/en/0x21-V12-Secure-Communication.md",
+   "hard": true
+  },
+  {
+   "q": "How should an OAuth authorization server check callback URLs per ASVS?",
+   "expect": "validates redirect URIs based on a client-specific allowlist of pre-registered URIs using exact string comparison",
+   "expect_file": "5.0/en/0x19-V10-OAuth-and-OIDC.md",
+   "hard": false
+  }
+ ]
+}
