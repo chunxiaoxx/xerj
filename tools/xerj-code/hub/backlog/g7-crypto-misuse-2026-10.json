@@ -1,0 +1,37 @@
+{
+  "corpus": "crypto-misuse-precedent",
+  "registered": "2026-10-05",
+  "note": "Round 1, against corpus-crypto-misuse-precedent (720 per-advisory text records — the crypto-misuse stratum selected mechanically from the flattened ghsa-db-v2 (594) / osv-ecosystems-v2 (101) / pysec-v2 (25) mirrors by CWE-326/327/328/329/347 tags or crypto-misuse prose: weak cipher/encryption, hardcoded or predictable key/secret, nonce reuse, signature forgery/verification bypass, padding oracle, ECB mode, insufficient entropy). Records are verbatim copies; each carries its own Source/licence line (CC-BY-4.0 dominant). Queries blind-authored from the domain framing (an agent reviewing crypto call sites queries this for real CWE-327/328/347-class precedents: the mechanism, the affected API, the fixed release); expect clauses whitespace-normalised grep-verified against the built mirror before any retrieval. Q5's clause appears in two files (the PYSEC record and its GHSA twin of the same CVE-2022-23942 advisory) — documented, grader passes on either. Coverage: JWT signature trust (node-jose CVE-2018-0114), key-type confusion (jsonwebtoken CVE-2022-23539), EDDSA signature malleability (elliptic CVE-2024-48949), nonce reuse (cocoon CVE-2024-21530), hardcoded key+IV (pydoris CVE-2022-23942).",
+  "queries": [
+    {
+      "q": "node-jose trusting the JSON web key embedded in the token header — which advisory and what release fixes the forging",
+      "expect": "improper validation of JWT signature",
+      "expect_file": "corpus-crypto-misuse-precedent/ghsa-jfxm-w8g2-4rcv.txt",
+      "hard": false
+    },
+    {
+      "q": "jsonwebtoken npm library accepting unexpected key types for verification — the legacy keys advisory and its fix version",
+      "expect": "unrestricted key type could lead to legacy keys usage",
+      "expect_file": "corpus-crypto-misuse-precedent/ghsa-8cf7-32gw-wr33.txt",
+      "hard": false
+    },
+    {
+      "q": "elliptic EDDSA verify signature malleability missing bounds check against curve order — which release added the validation",
+      "expect": "sig.S().gte(sig.eddsa.curve.n)",
+      "expect_file": "corpus-crypto-misuse-precedent/ghsa-434g-2637-qmqr.txt",
+      "hard": true
+    },
+    {
+      "q": "rust cocoon crate reusing the same nonce across sequential encrypt calls on one object — nonce reuse advisory",
+      "expect": "Sequential calls of encryption API",
+      "expect_file": "corpus-crypto-misuse-precedent/ghsa-6878-6wc2-pf5h.txt",
+      "hard": false
+    },
+    {
+      "q": "pydoris apache doris hardcoded key and IV for the ldap password cipher — fixed in which version",
+      "expect": "hardcoded key and IV to initialize the cipher used for ldap",
+      "expect_file": "corpus-crypto-misuse-precedent/PYSEC-2022-43150.txt",
+      "hard": false
+    }
+  ]
+}
