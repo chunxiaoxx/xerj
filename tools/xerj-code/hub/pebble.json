@@ -1,0 +1,21 @@
+{
+ "corpus": "pebble",
+ "cloned_at": "2026-10-04T21:50:00Z",
+ "repos": [
+  {
+   "repo": "pebble",
+   "url": "https://github.com/cockroachdb/pebble",
+   "licence": "BSD",
+   "sha": "e0818dd07ec580eb229e8291b4eefdb135cd5a55",
+   "files": 1492,
+   "bytes": 20958322,
+   "review": {
+    "spdx": "BSD",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-04",
+    "note": "CockroachDB pebble LSM storage engine as cloned (BSD-2-Clause, verified in tree). G7 round-1: 4/5 pass 4/5 relevant (CompactionConcurrencyRange, MemTableWriteStallDuration, L0 sub-levels scan order, range-deletion splitting prohibition). Evidence: backlog/g7-night2-2026-10-04-graded.json"
+   }
+  }
+ ]
+}

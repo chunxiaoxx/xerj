@@ -990,9 +990,14 @@
    "cat": "DATA",
    "domain": "an agent working on LSM stores queries this for a modern Go LSM with delete/RangeLock semantics",
    "g7": {
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "graded": "2026-10-04",
     "note": "pre-registered 2026-10-04 before indexing",
-    "round": 0,
-    "suite": "backlog/g7-pebble-2026-10.json"
+    "pass": 4,
+    "relevant": 4,
+    "round": 1,
+    "suite": "backlog/g7-pebble-2026-10.json",
+    "verdict": "PASS"
    },
    "lane": "A",
    "refresh": "pinned",
@@ -1003,7 +1008,7 @@
      "url": "https://github.com/cockroachdb/pebble"
     }
    ],
-   "status": "candidate"
+   "status": "live"
   },
   {
    "cat": "DATA",
