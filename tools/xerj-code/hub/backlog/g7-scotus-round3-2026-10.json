@@ -1,0 +1,37 @@
+{
+ "corpus": "scotus",
+ "registered": "2026-10-05",
+ "note": "ROUND 3, per-opinion granularity (corpus-scotus-v3, 1,158 opinion files grouped from the v2 part files by header justice/role; v1 whole-case buried holdings, v2 per-part fragments lost BM25 to adjacent paragraphs — round-2 graded 2/5). Queries and expect clauses are byte-identical to round 2; expect_file re-pinned to the v3 per-opinion files, each grep-verified. Pre-registered before round-3 retrieval. Public domain: opinions of the US Supreme Court (US gov work).",
+ "queries": [
+  {
+   "q": "did Dobbs overrule Roe v Wade",
+   "hard": false,
+   "expect": "We hold that Roe and Casey must be overruled",
+   "expect_file": "corpus-scotus-v3/opinions/2021/19-1392-dobbs-v-jackson-women-s-health-organization--opinion-of-the-court-alito-j.txt"
+  },
+  {
+   "q": "what happened to Chevron deference in Loper Bright",
+   "hard": false,
+   "expect": "Chevron is overruled.",
+   "expect_file": "corpus-scotus-v3/opinions/2023/22-451-loper-bright-enterprises-v-raimondo--opinion-of-the-court-roberts-c-j.txt"
+  },
+  {
+   "q": "what did the district court find about UNC admissions under the Equal Protection Clause",
+   "hard": true,
+   "expect": "was permissible under the Equal Protection Clause.",
+   "expect_file": "corpus-scotus-v3/opinions/2022/20-1199-students-for-fair-admissions-inc-v-president-and-fellows-of---opinion-of-the-court-roberts-c-j.txt"
+  },
+  {
+   "q": "what individual right does the Second Amendment guarantee under Bruen",
+   "hard": false,
+   "expect": "possess and carry weapons in case of confrontation.",
+   "expect_file": "corpus-scotus-v3/opinions/2021/20-843-new-york-state-rifle-pistol-assn-inc-v-bruen--opinion-of-the-court-thomas-j.txt"
+  },
+  {
+   "q": "what did Justice Sotomayor's dissent say the SFFA Court did",
+   "hard": true,
+   "expect": "by further entrenching racial inequality in education,",
+   "expect_file": "corpus-scotus-v3/opinions/2022/20-1199-students-for-fair-admissions-inc-v-president-and-fellows-of--sotomayor-dissenting--sotomayor-j-dissenting.txt"
+  }
+ ]
+}
