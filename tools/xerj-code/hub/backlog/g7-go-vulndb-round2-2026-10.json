@@ -1,0 +1,37 @@
+{
+ "corpus": "go-vulndb",
+ "registered": "2026-10-05",
+ "note": "Round 2, against the NEW per-advisory layer (corpus-go-vulndb-osv, 4,577 records: one .txt per GO-ID flattened from data/osv/*.json — id, summary, aliases, module + affected versions, fixed-in, dates, details verbatim, references; golang/vulndb @5cd8418c, BSD-3-Clause). Round 1 on the whole-repo clone was never graded: the walk exploded to 1.2M docs in 35 generations (Go tool source, tests, 15MB testdata .gz) and hit the 6h timeout with dupcheck 0/0/0. Queries and expect clauses byte-identical to round 1 (authored blind, never retrieved against); expect_file re-pinned to the flattened records, each whitespace-normalised grep-verified UNIQUE. Pre-registered before any round-2 retrieval.",
+ "queries": [
+  {
+   "q": "What could a malicious client forge through gin's URL handling per GO-2020-0001?",
+   "expect": "allows attackers to inject arbitrary log entries by manipulating the request path",
+   "expect_file": "corpus-go-vulndb-osv/go-2020-0001.txt",
+   "hard": false
+  },
+  {
+   "q": "Why did Go 1.19.6 patch the x/net HTTP/2 code — what resource does GO-2023-1571 burn?",
+   "expect": "cause excessive CPU consumption in the HPACK decoder, sufficient to cause a denial of service from a small number of small requests",
+   "expect_file": "corpus-go-vulndb-osv/go-2023-1571.txt",
+   "hard": false
+  },
+  {
+   "q": "What hang did google.golang.org/protobuf fix in 1.33.0 per GO-2024-2611?",
+   "expect": "can enter an infinite loop when unmarshaling certain forms of invalid JSON",
+   "expect_file": "corpus-go-vulndb-osv/go-2024-2611.txt",
+   "hard": false
+  },
+  {
+   "q": "What input makes Go's TLS stack crash before the 1.16.6 fix?",
+   "expect": "clients can panic when provided a certificate of the wrong type for the negotiated parameters",
+   "expect_file": "corpus-go-vulndb-osv/go-2021-0243.txt",
+   "hard": false
+  },
+  {
+   "q": "What kind of message remotely crashes an unauthenticated Go SSH endpoint when AEAD ciphers are in use?",
+   "expect": "consuming a malformed packet which contains an empty plaintext causes a panic",
+   "expect_file": "corpus-go-vulndb-osv/go-2022-0968.txt",
+   "hard": true
+  }
+ ]
+}
