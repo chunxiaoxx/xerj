@@ -882,6 +882,94 @@
    "relevant": 4,
    "verdict": "PASS"
   },
+  "go-vulndb": {
+   "median": 4.0,
+   "pass": 4,
+   "queries": [
+    {
+     "expect": "corpus-go-vulndb-osv/go-2020-0001.txt",
+     "expect_file": "corpus-go-vulndb-osv/go-2020-0001.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-go-vulndb-osv/go-2020-0001.txt",
+     "q": "What could a malicious client forge through gin's URL handling per GO-2020-0001?",
+     "top5": [
+      "corpus-go-vulndb-osv/go-2020-0001.txt",
+      "corpus-go-vulndb-osv/go-2023-1737.txt",
+      "corpus-go-vulndb-osv/go-2021-0052.txt",
+      "corpus-go-vulndb-osv/go-2021-0063.txt",
+      "corpus-go-vulndb-osv/go-2026-5017.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-go-vulndb-osv/go-2023-1571.txt",
+     "expect_file": "corpus-go-vulndb-osv/go-2023-1571.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-go-vulndb-osv/go-2023-1571.txt",
+     "q": "Why did Go 1.19.6 patch the x/net HTTP/2 code \u2014 what resource does GO-2023-1571 burn?",
+     "top5": [
+      "corpus-go-vulndb-osv/go-2023-1571.txt",
+      "corpus-go-vulndb-osv/go-2023-2102.txt",
+      "corpus-go-vulndb-osv/go-2026-4918.txt",
+      "corpus-go-vulndb-osv/go-2022-1144.txt",
+      "corpus-go-vulndb-osv/go-2023-1569.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-go-vulndb-osv/go-2024-2611.txt",
+     "expect_file": "corpus-go-vulndb-osv/go-2024-2611.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-go-vulndb-osv/go-2024-2611.txt",
+     "q": "What hang did google.golang.org/protobuf fix in 1.33.0 per GO-2024-2611?",
+     "top5": [
+      "corpus-go-vulndb-osv/go-2024-2611.txt",
+      "corpus-go-vulndb-osv/go-2023-1631.txt",
+      "corpus-go-vulndb-osv/go-2021-0053.txt",
+      "corpus-go-vulndb-osv/go-2024-2978.txt",
+      "corpus-go-vulndb-osv/go-2024-3162.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-go-vulndb-osv/go-2021-0243.txt",
+     "expect_file": "corpus-go-vulndb-osv/go-2021-0243.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-go-vulndb-osv/go-2021-0243.txt",
+     "q": "What input makes Go's TLS stack crash before the 1.16.6 fix?",
+     "top5": [
+      "corpus-go-vulndb-osv/go-2021-0243.txt",
+      "corpus-go-vulndb-osv/go-2022-1167.txt",
+      "corpus-go-vulndb-osv/go-2025-3966.txt",
+      "corpus-go-vulndb-osv/go-2026-5781.txt",
+      "corpus-go-vulndb-osv/go-2023-2375.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-go-vulndb-osv/go-2022-0968.txt",
+     "expect_file": "corpus-go-vulndb-osv/go-2022-0968.txt",
+     "grade": "irrelevant",
+     "hard": true,
+     "hit": null,
+     "q": "What kind of message remotely crashes an unauthenticated Go SSH endpoint when AEAD ciphers are in use?",
+     "top5": [
+      "corpus-go-vulndb-osv/go-2024-2527.txt",
+      "corpus-go-vulndb-osv/go-2021-0356.txt",
+      "corpus-go-vulndb-osv/go-2026-5596.txt",
+      "corpus-go-vulndb-osv/go-2025-4135.txt",
+      "corpus-go-vulndb-osv/go-2026-6103.txt"
+     ],
+     "verdict": "miss"
+    }
+   ],
+   "relevant": 4,
+   "verdict": "PASS"
+  },
   "govuk-design-system": {
    "median": 5.0,
    "pass": 5,

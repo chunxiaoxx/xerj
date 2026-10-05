@@ -182,6 +182,9 @@
   {
    "cat": "SEC",
    "domain": "an agent reviewing Go modules queries this for Go-team-curated advisories with symbols and fixed versions",
+   "g7": {
+    "verdict": "PASS"
+   },
    "lane": "A",
    "refresh": "weekly",
    "slug": "go-vulndb",
@@ -191,7 +194,7 @@
      "url": "https://github.com/golang/vulndb"
     }
    ],
-   "status": "candidate"
+   "status": "live"
   },
   {
    "cat": "SEC",
