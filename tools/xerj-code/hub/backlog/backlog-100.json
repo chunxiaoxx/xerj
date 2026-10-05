@@ -82,6 +82,9 @@
   {
    "cat": "SEC",
    "domain": "an agent reviewing Rust crate dependencies queries this for vulnerable crate versions, affected functions (271 RustSec advisories carry symbol lists), and patched releases \u2014 one text record per advisory from RustSec advisory-db (CC0) plus the crates.io OSV export (CC0, GHSA-sourced, zero alias overlap with RustSec)",
+   "g7": {
+    "verdict": "PASS"
+   },
    "lane": "A",
    "refresh": "weekly",
    "slug": "rustsec-advisories",
@@ -95,7 +98,7 @@
      "url": "https://github.com/rust-lang/crates.io/ (OSV export via osv.dev)"
     }
    ],
-   "status": "candidate"
+   "status": "live"
   },
   {
    "cat": "SEC",

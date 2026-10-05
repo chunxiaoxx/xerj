@@ -1840,6 +1840,94 @@
    "relevant": 4,
    "verdict": "PASS"
   },
+  "rustsec-advisories": {
+   "median": 5.0,
+   "pass": 5,
+   "queries": [
+    {
+     "expect": "corpus-rust-vulns-txt/rustsec-2016-0001.txt",
+     "expect_file": "corpus-rust-vulns-txt/rustsec-2016-0001.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-rust-vulns-txt/rustsec-2016-0001.txt:1",
+     "q": "Our Cargo.toml pins the openssl crate at 0.8.x; was there a man-in-the-middle issue with its default certificate validation, and which release fixes it?",
+     "top5": [
+      "corpus-rust-vulns-txt/rustsec-2016-0001.txt:1",
+      "corpus-rust-vulns-txt/rustsec-2021-0056.txt:1",
+      "rustsec/records.jsonl",
+      "rustsec/records.jsonl",
+      "corpus-rust-vulns-txt/rustsec-2026-0179.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-rust-vulns-txt/rustsec-2019-0009.txt",
+     "expect_file": "corpus-rust-vulns-txt/rustsec-2019-0009.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-rust-vulns-txt/rustsec-2019-0009.txt",
+     "q": "smallvec grow use after free double free which versions are affected and what do I patch to",
+     "top5": [
+      "corpus-rust-vulns-txt/rustsec-2019-0009.txt",
+      "rustsec/records.jsonl",
+      "corpus-rust-vulns-txt/rustsec-2026-0029.txt:1",
+      "corpus-rust-vulns-txt/rustsec-2026-0142.txt",
+      "corpus-rust-vulns-txt/rustsec-2026-0282.txt:1"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-rust-vulns-txt/rustsec-2018-0021.txt",
+     "expect_file": "corpus-rust-vulns-txt/rustsec-2018-0021.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-rust-vulns-txt/rustsec-2018-0021.txt",
+     "q": "libpulse-binding Stream objects get_context get_format_info memory safety bug which functions are affected",
+     "top5": [
+      "corpus-rust-vulns-txt/rustsec-2018-0021.txt",
+      "rustsec/records.jsonl",
+      "corpus-rust-vulns-txt/rustsec-2018-0020.txt:1",
+      "corpus-rust-vulns-txt/rustsec-2019-0038.txt",
+      "rustsec/records.jsonl"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-rust-vulns-txt/rustsec-2019-0011.txt",
+     "expect_file": "corpus-rust-vulns-txt/rustsec-2019-0011.txt",
+     "grade": "relevant",
+     "hard": true,
+     "hit": "corpus-rust-vulns-txt/rustsec-2019-0011.txt",
+     "q": "memoffset offset_of span_of unsoundness uninitialized memory dropped on panic",
+     "top5": [
+      "corpus-rust-vulns-txt/rustsec-2019-0011.txt",
+      "rustsec/records.jsonl",
+      "corpus-rust-vulns-txt/rustsec-2023-0045.txt",
+      "corpus-rust-vulns-txt/rustsec-2020-0103.txt",
+      "corpus-rust-vulns-txt/rustsec-2026-0252.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-rust-vulns-txt/ghsa-22w3-693w-x895.txt",
+     "expect_file": "corpus-rust-vulns-txt/ghsa-22w3-693w-x895.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-rust-vulns-txt/ghsa-22w3-693w-x895.txt",
+     "q": "webauthn-rs-core origin validation flaw allowing subdomain suffixes like attacker's hermit-crab.example for crab.example",
+     "top5": [
+      "corpus-rust-vulns-txt/ghsa-22w3-693w-x895.txt",
+      "osv/records.jsonl",
+      "corpus-rust-vulns-txt/ghsa-22w3-693w-x895.txt",
+      "corpus-rust-vulns-txt/ghsa-7gmj-67g7-phm9.txt",
+      "osv/records.jsonl"
+     ],
+     "verdict": "pass"
+    }
+   ],
+   "relevant": 5,
+   "verdict": "PASS"
+  },
   "scotus": {
    "diagnosis": "paragraph granularity is too fine: the holding PARAGRAPH loses BM25 to adjacent paragraphs of the same opinion (Loper Bright p007/p010 outrank the p011 holding; Sotomayor p008/p017 outrank p001). The #1140 per-file top-k cap does not apply because each paragraph is its own file in this mirror.",
    "fix_delivered": "2026-10-05: paragraph-split mirror corpus-scotus-v2 @1fbb81b6 (4,527 part files) indexed CLEAN (22,419 records) on the :19498 lane; round-2 graded 2/5 \u2014 up from 1/5 but under the 3/5 bar",
