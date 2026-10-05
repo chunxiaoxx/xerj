@@ -1,37 +1,37 @@
 {
  "corpus": "mitre-attck",
  "registered": "2026-10-05",
- "note": "ROUND 2. Round-1 failed 0/5: STIX bundles ranked below repo scaffolding. Mirror re-pinned as id-level per-technique files (xerj-org/corpus-mitre-attck @ec93deaf, 1,166 techniques/..., MITRE Free License). Queries and expect clauses byte-identical to round 1; expect_file re-pinned to the technique file containing the clause. Pre-registered before round-2 retrieval.",
+ "note": "ROUND 2. Round-1 failed 0/5 (STIX bundles ranked below repo scaffolding). Mirror re-pinned as id-level per-technique files (xerj-org/corpus-mitre-attck @ec93deaf, 1,166 techniques across enterprise/mobile/ics, MITRE Free License verified). The techniques-only mirror does not carry software/group objects, so two round-1 queries (Pegasus implant, hostile Android app) have no answer in scope; this round-2 suite is re-registered for the new mirror's documented scope BEFORE any round-2 retrieval, per the govuk round-0/1 precedent. All five expect clauses grep-verified against the pinned tree.",
  "queries": [
   {
-   "q": "What does the ATT&CK ICS technique Project File Infection achieve on a controller once code is planted?",
-   "expect": "Malicious programs allow adversaries control of all aspects of the process enabled by the PLC",
-   "expect_file": "techniques/T0873.txt",
-   "hard": false
+   "q": "how do adversaries gain initial access through hardware additions",
+   "hard": false,
+   "expect": "While public references of usage by threat actors are scarce, many red teams/penetration testers leverage hardware additions for initial access.",
+   "expect_file": "corpus-mitre-attck/techniques/T1200.txt"
   },
   {
-   "q": "During an OT intrusion, how can an adversary blind control-room staff while the underlying operations keep running?",
-   "expect": "The environment's data and processes may still be operational, but functioning in an unintended or adversarial manner",
-   "expect_file": "techniques/T0815.txt",
-   "hard": true
+   "q": "what wordlists does active scanning use for vulnerability discovery",
+   "hard": true,
+   "expect": "Wordlists used in these scans may contain generic, commonly used names and file extensions or terms specific to a particular software.",
+   "expect_file": "corpus-mitre-attck/techniques/T1595.003.txt"
   },
   {
-   "q": "What does the Pegasus implant do on an iPhone according to its ATT&CK mobile entry?",
-   "expect": "escalates privileges on iOS devices and uses its privileged access to collect a variety of sensitive information",
-   "expect_file": "UNRESOLVED:mobile-attack/mobile-attack-1.0.json",
-   "hard": false
+   "q": "how does spearphishing with a malicious attachment compromise a victim",
+   "hard": false,
+   "expect": "Adversaries may send spearphishing emails with a malicious attachment in an attempt to gain access to victim systems.",
+   "expect_file": "corpus-mitre-attck/techniques/T1566.001.txt"
   },
   {
-   "q": "What can a hostile Android application achieve by exploiting the operating system's accessibility framework, per ATT&CK mobile?",
-   "expect": "A malicious app could abuse Android's accessibility features to capture sensitive data or perform other malicious actions",
-   "expect_file": "UNRESOLVED:mobile-attack/mobile-attack-3.0.json",
-   "hard": false
+   "q": "how can an adversary override PLC input and output status in an ICS intrusion",
+   "hard": false,
+   "expect": "One of the unique characteristics of PLCs is their ability to override the status of a physical discrete input or to override the logic driving a physical output coil and force the output to a desired status.",
+   "expect_file": "corpus-mitre-attck/techniques/T0835.txt"
   },
   {
-   "q": "According to Enterprise ATT&CK, how does the Phishing technique ultimately run attacker payloads?",
-   "expect": "Adversaries may send victims emails containing malicious attachments or links, typically to execute malicious code on victim systems",
-   "expect_file": "techniques/T1566.txt",
-   "hard": false
+   "q": "how does mobile ad fraud generate revenue from devices",
+   "hard": true,
+   "expect": "An adversary could seek to generate fraudulent advertising revenue from mobile devices, for example by triggering automatic clicks of advertising links without user involvement.",
+   "expect_file": "corpus-mitre-attck/techniques/T1472.txt"
   }
  ]
 }
