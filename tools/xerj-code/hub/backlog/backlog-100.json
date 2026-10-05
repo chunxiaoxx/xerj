@@ -146,6 +146,7 @@
     "round": 0
    },
    "lane": "A",
+   "park_reason": "fresh --fresh build measured 1.4 items/s at 251,646 files (index phase, 2026-10-05, evidence in xerj-org/xerj#1147) - per-file overhead scales with corpus file count; not buildable on current hardware until #1147 lifts it. Raw-JSON mirror evicted from corpus dir to ~/.xerj-code/provenance (dual-walk trap). Alternative if needed: by-container concat mirror ~25k files.",
    "refresh": "daily",
    "slug": "osv-ecosystems",
    "sources": [
@@ -154,7 +155,7 @@
      "url": "https://osv.dev"
     }
    ],
-   "status": "deferred"
+   "status": "parked"
   },
   {
    "cat": "SEC",
