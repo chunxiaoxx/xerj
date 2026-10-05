@@ -1,0 +1,37 @@
+{
+ "corpus": "ghsa-db",
+ "registered": "2026-10-05",
+ "note": "Round 2, against corpus-ghsa-db-v2: 36,263 flattened per-advisory text records (id, summary, aliases, CWE, severity, packages+versions, fixed-in, dates, details verbatim, references; github/advisory-database @4b4ac300e, CC-BY-4.0). Round 1 on the raw JSON mirror was never retrievable: JSON files map to TYPED records with no `text` field, and `xerj code` passage search reads `text` — only the mirror's root README/LICENSE/corpus.json answered (G7 0/5, 3-hits signature). Queries and expect clauses byte-identical to round 1 (pre-registered 2026-10-03); expect_file re-pinned to the flattened records, whitespace-normalised grep-verified unique. Pre-registered before any round-2 retrieval. NOTE: expect clauses for Q1 (GHSA-jf85) and Q2 (GHSA-xv59) are not unique across the corpus (Q1's clause also occurs in 2 other lodash advisories, Q2's in ghsa-phqj-4mhp-q6mq) — clauses kept byte-identical to round 1; a pass still requires surfacing one of the carrying records in the top 5.",
+ "queries": [
+  {
+   "q": "In the npm advisory GHSA-jf85-cpcp-j695 for lodash, what does exploiting the flaw do to properties on every object?",
+   "expect": "causing the addition or modification of an existing property that will exist on all objects",
+   "expect_file": "corpus-ghsa-db-v2/ghsa-jf85-cpcp-j695.txt",
+   "hard": false
+  },
+  {
+   "q": "Under what conditions does rust-openssl before 0.10.79 overrun an allocation, and by how much?",
+   "expect": "writes up to 7 bytes past the end of the caller's buffer or Vec",
+   "expect_file": "corpus-ghsa-db-v2/ghsa-xv59-967r-8726.txt",
+   "hard": true
+  },
+  {
+   "q": "When does the python requests library expose proxy credentials to a target server, per GHSA-j8r2-6x86-q33q?",
+   "expect": "vulnerable to potentially leaking `Proxy-Authorization` headers to destination servers, specifically during redirects to an HTTPS origin",
+   "expect_file": "corpus-ghsa-db-v2/ghsa-j8r2-6x86-q33q.txt",
+   "hard": false
+  },
+  {
+   "q": "What is the worst-case outcome of loading a hostile .pth checkpoint into PyTorch, per GHSA-63cw-57p8-fm3p?",
+   "expect": "can corrupt memory and potentially lead to arbitrary code execution",
+   "expect_file": "corpus-ghsa-db-v2/ghsa-63cw-57p8-fm3p.txt",
+   "hard": false
+  },
+  {
+   "q": "What can an external user of esm.sh's CDN do to intranet-only sites via GHSA-3c9r-837r-qqm4?",
+   "expect": "allowing an attacker to retrieve information from internal websites through the vulnerability",
+   "expect_file": "corpus-ghsa-db-v2/ghsa-3c9r-837r-qqm4.txt",
+   "hard": false
+  }
+ ]
+}
