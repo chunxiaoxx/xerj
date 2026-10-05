@@ -138,6 +138,15 @@
   {
    "cat": "SEC",
    "domain": "an agent reviewing Python dependency trees queries this for PYSEC advisory records with fixed versions",
+   "g7": {
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "fix_pre_registered": "text-record re-pin (id+package+versions+CVE aliases+details prose per advisory); queries/clauses unchanged",
+    "graded": "2026-10-05",
+    "pass": 0,
+    "relevant": 0,
+    "round": 1,
+    "verdict": "FAIL"
+   },
    "lane": "B",
    "refresh": "weekly",
    "slug": "pysec",

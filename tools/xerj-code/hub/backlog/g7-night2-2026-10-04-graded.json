@@ -1412,6 +1412,95 @@
    "relevant": 4,
    "verdict": "PASS"
   },
+  "pysec": {
+   "analysis": "Round-1 FAIL 0/5. The raw-YAML mirror retrieves badly: queries in prose lose BM25 to the handful of advisories with long prose 'details' fields (the Cranelift and Hyperledger advisories appeared in every query's top-5) while the target advisories - terse YAML with keys and short fields - never surface. This is the exact shape problem the rust-vulns pack recipe was built to solve. FIX pre-registered: round-2 mirror converts each advisory to one self-describing text record (PYSEC id + package + ecosystem + affected versions + CVE aliases + the full details prose), so each record carries its own identity terms densely; queries and clauses unchanged, expect_file re-pinned to the .txt records.",
+   "median": 0.0,
+   "pass": 0,
+   "queries": [
+    {
+     "expect": "vulns/django/PYSEC-2025-1.yaml",
+     "expect_file": "vulns/django/PYSEC-2025-1.yaml",
+     "grade": "irrelevant",
+     "hard": false,
+     "hit": null,
+     "q": "What root cause did the django advisory for CVE-2024-56374 give for the denial of service?",
+     "top5": [
+      "advisory-database/vulns/indy-node/PYSEC-2020-48.yaml:1",
+      "advisory-database/vulns/frigate/PYSEC-2026-342.yaml:1",
+      "advisory-database/vulns/wasmtime/PYSEC-2021-87.yaml:31",
+      "advisory-database/vulns/mindsdb/PYSEC-2026-2648.yaml:1",
+      "advisory-database/vulns/open-webui/PYSEC-2026-4116.yaml:1"
+     ],
+     "verdict": "miss"
+    },
+    {
+     "expect": "vulns/urllib3/PYSEC-2023-192.yaml",
+     "expect_file": "vulns/urllib3/PYSEC-2023-192.yaml",
+     "grade": "irrelevant",
+     "hard": false,
+     "hit": null,
+     "q": "Why did urllib3 2.0.5 ship a fix for CVE-2023-43804, and what did it prevent?",
+     "top5": [
+      "advisory-database/vulns/indy-node/PYSEC-2020-48.yaml:1",
+      "advisory-database/vulns/wasmtime/PYSEC-2021-87.yaml:31",
+      "advisory-database/vulns/jupyterlab/PYSEC-2026-4056.yaml:1",
+      "advisory-database/vulns/asyncssh/PYSEC-2026-3809.yaml:1",
+      "advisory-database/vulns/wasmtime/PYSEC-2021-87.yaml:1"
+     ],
+     "verdict": "miss"
+    },
+    {
+     "expect": "vulns/cryptography/PYSEC-2023-254.yaml",
+     "expect_file": "vulns/cryptography/PYSEC-2023-254.yaml",
+     "grade": "irrelevant",
+     "hard": true,
+     "hit": null,
+     "q": "What happens to my python process if it deserializes a hostile PKCS7 blob with the affected cryptography release?",
+     "top5": [
+      "advisory-database/vulns/wasmtime/PYSEC-2021-87.yaml:1",
+      "advisory-database/vulns/jupyterlab/PYSEC-2026-4056.yaml:1",
+      "advisory-database/vulns/indy-node/PYSEC-2020-48.yaml:1",
+      "advisory-database/vulns/wasmtime/PYSEC-2021-87.yaml:31",
+      "advisory-database/vulns/langchain-core/PYSEC-2026-373.yaml:271"
+     ],
+     "verdict": "miss"
+    },
+    {
+     "expect": "vulns/requests/PYSEC-2026-2275.yaml",
+     "expect_file": "vulns/requests/PYSEC-2026-2275.yaml",
+     "grade": "irrelevant",
+     "hard": false,
+     "hit": null,
+     "q": "What did CVE-2026-25645 let a local attacker pre-plant in the temp folder used by requests?",
+     "top5": [
+      "advisory-database/vulns/mindsdb/PYSEC-2026-2648.yaml:1",
+      "advisory-database/vulns/open-webui/PYSEC-2026-2752.yaml:1",
+      "advisory-database/vulns/indy-node/PYSEC-2020-48.yaml:1",
+      "advisory-database/vulns/jupyterlab/PYSEC-2026-4056.yaml:1",
+      "advisory-database/vulns/wasmtime/PYSEC-2021-87.yaml:1"
+     ],
+     "verdict": "miss"
+    },
+    {
+     "expect": "vulns/fastapi/PYSEC-2024-38.yaml",
+     "expect_file": "vulns/fastapi/PYSEC-2024-38.yaml",
+     "grade": "irrelevant",
+     "hard": false,
+     "hit": null,
+     "q": "What kind of malicious upload header triggered the regular expression denial of service fixed in FastAPI?",
+     "top5": [
+      "advisory-database/vulns/frigate/PYSEC-2026-342.yaml:1",
+      "advisory-database/vulns/jupyterlab/PYSEC-2026-4056.yaml:1",
+      "advisory-database/vulns/sqlparse/PYSEC-2026-3698.yaml:1",
+      "advisory-database/vulns/materialx/PYSEC-2026-1608.yaml:1",
+      "advisory-database/vulns/wasmtime/PYSEC-2021-87.yaml:31"
+     ],
+     "verdict": "miss"
+    }
+   ],
+   "relevant": 0,
+   "verdict": "FAIL"
+  },
   "scotus": {
    "analysis": "Round-1 FAIL 1/5 (only the Sotomayor-dissent query passed, rank 1-2). Same failure class as ssa-poms round-1: opinions average 26KB (Dobbs ~300KB) and autoindex chunks them ~3x/file, so separate opinions crowd majorities in top-5 (Q2's top hits were Thomas's Loper Bright concurrence, not the majority holding 'Chevron is overruled') and citing cases outrank the source (Q4: two Rahimi files outrank Bruen for the Second Amendment question). FIX pre-registered: re-pin at paragraph granularity - one file per ~paragraph-run (<= ~8KB) carrying the opinion header (case, docket, author, disposition), so a record's self-content dominates and dense holding-bearing paragraphs rank; round-2 suite re-pins expect_file to the paragraph files, queries and clauses unchanged.",
    "median": 1,
