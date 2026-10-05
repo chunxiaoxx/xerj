@@ -1860,9 +1860,13 @@
    "cat": "DATA",
    "domain": "German federal statutes per norm: GG, BGB, StGB, StVO, VwGO (3,546 norm files)",
    "g7": {
-    "note": "pre-registered 2026-10-04 before retrieval",
-    "round": 0,
-    "suite": "backlog/g7-de-gesetze-2026-10.json"
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "fix_pre_registered": "round-2 queries with native umlauts; clauses/expect_files unchanged",
+    "graded": "2026-10-05",
+    "pass": 1,
+    "relevant": 1,
+    "round": 1,
+    "verdict": "FAIL"
    },
    "lane": "A",
    "refresh": "pinned",

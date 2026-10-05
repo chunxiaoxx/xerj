@@ -264,6 +264,95 @@
    "relevant": 4,
    "verdict": "PASS"
   },
+  "de-gesetze": {
+   "analysis": "Round-1 FAIL 1/5 - authoring artifact, not corpus quality. The suite's queries were written with ASCII-transliterated umlauts (Menschenwuerde, muessen, fuer, Moerder) but the norm text has native umlauts, and the analyzer does not fold transliterations: Q2/Q3/Q5 lost their strongest lexical anchors ('Moerder' vs 'Moerder', 'muessen' vs 'muessen'). Q4 (no umlaut anchor needed) passed with the expected file at rank 1. Q1 has no umlauts and missed on BM25 tie-break noise among 3,546 near-uniform tiny norm files (\u00a7-250 outranked \u00a7-249; a \u00a7-37-StVO file entered top-5 on a 'Schaden' stem). FIX pre-registered for round-2: queries re-authored with native umlauts - intent, clauses and expect_files unchanged; this is an encoding correction, not a fit to retrieval output. If Q1 misses again the corpus demotes for real ranking fragility.",
+   "median": 1,
+   "pass": 1,
+   "queries": [
+    {
+     "expect": "corpus-de-gesetze/bgb/\u00a7-249-BGB.txt",
+     "expect_file": "corpus-de-gesetze/bgb/\u00a7-249-BGB.txt",
+     "grade": "irrelevant",
+     "hard": false,
+     "hit": null,
+     "q": "was bedeutet Schadensersatz in Natur nach dem BGB",
+     "top5": [
+      "corpus-de-gesetze/bgb/\u00a7-250-BGB.txt",
+      "corpus-de-gesetze/bgb/\u00a7-752-BGB.txt",
+      "corpus-de-gesetze/stvo/\u00a7-37-StVO.txt",
+      "corpus-de-gesetze/bgb/\u00a7-989-BGB.txt",
+      "corpus-de-gesetze/bgb/\u00a7-618-BGB.txt"
+     ],
+     "verdict": "miss"
+    },
+    {
+     "expect": "corpus-de-gesetze/stgb/\u00a7-211-StGB.txt",
+     "expect_file": "corpus-de-gesetze/stgb/\u00a7-211-StGB.txt",
+     "grade": "irrelevant",
+     "hard": false,
+     "hit": null,
+     "q": "welche Strafe droht einem Moerder nach StGB 211",
+     "top5": [
+      "corpus-de-gesetze/stgb/\u00a7-47-StGB.txt",
+      "corpus-de-gesetze/stgb/\u00a7-35-StGB.txt",
+      "corpus-de-gesetze/stgb/\u00a7-28-StGB.txt",
+      "corpus-de-gesetze/stgb/\u00a7-157-StGB.txt",
+      "corpus-de-gesetze/stgb/\u00a7-46a-StGB.txt"
+     ],
+     "verdict": "miss"
+    },
+    {
+     "expect": "corpus-de-gesetze/gg/Art-1-GG.txt",
+     "expect_file": "corpus-de-gesetze/gg/Art-1-GG.txt",
+     "grade": "irrelevant",
+     "hard": false,
+     "hit": null,
+     "q": "was steht im Grundgesetz zur Menschenwuerde",
+     "top5": [
+      "corpus-de-gesetze/bgb/\u00a7-667-BGB.txt",
+      "corpus-de-gesetze/bgb/\u00a7-684-BGB.txt",
+      "corpus-de-gesetze/gg/Art-136-GG.txt",
+      "corpus-de-gesetze/bgb/\u00a7-2111-BGB.txt",
+      "corpus-de-gesetze/bgb/\u00a7-1486-BGB.txt"
+     ],
+     "verdict": "miss"
+    },
+    {
+     "expect": "corpus-de-gesetze/vwgo/\u00a7-40-VwGO.txt",
+     "expect_file": "corpus-de-gesetze/vwgo/\u00a7-40-VwGO.txt",
+     "grade": "relevant",
+     "hard": true,
+     "hit": "corpus-de-gesetze/vwgo/\u00a7-40-VwGO.txt",
+     "q": "welcher Rechtsweg gilt fuer oeffentlich-rechtliche Streitigkeiten",
+     "top5": [
+      "corpus-de-gesetze/vwgo/\u00a7-40-VwGO.txt",
+      "corpus-de-gesetze/vwgo/\u00a7-50-VwGO.txt",
+      "corpus-de-gesetze/bgb/\u00a7-1953-BGB.txt",
+      "corpus-de-gesetze/vwgo/\u00a7-52-VwGO.txt",
+      "corpus-de-gesetze/gg/Art-19-GG.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-de-gesetze/stvo/\u00a7-2-StVO.txt",
+     "expect_file": "corpus-de-gesetze/stvo/\u00a7-2-StVO.txt",
+     "grade": "irrelevant",
+     "hard": false,
+     "hit": null,
+     "q": "welche Fahrbahn muessen Fahrzeuge benutzen StVO",
+     "top5": [
+      "corpus-de-gesetze/stvo/\u00a7-26-StVO.txt",
+      "corpus-de-gesetze/stvo/\u00a7-25-StVO.txt",
+      "corpus-de-gesetze/stvo/Anlage-3-StVO.txt",
+      "corpus-de-gesetze/stvo/\u00a7-20-StVO.txt",
+      "corpus-de-gesetze/stvo/\u00a7-9-StVO.txt"
+     ],
+     "verdict": "miss"
+    }
+   ],
+   "relevant": 1,
+   "verdict": "FAIL"
+  },
   "ecfr-title-14": {
    "median": 5.0,
    "pass": 5,

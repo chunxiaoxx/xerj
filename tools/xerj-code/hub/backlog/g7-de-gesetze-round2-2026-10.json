@@ -1,0 +1,37 @@
+{
+ "corpus": "de-gesetze",
+ "registered": "2026-10-05",
+ "note": "ROUND 2. Round-1 failed 1/5 on an authoring artifact: queries were written with ASCII-transliterated umlauts while the norm text has native umlauts and the analyzer does not fold them. This suite restores native umlauts in the query text. Intent, expect clauses and expect_files are byte-identical to round 1 (g7-de-gesetze-2026-10.json). Pre-registered before round-2 retrieval.",
+ "queries": [
+  {
+   "q": "was bedeutet Schadensersatz in Natur nach dem BGB",
+   "hard": true,
+   "expect": "Wer zum Schadensersatz verpflichtet ist, hat den Zustand herzustellen",
+   "expect_file": "corpus-de-gesetze/bgb/\u00a7-249-BGB.txt"
+  },
+  {
+   "q": "welche Strafe droht einem M\u00f6rder nach StGB 211",
+   "hard": false,
+   "expect": "Der M\u00f6rder wird mit lebenslanger Freiheitsstrafe bestraft.",
+   "expect_file": "corpus-de-gesetze/stgb/\u00a7-211-StGB.txt"
+  },
+  {
+   "q": "was steht im Grundgesetz zur Menschenw\u00fcrde",
+   "hard": false,
+   "expect": "Die W\u00fcrde des Menschen ist unantastbar.",
+   "expect_file": "corpus-de-gesetze/gg/Art-1-GG.txt"
+  },
+  {
+   "q": "welcher Rechtsweg gilt f\u00fcr \u00f6ffentlich-rechtliche Streitigkeiten",
+   "hard": true,
+   "expect": "Der Verwaltungsrechtsweg ist in allen \u00f6ffentlich-rechtlichen Streitigkeiten",
+   "expect_file": "corpus-de-gesetze/vwgo/\u00a7-40-VwGO.txt"
+  },
+  {
+   "q": "welche Fahrbahn m\u00fcssen Fahrzeuge benutzen StVO",
+   "hard": false,
+   "expect": "Fahrzeuge m\u00fcssen die Fahrbahnen benutzen, von zwei Fahrbahnen die rechte.",
+   "expect_file": "corpus-de-gesetze/stvo/\u00a7-2-StVO.txt"
+  }
+ ]
+}
