@@ -1,0 +1,37 @@
+{
+ "corpus": "osv-ecosystems",
+ "registered": "2026-10-05",
+ "note": "Round 2, against corpus-osv-ecosystems-v2: all 251,912 OSV records flattened to one .txt per advisory (same per-source licences as the mirror NOTICE: GHSA CC-BY-4.0, OpenSSF MAL Apache-2.0, EEF CC-BY-4.0, Drupal MIT, GSD CC0). Round-1 mirror shape (raw per-ecosystem JSONs) was never indexed: the ghsa-db round-1 diagnosis (issue #1158) showed raw JSON maps to typed records with no `text` field, invisible to `xerj code` passage search — caught before this build burned. Queries and expect clauses byte-identical to the round-1 suite (pre-registered blind 2026-10-04); expect_file re-pinned to the flattened records, whitespace-normalised grep-verified. Pre-registered before any round-2 retrieval.",
+ "queries": [
+  {
+   "q": "We depend on org.apache.sshd:sshd-common 2.9.3; which Apache MINA SSHD release addressed the Terrapin attack, and is patching the server side alone enough?",
+   "expect": "The mitigations to prevent this type of attack were implemented in Apache MINA SSHD 2.12.0, both client and server side",
+   "expect_file": "corpus-osv-ecosystems-v2/ghsa-2326-hx7g-3m9r.txt",
+   "hard": false
+  },
+  {
+   "q": "With Composer 2.2.23 fetching packages as git clones instead of dist archives, which composer subcommands can an attacker abuse through a poisoned branch name to run code?",
+   "expect": "The `status`, `reinstall` and `remove` commands with packages installed from source via git containing specially crafted branch names",
+   "expect_file": "corpus-osv-ecosystems-v2/ghsa-47f6-5gq3-vx9c.txt",
+   "hard": false
+  },
+  {
+   "q": "How does the Devise confirmable email-change race condition let an attacker wind up with somebody else's address confirmed on their own account?",
+   "expect": "The confirmation token is sent to an email the attacker controls, but the `unconfirmed_email` in the database points to a victim's email address",
+   "expect_file": "corpus-osv-ecosystems-v2/ghsa-57hq-95w6-v4fc.txt",
+   "hard": false
+  },
+  {
+   "q": "On a dual-stack Node deployment, why can one abusive IPv4 visitor push every other IPv4 user of express-rate-limit into 429 responses?",
+   "expect": "This collapses all IPv4 traffic into a single rate-limit bucket: one client exhausting the limit causes HTTP 429 for all other IPv4 clients",
+   "expect_file": "corpus-osv-ecosystems-v2/ghsa-46wh-pxpv-q5gq.txt",
+   "hard": false
+  },
+  {
+   "q": "Why can a session token stolen earlier still authenticate after the user signs out of an ash_authentication_phoenix app?",
+   "expect": "a token obtained before sign-out, through script injection, interception or device theft, keeps authenticating until its own expiry",
+   "expect_file": "corpus-osv-ecosystems-v2/eef-cve-2025-4754.txt",
+   "hard": true
+  }
+ ]
+}
