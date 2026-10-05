@@ -1582,6 +1582,11 @@
   {
    "cat": "STD",
    "domain": "an agent answering federal tax questions queries this for what the Treasury regulations actually say \u2014 de minimis safe harbor, estimated-tax safe harbor, home-office exclusive use (demand: tax Ask-HN volume 40)",
+   "g7": {
+    "note": "insurance card \u2014 mirror public, suite blind-authored and registered; indexed when a round-2 slot fails",
+    "registered": "2026-10-05",
+    "suite": "backlog/g7-ecfr-title-26-2026-10.json"
+   },
    "lane": "A",
    "note": "G7 1/4 relevant (2026-10-02): paraphrase gap under lexical retrieval on tax phrasing; suite defect excluded (\u00a71.280A-2 proposed-only). Re-test pre-registered with neural embed mode. Pins and shape stand (WAVES.md wave N1).",
    "refresh": "pinned",
@@ -1589,7 +1594,7 @@
    "sources": [
     {
      "licence_hint": "public domain (US government work, 17 USC 105); pinned mirror github.com/xerj-org/corpus-ecfr-title-26",
-     "url": "https://www.govinfo.gov/bulkdata/ECFR/title-26/ECFR-title26.xml"
+     "url": "https://github.com/xerj-org/corpus-ecfr-title-26"
     }
    ],
    "status": "candidate"

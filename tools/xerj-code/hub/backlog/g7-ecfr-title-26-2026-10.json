@@ -1,0 +1,37 @@
+{
+ "corpus": "ecfr-title-26",
+ "registered": "2026-10-05",
+ "note": "Blind-authored from the source XML (ECFR-title26.xml, govinfo bulk data; mirror xerj-org/corpus-ecfr-title-26 @3f3e58c, 12,520 per-section files, AMDDATE Dec 18 2025 fm) before any retrieval against this corpus. Same pipeline as the live ecfr-title-12/29 mirrors. Held as the documented insurance card for the 100-live push: indexed and graded when a round-2 slot fails.",
+ "queries": [
+  {
+   "q": "when must replacement property be identified in a like-kind exchange",
+   "hard": false,
+   "expect": "ends at midnight on the 45th day thereafter",
+   "expect_file": "parts/part-1/sec-1.1031(k)-1.txt"
+  },
+  {
+   "q": "what factors indicate an activity is engaged in for profit",
+   "hard": false,
+   "expect": "in a businesslike manner and maintains complete and accurate books and records",
+   "expect_file": "parts/part-1/sec-1.183-2.txt"
+  },
+  {
+   "q": "how is the kiddie tax computed for a child's unearned income",
+   "hard": true,
+   "expect": "reduced by the child's net unearned income, plus the child's share of the allocable parental tax",
+   "expect_file": "parts/part-1/sec-1.1(i)-1T.txt"
+  },
+  {
+   "q": "when is a stock loss disallowed as a wash sale",
+   "hard": false,
+   "expect": "from the sale or other disposition of stock or securities",
+   "expect_file": "parts/part-1/sec-1.1091-1.txt"
+  },
+  {
+   "q": "what is the required annual estimated tax installment computed from",
+   "hard": true,
+   "expect": "An amount equal to 90 percent of the tax computed, at the rates applicable to the taxable year",
+   "expect_file": "parts/part-1/sec-1.6654-2.txt"
+  }
+ ]
+}
