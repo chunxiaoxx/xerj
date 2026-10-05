@@ -1099,92 +1099,42 @@
    "verdict": "PASS"
   },
   "owasp-asvs": {
-   "analysis": "Round-1 FAIL 1/5. The mirror holds both ASVS 4.0.3 (pdf + markdown) and 5.0 trees; retrieval answers from 4.0 (the 4.0.3 PDF hit appears twice - duplicate records crowd top-5) while the suite pins 5.0 sections. FIX pre-registered: re-pin to 5.0-only (the current standard; 4.0.3 is superseded and stays citable from upstream), round-2 suite unchanged queries/clauses, expect_file already 5.0.",
-   "median": 1,
-   "pass": 1,
+   "diagnosis": "chapter-per-file v2 mirror (31 files, 225 records, CLEAN) graded 2/5 \u2014 up from 1/5. The three misses all lost to the SHORT overview chapters: 0x03-What-is-the-ASVS, 0x04-Assessment_and_Certification and 0x90-Glossary name every concept briefly and their length-norm beats the deep requirement chapters (V7 session entropy, V9 JWT alg restriction, V12 transport). Same short-doc crowding family as ssa-poms.",
+   "fix_pre_registered": "ROUND 3: split each V-chapter into per-requirement records keyed by requirement id (V6.2.1, V7.1.2 ...), the rust-vulns shape \u2014 requirement ids and text are mechanically parseable from the markdown structure. Queries/clauses unchanged; expect_file re-pins to the per-requirement records. Unscheduled.",
+   "pass": 2,
    "queries": [
     {
      "expect": "5.0/en/0x15-V6-Authentication.md",
-     "expect_file": "5.0/en/0x15-V6-Authentication.md",
-     "grade": "irrelevant",
+     "grade": "relevant",
      "hard": false,
-     "hit": null,
-     "q": "What does ASVS level 2 say about protecting the SMS or email verification channel from automated guessing?",
-     "top5": [
-      "ASVS/4.0/OWASP Application Security Verification Standard 4.0.3-en.pdf",
-      "ASVS/4.0/en/0x11-V2-Authentication.md",
-      "ASVS/4.0/OWASP Application Security Verification Standard 4.0.3-en.pdf",
-      "ASVS/5.0/en/0x04-Assessment_and_Certification.md",
-      "ASVS/5.0/OWASP_Application_Security_Verification_Standard_5.0.0_en.pdf"
-     ],
-     "verdict": "miss"
+     "q": "What does ASVS level 2 say about protecting the SMS or email verification channel from automated guessing?"
     },
     {
      "expect": "5.0/en/0x16-V7-Session-Management.md",
-     "expect_file": "5.0/en/0x16-V7-Session-Management.md",
      "grade": "irrelevant",
      "hard": false,
-     "hit": null,
-     "q": "How much randomness must a server-side session reference have under ASVS?",
-     "top5": [
-      "ASVS/3.0/drafts/OWASP Application Security Verification Standard 3.0-5.docx",
-      "ASVS/3.0/drafts/OWASP Application Security Verification Standard v3.0.1 Redline.docx",
-      "ASVS/4.0/en/0x10-V1-Architecture.md",
-      "ASVS/5.0/en/0x90-Appendix-A_Glossary.md",
-      "ASVS/3.0.1/NIST_800-53_Mapping_to_ASVS_301.html"
-     ],
-     "verdict": "miss"
+     "q": "How much randomness must a server-side session reference have under ASVS?"
     },
     {
      "expect": "5.0/en/0x18-V9-Self-contained-Tokens.md",
-     "expect_file": "5.0/en/0x18-V9-Self-contained-Tokens.md",
      "grade": "irrelevant",
      "hard": false,
-     "hit": null,
-     "q": "What does ASVS require apps to do about restricting which JWT signing methods they accept?",
-     "top5": [
-      "ASVS/5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.docx",
-      "ASVS/5.0/en/0x04-Assessment_and_Certification.md",
-      "ASVS/3.0/drafts/OWASP Application Security Verification Standard 3.0-5.docx",
-      "ASVS/5.0/OWASP_Application_Security_Verification_Standard_5.0.0_en.pdf",
-      "ASVS/5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.docx"
-     ],
-     "verdict": "miss"
+     "q": "What does ASVS require apps to do about restricting which JWT signing methods they accept?"
     },
     {
      "expect": "5.0/en/0x21-V12-Secure-Communication.md",
-     "expect_file": "5.0/en/0x21-V12-Secure-Communication.md",
      "grade": "irrelevant",
      "hard": true,
-     "hit": null,
-     "q": "What extra transport-security requirement does ASVS impose at its highest assurance level?",
-     "top5": [
-      "ASVS/3.0.1/OWASP Application Security Verification Standard 3.0.1.docx",
-      "ASVS/5.0/OWASP_Application_Security_Verification_Standard_5.0.0_en.pdf",
-      "ASVS/5.0/en/0x03-What-is-the-ASVS.md",
-      "ASVS/5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.docx",
-      "ASVS/4.0/OWASP Application Security Verification Standard 4.0.3-en.pdf"
-     ],
-     "verdict": "miss"
+     "q": "What extra transport-security requirement does ASVS impose at its highest assurance level?"
     },
     {
      "expect": "5.0/en/0x19-V10-OAuth-and-OIDC.md",
-     "expect_file": "5.0/en/0x19-V10-OAuth-and-OIDC.md",
      "grade": "relevant",
      "hard": false,
-     "hit": "ASVS/5.0/en/0x19-V10-OAuth-and-OIDC.md",
-     "q": "How should an OAuth authorization server check callback URLs per ASVS?",
-     "top5": [
-      "ASVS/5.0/en/0x19-V10-OAuth-and-OIDC.md",
-      "ASVS/5.0/OWASP_Application_Security_Verification_Standard_5.0.0_en.pdf",
-      "ASVS/5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.docx",
-      "ASVS/5.0/en/0x19-V10-OAuth-and-OIDC.md",
-      "ASVS/5.0/docs_en/OWASP_Application_Security_Verification_Standard_5.0.0_en.docx"
-     ],
-     "verdict": "pass"
+     "q": "How should an OAuth authorization server check callback URLs per ASVS?"
     }
    ],
-   "relevant": 1,
+   "relevant": 2,
    "verdict": "FAIL"
   },
   "owasp-cheatsheets": {

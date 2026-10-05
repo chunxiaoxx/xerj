@@ -250,11 +250,11 @@
    "domain": "an agent reviewing an application's security posture queries this for the ASVS requirement and its verification level",
    "g7": {
     "evidence": "backlog/g7-night2-2026-10-04-graded.json",
-    "fix_pre_registered": "re-pin to 5.0-only (the current standard; 4.0.3 is superseded and stays citable from upstream), round-2 suite unchanged queries/clauses, expect_file already 5.0.",
+    "fix_pre_registered": "round-3: per-requirement records keyed by ASVS id; unscheduled",
     "graded": "2026-10-04",
     "pass": 1,
     "relevant": 1,
-    "round": 1,
+    "round": 2,
     "verdict": "FAIL"
    },
    "lane": "B",
