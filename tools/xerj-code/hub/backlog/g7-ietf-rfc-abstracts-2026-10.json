@@ -1,0 +1,37 @@
+{
+    "corpus": "ietf-rfc-abstracts",
+    "registered": "2026-10-05",
+    "note": "Round-2 for the ietf-rfc family, against the NEW per-RFC abstract layer (corpus-ietf-rfc-abstracts @36298d4d, 9,015 records: RFC number, title, category, obsoletes/updates chain, date, abstract — parsed from the byte-verbatim rfc/*.txt mirror; 49 untitled, 821 pre-1988 RFCs with no abstract/STATUS text kept as title-only records). Round-1 on the full-text mirror failed 0/5 on giant-file dilution: the expected 2 MB rfc-9110.txt could not outrank small RFCs mentioning the query terms in passing. Queries carry the SAME intents as round 1; expect clauses are grep-verified against the abstract records (whitespace-normalized by the grader; clauses chosen inside one wrapped line). Pre-registered before any retrieval against this corpus. Licence: IETF TLP-5.0 — title+abstract excerpts with attribution, full unmodified text stays in the ietf-rfc corpus.",
+    "queries": [
+        {
+            "q": "is HTTP a stateful or stateless protocol",
+            "hard": false,
+            "expect": "establishes common terminology",
+            "expect_file": "corpus-ietf-rfc-abstracts/rfc-9110-abstract.txt"
+        },
+        {
+            "q": "which document specifies TLS 1.3",
+            "hard": false,
+            "expect": "version 1.3 of the Transport Layer Security",
+            "expect_file": "corpus-ietf-rfc-abstracts/rfc-8446-abstract.txt"
+        },
+        {
+            "q": "where is the Transmission Control Protocol currently specified",
+            "hard": true,
+            "expect": "This document specifies the Transmission Control Protocol",
+            "expect_file": "corpus-ietf-rfc-abstracts/rfc-9293-abstract.txt"
+        },
+        {
+            "q": "what does QUIC provide as a transport protocol",
+            "hard": false,
+            "expect": "defines the core of the QUIC transport protocol",
+            "expect_file": "corpus-ietf-rfc-abstracts/rfc-9000-abstract.txt"
+        },
+        {
+            "q": "what problem do domain names solve in DNS",
+            "hard": true,
+            "expect": "describes the details of the domain system and protocol",
+            "expect_file": "corpus-ietf-rfc-abstracts/rfc-1035-abstract.txt"
+        }
+    ]
+}

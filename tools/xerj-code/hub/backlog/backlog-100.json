@@ -388,7 +388,8 @@
      "url": "https://www.rfc-editor.org/rfc/rfc-txt.tar.gz"
     }
    ],
-   "status": "candidate"
+   "status": "candidate",
+   "superseded_by": "ietf-rfc-abstracts"
   },
   {
    "cat": "STD",
