@@ -1896,12 +1896,11 @@
    "domain": "SSA program rules: disability waiting periods, SSI resource limits, payment mechanics",
    "g7": {
     "evidence": "backlog/g7-night2-2026-10-04-graded.json",
-    "fix_pre_registered": "v3 stub-excluded mirror (corpus-ssa-poms-v3 @0f198292, 25,227 files); suite g7-ssa-poms-round3-2026-10.json, queries/clauses unchanged",
+    "fix_pre_registered": "PARKED to the semantic lane with scotus/de-gesetze/otel-proto/owasp-asvs/nist-sp800-sec. Round-3 stub-exclusion (25,227 files) did NOT move the verdict: 0/5 again, zero partials. Corrected diagnosis: the binding constraint is same-unit sibling competition, not stub length-norm - DI 10105.070A/.075 outrank DI 10105.005B (the section that states the waiting-period rule), GN 00502.120B outranks GN 00502.001A. Same class as scotus round 3; needs cross-section ranking, out of lexical scope.",
     "graded": "2026-10-05",
-    "note": "round-1 0/5: chunk-crowding + length normalization; answer text present verbatim in corpus but not top-5",
     "pass": 0,
     "relevant": 0,
-    "round": 2,
+    "round": 3,
     "verdict": "FAIL"
    },
    "lane": "A",
@@ -1913,7 +1912,7 @@
      "url": "https://github.com/xerj-org/corpus-ssa-poms-v3"
     }
    ],
-   "status": "candidate"
+   "status": "deferred"
   },
   {
    "cat": "DATA",

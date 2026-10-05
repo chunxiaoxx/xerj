@@ -1,0 +1,37 @@
+{
+  "corpus": "redos-precedent",
+  "registered": "2026-10-05",
+  "note": "Round 1, against corpus-redos-precedent (633 per-advisory text records — the ReDoS stratum selected mechanically from the flattened ghsa-db-v2 (524) / pysec-v2 (105) / osv-ecosystems-v2 (4) mirrors by regex-specific signals: CWE-1337/CWE-185, ReDoS, catastrophic backtracking, regex-DoS prose. Bare CWE-400 general-resource-exhaustion advisories deliberately NOT selected — first build swept 1,779 via CWE-400 and was discarded as diluted before indexing). Records are verbatim copies; each carries its own Source/licence line (CC-BY-4.0 dominant). Queries blind-authored from the domain framing (an agent vetting regex handling queries this for real ReDoS precedents with the affected function and the fixed release); expect clauses whitespace-normalised grep-verified unique against the built mirror before any retrieval. Coverage: npm validator/lodash/semver/moment + PyPI bleach, title-class and mechanism-class clauses.",
+  "queries": [
+    {
+      "q": "the npm validator package email validation hangs on crafted input — is there a ReDoS advisory and which release fixes it?",
+      "expect": "Regular Expression Denial of Service in validator",
+      "expect_file": "corpus-redos-precedent/ghsa-f5w6-r7rg-mcgq.txt",
+      "hard": false
+    },
+    {
+      "q": "lodash 4.17 trim functions regular expression denial of service — which exact release patched it",
+      "expect": "Fixed in: lodash 4.17.21",
+      "expect_file": "corpus-redos-precedent/ghsa-29mw-wpgm-hmr9.txt",
+      "hard": false
+    },
+    {
+      "q": "semver range parsing ReDoS which function processes untrusted ranges and which versions fix it",
+      "expect": "via the function new Range, when untrusted user data is provided as a range",
+      "expect_file": "corpus-redos-precedent/ghsa-c2qf-rxjj-qqgw.txt",
+      "hard": true
+    },
+    {
+      "q": "moment js slow date parsing from strings regex denial of service advisory",
+      "expect": "regular expression denial of service when parsing dates as strings",
+      "expect_file": "corpus-redos-precedent/ghsa-446m-mv8f-q348.txt",
+      "hard": false
+    },
+    {
+      "q": "python bleach library clean parsing style attributes regex DoS — fixed in which version",
+      "expect": "parsing style attributes could result in a regular expression",
+      "expect_file": "corpus-redos-precedent/PYSEC-2020-340.txt",
+      "hard": false
+    }
+  ]
+}
