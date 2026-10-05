@@ -530,6 +530,94 @@
    "relevant": 5,
    "verdict": "PASS"
   },
+  "ecfr-title-26": {
+   "median": 3.0,
+   "pass": 3,
+   "queries": [
+    {
+     "expect": "parts/part-1/sec-1.1031(k)-1.txt",
+     "expect_file": "parts/part-1/sec-1.1031(k)-1.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "ecfr-title-26/parts/part-1/sec-1.1031(k)-1.txt",
+     "q": "when must replacement property be identified in a like-kind exchange",
+     "top5": [
+      "ecfr-title-26/parts/part-1/sec-1.1031(k)-1.txt",
+      "ecfr-title-26/parts/part-1/sec-1.168(i)-6.txt",
+      "ecfr-title-26/parts/part-1/sec-1.1031(k)-1.txt",
+      "ecfr-title-26/parts/part-1/sec-1.168(i)-6.txt",
+      "ecfr-title-26/parts/part-1/sec-1.168(k)-1.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "parts/part-1/sec-1.183-2.txt",
+     "expect_file": "parts/part-1/sec-1.183-2.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "ecfr-title-26/parts/part-1/sec-1.183-2.txt",
+     "q": "what factors indicate an activity is engaged in for profit",
+     "top5": [
+      "ecfr-title-26/parts/part-1/sec-1.183-2.txt",
+      "ecfr-title-26/parts/part-1/sec-1.183-2.txt",
+      "ecfr-title-26/parts/part-1/sec-1.6662-6.txt",
+      "ecfr-title-26/parts/part-1/sec-1.482-5.txt",
+      "ecfr-title-26/parts/part-1/sec-1.482-0.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "parts/part-1/sec-1.1(i)-1T.txt",
+     "expect_file": "parts/part-1/sec-1.1(i)-1T.txt",
+     "grade": "irrelevant",
+     "hard": true,
+     "hit": null,
+     "q": "how is the kiddie tax computed for a child's unearned income",
+     "top5": [
+      "ecfr-title-26/parts/part-1/sec-1.1301-1.txt",
+      "ecfr-title-26/parts/part-1/sec-1.832-4.txt",
+      "ecfr-title-26/parts/part-1/sec-1.6038D-2.txt",
+      "ecfr-title-26/parts/part-1/sec-1.832-4.txt",
+      "ecfr-title-26/parts/part-1/sec-1.6038D-2.txt"
+     ],
+     "verdict": "miss"
+    },
+    {
+     "expect": "parts/part-1/sec-1.1091-1.txt",
+     "expect_file": "parts/part-1/sec-1.1091-1.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "ecfr-title-26/parts/part-1/sec-1.1091-1.txt",
+     "q": "when is a stock loss disallowed as a wash sale",
+     "top5": [
+      "ecfr-title-26/parts/part-1/sec-1.1092(b)-3T.txt",
+      "ecfr-title-26/parts/part-1/sec-1.312-7.txt",
+      "ecfr-title-26/parts/part-1/sec-1.1091-1.txt",
+      "ecfr-title-26/parts/part-1/sec-1.6045A-1.txt",
+      "ecfr-title-26/parts/part-1/sec-1.1091-2.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "parts/part-1/sec-1.6654-2.txt",
+     "expect_file": "parts/part-1/sec-1.6654-2.txt",
+     "grade": "irrelevant",
+     "hard": true,
+     "hit": null,
+     "q": "what is the required annual estimated tax installment computed from",
+     "top5": [
+      "ecfr-title-26/parts/part-1/sec-1.6655-5.txt",
+      "ecfr-title-26/parts/part-1/sec-1.6655-3.txt",
+      "ecfr-title-26/parts/part-1/sec-1.6655-5.txt",
+      "ecfr-title-26/parts/part-1/sec-1.6655-1.txt",
+      "ecfr-title-26/parts/part-1/sec-1.6655-0.txt"
+     ],
+     "verdict": "miss"
+    }
+   ],
+   "relevant": 3,
+   "verdict": "PASS"
+  },
   "eurlex-core": {
    "median": 4.0,
    "pass": 4,

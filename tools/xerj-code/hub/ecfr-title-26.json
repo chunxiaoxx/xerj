@@ -1,0 +1,21 @@
+{
+ "corpus": "ecfr-title-26",
+ "cloned_at": "2026-10-05T02:00:00Z",
+ "repos": [
+  {
+   "repo": "ecfr-title-26",
+   "url": "https://github.com/xerj-org/corpus-ecfr-title-26",
+   "licence": "US-government-public-domain",
+   "sha": "3f3e58c72cbc583ce95fdc13c9c436e102e7d1e4",
+   "files": 6202,
+   "bytes": 74141734,
+   "review": {
+    "spdx": "US-government-public-domain",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-05",
+    "note": "eCFR Title 26 (IRS) current consolidated regulation, section-per-file; US government work, no copyright (17 USC 105). G7 3/5 relevant 2026-10-05, dupcheck 49682 docs CLEAN."
+   }
+  }
+ ]
+}
