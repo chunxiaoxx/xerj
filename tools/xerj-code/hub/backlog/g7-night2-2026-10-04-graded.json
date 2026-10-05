@@ -1664,6 +1664,94 @@
    "relevant": 5,
    "verdict": "PASS"
   },
+  "redos-precedent": {
+   "median": 4.0,
+   "pass": 4,
+   "queries": [
+    {
+     "expect": "corpus-redos-precedent/ghsa-f5w6-r7rg-mcgq.txt",
+     "expect_file": "corpus-redos-precedent/ghsa-f5w6-r7rg-mcgq.txt",
+     "grade": "irrelevant",
+     "hard": false,
+     "hit": null,
+     "q": "the npm validator package email validation hangs on crafted input \u2014 is there a ReDoS advisory and which release fixes it?",
+     "top5": [
+      "corpus-redos-precedent/ghsa-f38p-c2gq-4pmr.txt",
+      "corpus-redos-precedent/ghsa-j377-2x76-558h.txt",
+      "corpus-redos-precedent/ghsa-jwrc-g2q2-pq5p.txt:39",
+      "corpus-redos-precedent/PYSEC-2026-4148.txt:76",
+      "corpus-redos-precedent/ghsa-g5vv-9gxw-82hx.txt:244"
+     ],
+     "verdict": "miss"
+    },
+    {
+     "expect": "corpus-redos-precedent/ghsa-29mw-wpgm-hmr9.txt",
+     "expect_file": "corpus-redos-precedent/ghsa-29mw-wpgm-hmr9.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-redos-precedent/ghsa-29mw-wpgm-hmr9.txt:1",
+     "q": "lodash 4.17 trim functions regular expression denial of service \u2014 which exact release patched it",
+     "top5": [
+      "corpus-redos-precedent/ghsa-29mw-wpgm-hmr9.txt:1",
+      "corpus-redos-precedent/ghsa-x5rq-j2xg-h7qm.txt",
+      "corpus-redos-precedent/ghsa-hfxv-24rg-xrqf.txt:47",
+      "corpus-redos-precedent/ghsa-q75g-2496-mxpp.txt:1",
+      "corpus-redos-precedent/ghsa-7p7h-4mm5-852v.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-redos-precedent/ghsa-c2qf-rxjj-qqgw.txt",
+     "expect_file": "corpus-redos-precedent/ghsa-c2qf-rxjj-qqgw.txt",
+     "grade": "relevant",
+     "hard": true,
+     "hit": "corpus-redos-precedent/ghsa-c2qf-rxjj-qqgw.txt",
+     "q": "semver range parsing ReDoS which function processes untrusted ranges and which versions fix it",
+     "top5": [
+      "corpus-redos-precedent/ghsa-c2qf-rxjj-qqgw.txt",
+      "corpus-redos-precedent/ghsa-7f5h-v6xp-fcq8.txt:1",
+      "corpus-redos-precedent/ghsa-f7xj-rg7h-mc87.txt:49",
+      "corpus-redos-precedent/PYSEC-2026-1942.txt:36",
+      "corpus-redos-precedent/ghsa-7f5h-v6xp-fcq8.txt:37"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-redos-precedent/ghsa-446m-mv8f-q348.txt",
+     "expect_file": "corpus-redos-precedent/ghsa-446m-mv8f-q348.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-redos-precedent/ghsa-446m-mv8f-q348.txt:1",
+     "q": "moment js slow date parsing from strings regex denial of service advisory",
+     "top5": [
+      "corpus-redos-precedent/ghsa-wc69-rhjr-hc9g.txt",
+      "corpus-redos-precedent/ghsa-446m-mv8f-q348.txt:1",
+      "corpus-redos-precedent/ghsa-wc69-rhjr-hc9g.txt",
+      "corpus-redos-precedent/ghsa-hrpp-f84w-xhfg.txt:1",
+      "corpus-redos-precedent/ghsa-qg54-694p-wgpp.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-redos-precedent/PYSEC-2020-340.txt",
+     "expect_file": "corpus-redos-precedent/PYSEC-2020-340.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-redos-precedent/PYSEC-2020-340.txt:1",
+     "q": "python bleach library clean parsing style attributes regex DoS \u2014 fixed in which version",
+     "top5": [
+      "corpus-redos-precedent/PYSEC-2020-340.txt:1",
+      "corpus-redos-precedent/ghsa-vqhp-cxgc-6wmm.txt:1",
+      "corpus-redos-precedent/ghsa-rchf-xwx2-hm93.txt:1",
+      "corpus-redos-precedent/ghsa-j95f-988m-3j2f.txt",
+      "corpus-redos-precedent/ghsa-hjph-f4mc-wx4c.txt:1"
+     ],
+     "verdict": "pass"
+    }
+   ],
+   "relevant": 4,
+   "verdict": "PASS"
+  },
   "scotus": {
    "diagnosis": "paragraph granularity is too fine: the holding PARAGRAPH loses BM25 to adjacent paragraphs of the same opinion (Loper Bright p007/p010 outrank the p011 holding; Sotomayor p008/p017 outrank p001). The #1140 per-file top-k cap does not apply because each paragraph is its own file in this mirror.",
    "fix_delivered": "2026-10-05: paragraph-split mirror corpus-scotus-v2 @1fbb81b6 (4,527 part files) indexed CLEAN (22,419 records) on the :19498 lane; round-2 graded 2/5 \u2014 up from 1/5 but under the 3/5 bar",
