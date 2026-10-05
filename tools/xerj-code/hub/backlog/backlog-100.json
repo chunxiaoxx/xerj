@@ -127,6 +127,9 @@
   {
    "cat": "SEC",
    "domain": "an agent auditing dependencies across ecosystems queries this for GitHub-reviewed advisories with CVSS and patched ranges",
+   "g7": {
+    "verdict": "PASS"
+   },
    "lane": "A",
    "refresh": "weekly",
    "slug": "ghsa-db",
@@ -136,7 +139,7 @@
      "url": "https://github.com/github/advisory-database"
     }
    ],
-   "status": "candidate"
+   "status": "live"
   },
   {
    "cat": "SEC",
@@ -155,7 +158,7 @@
      "url": "https://osv.dev"
     }
    ],
-   "status": "parked"
+   "status": "deferred"
   },
   {
    "cat": "SEC",

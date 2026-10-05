@@ -1,0 +1,21 @@
+{
+ "corpus": "ghsa-db",
+ "cloned_at": "2026-10-05T02:00:00Z",
+ "repos": [
+  {
+   "repo": "corpus-ghsa-db-v2",
+   "url": "https://github.com/github/advisory-database",
+   "licence": "CC-BY-4.0",
+   "sha": "0af427f696c10b5e19cec4d33e71ff000cd6fe43",
+   "files": 36263,
+   "bytes": 79404027,
+   "review": {
+    "spdx": "CC-BY-4.0",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-05",
+    "note": "36,263 per-advisory text records flattened from github/advisory-database @4b4ac300e github-reviewed tree (CC-BY-4.0, LICENSE verified at pin; raw-JSON mirror evicted from the corpus dir after the dual-walk trap). G7 r2 5/5; dupcheck 58,309 records CLEAN; 9 stale generations retired at the verified swap. Two earlier attempts failed shape-side (dual-mirror walk) and memory-side (11.3GB doomed generation tripped the server circuit breaker) - both recorded"
+   }
+  }
+ ]
+}

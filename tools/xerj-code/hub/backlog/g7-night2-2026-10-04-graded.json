@@ -882,6 +882,94 @@
    "relevant": 4,
    "verdict": "PASS"
   },
+  "ghsa-db": {
+   "median": 5.0,
+   "pass": 5,
+   "queries": [
+    {
+     "expect": "corpus-ghsa-db-v2/ghsa-jf85-cpcp-j695.txt",
+     "expect_file": "corpus-ghsa-db-v2/ghsa-jf85-cpcp-j695.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-ghsa-db-v2/ghsa-jf85-cpcp-j695.txt",
+     "q": "In the npm advisory GHSA-jf85-cpcp-j695 for lodash, what does exploiting the flaw do to properties on every object?",
+     "top5": [
+      "corpus-ghsa-db-v2/ghsa-jf85-cpcp-j695.txt",
+      "corpus-ghsa-db-v2/ghsa-p6mc-m468-83gw.txt",
+      "corpus-ghsa-db-v2/ghsa-r5fr-rjxr-66jc.txt",
+      "corpus-ghsa-db-v2/ghsa-f23m-r3pf-42rh.txt",
+      "corpus-ghsa-db-v2/ghsa-fvqr-27wr-82fm.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-ghsa-db-v2/ghsa-xv59-967r-8726.txt",
+     "expect_file": "corpus-ghsa-db-v2/ghsa-xv59-967r-8726.txt",
+     "grade": "relevant",
+     "hard": true,
+     "hit": "corpus-ghsa-db-v2/ghsa-xv59-967r-8726.txt",
+     "q": "Under what conditions does rust-openssl before 0.10.79 overrun an allocation, and by how much?",
+     "top5": [
+      "corpus-ghsa-db-v2/ghsa-xp3w-r5p5-63rr.txt",
+      "corpus-ghsa-db-v2/ghsa-xv59-967r-8726.txt",
+      "corpus-ghsa-db-v2/ghsa-8c75-8mhr-p7r9.txt",
+      "corpus-ghsa-db-v2/ghsa-4r3c-5hpg-58qr.txt",
+      "corpus-ghsa-db-v2/ghsa-xmgf-hq76-4vx2.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-ghsa-db-v2/ghsa-j8r2-6x86-q33q.txt",
+     "expect_file": "corpus-ghsa-db-v2/ghsa-j8r2-6x86-q33q.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-ghsa-db-v2/ghsa-j8r2-6x86-q33q.txt",
+     "q": "When does the python requests library expose proxy credentials to a target server, per GHSA-j8r2-6x86-q33q?",
+     "top5": [
+      "corpus-ghsa-db-v2/ghsa-j8r2-6x86-q33q.txt",
+      "corpus-ghsa-db-v2/ghsa-j8r2-6x86-q33q.txt",
+      "corpus-ghsa-db-v2/ghsa-pw6j-qg29-8w7f.txt:1",
+      "corpus-ghsa-db-v2/ghsa-8988-9cw3-xx77.txt",
+      "corpus-ghsa-db-v2/ghsa-pw6j-qg29-8w7f.txt:394"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-ghsa-db-v2/ghsa-63cw-57p8-fm3p.txt",
+     "expect_file": "corpus-ghsa-db-v2/ghsa-63cw-57p8-fm3p.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-ghsa-db-v2/ghsa-63cw-57p8-fm3p.txt",
+     "q": "What is the worst-case outcome of loading a hostile .pth checkpoint into PyTorch, per GHSA-63cw-57p8-fm3p?",
+     "top5": [
+      "corpus-ghsa-db-v2/ghsa-63cw-57p8-fm3p.txt",
+      "corpus-ghsa-db-v2/ghsa-75m9-98v2-hjpm.txt",
+      "corpus-ghsa-db-v2/ghsa-hhrp-gw25-jr43.txt:38",
+      "corpus-ghsa-db-v2/ghsa-fjqc-hq36-qh5p.txt",
+      "corpus-ghsa-db-v2/ghsa-9pf3-7rrr-x5jh.txt:124"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-ghsa-db-v2/ghsa-3c9r-837r-qqm4.txt",
+     "expect_file": "corpus-ghsa-db-v2/ghsa-3c9r-837r-qqm4.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-ghsa-db-v2/ghsa-3c9r-837r-qqm4.txt",
+     "q": "What can an external user of esm.sh's CDN do to intranet-only sites via GHSA-3c9r-837r-qqm4?",
+     "top5": [
+      "corpus-ghsa-db-v2/ghsa-3c9r-837r-qqm4.txt",
+      "corpus-ghsa-db-v2/ghsa-3c9r-837r-qqm4.txt",
+      "corpus-ghsa-db-v2/ghsa-h3mw-4f23-gwpw.txt:1",
+      "corpus-ghsa-db-v2/ghsa-hcpf-qv9m-vfgp.txt:1",
+      "corpus-ghsa-db-v2/ghsa-x36r-4347-pm5x.txt"
+     ],
+     "verdict": "pass"
+    }
+   ],
+   "relevant": 5,
+   "verdict": "PASS"
+  },
   "go-vulndb": {
    "median": 4.0,
    "pass": 4,
