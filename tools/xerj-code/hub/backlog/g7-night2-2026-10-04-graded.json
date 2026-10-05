@@ -264,6 +264,94 @@
    "relevant": 4,
    "verdict": "PASS"
   },
+  "crypto-misuse-precedent": {
+   "median": 5.0,
+   "pass": 5,
+   "queries": [
+    {
+     "expect": "corpus-crypto-misuse-precedent/ghsa-jfxm-w8g2-4rcv.txt",
+     "expect_file": "corpus-crypto-misuse-precedent/ghsa-jfxm-w8g2-4rcv.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-crypto-misuse-precedent/ghsa-jfxm-w8g2-4rcv.txt",
+     "q": "node-jose trusting the JSON web key embedded in the token header \u2014 which advisory and what release fixes the forging",
+     "top5": [
+      "corpus-crypto-misuse-precedent/ghsa-jfxm-w8g2-4rcv.txt",
+      "corpus-crypto-misuse-precedent/ghsa-vm9r-h74p-hg97.txt",
+      "corpus-crypto-misuse-precedent/ghsa-9gxv-x7rp-r2hc.txt",
+      "corpus-crypto-misuse-precedent/PYSEC-2026-287.txt:1",
+      "corpus-crypto-misuse-precedent/ghsa-wvwj-cvrp-7pv5.txt:1"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-crypto-misuse-precedent/ghsa-8cf7-32gw-wr33.txt",
+     "expect_file": "corpus-crypto-misuse-precedent/ghsa-8cf7-32gw-wr33.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-crypto-misuse-precedent/ghsa-8cf7-32gw-wr33.txt",
+     "q": "jsonwebtoken npm library accepting unexpected key types for verification \u2014 the legacy keys advisory and its fix version",
+     "top5": [
+      "corpus-crypto-misuse-precedent/ghsa-8cf7-32gw-wr33.txt",
+      "corpus-crypto-misuse-precedent/ghsa-8cf7-32gw-wr33.txt",
+      "corpus-crypto-misuse-precedent/ghsa-qwph-4952-7xr6.txt",
+      "corpus-crypto-misuse-precedent/ghsa-9h47-pqcx-hjr4.txt",
+      "corpus-crypto-misuse-precedent/ghsa-fwg2-gr34-q3w8.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-crypto-misuse-precedent/ghsa-434g-2637-qmqr.txt",
+     "expect_file": "corpus-crypto-misuse-precedent/ghsa-434g-2637-qmqr.txt",
+     "grade": "relevant",
+     "hard": true,
+     "hit": "corpus-crypto-misuse-precedent/ghsa-434g-2637-qmqr.txt",
+     "q": "elliptic EDDSA verify signature malleability missing bounds check against curve order \u2014 which release added the validation",
+     "top5": [
+      "corpus-crypto-misuse-precedent/ghsa-434g-2637-qmqr.txt",
+      "corpus-crypto-misuse-precedent/ghsa-95v9-hv42-pwrj.txt:1",
+      "corpus-crypto-misuse-precedent/ghsa-f7q4-pwc6-w24p.txt:1",
+      "corpus-crypto-misuse-precedent/ghsa-p53j-g8pw-4w5f.txt",
+      "corpus-crypto-misuse-precedent/ghsa-xx36-6rv4-gj8r.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-crypto-misuse-precedent/ghsa-6878-6wc2-pf5h.txt",
+     "expect_file": "corpus-crypto-misuse-precedent/ghsa-6878-6wc2-pf5h.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-crypto-misuse-precedent/ghsa-6878-6wc2-pf5h.txt:1",
+     "q": "rust cocoon crate reusing the same nonce across sequential encrypt calls on one object \u2014 nonce reuse advisory",
+     "top5": [
+      "corpus-crypto-misuse-precedent/ghsa-6878-6wc2-pf5h.txt:1",
+      "corpus-crypto-misuse-precedent/ghsa-73g8-5h73-26h4.txt:42",
+      "corpus-crypto-misuse-precedent/ghsa-73g8-5h73-26h4.txt:114",
+      "corpus-crypto-misuse-precedent/ghsa-qv2q-c278-pch5.txt",
+      "corpus-crypto-misuse-precedent/README.md"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-crypto-misuse-precedent/PYSEC-2022-43150.txt",
+     "expect_file": "corpus-crypto-misuse-precedent/PYSEC-2022-43150.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-crypto-misuse-precedent/PYSEC-2022-43150.txt:1",
+     "q": "pydoris apache doris hardcoded key and IV for the ldap password cipher \u2014 fixed in which version",
+     "top5": [
+      "corpus-crypto-misuse-precedent/PYSEC-2022-43150.txt:1",
+      "corpus-crypto-misuse-precedent/ghsa-98j2-hfxp-8h8r.txt:1",
+      "corpus-crypto-misuse-precedent/ghsa-9fj5-jg6f-qg5r.txt",
+      "corpus-crypto-misuse-precedent/ghsa-fhh2-gg7w-gwpq.txt:79",
+      "corpus-crypto-misuse-precedent/ghsa-mr95-vfcf-fx9p.txt:1"
+     ],
+     "verdict": "pass"
+    }
+   ],
+   "relevant": 5,
+   "verdict": "PASS"
+  },
   "de-gesetze": {
    "analysis": "Round-1 FAIL 1/5 - authoring artifact, not corpus quality. The suite's queries were written with ASCII-transliterated umlauts (Menschenwuerde, muessen, fuer, Moerder) but the norm text has native umlauts, and the analyzer does not fold transliterations: Q2/Q3/Q5 lost their strongest lexical anchors ('Moerder' vs 'Moerder', 'muessen' vs 'muessen'). Q4 (no umlaut anchor needed) passed with the expected file at rank 1. Q1 has no umlauts and missed on BM25 tie-break noise among 3,546 near-uniform tiny norm files (\u00a7-250 outranked \u00a7-249; a \u00a7-37-StVO file entered top-5 on a 'Schaden' stem). FIX pre-registered for round-2: queries re-authored with native umlauts - intent, clauses and expect_files unchanged; this is an encoding correction, not a fit to retrieval output. If Q1 misses again the corpus demotes for real ranking fragility. ROUND 2 RESULT: also FAIL 1/5 - Q4 (the round-1 pass) passed again at rank 1; native umlauts did NOT recover Q2/Q3/Q5 (direct term probes: 'M\u00f6rder' matches exactly one file at 9.7, so the analyzer handles umlauts fine; the misses are ranking, not encoding). Mechanism: per-norm files are single-sentence tiny records where inbound \u00a7-number references in OTHER sections outweigh the section's own content - the hub-page problem (\u00a7-212 Totschlag outranks \u00a7-211 Mord for 'M\u00f6rder'). Demoted. Round-3 fix pre-registered: re-pin with richer records - per-law files split at \u00a7 boundaries carrying law name + section heading + full section text, so a record's self-content dominates inbound references.",
    "median": 1,

@@ -1012,7 +1012,10 @@
   {
    "cat": "BAD",
    "domain": "an agent reviewing crypto call sites queries this for real CWE-327/328/347-class advisories showing the misuse and the corrected construction",
-   "lane": "B",
+   "g7": {
+    "verdict": "PASS"
+   },
+   "lane": "A",
    "refresh": "weekly",
    "slug": "crypto-misuse-precedent",
    "sources": [
@@ -1021,7 +1024,7 @@
      "url": "curated from advisory databases by CWE class"
     }
    ],
-   "status": "candidate"
+   "status": "live"
   },
   {
    "cat": "DATA",
