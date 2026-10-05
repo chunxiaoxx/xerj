@@ -1414,6 +1414,7 @@
   },
   "pysec": {
    "analysis": "Round-1 FAIL 0/5. The raw-YAML mirror retrieves badly: queries in prose lose BM25 to the handful of advisories with long prose 'details' fields (the Cranelift and Hyperledger advisories appeared in every query's top-5) while the target advisories - terse YAML with keys and short fields - never surface. This is the exact shape problem the rust-vulns pack recipe was built to solve. FIX pre-registered: round-2 mirror converts each advisory to one self-describing text record (PYSEC id + package + ecosystem + affected versions + CVE aliases + the full details prose), so each record carries its own identity terms densely; queries and clauses unchanged, expect_file re-pinned to the .txt records.",
+   "fix_delivered": "2026-10-05: corpus-pysec-v2 @3373aa62 (7,721 text records) swapped in; round-2 suite g7-pysec-round2-2026-10.json registered, queries/clauses unchanged",
    "median": 0.0,
    "pass": 0,
    "queries": [

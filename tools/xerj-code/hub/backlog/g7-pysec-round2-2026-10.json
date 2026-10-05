@@ -1,0 +1,37 @@
+{
+ "corpus": "pysec",
+ "registered": "2026-10-05",
+ "note": "ROUND 2. Round-1 failed 0/5: on the raw-YAML mirror the same few prose-dense advisories (Cranelift, Hyperledger Indy) won every query's top-5 while terse YAML targets never surfaced - the shape problem the rust-vulns pack recipe exists to solve. Fix DELIVERED as pre-registered: xerj-org/corpus-pysec-v2 @3373aa62 converts each of the 7,721 advisories into one self-describing text record (id + package + ecosystem + affected ranges + CVE/GHSA aliases + references + full details prose), CC-BY-4.0 verified at the pin with the attribution block the licence requires. Queries and expect clauses UNCHANGED; expect_file re-pinned to the .txt records that grep-verified contain each clause. Registered before any round-2 retrieval.",
+ "queries": [
+  {
+   "q": "What root cause did the django advisory for CVE-2024-56374 give for the denial of service via IPv6 validation",
+   "hard": false,
+   "expect": "Lack of upper-bound limit enforcement in strings passed when performing IPv6 validation",
+   "expect_file": "corpus-pysec-v2/records/PYSEC-2025-1.txt"
+  },
+  {
+   "q": "Why did urllib3 2.0.5 ship a fix for CVE-2023-43804, and what did it prevent?",
+   "hard": false,
+   "expect": "unknowingly leak information via HTTP redirects to a different origin",
+   "expect_file": "corpus-pysec-v2/records/PYSEC-2023-192.txt"
+  },
+  {
+   "q": "What happens to my python process if it deserializes a hostile PKCS7 blob with the cryptography library",
+   "hard": true,
+   "expect": "Calling `load_pem_pkcs7_certificates` or `load_der_pkcs7_certificates` could lead to a potential DoS",
+   "expect_file": "corpus-pysec-v2/records/PYSEC-2023-254.txt"
+  },
+  {
+   "q": "What did CVE-2026-25645 let a local attacker pre-plant in the temp folder used by pip-audit",
+   "hard": true,
+   "expect": "uses a predictable filename when extracting files from zip archives into the system",
+   "expect_file": "corpus-pysec-v2/records/PYSEC-2026-2275.txt"
+  },
+  {
+   "q": "What kind of malicious upload header triggered the regular expression denial of service in python-multipart",
+   "hard": false,
+   "expect": "An attacker could send a custom-made `Content-Type` option that is very difficult",
+   "expect_file": "corpus-pysec-v2/records/PYSEC-2024-38.txt"
+  }
+ ]
+}
