@@ -399,7 +399,8 @@
    "g7": {
     "note": "round-2 layer: 9,015 per-RFC abstract records (corpus-ietf-rfc-abstracts @36298d4d); round-1 full-text mirror failed 0/5 on 2MB-file dilution",
     "registered": "2026-10-05",
-    "suite": "backlog/g7-ietf-rfc-abstracts-2026-10.json"
+    "suite": "backlog/g7-ietf-rfc-abstracts-2026-10.json",
+    "verdict": "PASS"
    },
    "lane": "A",
    "refresh": "pinned",
@@ -410,7 +411,7 @@
      "url": "https://www.rfc-editor.org/rfc/rfc-txt.tar.gz"
     }
    ],
-   "status": "candidate",
+   "status": "live",
    "superseded_by": "ietf-rfc-abstracts"
   },
   {

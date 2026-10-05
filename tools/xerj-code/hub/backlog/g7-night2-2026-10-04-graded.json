@@ -921,6 +921,94 @@
    "relevant": 0,
    "verdict": "FAIL"
   },
+  "ietf-rfc-abstracts": {
+   "median": 3.0,
+   "pass": 3,
+   "queries": [
+    {
+     "expect": "corpus-ietf-rfc-abstracts/rfc-9110-abstract.txt",
+     "expect_file": "corpus-ietf-rfc-abstracts/rfc-9110-abstract.txt",
+     "grade": "irrelevant",
+     "hard": false,
+     "hit": null,
+     "q": "is HTTP a stateful or stateless protocol",
+     "top5": [
+      "corpus-ietf-rfc-abstracts/rfc-7232-abstract.txt",
+      "corpus-ietf-rfc-abstracts/rfc-7234-abstract.txt",
+      "corpus-ietf-rfc-abstracts/rfc-9111-abstract.txt",
+      "corpus-ietf-rfc-abstracts/rfc-6265-abstract.txt",
+      "corpus-ietf-rfc-abstracts/rfc-7235-abstract.txt"
+     ],
+     "verdict": "miss"
+    },
+    {
+     "expect": "corpus-ietf-rfc-abstracts/rfc-8446-abstract.txt",
+     "expect_file": "corpus-ietf-rfc-abstracts/rfc-8446-abstract.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-ietf-rfc-abstracts/rfc-9846-abstract.txt",
+     "q": "which document specifies TLS 1.3",
+     "top5": [
+      "corpus-ietf-rfc-abstracts/rfc-9846-abstract.txt",
+      "corpus-ietf-rfc-abstracts/rfc-9456-abstract.txt",
+      "corpus-ietf-rfc-abstracts/rfc-9190-abstract.txt",
+      "corpus-ietf-rfc-abstracts/rfc-8998-abstract.txt",
+      "corpus-ietf-rfc-abstracts/rfc-9973-abstract.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-ietf-rfc-abstracts/rfc-9293-abstract.txt",
+     "expect_file": "corpus-ietf-rfc-abstracts/rfc-9293-abstract.txt",
+     "grade": "relevant",
+     "hard": true,
+     "hit": "corpus-ietf-rfc-abstracts/rfc-9293-abstract.txt",
+     "q": "where is the Transmission Control Protocol currently specified",
+     "top5": [
+      "corpus-ietf-rfc-abstracts/rfc-7122-abstract.txt",
+      "corpus-ietf-rfc-abstracts/rfc-4654-abstract.txt",
+      "corpus-ietf-rfc-abstracts/rfc-9293-abstract.txt",
+      "corpus-ietf-rfc-abstracts/rfc-7765-abstract.txt",
+      "corpus-ietf-rfc-abstracts/rfc-5062-abstract.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-ietf-rfc-abstracts/rfc-9000-abstract.txt",
+     "expect_file": "corpus-ietf-rfc-abstracts/rfc-9000-abstract.txt",
+     "grade": "relevant",
+     "hard": false,
+     "hit": "corpus-ietf-rfc-abstracts/rfc-9000-abstract.txt",
+     "q": "what does QUIC provide as a transport protocol",
+     "top5": [
+      "corpus-ietf-rfc-abstracts/rfc-9312-abstract.txt",
+      "corpus-ietf-rfc-abstracts/rfc-9250-abstract.txt",
+      "corpus-ietf-rfc-abstracts/rfc-9000-abstract.txt",
+      "corpus-ietf-rfc-abstracts/rfc-9114-abstract.txt",
+      "corpus-ietf-rfc-abstracts/rfc-9308-abstract.txt"
+     ],
+     "verdict": "pass"
+    },
+    {
+     "expect": "corpus-ietf-rfc-abstracts/rfc-1035-abstract.txt",
+     "expect_file": "corpus-ietf-rfc-abstracts/rfc-1035-abstract.txt",
+     "grade": "irrelevant",
+     "hard": true,
+     "hit": null,
+     "q": "what problem do domain names solve in DNS",
+     "top5": [
+      "corpus-ietf-rfc-abstracts/rfc-6761-abstract.txt",
+      "corpus-ietf-rfc-abstracts/rfc-2345-abstract.txt",
+      "corpus-ietf-rfc-abstracts/rfc-5895-abstract.txt",
+      "corpus-ietf-rfc-abstracts/rfc-3467-abstract.txt",
+      "corpus-ietf-rfc-abstracts/rfc-1178-abstract.txt"
+     ],
+     "verdict": "miss"
+    }
+   ],
+   "relevant": 3,
+   "verdict": "PASS"
+  },
   "mitre-attck": {
    "median": 5.0,
    "pass": 5,
