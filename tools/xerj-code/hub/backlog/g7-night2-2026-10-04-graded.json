@@ -794,6 +794,45 @@
    "relevant": 5,
    "verdict": "PASS"
   },
+  "ietf-rfc": {
+   "diagnosis": "20,001 files -> 144,117 chunk records: at this scale whole-RFC chunks lose BM25 to length-norm \u2014 hundreds of RFCs mention 'stateless protocol' in passing and short dense chunks outrank the chunk holding the actual clause (rfc-9110's statelessness sentence, rfc-8446's TLS 1.3 spec). The #1140 per-file cap cannot help when 10,000 files match.",
+   "fix_pre_registered": "ROUND 2: one self-describing record per RFC (number + title + abstract + status dates), the rust-vulns recipe \u2014 the abstract layer is parseable from the first ~40 lines of every RFC text file. Queries and expect clauses unchanged; expect_file re-pins to the per-RFC records. Unscheduled.",
+   "pass": 0,
+   "queries": [
+    {
+     "expect": "corpus-ietf-rfc/rfc/rfc-9110.txt",
+     "grade": "irrelevant",
+     "hard": false,
+     "q": "is HTTP a stateful or stateless protocol"
+    },
+    {
+     "expect": "corpus-ietf-rfc/rfc/rfc-8446.txt",
+     "grade": "irrelevant",
+     "hard": false,
+     "q": "which document specifies TLS 1.3"
+    },
+    {
+     "expect": "corpus-ietf-rfc/rfc/rfc-9293.txt",
+     "grade": "irrelevant",
+     "hard": false,
+     "q": "where is the Transmission Control Protocol currently specified"
+    },
+    {
+     "expect": "corpus-ietf-rfc/rfc/rfc-9000.txt",
+     "grade": "irrelevant",
+     "hard": false,
+     "q": "what does QUIC provide as a transport protocol"
+    },
+    {
+     "expect": "corpus-ietf-rfc/rfc/rfc-1035.txt",
+     "grade": "irrelevant",
+     "hard": false,
+     "q": "what problem do domain names solve in DNS"
+    }
+   ],
+   "relevant": 0,
+   "verdict": "FAIL"
+  },
   "mitre-attck": {
    "analysis": "Round-1 FAIL 0/5. Top hits across queries are repo scaffolding (index.md, README.md, generate-collection-index.py) rather than STIX content: the cloned attack-stix-data tree keeps techniques inside giant JSON bundles that rank below their own repository metadata. Same G2 shape-class as ecma262 (single-giant-file). FIX pre-registered: re-pin as id-level mirror like the passing mitre-cwe/mitre-capec - one text file per ATT&CK technique (T####) with name/description/kill-chain-phase/mitigations extracted from the STIX bundles already mirrored; round-2 suite re-pins expect_file to the per-technique files, queries and clauses unchanged.",
    "median": 0,

@@ -373,9 +373,11 @@
    "cat": "STD",
    "domain": "an agent implementing or debugging a protocol queries this for what the RFC actually says at clause level (TLP permits unmodified redistribution)",
    "g7": {
+    "fix_pre_registered": "round-2: per-RFC abstract record layer (see graded evidence diagnosis); unscheduled",
     "note": "pre-registered 2026-10-04 before retrieval; was deferred (no maintained mirror) - agent built a byte-verbatim one (9,836 rfc/*.txt, 10/10 sha256 re-verify) so it now backs the 100",
-    "round": 0,
-    "suite": "backlog/g7-ietf-rfc-2026-10.json"
+    "round": 1,
+    "suite": "backlog/g7-ietf-rfc-2026-10.json",
+    "verdict": "FAIL"
    },
    "lane": "A",
    "refresh": "pinned",
