@@ -1412,6 +1412,95 @@
    "relevant": 4,
    "verdict": "PASS"
   },
+  "scotus": {
+   "analysis": "Round-1 FAIL 1/5 (only the Sotomayor-dissent query passed, rank 1-2). Same failure class as ssa-poms round-1: opinions average 26KB (Dobbs ~300KB) and autoindex chunks them ~3x/file, so separate opinions crowd majorities in top-5 (Q2's top hits were Thomas's Loper Bright concurrence, not the majority holding 'Chevron is overruled') and citing cases outrank the source (Q4: two Rahimi files outrank Bruen for the Second Amendment question). FIX pre-registered: re-pin at paragraph granularity - one file per ~paragraph-run (<= ~8KB) carrying the opinion header (case, docket, author, disposition), so a record's self-content dominates and dense holding-bearing paragraphs rank; round-2 suite re-pins expect_file to the paragraph files, queries and clauses unchanged.",
+   "median": 1,
+   "pass": 1,
+   "queries": [
+    {
+     "expect": "corpus-scotus/opinions/2021/19-1392-dobbs-v-jackson-women-s-health-organization.txt",
+     "expect_file": "corpus-scotus/opinions/2021/19-1392-dobbs-v-jackson-women-s-health-organization.txt",
+     "grade": "irrelevant",
+     "hard": false,
+     "hit": null,
+     "q": "did Dobbs overrule Roe v Wade",
+     "top5": [
+      "corpus-scotus/opinions/2023/23-334-department-of-state-v-munoz-sotomayor-dissenting.txt:421",
+      "corpus-scotus/opinions/2025/25A810-mirabelli-v-bonta-barrett-concurring.txt:61",
+      "corpus-scotus/opinions/2021/19-1392-dobbs-v-jackson-women-s-health-organization-appendix-2.txt:1",
+      "corpus-scotus/opinions/2021/19-1392-dobbs-v-jackson-women-s-health-organization-appendix-2.txt:31",
+      "corpus-scotus/opinions/2023/23-726-moyle-v-united-states-alito-dissenting.txt:811"
+     ],
+     "verdict": "miss"
+    },
+    {
+     "expect": "corpus-scotus/opinions/2023/22-451-loper-bright-enterprises-v-raimondo.txt",
+     "expect_file": "corpus-scotus/opinions/2023/22-451-loper-bright-enterprises-v-raimondo.txt",
+     "grade": "irrelevant",
+     "hard": false,
+     "hit": null,
+     "q": "what happened to Chevron deference in Loper Bright",
+     "top5": [
+      "corpus-scotus/opinions/2024/23-1300-nrc-v-texas-gorsuch-dissenting.txt:811",
+      "corpus-scotus/opinions/2023/22-451-loper-bright-enterprises-v-raimondo-thomas-concurring.txt:1",
+      "corpus-scotus/opinions/2024/23-1300-nrc-v-texas-gorsuch-dissenting.txt:781",
+      "corpus-scotus/opinions/2023/22-451-loper-bright-enterprises-v-raimondo-kagan-dissenting.txt:871",
+      "corpus-scotus/opinions/2023/22-451-loper-bright-enterprises-v-raimondo-gorsuch-concurring.txt:1051"
+     ],
+     "verdict": "miss"
+    },
+    {
+     "expect": "corpus-scotus/opinions/2022/20-1199-students-for-fair-admissions-inc-v-president-and-fellows-of-.txt",
+     "expect_file": "corpus-scotus/opinions/2022/20-1199-students-for-fair-admissions-inc-v-president-and-fellows-of-.txt",
+     "grade": "irrelevant",
+     "hard": true,
+     "hit": null,
+     "q": "what did the district court find about UNC admissions under the Equal Protection Clause",
+     "top5": [
+      "corpus-scotus/opinions/2022/20-1199-students-for-fair-admissions-inc-v-president-and-fellows-of--jackson-dissenting.txt:691",
+      "corpus-scotus/opinions/2022/20-1199-students-for-fair-admissions-inc-v-president-and-fellows-of--jackson-dissenting.txt:1021",
+      "corpus-scotus/opinions/2022/20-1199-students-for-fair-admissions-inc-v-president-and-fellows-of--sotomayor-dissenting.txt:1021",
+      "corpus-scotus/opinions/2022/20-1199-students-for-fair-admissions-inc-v-president-and-fellows-of--thomas-concurring.txt:31",
+      "corpus-scotus/opinions/2024/23-477-united-states-v-skrmetti-thomas-concurring.txt:31"
+     ],
+     "verdict": "miss"
+    },
+    {
+     "expect": "corpus-scotus/opinions/2021/20-843-new-york-state-rifle-pistol-assn-inc-v-bruen.txt",
+     "expect_file": "corpus-scotus/opinions/2021/20-843-new-york-state-rifle-pistol-assn-inc-v-bruen.txt",
+     "grade": "irrelevant",
+     "hard": false,
+     "hit": null,
+     "q": "what individual right does the Second Amendment guarantee under Bruen",
+     "top5": [
+      "corpus-scotus/opinions/2023/22-915-united-states-v-rahimi-thomas-dissenting.txt:181",
+      "corpus-scotus/opinions/2023/22-915-united-states-v-rahimi-thomas-dissenting.txt:991",
+      "corpus-scotus/opinions/2023/22-915-united-states-v-rahimi-sotomayor-concurring.txt:31",
+      "corpus-scotus/opinions/2023/22-915-united-states-v-rahimi-kavanaugh-concurring.txt:1",
+      "corpus-scotus/opinions/2025/24-1046-wolford-v-lopez.txt:465"
+     ],
+     "verdict": "miss"
+    },
+    {
+     "expect": "corpus-scotus/opinions/2022/20-1199-students-for-fair-admissions-inc-v-president-and-fellows-of--sotomayor-dissenting.txt",
+     "expect_file": "corpus-scotus/opinions/2022/20-1199-students-for-fair-admissions-inc-v-president-and-fellows-of--sotomayor-dissenting.txt",
+     "grade": "relevant",
+     "hard": true,
+     "hit": "corpus-scotus/opinions/2022/20-1199-students-for-fair-admissions-inc-v-president-and-fellows-of--sotomayor-dissenting.txt:1021",
+     "q": "what did Justice Sotomayor's dissent say the SFFA Court did",
+     "top5": [
+      "corpus-scotus/opinions/2022/20-1199-students-for-fair-admissions-inc-v-president-and-fellows-of--sotomayor-dissenting.txt:1021",
+      "corpus-scotus/opinions/2025/24-351-postal-service-v-konan-sotomayor-dissenting.txt:1",
+      "corpus-scotus/opinions/2022/20-1199-students-for-fair-admissions-inc-v-president-and-fellows-of--sotomayor-dissenting.txt:1051",
+      "corpus-scotus/opinions/2023/22-976-garland-v-cargill-sotomayor-dissenting.txt:1",
+      "corpus-scotus/opinions/2024/23-997-stanley-v-city-of-sanford-2.txt"
+     ],
+     "verdict": "pass"
+    }
+   ],
+   "relevant": 1,
+   "verdict": "FAIL"
+  },
   "ssa-poms": {
    "analysis": "Round-1 FAIL 0/5. Expect clauses all exist in the pinned files (grep-verified) but none of the five expected files reached top-5. Q1's answer section (DI 10105.070, titled 'Waiting Period for DIB') ranked #1-2 while the suite pinned DI 10105.005 (same clause, different section); Q2's answer is verbatim in DI 00115.001 yet GN 01707.010 outranked it. Root cause hypothesis (pre-registered fix): POMS pages are 10-100KB and autoindex splits them ~3.8 records/file - 34,356 records from 8,989 files - so short chunks win BM25 length normalization and near-duplicate chunks crowd top-5 (DI 10105.070 appears twice in Q1's top-5). FIX: re-pin the mirror split at POMS sub-section boundaries (per A/B/C heading) so each record is small and clause-bearing; round-2 suite keeps identical queries and clauses, expect_file re-pinned to the new split. Not a suite edit: queries and expect clauses are unchanged.",
    "median": 0.0,

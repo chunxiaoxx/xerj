@@ -1841,9 +1841,13 @@
    "cat": "DATA",
    "domain": "US Supreme Court slip opinions 2019-2025 terms (449 cases, 1,158 files): holdings and separate opinions verbatim",
    "g7": {
-    "note": "pre-registered 2026-10-04 before retrieval",
-    "round": 0,
-    "suite": "backlog/g7-scotus-2026-10.json"
+    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
+    "fix_pre_registered": "paragraph-granular re-pin with opinion headers; queries/clauses unchanged",
+    "graded": "2026-10-05",
+    "pass": 1,
+    "relevant": 1,
+    "round": 1,
+    "verdict": "FAIL"
    },
    "lane": "A",
    "refresh": "pinned",
