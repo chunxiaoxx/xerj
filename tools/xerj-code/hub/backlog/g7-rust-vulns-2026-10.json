@@ -1,0 +1,37 @@
+{
+  "corpus": "rust-vulns",
+  "registered": "2026-10-05",
+  "note": "Round 1, against corpus-rust-vulns-txt (1,963 per-advisory text records flattened from the staged records.jsonl harvest: RustSec advisory-db 1,228 @3461c0d8 CC0-1.0 + crates.io OSV export 735 GHSA-sourced records RustSec did not take, zero alias overlap, CC0-1.0). The raw harvest is typed JSONL with no `text` field — issue #1158 invisibility class — so it was flattened before indexing, never burned. Queries blind-authored from the domain framing (an agent reviewing Rust crate dependencies for vulnerable versions, affected functions, fixed releases); expect clauses whitespace-normalised grep-verified unique against the built mirror before any retrieval. Coverage span: memory-corruption (smallvec, libpulse), TLS defaults (openssl), unsound/informational stratum (memoffset), and one OSV-sourced record (webauthn-rs) so both sources are exercised.",
+  "queries": [
+    {
+      "q": "Our Cargo.toml pins the openssl crate at 0.8.x; was there a man-in-the-middle issue with its default certificate validation, and which release fixes it?",
+      "expect": "SSL/TLS MitM vulnerability due to insecure defaults",
+      "expect_file": "corpus-rust-vulns-txt/rustsec-2016-0001.txt",
+      "hard": false
+    },
+    {
+      "q": "smallvec grow use after free double free which versions are affected and what do I patch to",
+      "expect": "Double-free and use-after-free in SmallVec::grow()",
+      "expect_file": "corpus-rust-vulns-txt/rustsec-2019-0009.txt",
+      "hard": false
+    },
+    {
+      "q": "libpulse-binding Stream objects get_context get_format_info memory safety bug which functions are affected",
+      "expect": "Use-after-free with objects returned by",
+      "expect_file": "corpus-rust-vulns-txt/rustsec-2018-0021.txt",
+      "hard": false
+    },
+    {
+      "q": "memoffset offset_of span_of unsoundness uninitialized memory dropped on panic",
+      "expect": "Flaw in offset_of and span_of causes SIGILL",
+      "expect_file": "corpus-rust-vulns-txt/rustsec-2019-0011.txt",
+      "hard": true
+    },
+    {
+      "q": "webauthn-rs-core origin validation flaw allowing subdomain suffixes like attacker's hermit-crab.example for crab.example",
+      "expect": "Origin validation mismatch possible when subdomains are allowed",
+      "expect_file": "corpus-rust-vulns-txt/ghsa-22w3-693w-x895.txt",
+      "hard": false
+    }
+  ]
+}

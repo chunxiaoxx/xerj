@@ -784,6 +784,20 @@
    "status": "live"
   },
   {
+   "cat": "SEC",
+   "domain": "an agent reviewing Rust crate dependencies queries this for vulnerable crate versions, affected functions (271 RustSec advisories carry symbol lists), and patched releases",
+   "lane": "A",
+   "refresh": "weekly",
+   "slug": "rust-vulns",
+   "sources": [
+    {
+     "licence_hint": "CC0-1.0 both sources (RustSec advisory-db @3461c0d8; crates.io OSV export) - verify at pin",
+     "url": "https://github.com/rustsec/advisory-db"
+    }
+   ],
+   "status": "candidate"
+  },
+  {
    "cat": "GOOD",
    "domain": "an agent reviewing code queries this for the review standard's concrete what-to-look-for and clangers",
    "lane": "A",
@@ -1883,11 +1897,11 @@
    "domain": "US Supreme Court slip opinions 2019-2025 terms (449 cases, 1,158 files): holdings and separate opinions verbatim",
    "g7": {
     "evidence": "backlog/g7-night2-2026-10-04-graded.json",
-    "fix_pre_registered": "round-3: section-granularity grouping of the v2 parts (see g7-night2-2026-10-04-graded.json scotus diagnosis); unscheduled",
+    "fix_pre_registered": "PARKED to the semantic lane with de-gesetze/otel-proto/owasp-asvs/nist-sp800-sec. Round-3 opinion-section grouping still fails on same-case section competition: dissents and concurrences quoting the majority's doctrine outrank the majority's own statement of it (Q4 Bruen passed only via Rahimi records quoting Bruen). Granularity ladder exhausted (v1 whole-case bury, v2 paragraph scatter, v3 section competition) - the defect is cross-section ranking, not shape; needs semantic ranking, out of lexical scope.",
     "graded": "2026-10-05",
-    "pass": 1,
-    "relevant": 1,
-    "round": 2,
+    "pass": 2,
+    "relevant": 5,
+    "round": 3,
     "verdict": "FAIL"
    },
    "lane": "A",
