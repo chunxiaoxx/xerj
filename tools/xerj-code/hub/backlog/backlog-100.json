@@ -371,6 +371,29 @@
    "status": "deferred"
   },
   {
+   "cat": "DATA",
+   "domain": "an agent answering US individual-tax questions queries IRS publications for the exact rule (Pub 523 home-sale exclusion, 502 medical mileage, 970 education credits)",
+   "g7": {
+    "evidence": "hub/g7-irs-2026-10.json (suite); graded 2026-10-03 from the session driver, FAIL 2/5, never flipped",
+    "fix_pre_registered": "Round-2 fix if scheduled: mirror lacks p505 (withholding) and p550 (investment income); misses are multi-pub queries landing on the p334 intro instead of the specific pub's section (mirror does carry p523). Add the missing pubs + pub-scoped shape review. Unscheduled.",
+    "graded": "2026-10-03",
+    "pass": 2,
+    "relevant": 5,
+    "round": 1,
+    "verdict": "FAIL"
+   },
+   "lane": "A",
+   "refresh": "pinned",
+   "slug": "irs-pubs",
+   "sources": [
+    {
+     "licence_hint": "US government works, public domain (17 USC 105) - verify at pin",
+     "url": "irs.gov pubs p15 p17 p334 p463 p501 p502 p503 p523 p525 p54 p551 p590 p596 p970 (mirrored)"
+    }
+   ],
+   "status": "candidate"
+  },
+  {
    "cat": "STD",
    "domain": "an agent implementing or debugging a protocol queries this for what the RFC actually says at clause level (TLP permits unmodified redistribution)",
    "g7": {
