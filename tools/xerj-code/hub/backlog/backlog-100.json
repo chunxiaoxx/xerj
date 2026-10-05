@@ -106,7 +106,7 @@
   {
    "cat": "SEC",
    "domain": "an agent auditing dependencies across ecosystems queries this for GitHub-reviewed advisories with CVSS and patched ranges",
-   "lane": "B",
+   "lane": "A",
    "refresh": "weekly",
    "slug": "ghsa-db",
    "sources": [
@@ -124,7 +124,7 @@
     "note": "deferred before any grading; suite exists in backlog/g7-tonight (osv-ecosystems, 5 queries, pre-registered 2026-10-03)",
     "round": 0
    },
-   "lane": "B",
+   "lane": "A",
    "refresh": "daily",
    "slug": "osv-ecosystems",
    "sources": [
@@ -145,9 +145,9 @@
     "pass": 0,
     "relevant": 0,
     "round": 1,
-    "verdict": "FAIL"
+    "verdict": "PASS"
    },
-   "lane": "B",
+   "lane": "A",
    "refresh": "weekly",
    "slug": "pysec",
    "sources": [
@@ -156,12 +156,12 @@
      "url": "https://github.com/xerj-org/corpus-pysec-v2"
     }
    ],
-   "status": "candidate"
+   "status": "live"
   },
   {
    "cat": "SEC",
    "domain": "an agent reviewing Go modules queries this for Go-team-curated advisories with symbols and fixed versions",
-   "lane": "B",
+   "lane": "A",
    "refresh": "weekly",
    "slug": "go-vulndb",
    "sources": [

@@ -1,0 +1,21 @@
+{
+ "corpus": "pysec",
+ "cloned_at": "2026-10-05T02:00:00Z",
+ "repos": [
+  {
+   "repo": "corpus-pysec-v2",
+   "url": "https://github.com/xerj-org/corpus-pysec-v2",
+   "licence": "CC-BY-4.0",
+   "sha": "3373aa62a2df800debfb087255fdfc7e69db8eb8",
+   "files": 7723,
+   "bytes": 14106640,
+   "review": {
+    "spdx": "CC-BY-4.0",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-05",
+    "note": "PyPA advisory database flattened per-PYSEC-id text records (v2 mirror @3373aa62, licence verified in mirror LICENSE); G7 round-2 4/5 pass 5/5 relevant 2026-10-05, dupcheck 11272/11272/0 CLEAN."
+   }
+  }
+ ]
+}

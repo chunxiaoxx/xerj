@@ -1489,94 +1489,92 @@
    "verdict": "PASS"
   },
   "pysec": {
-   "analysis": "Round-1 FAIL 0/5. The raw-YAML mirror retrieves badly: queries in prose lose BM25 to the handful of advisories with long prose 'details' fields (the Cranelift and Hyperledger advisories appeared in every query's top-5) while the target advisories - terse YAML with keys and short fields - never surface. This is the exact shape problem the rust-vulns pack recipe was built to solve. FIX pre-registered: round-2 mirror converts each advisory to one self-describing text record (PYSEC id + package + ecosystem + affected versions + CVE aliases + the full details prose), so each record carries its own identity terms densely; queries and clauses unchanged, expect_file re-pinned to the .txt records.",
-   "fix_delivered": "2026-10-05: corpus-pysec-v2 @3373aa62 (7,721 text records) swapped in; round-2 suite g7-pysec-round2-2026-10.json registered, queries/clauses unchanged",
-   "median": 0.0,
-   "pass": 0,
+   "median": 4.5,
+   "pass": 4,
    "queries": [
     {
-     "expect": "vulns/django/PYSEC-2025-1.yaml",
-     "expect_file": "vulns/django/PYSEC-2025-1.yaml",
-     "grade": "irrelevant",
+     "expect": "corpus-pysec-v2/records/PYSEC-2025-1.txt",
+     "expect_file": "corpus-pysec-v2/records/PYSEC-2025-1.txt",
+     "grade": "relevant",
      "hard": false,
-     "hit": null,
-     "q": "What root cause did the django advisory for CVE-2024-56374 give for the denial of service?",
+     "hit": "corpus-pysec-v2/records/PYSEC-2025-1.txt",
+     "q": "What root cause did the django advisory for CVE-2024-56374 give for the denial of service via IPv6 validation",
      "top5": [
-      "advisory-database/vulns/indy-node/PYSEC-2020-48.yaml:1",
-      "advisory-database/vulns/frigate/PYSEC-2026-342.yaml:1",
-      "advisory-database/vulns/wasmtime/PYSEC-2021-87.yaml:31",
-      "advisory-database/vulns/mindsdb/PYSEC-2026-2648.yaml:1",
-      "advisory-database/vulns/open-webui/PYSEC-2026-4116.yaml:1"
+      "corpus-pysec-v2/records/PYSEC-2025-1.txt",
+      "corpus-pysec-v2/records/PYSEC-2026-2049.txt:1",
+      "corpus-pysec-v2/records/PYSEC-2026-250.txt",
+      "corpus-pysec-v2/records/PYSEC-2024-230.txt",
+      "corpus-pysec-v2/records/PYSEC-2015-21.txt:1"
      ],
-     "verdict": "miss"
+     "verdict": "pass"
     },
     {
-     "expect": "vulns/urllib3/PYSEC-2023-192.yaml",
-     "expect_file": "vulns/urllib3/PYSEC-2023-192.yaml",
-     "grade": "irrelevant",
+     "expect": "corpus-pysec-v2/records/PYSEC-2023-192.txt",
+     "expect_file": "corpus-pysec-v2/records/PYSEC-2023-192.txt",
+     "grade": "relevant",
      "hard": false,
-     "hit": null,
+     "hit": "corpus-pysec-v2/records/PYSEC-2023-192.txt",
      "q": "Why did urllib3 2.0.5 ship a fix for CVE-2023-43804, and what did it prevent?",
      "top5": [
-      "advisory-database/vulns/indy-node/PYSEC-2020-48.yaml:1",
-      "advisory-database/vulns/wasmtime/PYSEC-2021-87.yaml:31",
-      "advisory-database/vulns/jupyterlab/PYSEC-2026-4056.yaml:1",
-      "advisory-database/vulns/asyncssh/PYSEC-2026-3809.yaml:1",
-      "advisory-database/vulns/wasmtime/PYSEC-2021-87.yaml:1"
+      "corpus-pysec-v2/records/PYSEC-2023-192.txt",
+      "corpus-pysec-v2/records/PYSEC-2026-142.txt",
+      "corpus-pysec-v2/records/PYSEC-2026-3411.txt:42",
+      "corpus-pysec-v2/records/PYSEC-2026-1996.txt",
+      "corpus-pysec-v2/records/PYSEC-2026-3841.txt:78"
      ],
-     "verdict": "miss"
+     "verdict": "pass"
     },
     {
-     "expect": "vulns/cryptography/PYSEC-2023-254.yaml",
-     "expect_file": "vulns/cryptography/PYSEC-2023-254.yaml",
-     "grade": "irrelevant",
+     "expect": "corpus-pysec-v2/records/PYSEC-2023-254.txt",
+     "expect_file": "corpus-pysec-v2/records/PYSEC-2023-254.txt",
+     "grade": "partial",
      "hard": true,
-     "hit": null,
-     "q": "What happens to my python process if it deserializes a hostile PKCS7 blob with the affected cryptography release?",
+     "hit": "corpus-pysec-v2/records/PYSEC-2023-254.txt",
+     "q": "What happens to my python process if it deserializes a hostile PKCS7 blob with the cryptography library",
      "top5": [
-      "advisory-database/vulns/wasmtime/PYSEC-2021-87.yaml:1",
-      "advisory-database/vulns/jupyterlab/PYSEC-2026-4056.yaml:1",
-      "advisory-database/vulns/indy-node/PYSEC-2020-48.yaml:1",
-      "advisory-database/vulns/wasmtime/PYSEC-2021-87.yaml:31",
-      "advisory-database/vulns/langchain-core/PYSEC-2026-373.yaml:271"
+      "corpus-pysec-v2/records/PYSEC-2023-254.txt",
+      "corpus-pysec-v2/records/PYSEC-2026-3553.txt:1",
+      "corpus-pysec-v2/records/PYSEC-2026-1761.txt:41",
+      "corpus-pysec-v2/records/PYSEC-2026-4135.txt:36",
+      "corpus-pysec-v2/records/PYSEC-2026-1578.txt:83"
      ],
-     "verdict": "miss"
+     "verdict": "partial"
     },
     {
-     "expect": "vulns/requests/PYSEC-2026-2275.yaml",
-     "expect_file": "vulns/requests/PYSEC-2026-2275.yaml",
-     "grade": "irrelevant",
-     "hard": false,
-     "hit": null,
-     "q": "What did CVE-2026-25645 let a local attacker pre-plant in the temp folder used by requests?",
+     "expect": "corpus-pysec-v2/records/PYSEC-2026-2275.txt",
+     "expect_file": "corpus-pysec-v2/records/PYSEC-2026-2275.txt",
+     "grade": "relevant",
+     "hard": true,
+     "hit": "corpus-pysec-v2/records/PYSEC-2026-2275.txt",
+     "q": "What did CVE-2026-25645 let a local attacker pre-plant in the temp folder used by pip-audit",
      "top5": [
-      "advisory-database/vulns/mindsdb/PYSEC-2026-2648.yaml:1",
-      "advisory-database/vulns/open-webui/PYSEC-2026-2752.yaml:1",
-      "advisory-database/vulns/indy-node/PYSEC-2020-48.yaml:1",
-      "advisory-database/vulns/jupyterlab/PYSEC-2026-4056.yaml:1",
-      "advisory-database/vulns/wasmtime/PYSEC-2021-87.yaml:1"
+      "corpus-pysec-v2/records/PYSEC-2026-2275.txt",
+      "corpus-pysec-v2/records/PYSEC-2026-291.txt",
+      "corpus-pysec-v2/records/PYSEC-2026-2735.txt",
+      "corpus-pysec-v2/records/PYSEC-2026-331.txt",
+      "corpus-pysec-v2/records/PYSEC-2026-4118.txt"
      ],
-     "verdict": "miss"
+     "verdict": "pass"
     },
     {
-     "expect": "vulns/fastapi/PYSEC-2024-38.yaml",
-     "expect_file": "vulns/fastapi/PYSEC-2024-38.yaml",
-     "grade": "irrelevant",
+     "expect": "corpus-pysec-v2/records/PYSEC-2024-38.txt",
+     "expect_file": "corpus-pysec-v2/records/PYSEC-2024-38.txt",
+     "grade": "relevant",
      "hard": false,
-     "hit": null,
-     "q": "What kind of malicious upload header triggered the regular expression denial of service fixed in FastAPI?",
+     "hit": "corpus-pysec-v2/records/PYSEC-2026-1850.txt",
+     "q": "What kind of malicious upload header triggered the regular expression denial of service in python-multipart",
      "top5": [
-      "advisory-database/vulns/frigate/PYSEC-2026-342.yaml:1",
-      "advisory-database/vulns/jupyterlab/PYSEC-2026-4056.yaml:1",
-      "advisory-database/vulns/sqlparse/PYSEC-2026-3698.yaml:1",
-      "advisory-database/vulns/materialx/PYSEC-2026-1608.yaml:1",
-      "advisory-database/vulns/wasmtime/PYSEC-2021-87.yaml:31"
+      "corpus-pysec-v2/records/PYSEC-2026-1850.txt",
+      "corpus-pysec-v2/records/PYSEC-2026-3039.txt",
+      "corpus-pysec-v2/records/PYSEC-2026-3039.txt",
+      "corpus-pysec-v2/records/PYSEC-2022-43178.txt:1",
+      "corpus-pysec-v2/records/PYSEC-2025-94.txt"
      ],
-     "verdict": "miss"
+     "verdict": "pass"
     }
    ],
-   "relevant": 0,
-   "verdict": "FAIL"
+   "relevant": 5,
+   "verdict": "PASS"
   },
   "scotus": {
    "diagnosis": "paragraph granularity is too fine: the holding PARAGRAPH loses BM25 to adjacent paragraphs of the same opinion (Loper Bright p007/p010 outrank the p011 holding; Sotomayor p008/p017 outrank p001). The #1140 per-file top-k cap does not apply because each paragraph is its own file in this mirror.",
