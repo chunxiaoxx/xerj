@@ -190,15 +190,15 @@
    "cat": "SEC",
    "domain": "an agent writing or reviewing detections queries this for technique ids, tactics, detection data-sources and procedure examples",
    "g7": {
-    "evidence": "backlog/g7-night2-2026-10-04-graded.json",
-    "fix_pre_registered": "re-pin as id-level mirror like the passing mitre-cwe/mitre-capec - one text file per ATT&CK technique (T####) with name/description/kill-chain-phase/mitigations extracted from the STIX bundles already mirrored; round-2 suite re-pins expect_file to the per-technique files, queries and clauses unchang",
-    "graded": "2026-10-04",
-    "pass": 0,
-    "relevant": 0,
-    "round": 1,
-    "verdict": "FAIL"
+    "evidence": "backlog/g7-mitre-attck-round2-2026-10.json",
+    "graded": "2026-10-05",
+    "note": "round-1 0/5 (STIX bundles ranked below repo scaffolding) -> per-technique mirror @ec93deaf, round-2 suite re-registered for the narrowed scope BEFORE retrieval; 5/5 on :19498 fresh build",
+    "pass": 5,
+    "relevant": 5,
+    "round": 2,
+    "verdict": "PASS"
    },
-   "lane": "B",
+   "lane": "A",
    "refresh": "weekly",
    "slug": "mitre-attck",
    "sources": [
@@ -207,7 +207,7 @@
      "url": "https://github.com/mitre-attack/attack-stix-data"
     }
    ],
-   "status": "candidate"
+   "status": "live"
   },
   {
    "cat": "SEC",

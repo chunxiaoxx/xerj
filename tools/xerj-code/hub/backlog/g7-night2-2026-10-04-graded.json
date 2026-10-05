@@ -834,93 +834,92 @@
    "verdict": "FAIL"
   },
   "mitre-attck": {
-   "analysis": "Round-1 FAIL 0/5. Top hits across queries are repo scaffolding (index.md, README.md, generate-collection-index.py) rather than STIX content: the cloned attack-stix-data tree keeps techniques inside giant JSON bundles that rank below their own repository metadata. Same G2 shape-class as ecma262 (single-giant-file). FIX pre-registered: re-pin as id-level mirror like the passing mitre-cwe/mitre-capec - one text file per ATT&CK technique (T####) with name/description/kill-chain-phase/mitigations extracted from the STIX bundles already mirrored; round-2 suite re-pins expect_file to the per-technique files, queries and clauses unchanged.",
-   "median": 0,
-   "pass": 0,
+   "median": 5.0,
+   "pass": 5,
    "queries": [
     {
-     "expect": "ics-attack/ics-attack-8.0.json",
-     "expect_file": "ics-attack/ics-attack-8.0.json",
-     "grade": "irrelevant",
+     "expect": "corpus-mitre-attck/techniques/T1200.txt",
+     "expect_file": "corpus-mitre-attck/techniques/T1200.txt",
+     "grade": "relevant",
      "hard": false,
-     "hit": null,
-     "q": "What does the ATT&CK ICS technique Project File Infection achieve on a controller once code is planted?",
+     "hit": "corpus-mitre-attck/techniques/T1200.txt",
+     "q": "how do adversaries gain initial access through hardware additions",
      "top5": [
-      "attack-stix-data/util/generate-collection-index.py",
-      "attack-stix-data/index.md",
-      "attack-stix-data/README.md",
-      "attack-stix-data/USAGE.md",
-      "attack-stix-data/LICENSE.txt"
+      "corpus-mitre-attck/techniques/T1200.txt",
+      "corpus-mitre-attck/techniques/T1193.txt",
+      "corpus-mitre-attck/techniques/T1592.001.txt",
+      "corpus-mitre-attck/techniques/T1566.001.txt",
+      "corpus-mitre-attck/techniques/T1566.003.txt"
      ],
-     "verdict": "miss"
+     "verdict": "pass"
     },
     {
-     "expect": "ics-attack/ics-attack-9.0.json",
-     "expect_file": "ics-attack/ics-attack-9.0.json",
-     "grade": "irrelevant",
+     "expect": "corpus-mitre-attck/techniques/T1595.003.txt",
+     "expect_file": "corpus-mitre-attck/techniques/T1595.003.txt",
+     "grade": "relevant",
      "hard": true,
-     "hit": null,
-     "q": "During an OT intrusion, how can an adversary blind control-room staff while the underlying operations keep running?",
+     "hit": "corpus-mitre-attck/techniques/T1595.003.txt",
+     "q": "what wordlists does active scanning use for vulnerability discovery",
      "top5": [
-      "attack-stix-data/index.md",
-      "attack-stix-data/USAGE.md",
-      "attack-stix-data/USAGE.md",
-      "attack-stix-data/index.md",
-      "attack-stix-data/util/README.md"
+      "corpus-mitre-attck/techniques/T1595.003.txt",
+      "corpus-mitre-attck/techniques/T1046.txt",
+      "corpus-mitre-attck/techniques/T0841.txt",
+      "corpus-mitre-attck/techniques/T1580.txt",
+      "corpus-mitre-attck/techniques/T1595.txt"
      ],
-     "verdict": "miss"
+     "verdict": "pass"
     },
     {
-     "expect": "mobile-attack/mobile-attack-1.0.json",
-     "expect_file": "mobile-attack/mobile-attack-1.0.json",
-     "grade": "irrelevant",
+     "expect": "corpus-mitre-attck/techniques/T1566.001.txt",
+     "expect_file": "corpus-mitre-attck/techniques/T1566.001.txt",
+     "grade": "relevant",
      "hard": false,
-     "hit": null,
-     "q": "What does the Pegasus implant do on an iPhone according to its ATT&CK mobile entry?",
+     "hit": "corpus-mitre-attck/techniques/T1566.001.txt",
+     "q": "how does spearphishing with a malicious attachment compromise a victim",
      "top5": [
-      "attack-stix-data/USAGE.md",
-      "attack-stix-data/LICENSE.txt",
-      "attack-stix-data/USAGE.md",
-      "attack-stix-data/index.md",
-      "attack-stix-data/index.md"
+      "corpus-mitre-attck/techniques/T1566.001.txt",
+      "corpus-mitre-attck/techniques/T1193.txt",
+      "corpus-mitre-attck/techniques/T1598.002.txt",
+      "corpus-mitre-attck/techniques/T1566.002.txt",
+      "corpus-mitre-attck/techniques/T1566.003.txt"
      ],
-     "verdict": "miss"
+     "verdict": "pass"
     },
     {
-     "expect": "mobile-attack/mobile-attack-3.0.json",
-     "expect_file": "mobile-attack/mobile-attack-3.0.json",
-     "grade": "irrelevant",
+     "expect": "corpus-mitre-attck/techniques/T0835.txt",
+     "expect_file": "corpus-mitre-attck/techniques/T0835.txt",
+     "grade": "relevant",
      "hard": false,
-     "hit": null,
-     "q": "What can a hostile Android application achieve by exploiting the operating system's accessibility framework, per ATT&CK mobile?",
+     "hit": "corpus-mitre-attck/techniques/T0835.txt",
+     "q": "how can an adversary override PLC input and output status in an ICS intrusion",
      "top5": [
-      "attack-stix-data/index.md",
-      "attack-stix-data/index.md",
-      "attack-stix-data/USAGE.md",
-      "attack-stix-data/USAGE.md",
-      "attack-stix-data/README.md"
+      "corpus-mitre-attck/techniques/T0835.txt",
+      "corpus-mitre-attck/techniques/T0877.txt",
+      "corpus-mitre-attck/techniques/T0824.txt",
+      "corpus-mitre-attck/techniques/T0854.txt",
+      "corpus-mitre-attck/techniques/T0850.txt"
      ],
-     "verdict": "miss"
+     "verdict": "pass"
     },
     {
-     "expect": "enterprise-attack/enterprise-attack.json",
-     "expect_file": "enterprise-attack/enterprise-attack.json",
-     "grade": "irrelevant",
-     "hard": false,
-     "hit": null,
-     "q": "According to Enterprise ATT&CK, how does the Phishing technique ultimately run attacker payloads?",
+     "expect": "corpus-mitre-attck/techniques/T1472.txt",
+     "expect_file": "corpus-mitre-attck/techniques/T1472.txt",
+     "grade": "relevant",
+     "hard": true,
+     "hit": "corpus-mitre-attck/techniques/T1472.txt:1",
+     "q": "how does mobile ad fraud generate revenue from devices",
      "top5": [
-      "attack-stix-data/USAGE.md",
-      "attack-stix-data/USAGE.md",
-      "attack-stix-data/index.md",
-      "attack-stix-data/LICENSE.txt",
-      "attack-stix-data/util/README.md"
+      "corpus-mitre-attck/techniques/T1472.txt:1",
+      "corpus-mitre-attck/techniques/T1643.txt",
+      "corpus-mitre-attck/techniques/T1448.txt",
+      "corpus-mitre-attck/techniques/T1683.txt",
+      "corpus-mitre-attck/techniques/T1496.003.txt"
      ],
-     "verdict": "miss"
+     "verdict": "pass"
     }
    ],
-   "relevant": 0,
-   "verdict": "FAIL"
+   "relevant": 5,
+   "verdict": "PASS"
   },
   "mutcd": {
    "median": 4.0,

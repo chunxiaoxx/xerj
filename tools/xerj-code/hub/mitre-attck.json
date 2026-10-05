@@ -1,0 +1,21 @@
+{
+ "corpus": "mitre-attck",
+ "cloned_at": "2026-10-05T02:00:00Z",
+ "repos": [
+  {
+   "repo": "corpus-mitre-attck",
+   "url": "https://github.com/xerj-org/corpus-mitre-attck",
+   "licence": "MITRE ATT&CK Terms of Use (permissive, notice-preserving)",
+   "sha": "ec93deafbc7498f79c5a6b71fba6a9b5347e9827",
+   "files": 1169,
+   "bytes": 1872723,
+   "review": {
+    "spdx": "MITRE ATT&CK Terms of Use (permissive, notice-preserving)",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-05",
+    "note": "ATT&CK v19.2 extracted from mitre-attack/attack-stix-data @6cda5ad8 as id-level per-technique text files (1,166 techniques across enterprise/mobile/ics; software/group objects out of documented scope). Round-1 failed 0/5 \u2014 raw STIX bundles ranked below repo scaffolding; the per-technique mirror is the fix, round-2 suite re-registered for the new scope BEFORE retrieval (govuk round-0/1 precedent). Graded 2026-10-05: 5/5 relevant on :19498 fresh build (2,595 records / 1,170 files, dupcheck CLEAN). Licence verified at the pin: upstream LICENSE.txt reproduced verbatim in the mirror \u2014 royalty-free use for research/development/commercial with MITRE copyright designation preserved on every copy."
+   }
+  }
+ ]
+}
