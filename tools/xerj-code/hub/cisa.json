@@ -1,0 +1,22 @@
+{
+ "corpus": "cisa",
+ "cloned_at": "2026-10-06T00:00:00Z",
+ "repos": [
+  {
+   "repo": "corpus-cisa",
+   "url": "https://github.com/xerj-org/corpus-cisa",
+   "licence": "US-government public domain (17 USC 105) + CC0-1.0 (KEV); co-published partner-nation caveat",
+   "sha": "edfa369426f26b2eb679357d24b0d37506696cd1",
+   "files": 1998,
+   "bytes": 4981080,
+   "review": {
+    "spdx": "US-government public domain (17 USC 105) and CC0-1.0",
+    "use": "adapt-with-attribution",
+    "by": "xerj-org",
+    "at": "2026-10-06",
+    "note": "Merged CISA corpus, one repo: cybersecurity advisories (2025-05..2026-10 window, byte-verbatim from corpus-cisa-alerts @b4d2547e86425aa3b3d63fa07a9ea07d339b49e1, US federal works 17 USC 105, co-published advisories flagged in front-matter may carry partner-nation copyright), ICS advisories (same), and the KEV catalog one file per CVE (CC0-1.0, human-verified in the mirror LICENSE; fields byte-verbatim from corpus-cisa-kev @1c09ebebd1e9821c8c38d4a72e4a3c7e6ea51c80). Two quality passes at merge, both evidence-linked in backlog/g7-cisa-2026-10-graded.json: (1) the 72 weekly KEV-announcement alerts dropped (their facts are kev/*.txt fields; their titles crowded per-CVE queries, G7 run 1 = 2.5/5 fail); (2) each KEV record opens with a one-sentence plain-English view of its fields and the 1.7 MB raw feed blob left the indexed tree (sha256 in the mirror README; it matched every query). G7 run 3 verdict in the evidence file."
+   }
+  }
+ ],
+ "note": "Merged corpus (registry 2026-10-06): one CISA hub instead of two. Supersedes cisa-kev and cisa-alerts (both withdrawn, rows flipped). Evidence: backlog/g7-cisa-2026-10-graded.json."
+}

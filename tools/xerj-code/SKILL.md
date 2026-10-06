@@ -60,6 +60,16 @@ it at the same commits anyone else is using:
 | `xerj-storage` | sled, fjall, redb | WAL, flush epochs, crash recovery, compaction, page allocation |
 | `xerj-columnar` | clickhouse | columnar storage, aggregation execution, compression codecs, vectorised scans |
 
+**Beyond engine code:** the same binary serves the public registry at
+<https://hub.xerj.org>: 99 live corpora across seven domains (security
+advisories, standards and regulations, operations, design guidance, failure
+precedent, data engines, net and crypto), each tagged with region and topics.
+Pick what a task needs by domain and tags, not by size. Same three commands:
+`xerj corpus add --from hub/<name>.json`, `xerj corpus index <name>`,
+`xerj code <name> "question"`. The registry of record is
+`hub/backlog/backlog-100.json` on the `corpus-hub` branch; `hub/README.md`
+explains the lanes.
+
 **Approach-only sources:** `elasticsearch` (AGPL-3.0 / SSPL-1.0 / Elastic-2.0)
 and `sonic` (MPL-2.0). Never copy their code into Apache-2.0 XERJ; for ES,
 pasting source would also falsify the project's public "shares no code with
