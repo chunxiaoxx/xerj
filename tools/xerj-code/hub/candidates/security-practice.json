@@ -1,0 +1,86 @@
+{
+ "corpus": "security-practice",
+ "cloned_at": null,
+ "status": "draft",
+ "domain": "security engineering: identity, authentication, sandboxing and hardening code",
+ "repos": [
+  {
+   "repo": "Vauban",
+   "url": "https://github.com/rbenaley/Vauban",
+   "licence": "hint only: BSD-2-Clause (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "c06d6f16db6b54d45cec88676f9c9554e6139b23",
+   "review": {
+    "spdx": "BSD-2-Clause",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit c06d6f16db6b: \"fix(mcp): harden hop 2 and close the review gaps (0.9.46)\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "keycloak-2fa-email-authenticator",
+   "url": "https://github.com/mesutpiskin/keycloak-2fa-email-authenticator",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "8420fb1dfbe5b12a34f798ef51708e897f70f783",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 8420fb1dfbe5: \"fix: offer email OTP under 'Try Another Way' without enrollment\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "vpn-server-manager",
+   "url": "https://github.com/kureinmaxim/vpn-server-manager",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "534155d9b0662c31dee07d677e4f5d3b7ace092d",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 534155d9b066: \"Add guarded Hysteria2 management for 4.10.2\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "cli",
+   "url": "https://github.com/apms-org/cli",
+   "licence": "hint only: GPL-3.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "3dd97d0c1262b4ee857fb96c367a8d92b1e8d18e",
+   "review": {
+    "spdx": "GPL-3.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 3dd97d0c1262: \"make every keybinding work the same in every terminal and OS\". suggested use: approach-only — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "sipnab",
+   "url": "https://github.com/NormB/sipnab",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "a26c1edf4a5d3d4a47cabcf2175edb77cd76f8dd",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit a26c1edf4a5d: \"Serve MCP and metrics over HTTPS, add --hep-tls-extra-ca, and give every TLS flag a...\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "py-spiffe",
+   "url": "https://github.com/HewlettPackard/py-spiffe",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "37f333b5eed9e2bc594b9e69767e42c3876187b3",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 37f333b5eed9: \"feat(svid): expose Workload API hint on X.509 and JWT SVIDs\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  }
+ ]
+}

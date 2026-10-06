@@ -1,0 +1,112 @@
+{
+ "corpus": "community-solutions",
+ "cloned_at": null,
+ "status": "draft",
+ "domain": "substantial recent solutions across other domains, contributed with the authors' permission",
+ "repos": [
+  {
+   "repo": "arandu",
+   "url": "https://github.com/arandu-io/arandu",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "85cfa650b1b0d7ca623cd89cef41d5fb803b094c",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-03 (reply to Corpus Hub outreach); selected commit 85cfa650b1b0: \"Link only SQLite by default and reach the shared store through its connector\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "gouroboros",
+   "url": "https://github.com/blinklabs-io/gouroboros",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "b1712de0e0e082d88f9b5e73036073f25674fbc5",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-04 (reply to Corpus Hub outreach); selected commit b1712de0e0e0: \"fix(ledger): correct certificate CBOR encoding and decoding\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "uji",
+   "url": "https://github.com/uji-labs/uji",
+   "licence": "hint only: GPL-3.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "1e2b00dd592fa68a0c0b5d4a430e52002eadae8c",
+   "review": {
+    "spdx": "GPL-3.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 1e2b00dd592f: \"feat: make toolcall expandable\". suggested use: approach-only — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "CRY",
+   "url": "https://github.com/JNechaevsky/CRY",
+   "licence": "hint only: GPL-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "3d31749c9a24b7f461dab1eee06146b39795006b",
+   "review": {
+    "spdx": "GPL-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 3d31749c9a24: \"Add Minimap\". suggested use: approach-only — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "icy_board",
+   "url": "https://github.com/mkrueger/icy_board",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "d05cc33f1fba0d6bd46f18369ab3018bd9b93158",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit d05cc33f1fba: \"Add a PPL 400 archive reader based on unarc-rs\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "presence-rs",
+   "url": "https://github.com/minikin/presence-rs",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "6cf1c80b646a27dc3bd293fa7cddfcff5e6f4acd",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 6cf1c80b646a: \"feat: JSON Schema through an optional schemars feature\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "nesting-app",
+   "url": "https://github.com/kenzap/nesting-app",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "08ac2a8d9e62abce8b804fc083e522236e4b3d58",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 08ac2a8d9e62: \"[new] Favor sheet edges feature\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "epubveri",
+   "url": "https://github.com/veripublica/epubveri",
+   "licence": "hint only: AGPL-3.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "4055497cda178b3308c95c82ab0be79ab939d501",
+   "review": {
+    "spdx": "AGPL-3.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 4055497cda17: \"Judge XML names and whitespace with epubcheck's own tables\". suggested use: approach-only — G4 review of the LICENSE file at this pin still required."
+   }
+  }
+ ]
+}
