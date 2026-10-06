@@ -196,7 +196,9 @@ STYLE = """/* corpus hub — brand tokens inherited from xerj.org */
 :root{--bg:#f6f4ee;--ink:#11120f;--mute:#696762;--line:#cfcbbf;--faint:#e3dfd4;
 --accent:#7f5200;--gold:#ffc400;--ok:#2e6b3a;--bad:#8c2f2f;--warn:#8a6d1a;
 --font-data:'IBM Plex Sans','Inter',system-ui,sans-serif;--font-mono:'JetBrains Mono','IBM Plex Mono',monospace}
-@media(prefers-color-scheme:dark){:root{--bg:#0b0b0d;--ink:#f4f2ec;--mute:#8a8680;--line:#3a3836;--faint:#2b2a28;--accent:#ffc400;--gold:#ffc400;--ok:#7fc08a;--bad:#e08a8a;--warn:#d4b45e}}
+/* White schema only — the brandbook day palette is the ONE scheme. No
+   prefers-color-scheme override, no dark variant (user directive
+   2026-10-06: hub.xerj.org is strictly brandbook, white default). */
 *{box-sizing:border-box}body{margin:0;font-family:var(--font-data);background:var(--bg);color:var(--ink);line-height:1.5}
 a{color:inherit}code{font-family:var(--font-mono);font-size:.92em;background:var(--faint);padding:.1em .35em;border-radius:4px}
 header.site{display:flex;align-items:baseline;gap:1rem;padding:1rem 2rem;border-bottom:1px solid var(--line);flex-wrap:wrap}
