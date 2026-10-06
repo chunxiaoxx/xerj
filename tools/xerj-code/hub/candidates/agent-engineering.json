@@ -1,0 +1,463 @@
+{
+ "corpus": "agent-engineering",
+ "cloned_at": null,
+ "status": "draft",
+ "domain": "AI agents, LLM tooling, MCP servers and inference: real implementations agents can retrieve when building the same thing",
+ "repos": [
+  {
+   "repo": "DeepSeek-Reasonix",
+   "url": "https://github.com/esengine/DeepSeek-Reasonix",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "a078f8e30fa4a8986300f0f0b0f72c90cceac6d4",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-03 (reply to Corpus Hub outreach); selected commit a078f8e30fa4: \"fix(studio): unify MCP launcher name inference\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "prettypleaseprint",
+   "url": "https://github.com/danileau/prettypleaseprint",
+   "licence": "hint only: AGPL-3.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "9539af6aad911cbd5b48c4f07db203b06714968d",
+   "review": {
+    "spdx": "AGPL-3.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-04 (reply to Corpus Hub outreach); selected commit 9539af6aad91: \"Give a print request a priority\". suggested use: approach-only — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "codex-desktop-linux",
+   "url": "https://github.com/ilysenko/codex-desktop-linux",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "e874ea11ba8a72ba842ec1b1edf286f5920808da",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-04 (reply to Corpus Hub outreach); selected commit e874ea11ba8a: \"Add optional graphical guided installer\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "webcodex",
+   "url": "https://github.com/yyjeqhc/webcodex",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "f6bd366ef7de9896ec1adbe59dd10b34e7e40c8c",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-04 (reply to Corpus Hub outreach); selected commit f6bd366ef7de: \"fix(browser): avoid admitting disabled and readonly controls\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "adk",
+   "url": "https://github.com/inference-gateway/adk",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "7d0af1ff28de40de7aeff45dedfae49d034e787c",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-04 (reply to Corpus Hub outreach); selected commit 7d0af1ff28de: \"feat(server): count streamed usage and publish it as an A2A extension\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "chaos",
+   "url": "https://github.com/seuros/chaos",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "9782fb0f265ed4935b0300661c581f01fbd0edc8",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-04 (reply to Corpus Hub outreach); selected commit 9782fb0f265e: \"feat(planning): add database-backed plans and tasks\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "analog-canvas",
+   "url": "https://github.com/cascode-ai/analog-canvas",
+   "licence": "hint only: AGPL-3.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "1886904c5eedf280835a3bde8fbe3dc029dc34e0",
+   "review": {
+    "spdx": "AGPL-3.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-04 (reply to Corpus Hub outreach); selected commit 1886904c5eed: \"Unify effective model contracts and generated-model transport\". suggested use: approach-only — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "rune",
+   "url": "https://github.com/fourdollars/rune",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "ab9e99438a90ce91098221bf3f1fced33b3f6108",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit ab9e99438a90: \"feat(sandbox): implement in-process pre_exec security enforcement\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "agentty",
+   "url": "https://github.com/agentty-xyz/agentty",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "9894a8253e2f9bdf6c6e058a14064d42f82f8736",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 9894a8253e2f: \"Show the total archived session count\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "xacpx",
+   "url": "https://github.com/gadzan/xacpx",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "986c9aecc2a22a148f85686667d0d28cb3f25f75",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 986c9aecc2a2: \"fix(conversations): close PR9 upgrade teardown and trigger gaps\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "PokeTokenBar",
+   "url": "https://github.com/chattymin/PokeTokenBar",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "be9cbc7f5c0e545bdc00d9aba3706a580aaf4016",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit be9cbc7f5c0e: \"feat(menubar): add a right-click menu to the menu bar item\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "argo",
+   "url": "https://github.com/gigioneggiando/argo",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "ad7dc0b80e66ee326458dbd49e2d451fddb74ff1",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit ad7dc0b80e66: \"feat: add deterministic evidence contract\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "deja-vu",
+   "url": "https://github.com/vshulcz/deja-vu",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "4d6713d6eb63a95cb79ee87e1bcbc5b4a93a96e0",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 4d6713d6eb63: \"feat: read CodeBuddy Code, TRAE CLI and Muse Code sessions, and wire CodeBuddy\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "netscli",
+   "url": "https://github.com/fstubner/netscli",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "604b05e745908547dafb02b8918a12205b67f467",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 604b05e74590: \"Add a privacy page and the Microsoft Store listing assets\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "lavik",
+   "url": "https://github.com/eloqdata/lavik",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "741dc3265d7c93ce9124e565015e6af5efcacc9c",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 741dc3265d7c: \"perf(storage): reuse Stream directory prefixes across suffix inserts\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "ai-agents",
+   "url": "https://github.com/geminik23/ai-agents",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "ebef4ebc84fcc0ecf8c34b2554c8d396f05d1b54",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit ebef4ebc84fc: \"fix: bound eval construction stack usage\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "agenda-intelligence-md",
+   "url": "https://github.com/vassiliylakhonin/agenda-intelligence-md",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "7e693ec67a1a1cbb53458235050a8047d554dbd5",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 7e693ec67a1a: \"fix: review critical minerals dossier evidence without false clearance\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "otari",
+   "url": "https://github.com/mozilla-ai/otari",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "756dc4757f9504f6ee1c6ed478d9864053822402",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 756dc4757f95: \"fix(usage): capture provider-reported latency for Groq and Ollama\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "architecture-intelligence-platform",
+   "url": "https://github.com/michaelegner/architecture-intelligence-platform",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "c5bc7cb58d4d6efef80b744347c51f36d14b6356",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit c5bc7cb58d4d: \"v0.6.0 I5.2: qualify the independent two-Workload capture\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "unsloth",
+   "url": "https://github.com/unslothai/unsloth",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "6f4c16250df25a8ee67148bccccbd08adeb15c70",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 6f4c16250df2: \"Studio: cap tool-result text at 256K chars, spill the full output to the sandbox\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "rigour",
+   "url": "https://github.com/rigour-labs/rigour",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "3c514cf1ca868fbfc551a70741824ad09c464db5",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 3c514cf1ca86: \"fix: Rigour as the whole quality boundary — stop, push and review\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "Sh1Zuku_Translate",
+   "url": "https://github.com/SparkofSpike/Sh1Zuku_Translate",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "0c1bf0da07043e900bd560db3dd9efcbf9552b54",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 0c1bf0da0704: \"feat: add translation quality feedback pipeline (sampling, rating, admin panel)\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "lomi",
+   "url": "https://github.com/lomi-dev/lomi",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "7b6c48a81bcbe9440dd0fe0845ff503830448410",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 7b6c48a81bcb: \"feat(chat): add custom api connections and platform checks\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "kicad-mcp-pro",
+   "url": "https://github.com/oaslananka/kicad-mcp-pro",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "a2ab498606e6069e78ebb73f258f5c15bb97a65e",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit a2ab498606e6: \"refactor(routing): extract manual track service\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "multivibe",
+   "url": "https://github.com/thibautrey/multivibe",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "b8524765a2d2b771fa5ed4dfff8047b2ee2268db",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit b8524765a2d2: \"MULTIVIBE-89 encrypt Swift application history with delegated keys\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "better-agentic-ide",
+   "url": "https://github.com/alvin-reyes/better-agentic-ide",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "1d86a8038000fbc5d68751f1ebd459b83e7d7320",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 1d86a8038000: \"Stage board: the engine\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "MemWhale",
+   "url": "https://github.com/wuisabel-gif/MemWhale",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "8233e56c9c28212c0dcf9c59203e9f4d03b21faa",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 8233e56c9c28: \"feat(integrations): capture Codex commands and add proactive recall\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "Astakos-AI-Agent",
+   "url": "https://github.com/alexneverland/Astakos-AI-Agent",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "2006d0042a60d3acfbcc4381e3c18abc7450c35f",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 2006d0042a60: \"fix: require relevant recent activity for goal follow-ups\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "king-pong",
+   "url": "https://github.com/KingAlexGilbert/king-pong",
+   "licence": "hint only: GPL-3.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "7ab185bb3e8f91a4aba227541866e7f6ddecf70c",
+   "review": {
+    "spdx": "GPL-3.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 7ab185bb3e8f: \"Polish gameplay, audio, match rules, and retro UI\". suggested use: approach-only — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "node-agent",
+   "url": "https://github.com/kubescape/node-agent",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "67e455e040520a3f1f5a4ac20fbf5fe25f676d43",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 67e455e04052: \"fix: stop retrying permanent container profile rejections\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "Levis",
+   "url": "https://github.com/CatVinci-Studio/Levis",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "ce2cde964b046dcd3c46b6d3affe80aa87030f72",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit ce2cde964b04: \"feat(export): write PDFs natively on Windows and Linux too\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "openkos",
+   "url": "https://github.com/jasonssdev/openkos",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "b5715d653777a7795a0bbd68875d2e2aaecfca42",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit b5715d653777: \"feat(okf): add openkos export with sensitivity enforced at the boundary\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "dsh-nexttavern",
+   "url": "https://github.com/a86582751/dsh-nexttavern",
+   "licence": "hint only: GPL-3.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "7d376e0ec6d9ec9372e7a5ccec79b710bab38055",
+   "review": {
+    "spdx": "GPL-3.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 7d376e0ec6d9: \"feat(card-reading): wire captured inputs and export selected Native openings [skip ci]\". suggested use: approach-only — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "huqan",
+   "url": "https://github.com/ali-ulu/huqan",
+   "licence": "hint only: AGPL-3.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "16b948cdd8ef90e6b9771ef4a5da5804409a642b",
+   "review": {
+    "spdx": "AGPL-3.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 16b948cdd8ef: \"feat(a2a): durable pre-dispatch intervention seam ()\". suggested use: approach-only — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "Fabric",
+   "url": "https://github.com/danielmiessler/Fabric",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "aa3e1727b7dfc62e54d5623e2f92ae355319320a",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit aa3e1727b7df: \"fix: correct SSE streaming behavior and restore native Azure routing\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  }
+ ]
+}

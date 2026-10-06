@@ -1,0 +1,164 @@
+{
+ "corpus": "web-app-patterns",
+ "cloned_at": null,
+ "status": "draft",
+ "domain": "web apps, APIs, frontends and design systems: production patterns from active projects",
+ "repos": [
+  {
+   "repo": "traccar",
+   "url": "https://github.com/traccar/traccar",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "77b4b1354d64dece8a425f8c2a8923a20393b642",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-03 (reply to Corpus Hub outreach); selected commit 77b4b1354d64: \"Fix imports ordering\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "ui",
+   "url": "https://github.com/swiftuijs/ui",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "2b6f5e8027bfebb82c35c9fcc92311d2007e0c70",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-03 (reply to Corpus Hub outreach); selected commit 2b6f5e8027bf: \"Harden SwiftUI.js and add scoped themes and glass materials\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "idx-bei",
+   "url": "https://github.com/nichsedge/idx-bei",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "ea795eb497dda4b999d44aae35f99c39c3a91272",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-04 (reply to Corpus Hub outreach); selected commit ea795eb497dd: \"feat(go): implement native Go engine, REST/WebSocket server, and unified CLI\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "playlistout",
+   "url": "https://github.com/LengxiQwQ/playlistout",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "c8fe0117a2a91ff70ba148f729bba8623d16fb66",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-04 (reply to Corpus Hub outreach); selected commit c8fe0117a2a9: \"feat(web): add open-source plugin ecosystem panel\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "matcha",
+   "url": "https://github.com/floatpane/matcha",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "820afde09482ec49e5470d1e49a2ac0f76605fec",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-04 (reply to Corpus Hub outreach); selected commit 820afde09482: \"fix: server-side PGP/MIME support\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "QTranslate",
+   "url": "https://github.com/ahatem/QTranslate",
+   "licence": "hint only: MPL-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "42f9c0dab4bd2aff1456bee2ae6ebecb63045675",
+   "review": {
+    "spdx": "MPL-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-04 (reply to Corpus Hub outreach); selected commit 42f9c0dab4bd: \"fix(dictionary): honor active language pair in auto lookup\". suggested use: approach-only — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "vresto",
+   "url": "https://github.com/kalfasyan/vresto",
+   "licence": "hint only: CC-BY-4.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "0a0c520234187a62ace11b3504ac55e702bf6672",
+   "review": {
+    "spdx": "CC-BY-4.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-04 (reply to Corpus Hub outreach); selected commit 0a0c52023418: \"feat(ui): inspect overlay values by clicking the map\". suggested use: approach-only — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "sendrec",
+   "url": "https://github.com/sendrec/sendrec",
+   "licence": "hint only: AGPL-3.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "54f24284fb601387bb60ad30662a20552941d8a1",
+   "review": {
+    "spdx": "AGPL-3.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-04 (reply to Corpus Hub outreach); selected commit 54f24284fb60: \"feat(recorder): add a camera picker\". suggested use: approach-only — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "PingsNest",
+   "url": "https://github.com/PingsNest/PingsNest",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "9b9371182ad63ffed118fd04c677b4c86bb9b24d",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 9b9371182ad6: \"feat: add server visibility configuration for public status page\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "CWIST",
+   "url": "https://github.com/c4punks/CWIST",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "714acdf938b55fa1bd533471b3fd8253529dd99c",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 714acdf938b5: \"perf(webrtc): run on the cwist reactor; fix browser interop\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "design-system",
+   "url": "https://github.com/Infomaniak/design-system",
+   "licence": "hint only: GPL-3.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "87064096c155b35e044b59c055656e95f37c796f",
+   "review": {
+    "spdx": "GPL-3.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 87064096c155: \"feat(figma-plugin): add ESDS icons plugin\". suggested use: approach-only — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "netgrip",
+   "url": "https://github.com/gnacho/netgrip",
+   "licence": "hint only: AGPL-3.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "332d44763e1ac343f7800b1b4f897e6af7c836d2",
+   "review": {
+    "spdx": "AGPL-3.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 332d44763e1a: \"feat(adguard): provision and manage the web UI credentials\". suggested use: approach-only — G4 review of the LICENSE file at this pin still required."
+   }
+  }
+ ]
+}

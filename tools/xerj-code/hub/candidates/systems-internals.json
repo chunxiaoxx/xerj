@@ -1,0 +1,190 @@
+{
+ "corpus": "systems-internals",
+ "cloned_at": null,
+ "status": "draft",
+ "domain": "compilers, runtimes, emulators, game engines, OS and low-level systems code",
+ "repos": [
+  {
+   "repo": "reaction-field",
+   "url": "https://github.com/9947447-alt/reaction-field",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "0956f19aefdab9819be0dc35dacaaa21de87a641",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-04 (reply to Corpus Hub outreach); selected commit 0956f19aefda: \"feat(b2r1): complete redox whitelist sections 3.8-3.9\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "reactos",
+   "url": "https://github.com/reactos/reactos",
+   "licence": "hint only: GPL-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "af9ad54d466794075836c1f4f6beee3dc8588737",
+   "review": {
+    "spdx": "GPL-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-04 (reply to Corpus Hub outreach); selected commit af9ad54d4667: \"[KEYBOARD][KBDNEC][SDK] Implement kbdnec.dll\". suggested use: approach-only — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "simulator-action",
+   "url": "https://github.com/futureware-tech/simulator-action",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "e1ab0c47dfd6c6ae2dce140df96db566da3fd699",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-04 (reply to Corpus Hub outreach); selected commit e1ab0c47dfd6: \"Upgrade dependencies\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "snapdom",
+   "url": "https://github.com/zumerlab/snapdom",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "bbde42f8dad31b523b64b2f6ca89adbb17b2245a",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-04 (reply to Corpus Hub outreach); selected commit bbde42f8dad3: \"fix: one [SnapDOM] prefix and plain-language console messages\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "crosspoint-simulator",
+   "url": "https://github.com/crosspoint-reader/crosspoint-simulator",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "097f44e08492d9dde40d45c1bce189fd1e782e0e",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-04 (reply to Corpus Hub outreach); selected commit 097f44e08492: \"fix: run firmware web manager in simulator\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "typephp",
+   "url": "https://github.com/typephp-php/typephp",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "ff564652485bea97b9e37d6a08039df15de5df75",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-04 (reply to Corpus Hub outreach); selected commit ff564652485b: \"Refactor and enhance member assignment validation\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "brave-core",
+   "url": "https://github.com/brave/brave-core",
+   "licence": "hint only: MPL-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "5754bc4e79b4b63909c45859f6f3d1d980697b65",
+   "review": {
+    "spdx": "MPL-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-04 (reply to Corpus Hub outreach); selected commit 5754bc4e79b4: \"Account: add a compact row for embedders that only link to the account UI\". suggested use: approach-only — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "Valthorne",
+   "url": "https://github.com/tehnewb/Valthorne",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "07e1042ee57470962d9436ee95fa6f4f3a932355",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-04 (reply to Corpus Hub outreach); selected commit 07e1042ee574: \"Add audio output device switching\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "otzaria_search_engine",
+   "url": "https://github.com/Otzaria/otzaria_search_engine",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "38ce984668d4e5cca1aad7725bcb99e25672e78a",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 38ce984668d4: \"Fix lost smart-search continuations and literal partial quotations\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "unity-save-system",
+   "url": "https://github.com/DerKekser/unity-save-system",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "426c05245948263fd833518dfe08892eb163ad19",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 426c05245948: \"1.3.0: per-file string tables, arrays, tolerant loading, save meta, fixed guids, Unity 6\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "paradox-tools",
+   "url": "https://github.com/taw/paradox-tools",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "c2ca5a5364c001c7a7dad54438456b2c26cc8bb4",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit c2ca5a5364c0: \"DSL for rulers\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "DiskRaptor",
+   "url": "https://github.com/SunMe1977/DiskRaptor",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "2c8a360f5d748559dccdc3db98fec9abf51975eb",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 2c8a360f5d74: \"feat: 10 growth improvements - trial mode, compare table, one-click update, history...\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "Vericore",
+   "url": "https://github.com/sonii-shivansh/Vericore",
+   "licence": "hint only: MIT (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "e67591e788144236359679121b2dd235d7b9015a",
+   "review": {
+    "spdx": "MIT",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit e67591e78814: \"fix(v1.0): harden release blockers\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  },
+  {
+   "repo": "query-doctor",
+   "url": "https://github.com/alexandrefimov/query-doctor",
+   "licence": "hint only: Apache-2.0 (GitHub licenseInfo at selection; verify at pin)",
+   "sha": "479bdc959eb4e61b6421eb5fa99a6bbbdaa534fe",
+   "review": {
+    "spdx": "Apache-2.0",
+    "use": "UNREVIEWED",
+    "by": "",
+    "at": "",
+    "note": "author permission by email 2026-10-05 (reply to Corpus Hub outreach); selected commit 479bdc959eb4: \"Retain bounded exchange inspection evidence for Recent cases\". suggested use: adapt-with-attribution — G4 review of the LICENSE file at this pin still required."
+   }
+  }
+ ]
+}

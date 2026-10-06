@@ -1980,6 +1980,361 @@
     }
    ],
    "status": "candidate"
+  },
+  {
+   "cat": "GOOD",
+   "domain": "an agent working on AI agents, LLM tooling, MCP servers and inference: real implementations agents can retrieve when building the same thing",
+   "lane": "A",
+   "note": "contributor-permission corpus opened 2026-10-05: every source author agreed by email to inclusion; manifest staged at candidates/agent-engineering.json",
+   "refresh": "pinned",
+   "slug": "agent-engineering",
+   "sources": [
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/CatVinci-Studio/Levis"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/KingAlexGilbert/king-pong"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/SparkofSpike/Sh1Zuku_Translate"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/a86582751/dsh-nexttavern"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/agentty-xyz/agentty"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/alexneverland/Astakos-AI-Agent"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/ali-ulu/huqan"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/alvin-reyes/better-agentic-ide"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/cascode-ai/analog-canvas"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/chattymin/PokeTokenBar"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/danielmiessler/Fabric"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/danileau/prettypleaseprint"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/eloqdata/lavik"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/esengine/DeepSeek-Reasonix"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/fourdollars/rune"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/fstubner/netscli"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/gadzan/xacpx"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/geminik23/ai-agents"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/gigioneggiando/argo"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/ilysenko/codex-desktop-linux"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/inference-gateway/adk"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/jasonssdev/openkos"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/kubescape/node-agent"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/lomi-dev/lomi"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/michaelegner/architecture-intelligence-platform"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/mozilla-ai/otari"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/oaslananka/kicad-mcp-pro"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/rigour-labs/rigour"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/seuros/chaos"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/thibautrey/multivibe"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/unslothai/unsloth"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/vassiliylakhonin/agenda-intelligence-md"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/vshulcz/deja-vu"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/wuisabel-gif/MemWhale"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/yyjeqhc/webcodex"
+    }
+   ],
+   "status": "candidate"
+  },
+  {
+   "cat": "GOOD",
+   "domain": "an agent working on substantial recent solutions across other domains, contributed with the authors' permission",
+   "lane": "A",
+   "note": "contributor-permission corpus opened 2026-10-05: every source author agreed by email to inclusion; manifest staged at candidates/community-solutions.json",
+   "refresh": "pinned",
+   "slug": "community-solutions",
+   "sources": [
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/JNechaevsky/CRY"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/arandu-io/arandu"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/blinklabs-io/gouroboros"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/kenzap/nesting-app"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/minikin/presence-rs"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/mkrueger/icy_board"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/uji-labs/uji"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/veripublica/epubveri"
+    }
+   ],
+   "status": "candidate"
+  },
+  {
+   "cat": "GOOD",
+   "domain": "an agent working on security engineering: identity, authentication, sandboxing and hardening code",
+   "lane": "A",
+   "note": "contributor-permission corpus opened 2026-10-05: every source author agreed by email to inclusion; manifest staged at candidates/security-practice.json",
+   "refresh": "pinned",
+   "slug": "security-practice",
+   "sources": [
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/HewlettPackard/py-spiffe"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/NormB/sipnab"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/apms-org/cli"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/kureinmaxim/vpn-server-manager"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/mesutpiskin/keycloak-2fa-email-authenticator"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/rbenaley/Vauban"
+    }
+   ],
+   "status": "candidate"
+  },
+  {
+   "cat": "GOOD",
+   "domain": "an agent working on compilers, runtimes, emulators, game engines, OS and low-level systems code",
+   "lane": "A",
+   "note": "contributor-permission corpus opened 2026-10-05: every source author agreed by email to inclusion; manifest staged at candidates/systems-internals.json",
+   "refresh": "pinned",
+   "slug": "systems-internals",
+   "sources": [
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/9947447-alt/reaction-field"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/DerKekser/unity-save-system"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/Otzaria/otzaria_search_engine"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/SunMe1977/DiskRaptor"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/alexandrefimov/query-doctor"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/brave/brave-core"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/crosspoint-reader/crosspoint-simulator"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/futureware-tech/simulator-action"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/reactos/reactos"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/sonii-shivansh/Vericore"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/taw/paradox-tools"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/tehnewb/Valthorne"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/typephp-php/typephp"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/zumerlab/snapdom"
+    }
+   ],
+   "status": "candidate"
+  },
+  {
+   "cat": "GOOD",
+   "domain": "an agent working on web apps, APIs, frontends and design systems: production patterns from active projects",
+   "lane": "A",
+   "note": "contributor-permission corpus opened 2026-10-05: every source author agreed by email to inclusion; manifest staged at candidates/web-app-patterns.json",
+   "refresh": "pinned",
+   "slug": "web-app-patterns",
+   "sources": [
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/Infomaniak/design-system"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/LengxiQwQ/playlistout"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/PingsNest/PingsNest"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/ahatem/QTranslate"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/c4punks/CWIST"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/floatpane/matcha"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/gnacho/netgrip"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/kalfasyan/vresto"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/nichsedge/idx-bei"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/sendrec/sendrec"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/swiftuijs/ui"
+    },
+    {
+     "licence_hint": "see drafts manifest review note",
+     "url": "https://github.com/traccar/traccar"
+    }
+   ],
+   "status": "candidate"
   }
  ],
  "lanes": [
