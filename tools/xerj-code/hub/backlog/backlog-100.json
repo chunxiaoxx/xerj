@@ -3612,6 +3612,29 @@
     ]
    },
    "note": "Cloned+reviewed 2026-10-07 (275 files). Small; build queued with the group."
+  },
+  {
+   "cat": "DATA",
+   "domain": "an agent retrieving from its own or another agent's multi-session history: raw trajectories with timestamps, failure turns kept verbatim, so a hit that says you already tried this and it failed is reachable",
+   "lane": "B",
+   "note": "opened on demand from issue #1138 (Chunxiao Wang, Assay / nautilus-compass): they will switch their eval answers to a corpus of real multi-session agent trajectories with failure turns intact. No such corpus exists here today: zero of the live manifests and none of the other backlog entries are session or trajectory data. Donation path open via tools/xerj-code/hub/CONTRIBUTING.md.",
+   "refresh": "pinned",
+   "slug": "agent-session-trajectories",
+   "sources": [
+    {
+     "licence_hint": "verify before copying: repo holds eval artifacts, not yet a trajectory dump",
+     "url": "https://github.com/chunxiaoxx/nautilus-compass"
+    }
+   ],
+   "status": "planned",
+   "tags": {
+    "region": "GLOBAL",
+    "topics": [
+     "agents",
+     "eval",
+     "memory"
+    ]
+   }
   }
  ],
  "lanes": [
