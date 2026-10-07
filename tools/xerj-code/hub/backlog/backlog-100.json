@@ -3397,6 +3397,221 @@
      "systems"
     ]
    }
+  },
+  {
+   "slug": "exploit-pocs-2026",
+   "cat": "SEC",
+   "lane": "A",
+   "refresh": "weekly",
+   "status": "live",
+   "domain": "an agent triaging a fresh CVE queries this for runnable 2026 PoC repositories: exploit source, affected product, and the fix commit together",
+   "sources": [
+    {
+     "url": "https://github.com/nomi-sec/PoC-in-GitHub",
+     "licence_hint": "mixed per pinned repo (many NONE-FOUND); blanket approach-only, per-repo pins in hub/exploit-pocs-2026.json"
+    }
+   ],
+   "tags": {
+    "region": "GLOBAL",
+    "topics": [
+     "exploits",
+     "vulnerabilities",
+     "security"
+    ],
+    "subtopics": [
+     "poc",
+     "source"
+    ]
+   },
+   "g7": "pending (graded suite owed after the reconcile re-run; tail coverage has a disk-flood caveat)",
+   "note": "LIVE 2026-10-06: 1,093,749 records from 4,614 pinned PoC repositories. Tail coverage caveat from the 2026-10-06 disk flood-stage (autoindex exit 1); reconcile re-run queued."
+  },
+  {
+   "slug": "cve-records",
+   "cat": "SEC",
+   "lane": "A",
+   "refresh": "daily",
+   "status": "candidate",
+   "domain": "an agent assessing a CVE queries this for the authoritative record: CVSS, affected versions, CPE, references and ADP history in full",
+   "sources": [
+    {
+     "url": "https://github.com/CVEProject/cvelistV5",
+     "licence_hint": "NONE-FOUND at pin (no LICENSE, README silent); US CVE-program published data"
+    }
+   ],
+   "tags": {
+    "region": "GLOBAL",
+    "topics": [
+     "vulnerabilities",
+     "security"
+    ],
+    "subtopics": [
+     "cve",
+     "records"
+    ]
+   },
+   "note": "Cloned+reviewed 2026-10-07 (402,744 records, 3.4GB). Full build running on an isolated node with the #1224/#1225/#1227 pipeline fixes; hub manifest lands when the read-back verifies."
+  },
+  {
+   "slug": "exploitdb-src",
+   "cat": "SEC",
+   "lane": "A",
+   "refresh": "weekly",
+   "status": "candidate",
+   "domain": "an agent matching an exploit to its target queries this for the full Exploit-DB record and exploit source",
+   "sources": [
+    {
+     "url": "https://gitlab.com/exploit-database/exploitdb",
+     "licence_hint": "GPL-2.0 (approach-only)"
+    }
+   ],
+   "tags": {
+    "region": "GLOBAL",
+    "topics": [
+     "exploits",
+     "security"
+    ],
+    "subtopics": [
+     "exploitdb"
+    ]
+   },
+   "note": "Cloned+reviewed 2026-10-07 (47,771 files). Build running at row time (151,456 records visible mid-build)."
+  },
+  {
+   "slug": "exploit-poc-index",
+   "cat": "SEC",
+   "lane": "A",
+   "refresh": "daily",
+   "status": "candidate",
+   "domain": "an agent mapping a CVE to public PoCs queries this for the cross-reference: PoC repo URLs per CVE id plus the trickest/wordlist metadata",
+   "sources": [
+    {
+     "url": "https://github.com/nomi-sec/PoC-in-GitHub",
+     "licence_hint": "CC0-1.0"
+    },
+    {
+     "url": "https://github.com/trickest/cve",
+     "licence_hint": "MIT"
+    }
+   ],
+   "tags": {
+    "region": "GLOBAL",
+    "topics": [
+     "exploits",
+     "vulnerabilities",
+     "security"
+    ],
+    "subtopics": [
+     "index"
+    ]
+   },
+   "note": "Cloned+reviewed 2026-10-07. First build interrupted by the 2026-10-06 disk flood-stage; rebuild queued behind the running cyber builds."
+  },
+  {
+   "slug": "exploit-pocs-2023",
+   "cat": "SEC",
+   "lane": "A",
+   "refresh": "pinned",
+   "status": "candidate",
+   "domain": "year backfill slice of the exploit-PoC set: 2023 PoC repositories at pinned shas",
+   "sources": [
+    {
+     "url": "https://github.com/nomi-sec/PoC-in-GitHub",
+     "licence_hint": "mixed per pinned repo; blanket approach-only"
+    }
+   ],
+   "tags": {
+    "region": "GLOBAL",
+    "topics": [
+     "exploits",
+     "vulnerabilities",
+     "security"
+    ],
+    "subtopics": [
+     "poc",
+     "source"
+    ]
+   },
+   "note": "Cloned at row time (2,451 repos, 4.75GB); build queued."
+  },
+  {
+   "slug": "exploit-pocs-2024",
+   "cat": "SEC",
+   "lane": "A",
+   "refresh": "pinned",
+   "status": "candidate",
+   "domain": "year backfill slice of the exploit-PoC set: 2024 PoC repositories at pinned shas",
+   "sources": [
+    {
+     "url": "https://github.com/nomi-sec/PoC-in-GitHub",
+     "licence_hint": "mixed per pinned repo; blanket approach-only"
+    }
+   ],
+   "tags": {
+    "region": "GLOBAL",
+    "topics": [
+     "exploits",
+     "vulnerabilities",
+     "security"
+    ],
+    "subtopics": [
+     "poc",
+     "source"
+    ]
+   },
+   "note": "Cloned at row time (2,994 repos, 19.4GB raw - the deepest year slice); build queued."
+  },
+  {
+   "slug": "exploit-pocs-2025",
+   "cat": "SEC",
+   "lane": "A",
+   "refresh": "pinned",
+   "status": "candidate",
+   "domain": "year backfill slice of the exploit-PoC set: 2025 PoC repositories at pinned shas",
+   "sources": [
+    {
+     "url": "https://github.com/nomi-sec/PoC-in-GitHub",
+     "licence_hint": "mixed per pinned repo; blanket approach-only"
+    }
+   ],
+   "tags": {
+    "region": "GLOBAL",
+    "topics": [
+     "exploits",
+     "vulnerabilities",
+     "security"
+    ],
+    "subtopics": [
+     "poc",
+     "source"
+    ]
+   },
+   "note": "Cloned at row time (3,859 repos, 4.61GB); build queued."
+  },
+  {
+   "slug": "vuln-fix-commits",
+   "cat": "SEC",
+   "lane": "A",
+   "refresh": "weekly",
+   "status": "candidate",
+   "domain": "an agent confirming a vulnerability is actually fixed queries this for the fixing commit references (SAP project-kb cvefixcommit)",
+   "sources": [
+    {
+     "url": "https://github.com/SAP/project-kb",
+     "licence_hint": "Apache-2.0"
+    }
+   ],
+   "tags": {
+    "region": "GLOBAL",
+    "topics": [
+     "vulnerabilities",
+     "security"
+    ],
+    "subtopics": [
+     "fix-commits"
+    ]
+   },
+   "note": "Cloned+reviewed 2026-10-07 (275 files). Small; build queued with the group."
   }
  ],
  "lanes": [
