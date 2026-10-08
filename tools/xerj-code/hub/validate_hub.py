@@ -99,9 +99,17 @@ for path in recipes:
         continue
     for i, s in enumerate(sources):
         where = f"{rel}: sources[{i}]"
-        for field in ("slug", "kind", "url", "licence"):
+        for field in ("slug", "kind", "licence"):
             if not s.get(field):
                 err(f"{where}: missing {field}")
+        # dir sources carry a recipe-relative path; the engine REFUSES a url
+        # on them (harvest/recipe.rs), so requiring one here would reject
+        # every valid dir recipe. First such recipe: xerj-blogposts.
+        if s.get("kind") == "dir":
+            if not s.get("path"):
+                err(f"{where}: dir source needs a 'path' (recipe-relative)")
+        elif not s.get("url"):
+            err(f"{where}: missing url")
         if s.get("kind") not in ("git", "http-zip", "dir"):
             err(f"{where}: kind must be git | http-zip | dir, got {s.get('kind')!r}")
         if "/" in s.get("slug", "") or ".." in s.get("slug", ""):
@@ -169,6 +177,10 @@ for name in sorted(live_manifests):
         backlog_errors.append(f"manifest {name}.json is lane A by construction; "
                               f"backlog row says {row.get('lane')!r}")
 for name in sorted(live_recipes):
+    if name in live_manifests:
+        # Hybrid: a lane-A manifest registers the corpus and references the
+        # recipe (rebuild reproducibility); the manifest row covers both.
+        continue
     row = next((r for r in rows if r.get("slug") == name), None)
     if row is None:
         backlog_errors.append(f"recipe {name} has no backlog row")

@@ -3636,6 +3636,33 @@
      "memory"
     ]
    }
+  },
+  {
+   "cat": "GOOD",
+   "domain": "an agent writing a XERJ blog post or docs page queries this for the house voice: how past posts open (a number first), argue (every claim traced to a run), and close (losses kept in) - 7 posts as records with derived cve_ids/release_ids",
+   "g7": {
+    "verdict": "PASS"
+   },
+   "lane": "A",
+   "note": "first build 2026-10-08 at pin fce97e180: 7 records, read-back 5/5 on the reference node; derived from landing/blog by gen_posts.py, whose --check mode gates drift in CI; the scoped exception to rule 3 (our published prose, never engine code)",
+   "recipe": "tools/packs/xerj-blogposts/recipe.toml",
+   "refresh": "pinned",
+   "slug": "xerj-blogposts",
+   "sources": [
+    {
+     "licence_hint": "Apache-2.0 - our own posts",
+     "url": "https://github.com/xerj-org/xerj (landing/blog only, harvested by the recipe's dir source)"
+    }
+   ],
+   "status": "live",
+   "tags": {
+    "region": "GLOBAL",
+    "topics": [
+     "writing",
+     "meta",
+     "xerj"
+    ]
+   }
   }
  ],
  "lanes": [
