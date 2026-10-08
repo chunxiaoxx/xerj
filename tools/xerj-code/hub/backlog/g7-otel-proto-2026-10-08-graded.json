@@ -1,0 +1,41 @@
+{
+ "suite": "g7-otel-proto-2026-10-08",
+ "graded": "2026-10-08",
+ "verdict": "FAIL",
+ "rule": "median >= 3 of 5 queries with a relevant needle in top-5 (PROGRAM-100.md)",
+ "score": "1/5",
+ "results": [
+  {
+   "q": "trace id all zeroes 16-byte array invalid spans from the same trace share the same trace id",
+   "needle_file": "opentelemetry-proto/opentelemetry/proto/trace/v1/trace.proto",
+   "top5": ["docs/db/oracledb.md", "docs/db/sql-server.md", "docs/faas/aws-lambda.md", "docs/faas/aws-lambda.md", "docs/db/oracledb.md"],
+   "relevant": false
+  },
+  {
+   "q": "exponential histogram zero threshold width of the zero region values rounded to zero",
+   "needle_file": "opentelemetry-proto/opentelemetry/proto/metrics/v1/metrics.proto",
+   "top5": ["docs/system/k8s-metrics.md", "docs/system/k8s-metrics.md", "docs/registry/entities/service.md", "docs/dotnet/dotnet-network-traces.md", "docs/resource/service.md"],
+   "relevant": false
+  },
+  {
+   "q": "HTTP request method not known to instrumentation attribute value _OTHER",
+   "needle_file": "semantic-conventions/semantic-conventions/docs/http/http-metrics.md",
+   "top5": ["docs/http/http-metrics.md", "docs/http/http-metrics.md", "docs/http/http-spans.md", "docs/http/http-spans.md", "docs/registry/attributes/http.md"],
+   "relevant": true
+  },
+  {
+   "q": "severity number normalized log level original string representation as it is known at the source",
+   "needle_file": "opentelemetry-proto/opentelemetry/proto/logs/v1/logs.proto",
+   "top5": ["docs/http/http-exceptions.md", "docs/registry/attributes/aws.md", "docs/registry/attributes/code.md", "docs/exceptions/exceptions-spans.md", "docs/registry/attributes/exception.md"],
+   "relevant": false
+  },
+  {
+   "q": "span attributes dropped count keys too long too many attributes discarded",
+   "needle_file": "opentelemetry-proto/opentelemetry/proto/trace/v1/trace.proto",
+   "top5": ["docs/system/system-metrics.md", "docs/general/attribute-requirement-level.md", "docs/general/attribute-requirement-level.md", "docs/how-to-write-conventions/README.md", "docs/registry/attributes/zos.md"],
+   "relevant": false
+  }
+ ],
+ "root_cause": "NOT a retrieval defect: the needle files are ABSENT from the index. The corpus walk indexed 3 datasets (json 2 records, opentelemetry-proto-docs 183, semantic-conventions-docs 2464 = 2,649 records from 329 walked files) while ALL 11 .proto files under opentelemetry/proto/ were silently UNASSIGNED — the terminal line says code_files=0 code_files_indexed=0, a wildcard ax_file=*trace.proto returns zero hits, and only 10 files were junk-marked. `.proto` is not in the tree-sitter code-extension registry, so the files fell out of the code family, and the dataset inference created only docs/json datasets — a file that lands in no dataset and no junk list is dropped with no record of the drop. Every top-5 hit is therefore a semantic-conventions .md file.",
+ "next": "engine issue filed for the unassigned-file hole (autoindex silently drops files in no dataset); otel-proto stays candidate — flipping it live on markdown-only coverage would misrepresent the corpus, whose point is the protocol definitions. Re-run this suite unchanged after the engine fix + rebuild."
+}
